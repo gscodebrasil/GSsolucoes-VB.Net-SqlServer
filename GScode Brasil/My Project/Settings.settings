@@ -1,0 +1,123 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Database_Servidor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.2.110</Value>
+    </Setting>
+    <Setting Name="Database_Porta" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1433</Value>
+    </Setting>
+    <Setting Name="Database_Banco" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gscode</Value>
+    </Setting>
+    <Setting Name="Database_Usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="Database_Senha" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ysQLa5ihU1gRA4cRtUuyCnOJZXm5UFE5LRn7UhkkTbI=</Value>
+    </Setting>
+    <Setting Name="SFTP_Servidor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.2.110</Value>
+    </Setting>
+    <Setting Name="SFTP_Porta" Type="System.String" Scope="User">
+      <Value Profile="(Default)">22</Value>
+    </Setting>
+    <Setting Name="SFTP_Usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mssql</Value>
+    </Setting>
+    <Setting Name="SFTP_Senha" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Geg26112009**</Value>
+    </Setting>
+    <Setting Name="SFTP_ChaveSSH" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SFTP_BackupDatabase" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/sql/backup/</Value>
+    </Setting>
+    <Setting Name="SFTP_BackupSistema" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/GSHome/Usuarios/</Value>
+    </Setting>
+    <Setting Name="SFTP_PhonebookClientes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Phonebook/Clientes/</Value>
+    </Setting>
+    <Setting Name="SFTP_PhonebookColaborador" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Phonebook/Colaboradores/</Value>
+    </Setting>
+    <Setting Name="SFTP_PhonebookFornecedor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Phonebook/Fornecedores/</Value>
+    </Setting>
+    <Setting Name="SFTP_PhonebookParceiro" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Phonebook/Parceiros/</Value>
+    </Setting>
+    <Setting Name="SFTP_HelpdeskOSExterno" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Helpdesk/OS Atendimento Externo/</Value>
+    </Setting>
+    <Setting Name="SFTP_HelpdeskOSRemoto" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Helpdesk/OS Atendimento Remoto/</Value>
+    </Setting>
+    <Setting Name="SFTP_Estoque" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Estoque/</Value>
+    </Setting>
+    <Setting Name="SFTP_Financeiro_Nfe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Financeiro/NFe/</Value>
+    </Setting>
+    <Setting Name="SFTP_Financeiro_NFSe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Financeiro/NFSe/</Value>
+    </Setting>
+    <Setting Name="SFTP_Dashboard_Phonebook" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Dashboard/Phonebook/</Value>
+    </Setting>
+    <Setting Name="SFTP_Dashboard_Helpdesk" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Dashboard/Helpdesk/</Value>
+    </Setting>
+    <Setting Name="SFTP_Dashboard_Estoque" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Dashboard/Estoque/</Value>
+    </Setting>
+    <Setting Name="SFTP_Dashboard_Financeiro" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/Dashboard/Financeiro/</Value>
+    </Setting>
+    <Setting Name="SMTP_Servidor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mail.erimat.com.br</Value>
+    </Setting>
+    <Setting Name="SMTP_Porta" Type="System.String" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="SMTP_Usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">suporte@erimat.com.br</Value>
+    </Setting>
+    <Setting Name="SMTP_Senha" Type="System.String" Scope="User">
+      <Value Profile="(Default)">f3t4e9c9</Value>
+    </Setting>
+    <Setting Name="SMTP_Administrador" Type="System.String" Scope="User">
+      <Value Profile="(Default)">guilherme@erimat.com.br</Value>
+    </Setting>
+    <Setting Name="SMTP_SSL" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AcessoAdmin_Usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin@gscodebrasil.com.br</Value>
+    </Setting>
+    <Setting Name="AcessoAdmin_Senha" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ysQLa5ihU1gRA4cRtUuyCnOJZXm5UFE5LRn7UhkkTbI=</Value>
+    </Setting>
+    <Setting Name="AutoLogin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LembrarAcesso" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Acesso_Usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Acesso_Senha" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Softphone_Nome" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Softphone_Local" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
