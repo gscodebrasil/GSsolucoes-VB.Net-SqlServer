@@ -106,6 +106,10 @@ Public Class FrmCadastros_Phonebook
         End With
     End Sub
 
+    Private Function ValidaEmail(strCheck As String) As Boolean
+        Return Regex.IsMatch(strCheck, "^([0-9a-z]([-\.\w]*[0-9a-z])*@([0-9a-z][-\w]*[0-9a-z]\.)+[a-z]{2,9})$")
+    End Function
+
     Private Sub BuscarRegistros(Tabela As String)
         Dim NDecimal As Integer
         Dim RegistroDe As Integer
@@ -392,9 +396,11 @@ Public Class FrmCadastros_Phonebook
     Private Sub BtnInfoComplementar_Cliente_Click(sender As Object, e As EventArgs) Handles BtnInfoComplementar_Cliente.Click
         If PanelInfoComplementar_Cliente.Visible = False Then
             PanelInfoComplementar_Cliente.Visible = True
+            Me.BtnInfoComplementar_Cliente.Text = $"Apagar informação complementar"
         Else
             TxtInfoComplementar_Cliente.Clear()
             PanelInfoComplementar_Cliente.Visible = False
+            Me.BtnInfoComplementar_Cliente.Text = $"Adicionar informação complementar"
         End If
     End Sub
 
@@ -421,12 +427,11 @@ Public Class FrmCadastros_Phonebook
     End Sub
 
     Private Sub TxtCPFouCNPJ_Cliente_TextChanged(sender As Object, e As EventArgs) Handles TxtCPFouCNPJ_Cliente.TextChanged
-        Select Case Me.TxtCPFouCNPJ_Cliente.Text.Length
-            Case 0
-                LblCPFouCNPJ_Cliente.Visible = False
-            Case Else
-                LblCPFouCNPJ_Cliente.Visible = True
-        End Select
+        If Me.TxtCPFouCNPJ_Cliente.Text.Length > 0 Then
+            LblCPFouCNPJ_Cliente.Visible = True
+        Else
+            LblCPFouCNPJ_Cliente.Visible = False
+        End If
     End Sub
 
     Private Sub TxtNome_Cliente_TextChanged(sender As Object, e As EventArgs) Handles TxtNome_Cliente.TextChanged
@@ -466,7 +471,6 @@ Public Class FrmCadastros_Phonebook
     End Function
 
     Private Sub TxtCEP_Cliente_TextChanged(sender As Object, e As EventArgs) Handles TxtCEP_Cliente.TextChanged
-
         ClValidaCep.MaskCep(sender)
         Select Case TxtCEP_Cliente.Text.Length
 
@@ -777,18 +781,22 @@ Public Class FrmCadastros_Phonebook
     Private Sub BtnInfoComplementar_Colaborador_Click(sender As Object, e As EventArgs) Handles BtnInfoComplementar_Colaborador.Click
         If PanelInfoComplementar_Colaborador.Visible = False Then
             PanelInfoComplementar_Colaborador.Visible = True
+            Me.BtnInfoComplementar_Colaborador.Text = $"Apagar informação complementar"
         Else
             TxtInfoComplementar_Colaborador.Clear()
             PanelInfoComplementar_Colaborador.Visible = False
+            Me.BtnInfoComplementar_Colaborador.Text = $"Adicionar informação complementar"
         End If
     End Sub
 
     Private Sub Guna2GradientButton5_Click(sender As Object, e As EventArgs) Handles BtnInfoComplementar_Fornecedor.Click
         If PanelInfoComplementar_Fornecedor.Visible = False Then
             PanelInfoComplementar_Fornecedor.Visible = True
+            Me.BtnInfoComplementar_Fornecedor.Text = $"Apagar informação complementar"
         Else
             TxtInfoComplementar_Fornecedor.Clear()
             PanelInfoComplementar_Fornecedor.Visible = False
+            Me.BtnInfoComplementar_Fornecedor.Text = $"Adicionar informação complementar"
         End If
     End Sub
 
@@ -1389,7 +1397,7 @@ Public Class FrmCadastros_Phonebook
                 Me.TxtCelular_Cliente.IconRight = Nothing
 
             Case 9
-                If Me.TxtCelular_Cliente.Text.StartsWith("0") Then
+                If Not Me.TxtCelular_Cliente.Text.StartsWith("0") Then
                     Me.TxtCelular_Cliente.Text = mask.Insert(5, "-")
                     Me.TxtCelular_Cliente.IconRight = Nothing
                 Else
@@ -1569,7 +1577,7 @@ Public Class FrmCadastros_Phonebook
                 Me.TxtCelular_Colaborador.IconRight = Nothing
 
             Case 9
-                If Me.TxtCelular_Colaborador.Text.StartsWith("0") Then
+                If Not Me.TxtCelular_Colaborador.Text.StartsWith("0") Then
                     Me.TxtCelular_Colaborador.Text = mask.Insert(5, "-")
                     Me.TxtCelular_Colaborador.IconRight = Nothing
                 Else
@@ -1748,7 +1756,7 @@ Public Class FrmCadastros_Phonebook
                 Me.TxtCelular_Fornecedor.IconRight = Nothing
 
             Case 9
-                If Me.TxtCelular_Fornecedor.Text.StartsWith("0") Then
+                If Not Me.TxtCelular_Fornecedor.Text.StartsWith("0") Then
                     Me.TxtCelular_Fornecedor.Text = mask.Insert(5, "-")
                     Me.TxtCelular_Fornecedor.IconRight = Nothing
                 Else
@@ -1786,6 +1794,325 @@ Public Class FrmCadastros_Phonebook
     Private Sub TxtCelular_Fornecedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCelular_Fornecedor.KeyPress
         If Not (Char.IsDigit(e.KeyChar) OrElse Char.IsControl(e.KeyChar)) Then
             e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCEP_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtCEP_Colaborador.TextChanged
+        ClValidaCep.MaskCep(sender)
+        Select Case TxtCEP_Colaborador.Text.Length
+
+            Case > 0
+                If ValidaCEP(TxtCEP_Colaborador.Text) = False Then
+                    LblCEP_Colaborador.Visible = True
+                    TxtCEP_Colaborador.IconRight = ImageList.Images(1)
+                Else
+                    LblCEP_Colaborador.Visible = True
+                    TxtCEP_Colaborador.IconRight = ImageList.Images(0)
+                End If
+
+            Case Else
+                LblCEP_Colaborador.Visible = False
+                TxtCEP_Colaborador.IconRight = Nothing
+
+        End Select
+    End Sub
+
+    Private Sub TxtCEP_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtCEP_Fornecedor.TextChanged
+        ClValidaCep.MaskCep(sender)
+        Select Case TxtCEP_Fornecedor.Text.Length
+
+            Case > 0
+                If ValidaCEP(TxtCEP_Fornecedor.Text) = False Then
+                    LblCEP_Fornecedor.Visible = True
+                    TxtCEP_Fornecedor.IconRight = ImageList.Images(1)
+                Else
+                    LblCEP_Fornecedor.Visible = True
+                    TxtCEP_Fornecedor.IconRight = ImageList.Images(0)
+                End If
+
+            Case Else
+                LblCEP_Fornecedor.Visible = False
+                TxtCEP_Fornecedor.IconRight = Nothing
+
+        End Select
+    End Sub
+
+    Private Sub TxtCEP_Cliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCEP_Cliente.KeyPress
+        ClValidaCep.ApenasNumeros(e, sender)
+    End Sub
+
+    Private Sub TxtCEP_Colaborador_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCEP_Colaborador.KeyPress
+        ClValidaCep.ApenasNumeros(e, sender)
+    End Sub
+
+    Private Sub TxtCEP_Fornecedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCEP_Fornecedor.KeyPress
+        ClValidaCep.ApenasNumeros(e, sender)
+    End Sub
+
+    Private Sub TxtUF_Cliente_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtUF_Cliente.KeyPress
+        If (Char.IsNumber(e.KeyChar)) OrElse (Char.IsSymbol(e.KeyChar)) OrElse (Char.IsPunctuation(e.KeyChar)) OrElse (Char.IsSeparator(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtUF_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtUF_Colaborador.TextChanged
+        If Me.TxtUF_Colaborador.Text.Length > 0 Then
+            LblUF_Colaborador.Visible = True
+        Else
+            LblUF_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtUF_Colaborador_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtUF_Colaborador.KeyPress
+        If (Char.IsNumber(e.KeyChar)) OrElse (Char.IsSymbol(e.KeyChar)) OrElse (Char.IsPunctuation(e.KeyChar)) OrElse (Char.IsSeparator(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtUF_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtUF_Fornecedor.TextChanged
+        If Me.TxtUF_Fornecedor.Text.Length > 0 Then
+            LblUF_Fornecedor.Visible = True
+        Else
+            LblUF_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtUF_Fornecedor_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtUF_Fornecedor.KeyPress
+        If (Char.IsNumber(e.KeyChar)) OrElse (Char.IsSymbol(e.KeyChar)) OrElse (Char.IsPunctuation(e.KeyChar)) OrElse (Char.IsSeparator(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtCidade_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtCidade_Colaborador.TextChanged
+        If Me.TxtCidade_Colaborador.Text.Length > 0 Then
+            LblCidade_Colaborador.Visible = True
+        Else
+            LblCidade_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtCPFouCNPJ_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtCPFouCNPJ_Colaborador.TextChanged
+        If Me.TxtCPFouCNPJ_Colaborador.Text.Length > 0 Then
+            LblCPFouCNPJ_Colaborador.Visible = True
+        Else
+            LblCPFouCNPJ_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtNome_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtNome_Colaborador.TextChanged
+        If Me.TxtNome_Colaborador.Text.Length > 0 Then
+            LblNome_Colaborador.Visible = True
+        Else
+            LblNome_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtEmail_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtEmail_Colaborador.TextChanged
+        Select Case Me.TxtEmail_Colaborador.Text.Length
+
+            Case > 0
+                If ValidaEmail(TxtEmail_Colaborador.Text) = False Then
+                    LblEmail_Colaborador.Visible = True
+                    TxtEmail_Colaborador.IconRight = ImageList.Images(1)
+                Else
+                    LblEmail_Colaborador.Visible = True
+                    TxtEmail_Colaborador.IconRight = Nothing
+                End If
+
+            Case <= 0
+                LblEmail_Colaborador.Visible = False
+                TxtEmail_Colaborador.IconRight = Nothing
+
+        End Select
+    End Sub
+
+    Private Sub TxtContatoPrincipal_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtContatoPrincipal_Colaborador.TextChanged
+        If Me.TxtContatoPrincipal_Colaborador.Text.Length > 0 Then
+            LblContatoPrincipal_Colaborador.Visible = True
+        Else
+            LblContatoPrincipal_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtContatoSecundario_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtContatoSecundario_Colaborador.TextChanged
+        If Me.TxtContatoSecundario_Colaborador.Text.Length > 0 Then
+            LblContatoSecundario_Colaborador.Visible = True
+        Else
+            LblContatoSecundario_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtCelular_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtCelular_Colaborador.TextChanged
+        If Me.TxtCelular_Colaborador.Text.Length > 0 Then
+            LblCelular_Colaborador.Visible = True
+        Else
+            LblCelular_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtEndereco_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtEndereco_Colaborador.TextChanged
+        If Me.TxtEndereco_Colaborador.Text.Length > 0 Then
+            LblEndereco_Colaborador.Visible = True
+        Else
+            LblEndereco_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtComplemento_Colaborador_TextChanged(sender As Object, e As EventArgs) Handles TxtComplemento_Colaborador.TextChanged
+        If Me.TxtComplemento_Colaborador.Text.Length > 0 Then
+            LblComplemento_Colaborador.Visible = True
+        Else
+            LblComplemento_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub CbGenero_Colaborador_Enter(sender As Object, e As EventArgs) Handles CbGenero_Colaborador.Enter
+        LblGenero_Colaborador.Visible = True
+    End Sub
+
+    Private Sub CbGenero_Cliente_Enter(sender As Object, e As EventArgs) Handles CbGenero_Cliente.Enter
+        LblGenero_Cliente.Visible = True
+    End Sub
+
+    Private Sub TxtCPFouCNPJ_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtCPFouCNPJ_Fornecedor.TextChanged
+        If Me.TxtCPFouCNPJ_Fornecedor.Text.Length > 0 Then
+            LblCPFouCNPJ_Fornecedor.Visible = True
+        Else
+            LblCPFouCNPJ_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtNome_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtNome_Fornecedor.TextChanged
+        If Me.TxtNome_Fornecedor.Text.Length > 0 Then
+            LblNome_Fornecedor.Visible = True
+        Else
+            LblNome_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtEmail_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtEmail_Fornecedor.TextChanged
+        Select Case Me.TxtEmail_Fornecedor.Text.Length
+
+            Case > 0
+                If ValidaEmail(TxtEmail_Fornecedor.Text) = False Then
+                    LblEmail_Fornecedor.Visible = True
+                    TxtEmail_Fornecedor.IconRight = ImageList.Images(1)
+                Else
+                    LblEmail_Fornecedor.Visible = True
+                    TxtEmail_Fornecedor.IconRight = Nothing
+                End If
+
+            Case <= 0
+                LblEmail_Fornecedor.Visible = False
+                TxtEmail_Fornecedor.IconRight = Nothing
+
+        End Select
+    End Sub
+
+    Private Sub TxtContatoPrincipal_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtContatoPrincipal_Fornecedor.TextChanged
+        If Me.TxtContatoPrincipal_Fornecedor.Text.Length > 0 Then
+            LblContatoPrincipal_Fornecedor.Visible = True
+        Else
+            LblContatoPrincipal_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtContatoSecundario_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtContatoSecundario_Fornecedor.TextChanged
+        If Me.TxtContatoSecundario_Fornecedor.Text.Length > 0 Then
+            LblContatoSecundario_Fornecedor.Visible = True
+        Else
+            LblContatoSecundario_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtCelular_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtCelular_Fornecedor.TextChanged
+        If Me.TxtCelular_Fornecedor.Text.Length > 0 Then
+            LblCelular_Fornecedor.Visible = True
+        Else
+            LblCelular_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtEndereco_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtEndereco_Fornecedor.TextChanged
+        If Me.TxtEndereco_Fornecedor.Text.Length > 0 Then
+            LblEndereco_Fornecedor.Visible = True
+        Else
+            LblEndereco_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtComplemento_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtComplemento_Fornecedor.TextChanged
+        If Me.TxtComplemento_Fornecedor.Text.Length > 0 Then
+            LblComplemento_Fornecedor.Visible = True
+        Else
+            LblComplemento_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtCidade_Fornecedor_TextChanged(sender As Object, e As EventArgs) Handles TxtCidade_Fornecedor.TextChanged
+        If Me.TxtCidade_Fornecedor.Text.Length > 0 Then
+            LblCidade_Fornecedor.Visible = True
+        Else
+            LblCidade_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub CbGenero_Fornecedor_Enter(sender As Object, e As EventArgs) Handles CbGenero_Fornecedor.Enter
+        LblGenero_Fornecedor.Visible = True
+    End Sub
+
+    Private Sub CbGenero_Cliente_LostFocus(sender As Object, e As EventArgs) Handles CbGenero_Cliente.LostFocus
+        If Me.CbGenero_Cliente.Text.Length <= 0 Then
+            LblGenero_Cliente.Visible = False
+        End If
+    End Sub
+
+    Private Sub CbGenero_Colaborador_LostFocus(sender As Object, e As EventArgs) Handles CbGenero_Colaborador.LostFocus
+        If Me.CbGenero_Colaborador.Text.Length <= 0 Then
+            LblGenero_Colaborador.Visible = False
+        End If
+    End Sub
+
+    Private Sub CbGenero_Fornecedor_LostFocus(sender As Object, e As EventArgs) Handles CbGenero_Fornecedor.LostFocus
+        If Me.CbGenero_Fornecedor.Text.Length <= 0 Then
+            LblGenero_Fornecedor.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtEmail_Cliente_TextChanged(sender As Object, e As EventArgs) Handles TxtEmail_Cliente.TextChanged
+        Select Case Me.TxtEmail_Cliente.Text.Length
+
+            Case > 0
+                If ValidaEmail(TxtEmail_Cliente.Text) = False Then
+                    LblEmail_Cliente.Visible = True
+                    TxtEmail_Cliente.IconRight = ImageList.Images(1)
+                Else
+                    LblEmail_Cliente.Visible = True
+                    TxtEmail_Cliente.IconRight = Nothing
+                End If
+
+            Case <= 0
+                LblEmail_Cliente.Visible = False
+                TxtEmail_Cliente.IconRight = Nothing
+
+        End Select
+    End Sub
+
+    Private Sub TxtEmail_Cliente_LostFocus(sender As Object, e As EventArgs) Handles TxtEmail_Cliente.LostFocus
+        If TxtEmail_Cliente.Text.Length < 0 OrElse ValidaEmail(TxtEmail_Cliente.Text) = False Then
+            TxtEmail_Cliente.IconRight = ImageList.Images(0)
+        End If
+    End Sub
+
+    Private Sub TxtEmail_Colaborador_LostFocus(sender As Object, e As EventArgs) Handles TxtEmail_Colaborador.LostFocus
+        If TxtEmail_Colaborador.Text.Length < 0 OrElse ValidaEmail(TxtEmail_Colaborador.Text) = False Then
+            TxtEmail_Colaborador.IconRight = ImageList.Images(0)
+        End If
+    End Sub
+
+    Private Sub TxtEmail_Fornecedor_LostFocus(sender As Object, e As EventArgs) Handles TxtEmail_Fornecedor.LostFocus
+        If TxtEmail_Fornecedor.Text.Length < 0 OrElse ValidaEmail(TxtEmail_Fornecedor.Text) = False Then
+            TxtEmail_Fornecedor.IconRight = ImageList.Images(0)
         End If
     End Sub
 End Class

@@ -669,7 +669,7 @@ Public Class FrmLogin
     End Sub
 
     Private Sub txtPerfilCep_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPerfilCep.KeyPress
-        ClValidaData.ApenasNumeros(e, sender)
+        ClValidaCep.ApenasNumeros(e, sender)
     End Sub
 
     Private Sub txtPerfilCep_IconRightClick(sender As Object, e As EventArgs) Handles txtPerfilCep.IconRightClick

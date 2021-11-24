@@ -23,13 +23,14 @@
 
         Caixa.MaxLength = 9
 
+
         If AscW(Press) <> 8 Then
             '----- Definindo a posição que o cursor esta no momento
             Cursor = Caixa.SelectionStart
 
             '----- Redefinindo a nova posição do cursor caso necessario
             If Len(Caixa.text) >= 5 Then
-                Cursor = Cursor + 1
+                Cursor += 1
             End If
 
             '----- Retirando as barras

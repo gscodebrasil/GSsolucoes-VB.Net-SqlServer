@@ -24,15 +24,15 @@ Partial Class FrmCadastros_Phonebook
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim Animation7 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCadastros_Phonebook))
         Me.TabControl_CadCons = New Guna.UI2.WinForms.Guna2TabControl()
         Me.TpInicio = New System.Windows.Forms.TabPage()
@@ -180,7 +180,7 @@ Partial Class FrmCadastros_Phonebook
         Me.LblContatoSecundario_Fornecedor = New System.Windows.Forms.Label()
         Me.LblEndereco_Fornecedor = New System.Windows.Forms.Label()
         Me.LblCEP_Fornecedor = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LblNome_Fornecedor = New System.Windows.Forms.Label()
         Me.LblCPFouCNPJ_Fornecedor = New System.Windows.Forms.Label()
         Me.TxtNome_Fornecedor = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtCPFouCNPJ_Fornecedor = New Guna.UI2.WinForms.Guna2TextBox()
@@ -926,22 +926,22 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvRegistros.AllowUserToAddRows = False
         Me.DgvRegistros.AllowUserToDeleteRows = False
         Me.DgvRegistros.AllowUserToResizeRows = False
-        DataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle49.ForeColor = System.Drawing.Color.Black
-        Me.DgvRegistros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle49
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DgvRegistros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DgvRegistros.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvRegistros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DgvRegistros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle50.BackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle50.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
-        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvRegistros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle50
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvRegistros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DgvRegistros.ColumnHeadersHeight = 40
         Me.DgvRegistros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn2})
         Me.DgvRegistros.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -963,14 +963,14 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvRegistros.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvRegistros.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.SelectTransition.SetDecoration(Me.DgvRegistros, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle51.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle51.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle51.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvRegistros.DefaultCellStyle = DataGridViewCellStyle51
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvRegistros.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvRegistros.EnableHeadersVisualStyles = False
         Me.DgvRegistros.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -980,14 +980,14 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvRegistros.Location = New System.Drawing.Point(0, 0)
         Me.DgvRegistros.MultiSelect = False
         Me.DgvRegistros.Name = "DgvRegistros"
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle52.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle52.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle52.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvRegistros.RowHeadersDefaultCellStyle = DataGridViewCellStyle52
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvRegistros.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvRegistros.RowHeadersVisible = False
         Me.DgvRegistros.RowTemplate.Height = 40
         Me.DgvRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -1106,7 +1106,7 @@ Partial Class FrmCadastros_Phonebook
         'VoltarMenu
         '
         Me.VoltarMenu.AutoRoundedCorners = True
-        Me.VoltarMenu.BorderRadius = 15
+        Me.VoltarMenu.BorderRadius = 16
         Me.VoltarMenu.CheckedState.Parent = Me.VoltarMenu
         Me.VoltarMenu.CustomImages.Parent = Me.VoltarMenu
         Me.SelectTransition.SetDecoration(Me.VoltarMenu, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -3393,7 +3393,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInformacoes_Fornecedor.Controls.Add(Me.LblContatoSecundario_Fornecedor)
         Me.PanelInformacoes_Fornecedor.Controls.Add(Me.LblEndereco_Fornecedor)
         Me.PanelInformacoes_Fornecedor.Controls.Add(Me.LblCEP_Fornecedor)
-        Me.PanelInformacoes_Fornecedor.Controls.Add(Me.Label11)
+        Me.PanelInformacoes_Fornecedor.Controls.Add(Me.LblNome_Fornecedor)
         Me.PanelInformacoes_Fornecedor.Controls.Add(Me.LblCPFouCNPJ_Fornecedor)
         Me.PanelInformacoes_Fornecedor.Controls.Add(Me.TxtNome_Fornecedor)
         Me.PanelInformacoes_Fornecedor.Controls.Add(Me.TxtCPFouCNPJ_Fornecedor)
@@ -3437,6 +3437,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEmail_Fornecedor.BorderColor = System.Drawing.Color.Gray
         Me.TxtEmail_Fornecedor.BorderRadius = 6
         Me.TxtEmail_Fornecedor.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.TxtEmail_Fornecedor.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TxtEmail_Fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.SelectTransition.SetDecoration(Me.TxtEmail_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TxtEmail_Fornecedor.DefaultText = ""
@@ -3459,7 +3460,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEmail_Fornecedor.Name = "TxtEmail_Fornecedor"
         Me.TxtEmail_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtEmail_Fornecedor.PlaceholderForeColor = System.Drawing.Color.Gray
-        Me.TxtEmail_Fornecedor.PlaceholderText = "E-mail *"
+        Me.TxtEmail_Fornecedor.PlaceholderText = "e-mail *"
         Me.TxtEmail_Fornecedor.SelectedText = ""
         Me.TxtEmail_Fornecedor.ShadowDecoration.Parent = Me.TxtEmail_Fornecedor
         Me.TxtEmail_Fornecedor.Size = New System.Drawing.Size(486, 36)
@@ -3679,20 +3680,20 @@ Partial Class FrmCadastros_Phonebook
         Me.LblCEP_Fornecedor.Text = "Cep"
         Me.LblCEP_Fornecedor.Visible = False
         '
-        'Label11
+        'LblNome_Fornecedor
         '
-        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.SelectTransition.SetDecoration(Me.Label11, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(237, 88)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(48, 15)
-        Me.Label11.TabIndex = 246
-        Me.Label11.Text = "Nome *"
-        Me.Label11.Visible = False
+        Me.LblNome_Fornecedor.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LblNome_Fornecedor.AutoSize = True
+        Me.LblNome_Fornecedor.BackColor = System.Drawing.Color.Transparent
+        Me.SelectTransition.SetDecoration(Me.LblNome_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblNome_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LblNome_Fornecedor.ForeColor = System.Drawing.Color.Black
+        Me.LblNome_Fornecedor.Location = New System.Drawing.Point(237, 88)
+        Me.LblNome_Fornecedor.Name = "LblNome_Fornecedor"
+        Me.LblNome_Fornecedor.Size = New System.Drawing.Size(48, 15)
+        Me.LblNome_Fornecedor.TabIndex = 246
+        Me.LblNome_Fornecedor.Text = "Nome *"
+        Me.LblNome_Fornecedor.Visible = False
         '
         'LblCPFouCNPJ_Fornecedor
         '
@@ -4180,22 +4181,22 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvArquivos.AllowUserToAddRows = False
         Me.DgvArquivos.AllowUserToDeleteRows = False
         Me.DgvArquivos.AllowUserToResizeRows = False
-        DataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle53.ForeColor = System.Drawing.Color.Black
-        Me.DgvArquivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle53
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
+        Me.DgvArquivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DgvArquivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DgvArquivos.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvArquivos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvArquivos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DgvArquivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle54.BackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle54.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle54.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
-        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvArquivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle54
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvArquivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DgvArquivos.ColumnHeadersHeight = 40
         Me.DgvArquivos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DgvColumnSelect})
         Me.DgvArquivos.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -4217,14 +4218,14 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvArquivos.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvArquivos.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.SelectTransition.SetDecoration(Me.DgvArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle55.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle55.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle55.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle55.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle55.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvArquivos.DefaultCellStyle = DataGridViewCellStyle55
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvArquivos.DefaultCellStyle = DataGridViewCellStyle7
         Me.DgvArquivos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvArquivos.EnableHeadersVisualStyles = False
         Me.DgvArquivos.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -4234,14 +4235,14 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvArquivos.Location = New System.Drawing.Point(0, 0)
         Me.DgvArquivos.MultiSelect = False
         Me.DgvArquivos.Name = "DgvArquivos"
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle56.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle56.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle56.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvArquivos.RowHeadersDefaultCellStyle = DataGridViewCellStyle56
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvArquivos.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.DgvArquivos.RowHeadersVisible = False
         Me.DgvArquivos.RowTemplate.Height = 40
         Me.DgvArquivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -4380,22 +4381,22 @@ Partial Class FrmCadastros_Phonebook
         'SelectTransition
         '
         Me.SelectTransition.Cursor = Nothing
-        Animation7.AnimateOnlyDifferences = True
-        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
-        Animation7.LeafCoeff = 0!
-        Animation7.MaxTime = 1.0!
-        Animation7.MinTime = 0!
-        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
-        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
-        Animation7.MosaicSize = 0
-        Animation7.Padding = New System.Windows.Forms.Padding(0)
-        Animation7.RotateCoeff = 0!
-        Animation7.RotateLimit = 0!
-        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
-        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
-        Animation7.TimeCoeff = 0!
-        Animation7.TransparencyCoeff = 0!
-        Me.SelectTransition.DefaultAnimation = Animation7
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.SelectTransition.DefaultAnimation = Animation1
         '
         'LblSelectRegister_Cliente
         '
@@ -5486,7 +5487,7 @@ Partial Class FrmCadastros_Phonebook
     Friend WithEvents LblContatoSecundario_Fornecedor As Label
     Friend WithEvents LblEndereco_Fornecedor As Label
     Friend WithEvents LblCEP_Fornecedor As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents LblNome_Fornecedor As Label
     Friend WithEvents LblCPFouCNPJ_Fornecedor As Label
     Friend WithEvents TxtNome_Fornecedor As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents TxtCPFouCNPJ_Fornecedor As Guna.UI2.WinForms.Guna2TextBox

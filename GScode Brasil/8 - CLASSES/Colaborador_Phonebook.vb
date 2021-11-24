@@ -38,7 +38,7 @@ Public Class Colaborador_Phonebook
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"INSERT INTO dbo.cliente_phonebook(id_interno, cpf_cnpj, name, genero, email, contato_principal, contato_secundario, celular, cep, endereco, complemento, cidade, uf, cond_contratual, equipamento, numero_serie, info_complementar, date_cad) VALUES ('{id_interno}','{cpf_cnpj}','{name}','{genero}','{email}','{contato_principal}','{contato_secundario}','{celular}','{cep}','{endereco}','{complemento}','{cidade}','{uf}','{info_complementar}', GETDATE());", conn)
+                Using command As SqlCommand = New SqlCommand($"INSERT INTO dbo.cliente_phonebook(id_interno, cpf_cnpj, name, genero, email, contato_principal, contato_secundario, celular, cep, endereco, complemento, cidade, uf, info_complementar, date_cad) VALUES ('{id_interno}','{cpf_cnpj}','{name}','{genero}','{email}','{contato_principal}','{contato_secundario}','{celular}','{cep}','{endereco}','{complemento}','{cidade}','{uf}','{info_complementar}', GETDATE());", conn)
 
                     command.ExecuteNonQuery()
                     valida = True
