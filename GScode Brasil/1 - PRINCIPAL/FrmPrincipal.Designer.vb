@@ -24,12 +24,12 @@ Partial Class FrmPrincipal
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation3 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation2 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation1 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim Animation8 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim Animation9 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim Animation10 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim Animation7 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim Animation6 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
-        Dim Animation4 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation5 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Me.NotMessageLeftHome = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.BtnNotLeft = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.NotMessageTop = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
@@ -391,22 +391,22 @@ Partial Class FrmPrincipal
         '
         Me.TimerMenuDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide
         Me.TimerMenuDeslizante.Cursor = Nothing
-        Animation3.AnimateOnlyDifferences = True
-        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
-        Animation3.LeafCoeff = 0!
-        Animation3.MaxTime = 1.0!
-        Animation3.MinTime = 0!
-        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
-        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
-        Animation3.MosaicSize = 0
-        Animation3.Padding = New System.Windows.Forms.Padding(0)
-        Animation3.RotateCoeff = 0!
-        Animation3.RotateLimit = 0!
-        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
-        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
-        Animation3.TimeCoeff = 0!
-        Animation3.TransparencyCoeff = 0!
-        Me.TimerMenuDeslizante.DefaultAnimation = Animation3
+        Animation8.AnimateOnlyDifferences = True
+        Animation8.BlindCoeff = CType(resources.GetObject("Animation8.BlindCoeff"), System.Drawing.PointF)
+        Animation8.LeafCoeff = 0!
+        Animation8.MaxTime = 1.0!
+        Animation8.MinTime = 0!
+        Animation8.MosaicCoeff = CType(resources.GetObject("Animation8.MosaicCoeff"), System.Drawing.PointF)
+        Animation8.MosaicShift = CType(resources.GetObject("Animation8.MosaicShift"), System.Drawing.PointF)
+        Animation8.MosaicSize = 0
+        Animation8.Padding = New System.Windows.Forms.Padding(0)
+        Animation8.RotateCoeff = 0!
+        Animation8.RotateLimit = 0!
+        Animation8.ScaleCoeff = CType(resources.GetObject("Animation8.ScaleCoeff"), System.Drawing.PointF)
+        Animation8.SlideCoeff = CType(resources.GetObject("Animation8.SlideCoeff"), System.Drawing.PointF)
+        Animation8.TimeCoeff = 0!
+        Animation8.TransparencyCoeff = 0!
+        Me.TimerMenuDeslizante.DefaultAnimation = Animation8
         '
         'Guna2HtmlLabel2
         '
@@ -2613,9 +2613,9 @@ Partial Class FrmPrincipal
         Me.AppTransition.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerSubMenuDeslizante.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TpEstoque.Location = New System.Drawing.Point(44, 4)
+        Me.TpEstoque.Location = New System.Drawing.Point(5, 4)
         Me.TpEstoque.Name = "TpEstoque"
-        Me.TpEstoque.Size = New System.Drawing.Size(180, 651)
+        Me.TpEstoque.Size = New System.Drawing.Size(219, 651)
         Me.TpEstoque.TabIndex = 3
         Me.TpEstoque.Text = "Estoque"
         '
@@ -3399,9 +3399,9 @@ Partial Class FrmPrincipal
         Me.AppTransition.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerSubMenuDeslizante.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TpFinanceiro.Location = New System.Drawing.Point(44, 4)
+        Me.TpFinanceiro.Location = New System.Drawing.Point(5, 4)
         Me.TpFinanceiro.Name = "TpFinanceiro"
-        Me.TpFinanceiro.Size = New System.Drawing.Size(180, 651)
+        Me.TpFinanceiro.Size = New System.Drawing.Size(219, 651)
         Me.TpFinanceiro.TabIndex = 4
         Me.TpFinanceiro.Text = "Financeiro"
         '
@@ -4185,9 +4185,9 @@ Partial Class FrmPrincipal
         Me.AppTransition.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerSubMenuDeslizante.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TpDashboard.Location = New System.Drawing.Point(44, 4)
+        Me.TpDashboard.Location = New System.Drawing.Point(5, 4)
         Me.TpDashboard.Name = "TpDashboard"
-        Me.TpDashboard.Size = New System.Drawing.Size(180, 651)
+        Me.TpDashboard.Size = New System.Drawing.Size(219, 651)
         Me.TpDashboard.TabIndex = 5
         Me.TpDashboard.Text = "Dashboard"
         '
@@ -5299,43 +5299,43 @@ Partial Class FrmPrincipal
         '
         Me.TimerSubMenuDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide
         Me.TimerSubMenuDeslizante.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation2
+        Animation9.AnimateOnlyDifferences = True
+        Animation9.BlindCoeff = CType(resources.GetObject("Animation9.BlindCoeff"), System.Drawing.PointF)
+        Animation9.LeafCoeff = 0!
+        Animation9.MaxTime = 1.0!
+        Animation9.MinTime = 0!
+        Animation9.MosaicCoeff = CType(resources.GetObject("Animation9.MosaicCoeff"), System.Drawing.PointF)
+        Animation9.MosaicShift = CType(resources.GetObject("Animation9.MosaicShift"), System.Drawing.PointF)
+        Animation9.MosaicSize = 0
+        Animation9.Padding = New System.Windows.Forms.Padding(0)
+        Animation9.RotateCoeff = 0!
+        Animation9.RotateLimit = 0!
+        Animation9.ScaleCoeff = CType(resources.GetObject("Animation9.ScaleCoeff"), System.Drawing.PointF)
+        Animation9.SlideCoeff = CType(resources.GetObject("Animation9.SlideCoeff"), System.Drawing.PointF)
+        Animation9.TimeCoeff = 0!
+        Animation9.TransparencyCoeff = 0!
+        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation9
         '
         'TimerPanelDeslizante
         '
         Me.TimerPanelDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
         Me.TimerPanelDeslizante.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 1.0!
-        Me.TimerPanelDeslizante.DefaultAnimation = Animation1
+        Animation10.AnimateOnlyDifferences = True
+        Animation10.BlindCoeff = CType(resources.GetObject("Animation10.BlindCoeff"), System.Drawing.PointF)
+        Animation10.LeafCoeff = 0!
+        Animation10.MaxTime = 1.0!
+        Animation10.MinTime = 0!
+        Animation10.MosaicCoeff = CType(resources.GetObject("Animation10.MosaicCoeff"), System.Drawing.PointF)
+        Animation10.MosaicShift = CType(resources.GetObject("Animation10.MosaicShift"), System.Drawing.PointF)
+        Animation10.MosaicSize = 0
+        Animation10.Padding = New System.Windows.Forms.Padding(0)
+        Animation10.RotateCoeff = 0!
+        Animation10.RotateLimit = 0!
+        Animation10.ScaleCoeff = CType(resources.GetObject("Animation10.ScaleCoeff"), System.Drawing.PointF)
+        Animation10.SlideCoeff = CType(resources.GetObject("Animation10.SlideCoeff"), System.Drawing.PointF)
+        Animation10.TimeCoeff = 0!
+        Animation10.TransparencyCoeff = 1.0!
+        Me.TimerPanelDeslizante.DefaultAnimation = Animation10
         Me.TimerPanelDeslizante.Interval = 5
         Me.TimerPanelDeslizante.MaxAnimationTime = 800
         Me.TimerPanelDeslizante.TimeStep = 0.05!
@@ -5397,22 +5397,22 @@ Partial Class FrmPrincipal
         '
         Me.EditUserTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
         Me.EditUserTransition.Cursor = Nothing
-        Animation4.AnimateOnlyDifferences = True
-        Animation4.BlindCoeff = CType(resources.GetObject("Animation4.BlindCoeff"), System.Drawing.PointF)
-        Animation4.LeafCoeff = 0!
-        Animation4.MaxTime = 1.0!
-        Animation4.MinTime = 0!
-        Animation4.MosaicCoeff = CType(resources.GetObject("Animation4.MosaicCoeff"), System.Drawing.PointF)
-        Animation4.MosaicShift = CType(resources.GetObject("Animation4.MosaicShift"), System.Drawing.PointF)
-        Animation4.MosaicSize = 0
-        Animation4.Padding = New System.Windows.Forms.Padding(0)
-        Animation4.RotateCoeff = 0!
-        Animation4.RotateLimit = 0!
-        Animation4.ScaleCoeff = CType(resources.GetObject("Animation4.ScaleCoeff"), System.Drawing.PointF)
-        Animation4.SlideCoeff = CType(resources.GetObject("Animation4.SlideCoeff"), System.Drawing.PointF)
-        Animation4.TimeCoeff = 0!
-        Animation4.TransparencyCoeff = 1.0!
-        Me.EditUserTransition.DefaultAnimation = Animation4
+        Animation7.AnimateOnlyDifferences = True
+        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
+        Animation7.LeafCoeff = 0!
+        Animation7.MaxTime = 1.0!
+        Animation7.MinTime = 0!
+        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
+        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
+        Animation7.MosaicSize = 0
+        Animation7.Padding = New System.Windows.Forms.Padding(0)
+        Animation7.RotateCoeff = 0!
+        Animation7.RotateLimit = 0!
+        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
+        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
+        Animation7.TimeCoeff = 0!
+        Animation7.TransparencyCoeff = 1.0!
+        Me.EditUserTransition.DefaultAnimation = Animation7
         '
         'ImageIcon
         '
@@ -5424,22 +5424,22 @@ Partial Class FrmPrincipal
         '
         Me.AppTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
         Me.AppTransition.Cursor = Nothing
-        Animation5.AnimateOnlyDifferences = True
-        Animation5.BlindCoeff = CType(resources.GetObject("Animation5.BlindCoeff"), System.Drawing.PointF)
-        Animation5.LeafCoeff = 0!
-        Animation5.MaxTime = 1.0!
-        Animation5.MinTime = 0!
-        Animation5.MosaicCoeff = CType(resources.GetObject("Animation5.MosaicCoeff"), System.Drawing.PointF)
-        Animation5.MosaicShift = CType(resources.GetObject("Animation5.MosaicShift"), System.Drawing.PointF)
-        Animation5.MosaicSize = 0
-        Animation5.Padding = New System.Windows.Forms.Padding(0)
-        Animation5.RotateCoeff = 0!
-        Animation5.RotateLimit = 0!
-        Animation5.ScaleCoeff = CType(resources.GetObject("Animation5.ScaleCoeff"), System.Drawing.PointF)
-        Animation5.SlideCoeff = CType(resources.GetObject("Animation5.SlideCoeff"), System.Drawing.PointF)
-        Animation5.TimeCoeff = 0!
-        Animation5.TransparencyCoeff = 1.0!
-        Me.AppTransition.DefaultAnimation = Animation5
+        Animation6.AnimateOnlyDifferences = True
+        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
+        Animation6.LeafCoeff = 0!
+        Animation6.MaxTime = 1.0!
+        Animation6.MinTime = 0!
+        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
+        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
+        Animation6.MosaicSize = 0
+        Animation6.Padding = New System.Windows.Forms.Padding(0)
+        Animation6.RotateCoeff = 0!
+        Animation6.RotateLimit = 0!
+        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
+        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
+        Animation6.TimeCoeff = 0!
+        Animation6.TransparencyCoeff = 1.0!
+        Me.AppTransition.DefaultAnimation = Animation6
         Me.AppTransition.TimeStep = 0.01!
         '
         'FrmPrincipal

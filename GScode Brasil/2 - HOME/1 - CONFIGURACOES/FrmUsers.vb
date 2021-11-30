@@ -18,6 +18,8 @@ Public Class FrmUsers
     Private ColumnOpcoes As String = "name"
     Private ColumnGenero As String = ""
     Private ColumnData As String = ""
+    Private RegistroDe As Integer
+    Private RegistroAte As Integer
 
 #End Region
 
@@ -87,8 +89,8 @@ Public Class FrmUsers
 
     Private Sub DgvPaginacao_Seguinte()
         Dim NDecimal As Integer
-        Dim RegistroDe As Integer
-        Dim RegistroAte As Integer = CbRegistrosPorPagina.Text
+
+        RegistroAte = CbRegistrosPorPagina.Text
 
         If PaginaAtual = PaginaTotal Then
             Exit Sub
@@ -96,8 +98,8 @@ Public Class FrmUsers
 
         RegistroDe = CInt(CbRegistrosPorPagina.Text) * PaginaAtual
 
-        ClUserInfo.CountUsers($"SELECT COUNT(*) FROM user_info")
-        ClUserInfo.RegistroUserDesc(DgvUsers, $"SELECT * FROM user_info ORDER BY id DESC OFFSET {RegistroDe} ROWS FETCH NEXT {RegistroAte} ROWS ONLY")
+        ClUserInfo.CountUsers($"Select COUNT(*) FROM user_info WHERE {ColumnGenero} {ColumnData} {ColumnOpcoes} Like '{TxtFilter.Text}%'")
+        ClUserInfo.RegistroUserDesc(DgvUsers, $"SELECT * FROM user_info WHERE {ColumnGenero} {ColumnData} {ColumnOpcoes} Like '{TxtFilter.Text}%' ORDER BY id DESC OFFSET {RegistroDe} ROWS FETCH NEXT {RegistroAte} ROWS ONLY")
 
         PaginaAtual += 1
         PaginaTotal = ClUserInfo.TotalUser / CInt(CbRegistrosPorPagina.Text)
@@ -121,8 +123,8 @@ Public Class FrmUsers
 
     Private Sub DgvPaginacao_Anterior()
         Dim NDecimal As Integer
-        Dim RegistroDe As Integer
-        Dim RegistroAte As Integer = CbRegistrosPorPagina.Text
+
+        RegistroAte = CbRegistrosPorPagina.Text
 
         If PaginaAtual = 1 Then
             Exit Sub
@@ -130,8 +132,8 @@ Public Class FrmUsers
 
         RegistroDe -= CInt(CbRegistrosPorPagina.Text)
 
-        ClUserInfo.CountUsers($"SELECT COUNT(*) FROM user_info")
-        ClUserInfo.RegistroUserDesc(DgvUsers, $"SELECT * FROM user_info ORDER BY id DESC OFFSET {RegistroDe} ROWS FETCH NEXT {RegistroAte} ROWS ONLY")
+        ClUserInfo.CountUsers($"Select COUNT(*) FROM user_info WHERE {ColumnGenero} {ColumnData} {ColumnOpcoes} Like '{TxtFilter.Text}%'")
+        ClUserInfo.RegistroUserDesc(DgvUsers, $"SELECT * FROM user_info WHERE {ColumnGenero} {ColumnData} {ColumnOpcoes} Like '{TxtFilter.Text}%' ORDER BY id DESC OFFSET {RegistroDe} ROWS FETCH NEXT {RegistroAte} ROWS ONLY")
 
         PaginaAtual -= 1
         PaginaTotal = ClUserInfo.TotalUser / CInt(CbRegistrosPorPagina.Text)
@@ -355,7 +357,7 @@ Public Class FrmUsers
         Dim RegistroAte As Integer = CbRegistrosPorPagina.Text
 
         ClUserInfo.CountUsers($"Select COUNT(*) FROM user_info WHERE {ColumnGenero} {ColumnData} {ColumnOpcoes} Like '{TxtFilter.Text}%'")
-        ClUserInfo.RegistroUserDesc(DgvUsers, $"SELECT * FROM user_info WHERE {ColumnGenero} {ColumnData} {ColumnOpcoes} like '{TxtFilter.Text}%' ORDER BY date_cad DESC OFFSET {RegistroDe} ROWS FETCH NEXT {RegistroAte} ROWS ONLY")
+        ClUserInfo.RegistroUserDesc(DgvUsers, $"SELECT * FROM user_info WHERE {ColumnGenero} {ColumnData} {ColumnOpcoes} like '{TxtFilter.Text}%' ORDER BY id DESC OFFSET {RegistroDe} ROWS FETCH NEXT {RegistroAte} ROWS ONLY")
 
         If ClUserInfo.TotalUser > 0 Then
             PaginaAtual = 1

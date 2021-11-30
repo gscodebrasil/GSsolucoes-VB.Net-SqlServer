@@ -24,15 +24,15 @@ Partial Class FrmCadastros_Phonebook
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim DataGridViewCellStyle49 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle50 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle51 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle52 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle53 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim Animation7 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCadastros_Phonebook))
         Me.TabControl_CadCons = New Guna.UI2.WinForms.Guna2TabControl()
         Me.TpInicio = New System.Windows.Forms.TabPage()
@@ -92,6 +92,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInfoComplementar_Cliente = New Guna.UI2.WinForms.Guna2Panel()
         Me.TxtInfoComplementar_Cliente = New Guna.UI2.WinForms.Guna2TextBox()
         Me.PanelInformacoes_Cliente = New Guna.UI2.WinForms.Guna2Panel()
+        Me.LblIdInterno_Cliente = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblEmail_Cliente = New System.Windows.Forms.Label()
         Me.TxtEmail_Cliente = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblGenero_Cliente = New System.Windows.Forms.Label()
@@ -250,6 +251,8 @@ Partial Class FrmCadastros_Phonebook
         Me.TimerDel_Cliente = New System.Windows.Forms.Timer(Me.components)
         Me.TimerDel_Colaborador = New System.Windows.Forms.Timer(Me.components)
         Me.TimerDel_Fornecedor = New System.Windows.Forms.Timer(Me.components)
+        Me.Fbd = New System.Windows.Forms.FolderBrowserDialog()
+        Me.TimerDownload = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl_CadCons.SuspendLayout()
         Me.TpInicio.SuspendLayout()
         Me.ShPanel2.SuspendLayout()
@@ -317,7 +320,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TabControl_CadCons.Location = New System.Drawing.Point(0, 0)
         Me.TabControl_CadCons.Name = "TabControl_CadCons"
         Me.TabControl_CadCons.SelectedIndex = 0
-        Me.TabControl_CadCons.Size = New System.Drawing.Size(772, 526)
+        Me.TabControl_CadCons.Size = New System.Drawing.Size(788, 565)
         Me.TabControl_CadCons.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty
         Me.TabControl_CadCons.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TabControl_CadCons.TabButtonHoverState.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!)
@@ -350,7 +353,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpInicio.Location = New System.Drawing.Point(4, 4)
         Me.TpInicio.Name = "TpInicio"
         Me.TpInicio.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpInicio.Size = New System.Drawing.Size(764, 493)
+        Me.TpInicio.Size = New System.Drawing.Size(780, 532)
         Me.TpInicio.TabIndex = 1
         Me.TpInicio.Text = "Inicio Cadastro"
         Me.TpInicio.UseVisualStyleBackColor = True
@@ -363,7 +366,7 @@ Partial Class FrmCadastros_Phonebook
         Me.ShPanel2.Controls.Add(Me.Lbl9)
         Me.SelectTransition.SetDecoration(Me.ShPanel2, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.ShPanel2.FillColor = System.Drawing.Color.LightGray
-        Me.ShPanel2.Location = New System.Drawing.Point(299, 99)
+        Me.ShPanel2.Location = New System.Drawing.Point(307, 99)
         Me.ShPanel2.Name = "ShPanel2"
         Me.ShPanel2.Radius = 4
         Me.ShPanel2.ShadowColor = System.Drawing.Color.Black
@@ -423,7 +426,7 @@ Partial Class FrmCadastros_Phonebook
         Me.ShPanel1.Controls.Add(Me.Lbl8)
         Me.SelectTransition.SetDecoration(Me.ShPanel1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.ShPanel1.FillColor = System.Drawing.Color.LightGray
-        Me.ShPanel1.Location = New System.Drawing.Point(81, 98)
+        Me.ShPanel1.Location = New System.Drawing.Point(89, 98)
         Me.ShPanel1.Name = "ShPanel1"
         Me.ShPanel1.Radius = 4
         Me.ShPanel1.ShadowColor = System.Drawing.Color.Black
@@ -483,7 +486,7 @@ Partial Class FrmCadastros_Phonebook
         Me.ShPanel3.Controls.Add(Me.Lbl10)
         Me.SelectTransition.SetDecoration(Me.ShPanel3, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.ShPanel3.FillColor = System.Drawing.Color.LightGray
-        Me.ShPanel3.Location = New System.Drawing.Point(517, 99)
+        Me.ShPanel3.Location = New System.Drawing.Point(525, 99)
         Me.ShPanel3.Name = "ShPanel3"
         Me.ShPanel3.Radius = 4
         Me.ShPanel3.ShadowColor = System.Drawing.Color.Black
@@ -543,7 +546,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.Lbl1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Lbl1.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Lbl1.Location = New System.Drawing.Point(15, 1)
+        Me.Lbl1.Location = New System.Drawing.Point(23, 1)
         Me.Lbl1.Name = "Lbl1"
         Me.Lbl1.Size = New System.Drawing.Size(734, 76)
         Me.Lbl1.TabIndex = 117
@@ -558,9 +561,9 @@ Partial Class FrmCadastros_Phonebook
         Me.Lbl2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Lbl2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl2.ForeColor = System.Drawing.Color.Black
-        Me.Lbl2.Location = New System.Drawing.Point(3, 405)
+        Me.Lbl2.Location = New System.Drawing.Point(3, 444)
         Me.Lbl2.Name = "Lbl2"
-        Me.Lbl2.Size = New System.Drawing.Size(758, 85)
+        Me.Lbl2.Size = New System.Drawing.Size(774, 85)
         Me.Lbl2.TabIndex = 116
         Me.Lbl2.Text = "<font color=DimGray>Em caso de duvidas contate nosso suporte</font><br>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<font co" &
     "lor=Blue>suporte@gscodebrasil.com.br</font>"
@@ -578,7 +581,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpConsulta.Location = New System.Drawing.Point(4, 4)
         Me.TpConsulta.Name = "TpConsulta"
         Me.TpConsulta.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpConsulta.Size = New System.Drawing.Size(764, 493)
+        Me.TpConsulta.Size = New System.Drawing.Size(780, 532)
         Me.TpConsulta.TabIndex = 8
         Me.TpConsulta.Text = "Inicio Consulta"
         '
@@ -590,7 +593,7 @@ Partial Class FrmCadastros_Phonebook
         Me.Guna2ShadowPanel1.Controls.Add(Me.Guna2HtmlLabel1)
         Me.SelectTransition.SetDecoration(Me.Guna2ShadowPanel1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.LightGray
-        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(299, 100)
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(307, 100)
         Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Me.Guna2ShadowPanel1.Radius = 4
         Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
@@ -649,7 +652,7 @@ Partial Class FrmCadastros_Phonebook
         Me.Guna2ShadowPanel2.Controls.Add(Me.Guna2HtmlLabel2)
         Me.SelectTransition.SetDecoration(Me.Guna2ShadowPanel2, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ShadowPanel2.FillColor = System.Drawing.Color.LightGray
-        Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(81, 99)
+        Me.Guna2ShadowPanel2.Location = New System.Drawing.Point(89, 99)
         Me.Guna2ShadowPanel2.Name = "Guna2ShadowPanel2"
         Me.Guna2ShadowPanel2.Radius = 4
         Me.Guna2ShadowPanel2.ShadowColor = System.Drawing.Color.Black
@@ -708,7 +711,7 @@ Partial Class FrmCadastros_Phonebook
         Me.Guna2ShadowPanel3.Controls.Add(Me.Guna2HtmlLabel3)
         Me.SelectTransition.SetDecoration(Me.Guna2ShadowPanel3, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ShadowPanel3.FillColor = System.Drawing.Color.LightGray
-        Me.Guna2ShadowPanel3.Location = New System.Drawing.Point(517, 100)
+        Me.Guna2ShadowPanel3.Location = New System.Drawing.Point(525, 100)
         Me.Guna2ShadowPanel3.Name = "Guna2ShadowPanel3"
         Me.Guna2ShadowPanel3.Radius = 4
         Me.Guna2ShadowPanel3.ShadowColor = System.Drawing.Color.Black
@@ -767,7 +770,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.Guna2HtmlLabel4, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(15, 2)
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(23, 2)
         Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(734, 76)
         Me.Guna2HtmlLabel4.TabIndex = 122
@@ -782,9 +785,9 @@ Partial Class FrmCadastros_Phonebook
         Me.Guna2HtmlLabel5.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(3, 405)
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(3, 444)
         Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
-        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(758, 85)
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(774, 85)
         Me.Guna2HtmlLabel5.TabIndex = 121
         Me.Guna2HtmlLabel5.Text = "<font color=DimGray>Em caso de duvidas contate nosso suporte</font><br>" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "<font co" &
     "lor=Blue>suporte@gscodebrasil.com.br</font>"
@@ -798,7 +801,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TPLista.Location = New System.Drawing.Point(4, 4)
         Me.TPLista.Name = "TPLista"
         Me.TPLista.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPLista.Size = New System.Drawing.Size(764, 493)
+        Me.TPLista.Size = New System.Drawing.Size(780, 532)
         Me.TPLista.TabIndex = 7
         Me.TPLista.Text = "Lista"
         '
@@ -821,7 +824,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TlpRegistros.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71.0!))
         Me.TlpRegistros.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TlpRegistros.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TlpRegistros.Size = New System.Drawing.Size(758, 487)
+        Me.TlpRegistros.Size = New System.Drawing.Size(774, 526)
         Me.TlpRegistros.TabIndex = 11
         '
         'PanelRegistros
@@ -833,7 +836,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelRegistros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelRegistros.Location = New System.Drawing.Point(28, 33)
         Me.PanelRegistros.Name = "PanelRegistros"
-        Me.PanelRegistros.Size = New System.Drawing.Size(702, 65)
+        Me.PanelRegistros.Size = New System.Drawing.Size(718, 65)
         Me.PanelRegistros.TabIndex = 8
         '
         'CbRegistrosPorPagina
@@ -857,7 +860,7 @@ Partial Class FrmCadastros_Phonebook
         Me.CbRegistrosPorPagina.ItemHeight = 30
         Me.CbRegistrosPorPagina.Items.AddRange(New Object() {"10", "20", "50", "150"})
         Me.CbRegistrosPorPagina.ItemsAppearance.Parent = Me.CbRegistrosPorPagina
-        Me.CbRegistrosPorPagina.Location = New System.Drawing.Point(611, 26)
+        Me.CbRegistrosPorPagina.Location = New System.Drawing.Point(627, 26)
         Me.CbRegistrosPorPagina.Name = "CbRegistrosPorPagina"
         Me.CbRegistrosPorPagina.ShadowDecoration.Parent = Me.CbRegistrosPorPagina
         Me.CbRegistrosPorPagina.Size = New System.Drawing.Size(87, 36)
@@ -917,7 +920,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelCentral.Location = New System.Drawing.Point(28, 104)
         Me.PanelCentral.Name = "PanelCentral"
         Me.PanelCentral.ShadowDecoration.Parent = Me.PanelCentral
-        Me.PanelCentral.Size = New System.Drawing.Size(702, 340)
+        Me.PanelCentral.Size = New System.Drawing.Size(718, 379)
         Me.PanelCentral.TabIndex = 9
         '
         'DgvRegistros
@@ -926,22 +929,22 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvRegistros.AllowUserToAddRows = False
         Me.DgvRegistros.AllowUserToDeleteRows = False
         Me.DgvRegistros.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        Me.DgvRegistros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle49.ForeColor = System.Drawing.Color.Black
+        Me.DgvRegistros.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle49
         Me.DgvRegistros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DgvRegistros.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvRegistros.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvRegistros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DgvRegistros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvRegistros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle50.BackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle50.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle50.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
+        DataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvRegistros.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle50
         Me.DgvRegistros.ColumnHeadersHeight = 40
         Me.DgvRegistros.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewCheckBoxColumn2})
         Me.DgvRegistros.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -963,14 +966,14 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvRegistros.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvRegistros.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.SelectTransition.SetDecoration(Me.DgvRegistros, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvRegistros.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle51.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle51.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle51.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle51.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvRegistros.DefaultCellStyle = DataGridViewCellStyle51
         Me.DgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvRegistros.EnableHeadersVisualStyles = False
         Me.DgvRegistros.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -980,18 +983,18 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvRegistros.Location = New System.Drawing.Point(0, 0)
         Me.DgvRegistros.MultiSelect = False
         Me.DgvRegistros.Name = "DgvRegistros"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvRegistros.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle52.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle52.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle52.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvRegistros.RowHeadersDefaultCellStyle = DataGridViewCellStyle52
         Me.DgvRegistros.RowHeadersVisible = False
         Me.DgvRegistros.RowTemplate.Height = 40
         Me.DgvRegistros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvRegistros.Size = New System.Drawing.Size(702, 307)
+        Me.DgvRegistros.Size = New System.Drawing.Size(718, 346)
         Me.DgvRegistros.TabIndex = 9
         Me.DgvRegistros.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -1014,10 +1017,10 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelPaginacao.Controls.Add(Me.BtnNext)
         Me.SelectTransition.SetDecoration(Me.PanelPaginacao, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelPaginacao.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelPaginacao.Location = New System.Drawing.Point(0, 307)
+        Me.PanelPaginacao.Location = New System.Drawing.Point(0, 346)
         Me.PanelPaginacao.Name = "PanelPaginacao"
         Me.PanelPaginacao.ShadowDecoration.Parent = Me.PanelPaginacao
-        Me.PanelPaginacao.Size = New System.Drawing.Size(702, 33)
+        Me.PanelPaginacao.Size = New System.Drawing.Size(718, 33)
         Me.PanelPaginacao.TabIndex = 10
         '
         'LblSelectRegister
@@ -1036,11 +1039,12 @@ Partial Class FrmCadastros_Phonebook
         '
         'LblPaginacao
         '
+        Me.LblPaginacao.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LblPaginacao.BackColor = System.Drawing.Color.Transparent
         Me.SelectTransition.SetDecoration(Me.LblPaginacao, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblPaginacao.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.LblPaginacao.ForeColor = System.Drawing.Color.DimGray
-        Me.LblPaginacao.Location = New System.Drawing.Point(272, 10)
+        Me.LblPaginacao.Location = New System.Drawing.Point(287, 10)
         Me.LblPaginacao.Name = "LblPaginacao"
         Me.LblPaginacao.Size = New System.Drawing.Size(144, 15)
         Me.LblPaginacao.TabIndex = 5
@@ -1069,7 +1073,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnPrevio.HoverState.Parent = Me.BtnPrevio
         Me.BtnPrevio.Image = CType(resources.GetObject("BtnPrevio.Image"), System.Drawing.Image)
         Me.BtnPrevio.ImageSize = New System.Drawing.Size(14, 14)
-        Me.BtnPrevio.Location = New System.Drawing.Point(619, 4)
+        Me.BtnPrevio.Location = New System.Drawing.Point(635, 4)
         Me.BtnPrevio.Name = "BtnPrevio"
         Me.BtnPrevio.ShadowDecoration.Parent = Me.BtnPrevio
         Me.BtnPrevio.Size = New System.Drawing.Size(40, 25)
@@ -1097,7 +1101,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnNext.HoverState.Parent = Me.BtnNext
         Me.BtnNext.Image = CType(resources.GetObject("BtnNext.Image"), System.Drawing.Image)
         Me.BtnNext.ImageSize = New System.Drawing.Size(14, 14)
-        Me.BtnNext.Location = New System.Drawing.Point(660, 4)
+        Me.BtnNext.Location = New System.Drawing.Point(676, 4)
         Me.BtnNext.Name = "BtnNext"
         Me.BtnNext.ShadowDecoration.Parent = Me.BtnNext
         Me.BtnNext.Size = New System.Drawing.Size(40, 25)
@@ -1117,14 +1121,14 @@ Partial Class FrmCadastros_Phonebook
         Me.VoltarMenu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.VoltarMenu.DisabledState.Parent = Me.VoltarMenu
         Me.VoltarMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.VoltarMenu.FillColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.VoltarMenu.FillColor = System.Drawing.Color.SlateGray
         Me.VoltarMenu.FillColor2 = System.Drawing.Color.Black
         Me.VoltarMenu.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.VoltarMenu.ForeColor = System.Drawing.Color.White
         Me.VoltarMenu.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.VoltarMenu.HoverState.Parent = Me.VoltarMenu
         Me.VoltarMenu.ImageSize = New System.Drawing.Size(18, 18)
-        Me.VoltarMenu.Location = New System.Drawing.Point(28, 450)
+        Me.VoltarMenu.Location = New System.Drawing.Point(28, 489)
         Me.VoltarMenu.Name = "VoltarMenu"
         Me.VoltarMenu.ShadowDecoration.Parent = Me.VoltarMenu
         Me.VoltarMenu.Size = New System.Drawing.Size(124, 34)
@@ -1141,7 +1145,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpPerfil.Location = New System.Drawing.Point(4, 4)
         Me.TpPerfil.Name = "TpPerfil"
         Me.TpPerfil.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpPerfil.Size = New System.Drawing.Size(764, 493)
+        Me.TpPerfil.Size = New System.Drawing.Size(780, 532)
         Me.TpPerfil.TabIndex = 5
         Me.TpPerfil.Text = "Perfil"
         '
@@ -1160,7 +1164,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TlpPerfil.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TlpPerfil.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TlpPerfil.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TlpPerfil.Size = New System.Drawing.Size(741, 891)
+        Me.TlpPerfil.Size = New System.Drawing.Size(757, 891)
         Me.TlpPerfil.TabIndex = 2
         '
         'PanelPerfil
@@ -1178,7 +1182,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelPerfil.Location = New System.Drawing.Point(28, 33)
         Me.PanelPerfil.Name = "PanelPerfil"
         Me.PanelPerfil.ShadowDecoration.Parent = Me.PanelPerfil
-        Me.PanelPerfil.Size = New System.Drawing.Size(685, 825)
+        Me.PanelPerfil.Size = New System.Drawing.Size(701, 825)
         Me.PanelPerfil.TabIndex = 0
         '
         'BtnVoltarLista
@@ -1195,14 +1199,14 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnVoltarLista.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BtnVoltarLista.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.BtnVoltarLista.DisabledState.Parent = Me.BtnVoltarLista
-        Me.BtnVoltarLista.FillColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.BtnVoltarLista.FillColor = System.Drawing.Color.SlateGray
         Me.BtnVoltarLista.FillColor2 = System.Drawing.Color.Black
         Me.BtnVoltarLista.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnVoltarLista.ForeColor = System.Drawing.Color.White
         Me.BtnVoltarLista.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnVoltarLista.HoverState.Parent = Me.BtnVoltarLista
         Me.BtnVoltarLista.ImageSize = New System.Drawing.Size(18, 18)
-        Me.BtnVoltarLista.Location = New System.Drawing.Point(21, 772)
+        Me.BtnVoltarLista.Location = New System.Drawing.Point(47, 772)
         Me.BtnVoltarLista.Name = "BtnVoltarLista"
         Me.BtnVoltarLista.ShadowDecoration.Parent = Me.BtnVoltarLista
         Me.BtnVoltarLista.Size = New System.Drawing.Size(124, 33)
@@ -1217,11 +1221,12 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblId_Interno, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblId_Interno.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblId_Interno.ForeColor = System.Drawing.Color.Black
-        Me.LblId_Interno.Location = New System.Drawing.Point(39, 271)
+        Me.LblId_Interno.Location = New System.Drawing.Point(47, 271)
         Me.LblId_Interno.Name = "LblId_Interno"
         Me.LblId_Interno.Size = New System.Drawing.Size(607, 21)
         Me.LblId_Interno.TabIndex = 267
         Me.LblId_Interno.Text = "..."
+        Me.LblId_Interno.TextAlignment = System.Drawing.ContentAlignment.BottomLeft
         '
         'BtnAnexo
         '
@@ -1246,7 +1251,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnAnexo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.BtnAnexo.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnAnexo.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnAnexo.Location = New System.Drawing.Point(39, 220)
+        Me.BtnAnexo.Location = New System.Drawing.Point(47, 220)
         Me.BtnAnexo.Name = "BtnAnexo"
         Me.BtnAnexo.ShadowDecoration.Parent = Me.BtnAnexo
         Me.BtnAnexo.Size = New System.Drawing.Size(165, 35)
@@ -1277,7 +1282,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnDeletar.Image = CType(resources.GetObject("BtnDeletar.Image"), System.Drawing.Image)
         Me.BtnDeletar.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnDeletar.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnDeletar.Location = New System.Drawing.Point(617, 758)
+        Me.BtnDeletar.Location = New System.Drawing.Point(599, 751)
         Me.BtnDeletar.Name = "BtnDeletar"
         Me.BtnDeletar.ShadowDecoration.Parent = Me.BtnDeletar
         Me.BtnDeletar.Size = New System.Drawing.Size(55, 55)
@@ -1306,7 +1311,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnEditar.Image = CType(resources.GetObject("BtnEditar.Image"), System.Drawing.Image)
         Me.BtnEditar.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnEditar.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnEditar.Location = New System.Drawing.Point(554, 758)
+        Me.BtnEditar.Location = New System.Drawing.Point(536, 751)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.ShadowDecoration.Parent = Me.BtnEditar
         Me.BtnEditar.Size = New System.Drawing.Size(55, 55)
@@ -1318,9 +1323,9 @@ Partial Class FrmCadastros_Phonebook
         Me.LblNome.AutoSize = False
         Me.LblNome.BackColor = System.Drawing.Color.Transparent
         Me.SelectTransition.SetDecoration(Me.LblNome, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblNome.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNome.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNome.ForeColor = System.Drawing.Color.Black
-        Me.LblNome.Location = New System.Drawing.Point(39, 165)
+        Me.LblNome.Location = New System.Drawing.Point(47, 165)
         Me.LblNome.Name = "LblNome"
         Me.LblNome.Size = New System.Drawing.Size(607, 21)
         Me.LblNome.TabIndex = 192
@@ -1335,7 +1340,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblInformacoes, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblInformacoes.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInformacoes.ForeColor = System.Drawing.Color.Black
-        Me.LblInformacoes.Location = New System.Drawing.Point(39, 295)
+        Me.LblInformacoes.Location = New System.Drawing.Point(47, 295)
         Me.LblInformacoes.Name = "LblInformacoes"
         Me.LblInformacoes.Size = New System.Drawing.Size(607, 450)
         Me.LblInformacoes.TabIndex = 190
@@ -1352,7 +1357,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.ImgPerfil, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.ImgPerfil.Image = CType(resources.GetObject("ImgPerfil.Image"), System.Drawing.Image)
         Me.ImgPerfil.IsCircle = True
-        Me.ImgPerfil.Location = New System.Drawing.Point(277, 16)
+        Me.ImgPerfil.Location = New System.Drawing.Point(285, 16)
         Me.ImgPerfil.Name = "ImgPerfil"
         Me.ImgPerfil.Size = New System.Drawing.Size(130, 130)
         Me.ImgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -1369,7 +1374,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpClientes.Location = New System.Drawing.Point(4, 4)
         Me.TpClientes.Name = "TpClientes"
         Me.TpClientes.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpClientes.Size = New System.Drawing.Size(764, 493)
+        Me.TpClientes.Size = New System.Drawing.Size(780, 532)
         Me.TpClientes.TabIndex = 0
         Me.TpClientes.Text = "Clientes"
         '
@@ -1384,7 +1389,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelClientes.Location = New System.Drawing.Point(3, 3)
         Me.PanelClientes.Name = "PanelClientes"
         Me.PanelClientes.ShadowDecoration.Parent = Me.PanelClientes
-        Me.PanelClientes.Size = New System.Drawing.Size(741, 1019)
+        Me.PanelClientes.Size = New System.Drawing.Size(757, 1019)
         Me.PanelClientes.TabIndex = 1
         '
         'PanelSalvarCancelar_Cliente
@@ -1396,7 +1401,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelSalvarCancelar_Cliente.Location = New System.Drawing.Point(0, 932)
         Me.PanelSalvarCancelar_Cliente.Name = "PanelSalvarCancelar_Cliente"
         Me.PanelSalvarCancelar_Cliente.ShadowDecoration.Parent = Me.PanelSalvarCancelar_Cliente
-        Me.PanelSalvarCancelar_Cliente.Size = New System.Drawing.Size(741, 87)
+        Me.PanelSalvarCancelar_Cliente.Size = New System.Drawing.Size(757, 87)
         Me.PanelSalvarCancelar_Cliente.TabIndex = 238
         '
         'BtnCancelar_Cliente
@@ -1418,7 +1423,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnCancelar_Cliente.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar_Cliente.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnCancelar_Cliente.HoverState.Parent = Me.BtnCancelar_Cliente
-        Me.BtnCancelar_Cliente.Location = New System.Drawing.Point(243, 30)
+        Me.BtnCancelar_Cliente.Location = New System.Drawing.Point(251, 30)
         Me.BtnCancelar_Cliente.Name = "BtnCancelar_Cliente"
         Me.BtnCancelar_Cliente.ShadowDecoration.Parent = Me.BtnCancelar_Cliente
         Me.BtnCancelar_Cliente.Size = New System.Drawing.Size(124, 38)
@@ -1443,7 +1448,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnSalvar_Cliente.ForeColor = System.Drawing.Color.White
         Me.BtnSalvar_Cliente.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnSalvar_Cliente.HoverState.Parent = Me.BtnSalvar_Cliente
-        Me.BtnSalvar_Cliente.Location = New System.Drawing.Point(374, 30)
+        Me.BtnSalvar_Cliente.Location = New System.Drawing.Point(382, 30)
         Me.BtnSalvar_Cliente.Name = "BtnSalvar_Cliente"
         Me.BtnSalvar_Cliente.ShadowDecoration.Parent = Me.BtnSalvar_Cliente
         Me.BtnSalvar_Cliente.Size = New System.Drawing.Size(124, 38)
@@ -1458,7 +1463,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInfoComplementar_Cliente.Location = New System.Drawing.Point(0, 637)
         Me.PanelInfoComplementar_Cliente.Name = "PanelInfoComplementar_Cliente"
         Me.PanelInfoComplementar_Cliente.ShadowDecoration.Parent = Me.PanelInfoComplementar_Cliente
-        Me.PanelInfoComplementar_Cliente.Size = New System.Drawing.Size(741, 295)
+        Me.PanelInfoComplementar_Cliente.Size = New System.Drawing.Size(757, 295)
         Me.PanelInfoComplementar_Cliente.TabIndex = 240
         Me.PanelInfoComplementar_Cliente.Visible = False
         '
@@ -1487,7 +1492,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtInfoComplementar_Cliente.HoverState.Parent = Me.TxtInfoComplementar_Cliente
         Me.TxtInfoComplementar_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtInfoComplementar_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtInfoComplementar_Cliente.Location = New System.Drawing.Point(42, 28)
+        Me.TxtInfoComplementar_Cliente.Location = New System.Drawing.Point(50, 28)
         Me.TxtInfoComplementar_Cliente.Multiline = True
         Me.TxtInfoComplementar_Cliente.Name = "TxtInfoComplementar_Cliente"
         Me.TxtInfoComplementar_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1502,6 +1507,7 @@ Partial Class FrmCadastros_Phonebook
         '
         'PanelInformacoes_Cliente
         '
+        Me.PanelInformacoes_Cliente.Controls.Add(Me.LblIdInterno_Cliente)
         Me.PanelInformacoes_Cliente.Controls.Add(Me.LblEmail_Cliente)
         Me.PanelInformacoes_Cliente.Controls.Add(Me.TxtEmail_Cliente)
         Me.PanelInformacoes_Cliente.Controls.Add(Me.LblGenero_Cliente)
@@ -1540,8 +1546,22 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInformacoes_Cliente.Location = New System.Drawing.Point(0, 0)
         Me.PanelInformacoes_Cliente.Name = "PanelInformacoes_Cliente"
         Me.PanelInformacoes_Cliente.ShadowDecoration.Parent = Me.PanelInformacoes_Cliente
-        Me.PanelInformacoes_Cliente.Size = New System.Drawing.Size(741, 637)
+        Me.PanelInformacoes_Cliente.Size = New System.Drawing.Size(757, 637)
         Me.PanelInformacoes_Cliente.TabIndex = 237
+        '
+        'LblIdInterno_Cliente
+        '
+        Me.LblIdInterno_Cliente.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LblIdInterno_Cliente.BackColor = System.Drawing.Color.Transparent
+        Me.SelectTransition.SetDecoration(Me.LblIdInterno_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblIdInterno_Cliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblIdInterno_Cliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LblIdInterno_Cliente.Location = New System.Drawing.Point(698, 31)
+        Me.LblIdInterno_Cliente.Name = "LblIdInterno_Cliente"
+        Me.LblIdInterno_Cliente.Size = New System.Drawing.Size(12, 15)
+        Me.LblIdInterno_Cliente.TabIndex = 274
+        Me.LblIdInterno_Cliente.Text = "..."
+        Me.LblIdInterno_Cliente.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'LblEmail_Cliente
         '
@@ -1551,7 +1571,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblEmail_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEmail_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblEmail_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblEmail_Cliente.Location = New System.Drawing.Point(217, 159)
+        Me.LblEmail_Cliente.Location = New System.Drawing.Point(225, 159)
         Me.LblEmail_Cliente.Name = "LblEmail_Cliente"
         Me.LblEmail_Cliente.Size = New System.Drawing.Size(49, 15)
         Me.LblEmail_Cliente.TabIndex = 273
@@ -1566,6 +1586,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEmail_Cliente.BorderColor = System.Drawing.Color.Gray
         Me.TxtEmail_Cliente.BorderRadius = 6
         Me.TxtEmail_Cliente.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.TxtEmail_Cliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TxtEmail_Cliente.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.SelectTransition.SetDecoration(Me.TxtEmail_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TxtEmail_Cliente.DefaultText = ""
@@ -1583,12 +1604,13 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEmail_Cliente.HoverState.Parent = Me.TxtEmail_Cliente
         Me.TxtEmail_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtEmail_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtEmail_Cliente.Location = New System.Drawing.Point(216, 178)
+        Me.TxtEmail_Cliente.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtEmail_Cliente.Location = New System.Drawing.Point(224, 178)
         Me.TxtEmail_Cliente.MaxLength = 200
         Me.TxtEmail_Cliente.Name = "TxtEmail_Cliente"
         Me.TxtEmail_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtEmail_Cliente.PlaceholderForeColor = System.Drawing.Color.Gray
-        Me.TxtEmail_Cliente.PlaceholderText = "E-mail *"
+        Me.TxtEmail_Cliente.PlaceholderText = "e-mail *"
         Me.TxtEmail_Cliente.SelectedText = ""
         Me.TxtEmail_Cliente.ShadowDecoration.Parent = Me.TxtEmail_Cliente
         Me.TxtEmail_Cliente.Size = New System.Drawing.Size(486, 36)
@@ -1604,7 +1626,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblGenero_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblGenero_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblGenero_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblGenero_Cliente.Location = New System.Drawing.Point(41, 159)
+        Me.LblGenero_Cliente.Location = New System.Drawing.Point(49, 159)
         Me.LblGenero_Cliente.Name = "LblGenero_Cliente"
         Me.LblGenero_Cliente.Size = New System.Drawing.Size(53, 15)
         Me.LblGenero_Cliente.TabIndex = 271
@@ -1631,7 +1653,7 @@ Partial Class FrmCadastros_Phonebook
         Me.CbGenero_Cliente.ItemHeight = 30
         Me.CbGenero_Cliente.Items.AddRange(New Object() {"Feminino", "Masculino", "Personalizado"})
         Me.CbGenero_Cliente.ItemsAppearance.Parent = Me.CbGenero_Cliente
-        Me.CbGenero_Cliente.Location = New System.Drawing.Point(40, 178)
+        Me.CbGenero_Cliente.Location = New System.Drawing.Point(48, 178)
         Me.CbGenero_Cliente.MaxLength = 20
         Me.CbGenero_Cliente.Name = "CbGenero_Cliente"
         Me.CbGenero_Cliente.ShadowDecoration.Parent = Me.CbGenero_Cliente
@@ -1649,7 +1671,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblNSerie_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNSerie_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblNSerie_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblNSerie_Cliente.Location = New System.Drawing.Point(462, 505)
+        Me.LblNSerie_Cliente.Location = New System.Drawing.Point(470, 505)
         Me.LblNSerie_Cliente.Name = "LblNSerie_Cliente"
         Me.LblNSerie_Cliente.Size = New System.Drawing.Size(64, 15)
         Me.LblNSerie_Cliente.TabIndex = 264
@@ -1681,7 +1703,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtNSerie_Cliente.HoverState.Parent = Me.TxtNSerie_Cliente
         Me.TxtNSerie_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtNSerie_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtNSerie_Cliente.Location = New System.Drawing.Point(461, 524)
+        Me.TxtNSerie_Cliente.Location = New System.Drawing.Point(469, 524)
         Me.TxtNSerie_Cliente.MaxLength = 80
         Me.TxtNSerie_Cliente.Name = "TxtNSerie_Cliente"
         Me.TxtNSerie_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1702,7 +1724,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblEquipamento_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEquipamento_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblEquipamento_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblEquipamento_Cliente.Location = New System.Drawing.Point(221, 505)
+        Me.LblEquipamento_Cliente.Location = New System.Drawing.Point(229, 505)
         Me.LblEquipamento_Cliente.Name = "LblEquipamento_Cliente"
         Me.LblEquipamento_Cliente.Size = New System.Drawing.Size(86, 15)
         Me.LblEquipamento_Cliente.TabIndex = 262
@@ -1734,7 +1756,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEquipamento_Cliente.HoverState.Parent = Me.TxtEquipamento_Cliente
         Me.TxtEquipamento_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtEquipamento_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtEquipamento_Cliente.Location = New System.Drawing.Point(220, 524)
+        Me.TxtEquipamento_Cliente.Location = New System.Drawing.Point(228, 524)
         Me.TxtEquipamento_Cliente.MaxLength = 150
         Me.TxtEquipamento_Cliente.Name = "TxtEquipamento_Cliente"
         Me.TxtEquipamento_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1767,7 +1789,7 @@ Partial Class FrmCadastros_Phonebook
         Me.CbCondicao_Cliente.ItemHeight = 30
         Me.CbCondicao_Cliente.Items.AddRange(New Object() {"Sem contrato", "Com contrato"})
         Me.CbCondicao_Cliente.ItemsAppearance.Parent = Me.CbCondicao_Cliente
-        Me.CbCondicao_Cliente.Location = New System.Drawing.Point(42, 524)
+        Me.CbCondicao_Cliente.Location = New System.Drawing.Point(50, 524)
         Me.CbCondicao_Cliente.MaxLength = 20
         Me.CbCondicao_Cliente.Name = "CbCondicao_Cliente"
         Me.CbCondicao_Cliente.ShadowDecoration.Parent = Me.CbCondicao_Cliente
@@ -1784,7 +1806,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblInfoGerais_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblInfoGerais_Cliente.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInfoGerais_Cliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LblInfoGerais_Cliente.Location = New System.Drawing.Point(42, 448)
+        Me.LblInfoGerais_Cliente.Location = New System.Drawing.Point(50, 448)
         Me.LblInfoGerais_Cliente.Name = "LblInfoGerais_Cliente"
         Me.LblInfoGerais_Cliente.Size = New System.Drawing.Size(172, 21)
         Me.LblInfoGerais_Cliente.TabIndex = 259
@@ -1797,11 +1819,11 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblInfoPerfil_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblInfoPerfil_Cliente.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInfoPerfil_Cliente.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LblInfoPerfil_Cliente.Location = New System.Drawing.Point(38, 25)
+        Me.LblInfoPerfil_Cliente.Location = New System.Drawing.Point(46, 25)
         Me.LblInfoPerfil_Cliente.Name = "LblInfoPerfil_Cliente"
-        Me.LblInfoPerfil_Cliente.Size = New System.Drawing.Size(192, 21)
+        Me.LblInfoPerfil_Cliente.Size = New System.Drawing.Size(287, 21)
         Me.LblInfoPerfil_Cliente.TabIndex = 258
-        Me.LblInfoPerfil_Cliente.Text = "INFORMÇÕES DE PERFIL"
+        Me.LblInfoPerfil_Cliente.Text = "INFORMÇÕES DE PERFIL DO CLIENTE"
         '
         'LblCondicao_Cliente
         '
@@ -1811,7 +1833,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCondicao_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCondicao_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCondicao_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblCondicao_Cliente.Location = New System.Drawing.Point(43, 505)
+        Me.LblCondicao_Cliente.Location = New System.Drawing.Point(51, 505)
         Me.LblCondicao_Cliente.Name = "LblCondicao_Cliente"
         Me.LblCondicao_Cliente.Size = New System.Drawing.Size(123, 15)
         Me.LblCondicao_Cliente.TabIndex = 257
@@ -1825,7 +1847,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCelular_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCelular_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCelular_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblCelular_Cliente.Location = New System.Drawing.Point(475, 228)
+        Me.LblCelular_Cliente.Location = New System.Drawing.Point(483, 228)
         Me.LblCelular_Cliente.Name = "LblCelular_Cliente"
         Me.LblCelular_Cliente.Size = New System.Drawing.Size(44, 15)
         Me.LblCelular_Cliente.TabIndex = 256
@@ -1859,7 +1881,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCelular_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCelular_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtCelular_Cliente.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtCelular_Cliente.Location = New System.Drawing.Point(474, 246)
+        Me.TxtCelular_Cliente.Location = New System.Drawing.Point(482, 246)
         Me.TxtCelular_Cliente.MaxLength = 20
         Me.TxtCelular_Cliente.Name = "TxtCelular_Cliente"
         Me.TxtCelular_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1880,7 +1902,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblContatoPrincipal_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblContatoPrincipal_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblContatoPrincipal_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblContatoPrincipal_Cliente.Location = New System.Drawing.Point(43, 228)
+        Me.LblContatoPrincipal_Cliente.Location = New System.Drawing.Point(51, 228)
         Me.LblContatoPrincipal_Cliente.Name = "LblContatoPrincipal_Cliente"
         Me.LblContatoPrincipal_Cliente.Size = New System.Drawing.Size(107, 15)
         Me.LblContatoPrincipal_Cliente.TabIndex = 254
@@ -1913,7 +1935,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtContatoPrincipal_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtContatoPrincipal_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtContatoPrincipal_Cliente.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtContatoPrincipal_Cliente.Location = New System.Drawing.Point(42, 246)
+        Me.TxtContatoPrincipal_Cliente.Location = New System.Drawing.Point(50, 246)
         Me.TxtContatoPrincipal_Cliente.MaxLength = 20
         Me.TxtContatoPrincipal_Cliente.Name = "TxtContatoPrincipal_Cliente"
         Me.TxtContatoPrincipal_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1934,7 +1956,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblUF_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblUF_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblUF_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblUF_Cliente.Location = New System.Drawing.Point(617, 361)
+        Me.LblUF_Cliente.Location = New System.Drawing.Point(625, 361)
         Me.LblUF_Cliente.Name = "LblUF_Cliente"
         Me.LblUF_Cliente.Size = New System.Drawing.Size(21, 15)
         Me.LblUF_Cliente.TabIndex = 252
@@ -1949,7 +1971,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCidade_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCidade_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCidade_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblCidade_Cliente.Location = New System.Drawing.Point(268, 361)
+        Me.LblCidade_Cliente.Location = New System.Drawing.Point(276, 361)
         Me.LblCidade_Cliente.Name = "LblCidade_Cliente"
         Me.LblCidade_Cliente.Size = New System.Drawing.Size(44, 15)
         Me.LblCidade_Cliente.TabIndex = 251
@@ -1964,7 +1986,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblComplemento_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblComplemento_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblComplemento_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblComplemento_Cliente.Location = New System.Drawing.Point(43, 361)
+        Me.LblComplemento_Cliente.Location = New System.Drawing.Point(51, 361)
         Me.LblComplemento_Cliente.Name = "LblComplemento_Cliente"
         Me.LblComplemento_Cliente.Size = New System.Drawing.Size(84, 15)
         Me.LblComplemento_Cliente.TabIndex = 250
@@ -1979,7 +2001,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblContatoSecundario_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblContatoSecundario_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblContatoSecundario_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblContatoSecundario_Cliente.Location = New System.Drawing.Point(259, 228)
+        Me.LblContatoSecundario_Cliente.Location = New System.Drawing.Point(267, 228)
         Me.LblContatoSecundario_Cliente.Name = "LblContatoSecundario_Cliente"
         Me.LblContatoSecundario_Cliente.Size = New System.Drawing.Size(111, 15)
         Me.LblContatoSecundario_Cliente.TabIndex = 249
@@ -1994,7 +2016,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblEndereco_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEndereco_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblEndereco_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblEndereco_Cliente.Location = New System.Drawing.Point(178, 294)
+        Me.LblEndereco_Cliente.Location = New System.Drawing.Point(186, 294)
         Me.LblEndereco_Cliente.Name = "LblEndereco_Cliente"
         Me.LblEndereco_Cliente.Size = New System.Drawing.Size(56, 15)
         Me.LblEndereco_Cliente.TabIndex = 248
@@ -2009,7 +2031,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCEP_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCEP_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCEP_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblCEP_Cliente.Location = New System.Drawing.Point(43, 294)
+        Me.LblCEP_Cliente.Location = New System.Drawing.Point(51, 294)
         Me.LblCEP_Cliente.Name = "LblCEP_Cliente"
         Me.LblCEP_Cliente.Size = New System.Drawing.Size(28, 15)
         Me.LblCEP_Cliente.TabIndex = 247
@@ -2024,7 +2046,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblNome_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNome_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblNome_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblNome_Cliente.Location = New System.Drawing.Point(237, 88)
+        Me.LblNome_Cliente.Location = New System.Drawing.Point(245, 88)
         Me.LblNome_Cliente.Name = "LblNome_Cliente"
         Me.LblNome_Cliente.Size = New System.Drawing.Size(48, 15)
         Me.LblNome_Cliente.TabIndex = 246
@@ -2039,7 +2061,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCPFouCNPJ_Cliente, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCPFouCNPJ_Cliente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCPFouCNPJ_Cliente.ForeColor = System.Drawing.Color.Black
-        Me.LblCPFouCNPJ_Cliente.Location = New System.Drawing.Point(43, 89)
+        Me.LblCPFouCNPJ_Cliente.Location = New System.Drawing.Point(51, 89)
         Me.LblCPFouCNPJ_Cliente.Name = "LblCPFouCNPJ_Cliente"
         Me.LblCPFouCNPJ_Cliente.Size = New System.Drawing.Size(83, 15)
         Me.LblCPFouCNPJ_Cliente.TabIndex = 245
@@ -2071,7 +2093,8 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtNome_Cliente.HoverState.Parent = Me.TxtNome_Cliente
         Me.TxtNome_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtNome_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtNome_Cliente.Location = New System.Drawing.Point(236, 107)
+        Me.TxtNome_Cliente.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtNome_Cliente.Location = New System.Drawing.Point(244, 107)
         Me.TxtNome_Cliente.MaxLength = 500
         Me.TxtNome_Cliente.Name = "TxtNome_Cliente"
         Me.TxtNome_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2110,7 +2133,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCPFouCNPJ_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCPFouCNPJ_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtCPFouCNPJ_Cliente.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtCPFouCNPJ_Cliente.Location = New System.Drawing.Point(42, 107)
+        Me.TxtCPFouCNPJ_Cliente.Location = New System.Drawing.Point(50, 107)
         Me.TxtCPFouCNPJ_Cliente.MaxLength = 2000
         Me.TxtCPFouCNPJ_Cliente.Name = "TxtCPFouCNPJ_Cliente"
         Me.TxtCPFouCNPJ_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2149,7 +2172,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtContatoSecundario_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtContatoSecundario_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtContatoSecundario_Cliente.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtContatoSecundario_Cliente.Location = New System.Drawing.Point(258, 246)
+        Me.TxtContatoSecundario_Cliente.Location = New System.Drawing.Point(266, 246)
         Me.TxtContatoSecundario_Cliente.MaxLength = 20
         Me.TxtContatoSecundario_Cliente.Name = "TxtContatoSecundario_Cliente"
         Me.TxtContatoSecundario_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2187,7 +2210,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEndereco_Cliente.HoverState.Parent = Me.TxtEndereco_Cliente
         Me.TxtEndereco_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtEndereco_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtEndereco_Cliente.Location = New System.Drawing.Point(181, 313)
+        Me.TxtEndereco_Cliente.Location = New System.Drawing.Point(189, 313)
         Me.TxtEndereco_Cliente.MaxLength = 500
         Me.TxtEndereco_Cliente.Name = "TxtEndereco_Cliente"
         Me.TxtEndereco_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2227,7 +2250,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCEP_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtCEP_Cliente.IconRightOffset = New System.Drawing.Point(5, 0)
         Me.TxtCEP_Cliente.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtCEP_Cliente.Location = New System.Drawing.Point(42, 313)
+        Me.TxtCEP_Cliente.Location = New System.Drawing.Point(50, 313)
         Me.TxtCEP_Cliente.MaxLength = 10
         Me.TxtCEP_Cliente.Name = "TxtCEP_Cliente"
         Me.TxtCEP_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2265,7 +2288,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtComplemento_Cliente.HoverState.Parent = Me.TxtComplemento_Cliente
         Me.TxtComplemento_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtComplemento_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtComplemento_Cliente.Location = New System.Drawing.Point(42, 380)
+        Me.TxtComplemento_Cliente.Location = New System.Drawing.Point(50, 380)
         Me.TxtComplemento_Cliente.MaxLength = 200
         Me.TxtComplemento_Cliente.Name = "TxtComplemento_Cliente"
         Me.TxtComplemento_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2303,7 +2326,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCidade_Cliente.HoverState.Parent = Me.TxtCidade_Cliente
         Me.TxtCidade_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCidade_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtCidade_Cliente.Location = New System.Drawing.Point(267, 380)
+        Me.TxtCidade_Cliente.Location = New System.Drawing.Point(275, 380)
         Me.TxtCidade_Cliente.MaxLength = 50
         Me.TxtCidade_Cliente.Name = "TxtCidade_Cliente"
         Me.TxtCidade_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2342,7 +2365,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtUF_Cliente.HoverState.Parent = Me.TxtUF_Cliente
         Me.TxtUF_Cliente.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtUF_Cliente.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtUF_Cliente.Location = New System.Drawing.Point(616, 380)
+        Me.TxtUF_Cliente.Location = New System.Drawing.Point(624, 380)
         Me.TxtUF_Cliente.MaxLength = 2
         Me.TxtUF_Cliente.Name = "TxtUF_Cliente"
         Me.TxtUF_Cliente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2379,7 +2402,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnInfoComplementar_Cliente.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.BtnInfoComplementar_Cliente.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnInfoComplementar_Cliente.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnInfoComplementar_Cliente.Location = New System.Drawing.Point(50, 576)
+        Me.BtnInfoComplementar_Cliente.Location = New System.Drawing.Point(58, 576)
         Me.BtnInfoComplementar_Cliente.Name = "BtnInfoComplementar_Cliente"
         Me.BtnInfoComplementar_Cliente.ShadowDecoration.Parent = Me.BtnInfoComplementar_Cliente
         Me.BtnInfoComplementar_Cliente.Size = New System.Drawing.Size(255, 35)
@@ -2396,7 +2419,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpColaborador.Location = New System.Drawing.Point(4, 4)
         Me.TpColaborador.Name = "TpColaborador"
         Me.TpColaborador.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpColaborador.Size = New System.Drawing.Size(764, 493)
+        Me.TpColaborador.Size = New System.Drawing.Size(780, 532)
         Me.TpColaborador.TabIndex = 2
         Me.TpColaborador.Text = "Colaborador"
         '
@@ -2411,7 +2434,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelColaborador.Location = New System.Drawing.Point(3, 3)
         Me.PanelColaborador.Name = "PanelColaborador"
         Me.PanelColaborador.ShadowDecoration.Parent = Me.PanelColaborador
-        Me.PanelColaborador.Size = New System.Drawing.Size(741, 875)
+        Me.PanelColaborador.Size = New System.Drawing.Size(757, 875)
         Me.PanelColaborador.TabIndex = 2
         '
         'PanelSalvarCancelar_Colaborador
@@ -2423,7 +2446,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelSalvarCancelar_Colaborador.Location = New System.Drawing.Point(0, 788)
         Me.PanelSalvarCancelar_Colaborador.Name = "PanelSalvarCancelar_Colaborador"
         Me.PanelSalvarCancelar_Colaborador.ShadowDecoration.Parent = Me.PanelSalvarCancelar_Colaborador
-        Me.PanelSalvarCancelar_Colaborador.Size = New System.Drawing.Size(741, 87)
+        Me.PanelSalvarCancelar_Colaborador.Size = New System.Drawing.Size(757, 87)
         Me.PanelSalvarCancelar_Colaborador.TabIndex = 238
         '
         'BtnCancelar_Colaborador
@@ -2445,7 +2468,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnCancelar_Colaborador.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar_Colaborador.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnCancelar_Colaborador.HoverState.Parent = Me.BtnCancelar_Colaborador
-        Me.BtnCancelar_Colaborador.Location = New System.Drawing.Point(243, 30)
+        Me.BtnCancelar_Colaborador.Location = New System.Drawing.Point(251, 30)
         Me.BtnCancelar_Colaborador.Name = "BtnCancelar_Colaborador"
         Me.BtnCancelar_Colaborador.ShadowDecoration.Parent = Me.BtnCancelar_Colaborador
         Me.BtnCancelar_Colaborador.Size = New System.Drawing.Size(124, 38)
@@ -2470,7 +2493,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnSalvar_Colaborador.ForeColor = System.Drawing.Color.White
         Me.BtnSalvar_Colaborador.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnSalvar_Colaborador.HoverState.Parent = Me.BtnSalvar_Colaborador
-        Me.BtnSalvar_Colaborador.Location = New System.Drawing.Point(374, 30)
+        Me.BtnSalvar_Colaborador.Location = New System.Drawing.Point(382, 30)
         Me.BtnSalvar_Colaborador.Name = "BtnSalvar_Colaborador"
         Me.BtnSalvar_Colaborador.ShadowDecoration.Parent = Me.BtnSalvar_Colaborador
         Me.BtnSalvar_Colaborador.Size = New System.Drawing.Size(124, 38)
@@ -2485,7 +2508,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInfoComplementar_Colaborador.Location = New System.Drawing.Point(0, 493)
         Me.PanelInfoComplementar_Colaborador.Name = "PanelInfoComplementar_Colaborador"
         Me.PanelInfoComplementar_Colaborador.ShadowDecoration.Parent = Me.PanelInfoComplementar_Colaborador
-        Me.PanelInfoComplementar_Colaborador.Size = New System.Drawing.Size(741, 295)
+        Me.PanelInfoComplementar_Colaborador.Size = New System.Drawing.Size(757, 295)
         Me.PanelInfoComplementar_Colaborador.TabIndex = 240
         Me.PanelInfoComplementar_Colaborador.Visible = False
         '
@@ -2514,7 +2537,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtInfoComplementar_Colaborador.HoverState.Parent = Me.TxtInfoComplementar_Colaborador
         Me.TxtInfoComplementar_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtInfoComplementar_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtInfoComplementar_Colaborador.Location = New System.Drawing.Point(42, 28)
+        Me.TxtInfoComplementar_Colaborador.Location = New System.Drawing.Point(50, 28)
         Me.TxtInfoComplementar_Colaborador.Multiline = True
         Me.TxtInfoComplementar_Colaborador.Name = "TxtInfoComplementar_Colaborador"
         Me.TxtInfoComplementar_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2560,7 +2583,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInformacoes_Colaborador.Location = New System.Drawing.Point(0, 0)
         Me.PanelInformacoes_Colaborador.Name = "PanelInformacoes_Colaborador"
         Me.PanelInformacoes_Colaborador.ShadowDecoration.Parent = Me.PanelInformacoes_Colaborador
-        Me.PanelInformacoes_Colaborador.Size = New System.Drawing.Size(741, 493)
+        Me.PanelInformacoes_Colaborador.Size = New System.Drawing.Size(757, 493)
         Me.PanelInformacoes_Colaborador.TabIndex = 237
         '
         'LblEmail_Colaborador
@@ -2571,7 +2594,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblEmail_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEmail_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblEmail_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblEmail_Colaborador.Location = New System.Drawing.Point(217, 160)
+        Me.LblEmail_Colaborador.Location = New System.Drawing.Point(225, 160)
         Me.LblEmail_Colaborador.Name = "LblEmail_Colaborador"
         Me.LblEmail_Colaborador.Size = New System.Drawing.Size(49, 15)
         Me.LblEmail_Colaborador.TabIndex = 271
@@ -2586,6 +2609,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEmail_Colaborador.BorderColor = System.Drawing.Color.Gray
         Me.TxtEmail_Colaborador.BorderRadius = 6
         Me.TxtEmail_Colaborador.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.TxtEmail_Colaborador.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TxtEmail_Colaborador.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.SelectTransition.SetDecoration(Me.TxtEmail_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TxtEmail_Colaborador.DefaultText = ""
@@ -2603,12 +2627,13 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEmail_Colaborador.HoverState.Parent = Me.TxtEmail_Colaborador
         Me.TxtEmail_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtEmail_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtEmail_Colaborador.Location = New System.Drawing.Point(216, 179)
+        Me.TxtEmail_Colaborador.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtEmail_Colaborador.Location = New System.Drawing.Point(224, 179)
         Me.TxtEmail_Colaborador.MaxLength = 200
         Me.TxtEmail_Colaborador.Name = "TxtEmail_Colaborador"
         Me.TxtEmail_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtEmail_Colaborador.PlaceholderForeColor = System.Drawing.Color.Gray
-        Me.TxtEmail_Colaborador.PlaceholderText = "E-mail *"
+        Me.TxtEmail_Colaborador.PlaceholderText = "e-mail *"
         Me.TxtEmail_Colaborador.SelectedText = ""
         Me.TxtEmail_Colaborador.ShadowDecoration.Parent = Me.TxtEmail_Colaborador
         Me.TxtEmail_Colaborador.Size = New System.Drawing.Size(486, 36)
@@ -2623,11 +2648,11 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblInfoPerfil_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblInfoPerfil_Colaborador.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInfoPerfil_Colaborador.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LblInfoPerfil_Colaborador.Location = New System.Drawing.Point(38, 25)
+        Me.LblInfoPerfil_Colaborador.Location = New System.Drawing.Point(46, 25)
         Me.LblInfoPerfil_Colaborador.Name = "LblInfoPerfil_Colaborador"
-        Me.LblInfoPerfil_Colaborador.Size = New System.Drawing.Size(192, 21)
+        Me.LblInfoPerfil_Colaborador.Size = New System.Drawing.Size(342, 21)
         Me.LblInfoPerfil_Colaborador.TabIndex = 258
-        Me.LblInfoPerfil_Colaborador.Text = "INFORMÇÕES DE PERFIL"
+        Me.LblInfoPerfil_Colaborador.Text = "INFORMÇÕES DE PERFIL DO COLABORADOR"
         '
         'LblCelular_Colaborador
         '
@@ -2637,7 +2662,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCelular_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCelular_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCelular_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblCelular_Colaborador.Location = New System.Drawing.Point(475, 232)
+        Me.LblCelular_Colaborador.Location = New System.Drawing.Point(483, 232)
         Me.LblCelular_Colaborador.Name = "LblCelular_Colaborador"
         Me.LblCelular_Colaborador.Size = New System.Drawing.Size(44, 15)
         Me.LblCelular_Colaborador.TabIndex = 256
@@ -2671,7 +2696,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCelular_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCelular_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtCelular_Colaborador.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtCelular_Colaborador.Location = New System.Drawing.Point(474, 250)
+        Me.TxtCelular_Colaborador.Location = New System.Drawing.Point(482, 250)
         Me.TxtCelular_Colaborador.MaxLength = 16
         Me.TxtCelular_Colaborador.Name = "TxtCelular_Colaborador"
         Me.TxtCelular_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2692,7 +2717,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblContatoPrincipal_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblContatoPrincipal_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblContatoPrincipal_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblContatoPrincipal_Colaborador.Location = New System.Drawing.Point(43, 232)
+        Me.LblContatoPrincipal_Colaborador.Location = New System.Drawing.Point(51, 232)
         Me.LblContatoPrincipal_Colaborador.Name = "LblContatoPrincipal_Colaborador"
         Me.LblContatoPrincipal_Colaborador.Size = New System.Drawing.Size(107, 15)
         Me.LblContatoPrincipal_Colaborador.TabIndex = 254
@@ -2725,7 +2750,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtContatoPrincipal_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtContatoPrincipal_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtContatoPrincipal_Colaborador.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtContatoPrincipal_Colaborador.Location = New System.Drawing.Point(42, 250)
+        Me.TxtContatoPrincipal_Colaborador.Location = New System.Drawing.Point(50, 250)
         Me.TxtContatoPrincipal_Colaborador.MaxLength = 16
         Me.TxtContatoPrincipal_Colaborador.Name = "TxtContatoPrincipal_Colaborador"
         Me.TxtContatoPrincipal_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2746,7 +2771,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblUF_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblUF_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblUF_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblUF_Colaborador.Location = New System.Drawing.Point(617, 365)
+        Me.LblUF_Colaborador.Location = New System.Drawing.Point(625, 365)
         Me.LblUF_Colaborador.Name = "LblUF_Colaborador"
         Me.LblUF_Colaborador.Size = New System.Drawing.Size(21, 15)
         Me.LblUF_Colaborador.TabIndex = 252
@@ -2761,7 +2786,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCidade_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCidade_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCidade_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblCidade_Colaborador.Location = New System.Drawing.Point(268, 365)
+        Me.LblCidade_Colaborador.Location = New System.Drawing.Point(276, 365)
         Me.LblCidade_Colaborador.Name = "LblCidade_Colaborador"
         Me.LblCidade_Colaborador.Size = New System.Drawing.Size(44, 15)
         Me.LblCidade_Colaborador.TabIndex = 251
@@ -2776,7 +2801,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblComplemento_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblComplemento_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblComplemento_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblComplemento_Colaborador.Location = New System.Drawing.Point(43, 365)
+        Me.LblComplemento_Colaborador.Location = New System.Drawing.Point(51, 365)
         Me.LblComplemento_Colaborador.Name = "LblComplemento_Colaborador"
         Me.LblComplemento_Colaborador.Size = New System.Drawing.Size(84, 15)
         Me.LblComplemento_Colaborador.TabIndex = 250
@@ -2791,7 +2816,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblContatoSecundario_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblContatoSecundario_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblContatoSecundario_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblContatoSecundario_Colaborador.Location = New System.Drawing.Point(259, 232)
+        Me.LblContatoSecundario_Colaborador.Location = New System.Drawing.Point(267, 232)
         Me.LblContatoSecundario_Colaborador.Name = "LblContatoSecundario_Colaborador"
         Me.LblContatoSecundario_Colaborador.Size = New System.Drawing.Size(111, 15)
         Me.LblContatoSecundario_Colaborador.TabIndex = 249
@@ -2806,7 +2831,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblEndereco_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEndereco_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblEndereco_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblEndereco_Colaborador.Location = New System.Drawing.Point(178, 298)
+        Me.LblEndereco_Colaborador.Location = New System.Drawing.Point(186, 298)
         Me.LblEndereco_Colaborador.Name = "LblEndereco_Colaborador"
         Me.LblEndereco_Colaborador.Size = New System.Drawing.Size(56, 15)
         Me.LblEndereco_Colaborador.TabIndex = 248
@@ -2821,7 +2846,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCEP_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCEP_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCEP_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblCEP_Colaborador.Location = New System.Drawing.Point(43, 298)
+        Me.LblCEP_Colaborador.Location = New System.Drawing.Point(51, 298)
         Me.LblCEP_Colaborador.Name = "LblCEP_Colaborador"
         Me.LblCEP_Colaborador.Size = New System.Drawing.Size(28, 15)
         Me.LblCEP_Colaborador.TabIndex = 247
@@ -2836,7 +2861,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblNome_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNome_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblNome_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblNome_Colaborador.Location = New System.Drawing.Point(237, 88)
+        Me.LblNome_Colaborador.Location = New System.Drawing.Point(245, 88)
         Me.LblNome_Colaborador.Name = "LblNome_Colaborador"
         Me.LblNome_Colaborador.Size = New System.Drawing.Size(48, 15)
         Me.LblNome_Colaborador.TabIndex = 246
@@ -2851,7 +2876,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCPFouCNPJ_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCPFouCNPJ_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCPFouCNPJ_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblCPFouCNPJ_Colaborador.Location = New System.Drawing.Point(43, 89)
+        Me.LblCPFouCNPJ_Colaborador.Location = New System.Drawing.Point(51, 89)
         Me.LblCPFouCNPJ_Colaborador.Name = "LblCPFouCNPJ_Colaborador"
         Me.LblCPFouCNPJ_Colaborador.Size = New System.Drawing.Size(83, 15)
         Me.LblCPFouCNPJ_Colaborador.TabIndex = 245
@@ -2883,7 +2908,8 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtNome_Colaborador.HoverState.Parent = Me.TxtNome_Colaborador
         Me.TxtNome_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtNome_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtNome_Colaborador.Location = New System.Drawing.Point(236, 107)
+        Me.TxtNome_Colaborador.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtNome_Colaborador.Location = New System.Drawing.Point(244, 107)
         Me.TxtNome_Colaborador.MaxLength = 500
         Me.TxtNome_Colaborador.Name = "TxtNome_Colaborador"
         Me.TxtNome_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2921,7 +2947,8 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCPFouCNPJ_Colaborador.HoverState.Parent = Me.TxtCPFouCNPJ_Colaborador
         Me.TxtCPFouCNPJ_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCPFouCNPJ_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtCPFouCNPJ_Colaborador.Location = New System.Drawing.Point(42, 107)
+        Me.TxtCPFouCNPJ_Colaborador.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtCPFouCNPJ_Colaborador.Location = New System.Drawing.Point(50, 107)
         Me.TxtCPFouCNPJ_Colaborador.Name = "TxtCPFouCNPJ_Colaborador"
         Me.TxtCPFouCNPJ_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtCPFouCNPJ_Colaborador.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -2959,7 +2986,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtContatoSecundario_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtContatoSecundario_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtContatoSecundario_Colaborador.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtContatoSecundario_Colaborador.Location = New System.Drawing.Point(258, 250)
+        Me.TxtContatoSecundario_Colaborador.Location = New System.Drawing.Point(266, 250)
         Me.TxtContatoSecundario_Colaborador.MaxLength = 16
         Me.TxtContatoSecundario_Colaborador.Name = "TxtContatoSecundario_Colaborador"
         Me.TxtContatoSecundario_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2997,7 +3024,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEndereco_Colaborador.HoverState.Parent = Me.TxtEndereco_Colaborador
         Me.TxtEndereco_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtEndereco_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtEndereco_Colaborador.Location = New System.Drawing.Point(181, 317)
+        Me.TxtEndereco_Colaborador.Location = New System.Drawing.Point(189, 317)
         Me.TxtEndereco_Colaborador.Name = "TxtEndereco_Colaborador"
         Me.TxtEndereco_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtEndereco_Colaborador.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -3036,7 +3063,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCEP_Colaborador.IconLeftSize = New System.Drawing.Size(16, 16)
         Me.TxtCEP_Colaborador.IconRightOffset = New System.Drawing.Point(5, 0)
         Me.TxtCEP_Colaborador.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtCEP_Colaborador.Location = New System.Drawing.Point(42, 317)
+        Me.TxtCEP_Colaborador.Location = New System.Drawing.Point(50, 317)
         Me.TxtCEP_Colaborador.MaxLength = 9
         Me.TxtCEP_Colaborador.Name = "TxtCEP_Colaborador"
         Me.TxtCEP_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3074,7 +3101,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtComplemento_Colaborador.HoverState.Parent = Me.TxtComplemento_Colaborador
         Me.TxtComplemento_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtComplemento_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtComplemento_Colaborador.Location = New System.Drawing.Point(42, 384)
+        Me.TxtComplemento_Colaborador.Location = New System.Drawing.Point(50, 384)
         Me.TxtComplemento_Colaborador.Name = "TxtComplemento_Colaborador"
         Me.TxtComplemento_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtComplemento_Colaborador.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -3111,7 +3138,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCidade_Colaborador.HoverState.Parent = Me.TxtCidade_Colaborador
         Me.TxtCidade_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCidade_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtCidade_Colaborador.Location = New System.Drawing.Point(267, 384)
+        Me.TxtCidade_Colaborador.Location = New System.Drawing.Point(275, 384)
         Me.TxtCidade_Colaborador.Name = "TxtCidade_Colaborador"
         Me.TxtCidade_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtCidade_Colaborador.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -3149,7 +3176,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtUF_Colaborador.HoverState.Parent = Me.TxtUF_Colaborador
         Me.TxtUF_Colaborador.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtUF_Colaborador.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtUF_Colaborador.Location = New System.Drawing.Point(616, 384)
+        Me.TxtUF_Colaborador.Location = New System.Drawing.Point(624, 384)
         Me.TxtUF_Colaborador.MaxLength = 2
         Me.TxtUF_Colaborador.Name = "TxtUF_Colaborador"
         Me.TxtUF_Colaborador.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3171,7 +3198,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblGenero_Colaborador, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblGenero_Colaborador.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblGenero_Colaborador.ForeColor = System.Drawing.Color.Black
-        Me.LblGenero_Colaborador.Location = New System.Drawing.Point(41, 160)
+        Me.LblGenero_Colaborador.Location = New System.Drawing.Point(49, 160)
         Me.LblGenero_Colaborador.Name = "LblGenero_Colaborador"
         Me.LblGenero_Colaborador.Size = New System.Drawing.Size(53, 15)
         Me.LblGenero_Colaborador.TabIndex = 269
@@ -3198,7 +3225,7 @@ Partial Class FrmCadastros_Phonebook
         Me.CbGenero_Colaborador.ItemHeight = 30
         Me.CbGenero_Colaborador.Items.AddRange(New Object() {"Feminino", "Masculino", "Personalizado"})
         Me.CbGenero_Colaborador.ItemsAppearance.Parent = Me.CbGenero_Colaborador
-        Me.CbGenero_Colaborador.Location = New System.Drawing.Point(42, 179)
+        Me.CbGenero_Colaborador.Location = New System.Drawing.Point(50, 179)
         Me.CbGenero_Colaborador.Name = "CbGenero_Colaborador"
         Me.CbGenero_Colaborador.ShadowDecoration.Parent = Me.CbGenero_Colaborador
         Me.CbGenero_Colaborador.Size = New System.Drawing.Size(167, 36)
@@ -3230,7 +3257,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnInfoComplementar_Colaborador.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.BtnInfoComplementar_Colaborador.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnInfoComplementar_Colaborador.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnInfoComplementar_Colaborador.Location = New System.Drawing.Point(40, 452)
+        Me.BtnInfoComplementar_Colaborador.Location = New System.Drawing.Point(48, 452)
         Me.BtnInfoComplementar_Colaborador.Name = "BtnInfoComplementar_Colaborador"
         Me.BtnInfoComplementar_Colaborador.ShadowDecoration.Parent = Me.BtnInfoComplementar_Colaborador
         Me.BtnInfoComplementar_Colaborador.Size = New System.Drawing.Size(255, 35)
@@ -3247,7 +3274,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpFornecedor.Location = New System.Drawing.Point(4, 4)
         Me.TpFornecedor.Name = "TpFornecedor"
         Me.TpFornecedor.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpFornecedor.Size = New System.Drawing.Size(764, 493)
+        Me.TpFornecedor.Size = New System.Drawing.Size(780, 532)
         Me.TpFornecedor.TabIndex = 3
         Me.TpFornecedor.Text = "Fornecedor"
         '
@@ -3262,7 +3289,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelFornecedor.Location = New System.Drawing.Point(3, 3)
         Me.PanelFornecedor.Name = "PanelFornecedor"
         Me.PanelFornecedor.ShadowDecoration.Parent = Me.PanelFornecedor
-        Me.PanelFornecedor.Size = New System.Drawing.Size(741, 882)
+        Me.PanelFornecedor.Size = New System.Drawing.Size(757, 882)
         Me.PanelFornecedor.TabIndex = 3
         '
         'PanelSalvarCancelar_Fornecedor
@@ -3274,7 +3301,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelSalvarCancelar_Fornecedor.Location = New System.Drawing.Point(0, 795)
         Me.PanelSalvarCancelar_Fornecedor.Name = "PanelSalvarCancelar_Fornecedor"
         Me.PanelSalvarCancelar_Fornecedor.ShadowDecoration.Parent = Me.PanelSalvarCancelar_Fornecedor
-        Me.PanelSalvarCancelar_Fornecedor.Size = New System.Drawing.Size(741, 87)
+        Me.PanelSalvarCancelar_Fornecedor.Size = New System.Drawing.Size(757, 87)
         Me.PanelSalvarCancelar_Fornecedor.TabIndex = 238
         '
         'BtnCancelar_Fornecedor
@@ -3296,7 +3323,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnCancelar_Fornecedor.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar_Fornecedor.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnCancelar_Fornecedor.HoverState.Parent = Me.BtnCancelar_Fornecedor
-        Me.BtnCancelar_Fornecedor.Location = New System.Drawing.Point(243, 30)
+        Me.BtnCancelar_Fornecedor.Location = New System.Drawing.Point(251, 30)
         Me.BtnCancelar_Fornecedor.Name = "BtnCancelar_Fornecedor"
         Me.BtnCancelar_Fornecedor.ShadowDecoration.Parent = Me.BtnCancelar_Fornecedor
         Me.BtnCancelar_Fornecedor.Size = New System.Drawing.Size(124, 38)
@@ -3321,7 +3348,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnSalvar_Fornecedor.ForeColor = System.Drawing.Color.White
         Me.BtnSalvar_Fornecedor.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnSalvar_Fornecedor.HoverState.Parent = Me.BtnSalvar_Fornecedor
-        Me.BtnSalvar_Fornecedor.Location = New System.Drawing.Point(374, 30)
+        Me.BtnSalvar_Fornecedor.Location = New System.Drawing.Point(382, 30)
         Me.BtnSalvar_Fornecedor.Name = "BtnSalvar_Fornecedor"
         Me.BtnSalvar_Fornecedor.ShadowDecoration.Parent = Me.BtnSalvar_Fornecedor
         Me.BtnSalvar_Fornecedor.Size = New System.Drawing.Size(124, 38)
@@ -3336,7 +3363,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInfoComplementar_Fornecedor.Location = New System.Drawing.Point(0, 500)
         Me.PanelInfoComplementar_Fornecedor.Name = "PanelInfoComplementar_Fornecedor"
         Me.PanelInfoComplementar_Fornecedor.ShadowDecoration.Parent = Me.PanelInfoComplementar_Fornecedor
-        Me.PanelInfoComplementar_Fornecedor.Size = New System.Drawing.Size(741, 295)
+        Me.PanelInfoComplementar_Fornecedor.Size = New System.Drawing.Size(757, 295)
         Me.PanelInfoComplementar_Fornecedor.TabIndex = 240
         Me.PanelInfoComplementar_Fornecedor.Visible = False
         '
@@ -3365,7 +3392,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtInfoComplementar_Fornecedor.HoverState.Parent = Me.TxtInfoComplementar_Fornecedor
         Me.TxtInfoComplementar_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtInfoComplementar_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtInfoComplementar_Fornecedor.Location = New System.Drawing.Point(42, 28)
+        Me.TxtInfoComplementar_Fornecedor.Location = New System.Drawing.Point(50, 28)
         Me.TxtInfoComplementar_Fornecedor.Multiline = True
         Me.TxtInfoComplementar_Fornecedor.Name = "TxtInfoComplementar_Fornecedor"
         Me.TxtInfoComplementar_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3411,7 +3438,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelInformacoes_Fornecedor.Location = New System.Drawing.Point(0, 0)
         Me.PanelInformacoes_Fornecedor.Name = "PanelInformacoes_Fornecedor"
         Me.PanelInformacoes_Fornecedor.ShadowDecoration.Parent = Me.PanelInformacoes_Fornecedor
-        Me.PanelInformacoes_Fornecedor.Size = New System.Drawing.Size(741, 500)
+        Me.PanelInformacoes_Fornecedor.Size = New System.Drawing.Size(757, 500)
         Me.PanelInformacoes_Fornecedor.TabIndex = 237
         '
         'LblEmail_Fornecedor
@@ -3422,7 +3449,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblEmail_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEmail_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblEmail_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblEmail_Fornecedor.Location = New System.Drawing.Point(217, 155)
+        Me.LblEmail_Fornecedor.Location = New System.Drawing.Point(225, 155)
         Me.LblEmail_Fornecedor.Name = "LblEmail_Fornecedor"
         Me.LblEmail_Fornecedor.Size = New System.Drawing.Size(49, 15)
         Me.LblEmail_Fornecedor.TabIndex = 271
@@ -3455,7 +3482,8 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEmail_Fornecedor.HoverState.Parent = Me.TxtEmail_Fornecedor
         Me.TxtEmail_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtEmail_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtEmail_Fornecedor.Location = New System.Drawing.Point(216, 174)
+        Me.TxtEmail_Fornecedor.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtEmail_Fornecedor.Location = New System.Drawing.Point(224, 174)
         Me.TxtEmail_Fornecedor.MaxLength = 200
         Me.TxtEmail_Fornecedor.Name = "TxtEmail_Fornecedor"
         Me.TxtEmail_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3475,11 +3503,11 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblInfoPerfil_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblInfoPerfil_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblInfoPerfil_Fornecedor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.LblInfoPerfil_Fornecedor.Location = New System.Drawing.Point(38, 25)
+        Me.LblInfoPerfil_Fornecedor.Location = New System.Drawing.Point(46, 25)
         Me.LblInfoPerfil_Fornecedor.Name = "LblInfoPerfil_Fornecedor"
-        Me.LblInfoPerfil_Fornecedor.Size = New System.Drawing.Size(192, 21)
+        Me.LblInfoPerfil_Fornecedor.Size = New System.Drawing.Size(329, 21)
         Me.LblInfoPerfil_Fornecedor.TabIndex = 258
-        Me.LblInfoPerfil_Fornecedor.Text = "INFORMÇÕES DE PERFIL"
+        Me.LblInfoPerfil_Fornecedor.Text = "INFORMÇÕES DE PERFIL DO FORNECEDOR"
         '
         'LblCelular_Fornecedor
         '
@@ -3489,7 +3517,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCelular_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCelular_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCelular_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblCelular_Fornecedor.Location = New System.Drawing.Point(475, 221)
+        Me.LblCelular_Fornecedor.Location = New System.Drawing.Point(483, 221)
         Me.LblCelular_Fornecedor.Name = "LblCelular_Fornecedor"
         Me.LblCelular_Fornecedor.Size = New System.Drawing.Size(44, 15)
         Me.LblCelular_Fornecedor.TabIndex = 256
@@ -3523,7 +3551,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCelular_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCelular_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtCelular_Fornecedor.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtCelular_Fornecedor.Location = New System.Drawing.Point(474, 239)
+        Me.TxtCelular_Fornecedor.Location = New System.Drawing.Point(482, 239)
         Me.TxtCelular_Fornecedor.MaxLength = 16
         Me.TxtCelular_Fornecedor.Name = "TxtCelular_Fornecedor"
         Me.TxtCelular_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3544,7 +3572,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblContatoPrincipal_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblContatoPrincipal_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblContatoPrincipal_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblContatoPrincipal_Fornecedor.Location = New System.Drawing.Point(43, 221)
+        Me.LblContatoPrincipal_Fornecedor.Location = New System.Drawing.Point(51, 221)
         Me.LblContatoPrincipal_Fornecedor.Name = "LblContatoPrincipal_Fornecedor"
         Me.LblContatoPrincipal_Fornecedor.Size = New System.Drawing.Size(107, 15)
         Me.LblContatoPrincipal_Fornecedor.TabIndex = 254
@@ -3577,7 +3605,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtContatoPrincipal_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtContatoPrincipal_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtContatoPrincipal_Fornecedor.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtContatoPrincipal_Fornecedor.Location = New System.Drawing.Point(42, 239)
+        Me.TxtContatoPrincipal_Fornecedor.Location = New System.Drawing.Point(50, 239)
         Me.TxtContatoPrincipal_Fornecedor.MaxLength = 16
         Me.TxtContatoPrincipal_Fornecedor.Name = "TxtContatoPrincipal_Fornecedor"
         Me.TxtContatoPrincipal_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3598,7 +3626,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblUF_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblUF_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblUF_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblUF_Fornecedor.Location = New System.Drawing.Point(617, 354)
+        Me.LblUF_Fornecedor.Location = New System.Drawing.Point(625, 354)
         Me.LblUF_Fornecedor.Name = "LblUF_Fornecedor"
         Me.LblUF_Fornecedor.Size = New System.Drawing.Size(21, 15)
         Me.LblUF_Fornecedor.TabIndex = 252
@@ -3613,7 +3641,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCidade_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCidade_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCidade_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblCidade_Fornecedor.Location = New System.Drawing.Point(268, 354)
+        Me.LblCidade_Fornecedor.Location = New System.Drawing.Point(276, 354)
         Me.LblCidade_Fornecedor.Name = "LblCidade_Fornecedor"
         Me.LblCidade_Fornecedor.Size = New System.Drawing.Size(44, 15)
         Me.LblCidade_Fornecedor.TabIndex = 251
@@ -3628,7 +3656,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblComplemento_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblComplemento_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblComplemento_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblComplemento_Fornecedor.Location = New System.Drawing.Point(43, 354)
+        Me.LblComplemento_Fornecedor.Location = New System.Drawing.Point(51, 354)
         Me.LblComplemento_Fornecedor.Name = "LblComplemento_Fornecedor"
         Me.LblComplemento_Fornecedor.Size = New System.Drawing.Size(84, 15)
         Me.LblComplemento_Fornecedor.TabIndex = 250
@@ -3643,7 +3671,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblContatoSecundario_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblContatoSecundario_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblContatoSecundario_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblContatoSecundario_Fornecedor.Location = New System.Drawing.Point(259, 221)
+        Me.LblContatoSecundario_Fornecedor.Location = New System.Drawing.Point(267, 221)
         Me.LblContatoSecundario_Fornecedor.Name = "LblContatoSecundario_Fornecedor"
         Me.LblContatoSecundario_Fornecedor.Size = New System.Drawing.Size(111, 15)
         Me.LblContatoSecundario_Fornecedor.TabIndex = 249
@@ -3658,7 +3686,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblEndereco_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEndereco_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblEndereco_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblEndereco_Fornecedor.Location = New System.Drawing.Point(178, 287)
+        Me.LblEndereco_Fornecedor.Location = New System.Drawing.Point(186, 287)
         Me.LblEndereco_Fornecedor.Name = "LblEndereco_Fornecedor"
         Me.LblEndereco_Fornecedor.Size = New System.Drawing.Size(56, 15)
         Me.LblEndereco_Fornecedor.TabIndex = 248
@@ -3673,7 +3701,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCEP_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCEP_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCEP_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblCEP_Fornecedor.Location = New System.Drawing.Point(43, 287)
+        Me.LblCEP_Fornecedor.Location = New System.Drawing.Point(51, 287)
         Me.LblCEP_Fornecedor.Name = "LblCEP_Fornecedor"
         Me.LblCEP_Fornecedor.Size = New System.Drawing.Size(28, 15)
         Me.LblCEP_Fornecedor.TabIndex = 247
@@ -3688,7 +3716,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblNome_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNome_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblNome_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblNome_Fornecedor.Location = New System.Drawing.Point(237, 88)
+        Me.LblNome_Fornecedor.Location = New System.Drawing.Point(245, 88)
         Me.LblNome_Fornecedor.Name = "LblNome_Fornecedor"
         Me.LblNome_Fornecedor.Size = New System.Drawing.Size(48, 15)
         Me.LblNome_Fornecedor.TabIndex = 246
@@ -3703,7 +3731,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblCPFouCNPJ_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblCPFouCNPJ_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblCPFouCNPJ_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblCPFouCNPJ_Fornecedor.Location = New System.Drawing.Point(43, 89)
+        Me.LblCPFouCNPJ_Fornecedor.Location = New System.Drawing.Point(51, 89)
         Me.LblCPFouCNPJ_Fornecedor.Name = "LblCPFouCNPJ_Fornecedor"
         Me.LblCPFouCNPJ_Fornecedor.Size = New System.Drawing.Size(83, 15)
         Me.LblCPFouCNPJ_Fornecedor.TabIndex = 245
@@ -3735,7 +3763,8 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtNome_Fornecedor.HoverState.Parent = Me.TxtNome_Fornecedor
         Me.TxtNome_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtNome_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtNome_Fornecedor.Location = New System.Drawing.Point(236, 107)
+        Me.TxtNome_Fornecedor.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtNome_Fornecedor.Location = New System.Drawing.Point(244, 107)
         Me.TxtNome_Fornecedor.MaxLength = 500
         Me.TxtNome_Fornecedor.Name = "TxtNome_Fornecedor"
         Me.TxtNome_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3773,7 +3802,8 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCPFouCNPJ_Fornecedor.HoverState.Parent = Me.TxtCPFouCNPJ_Fornecedor
         Me.TxtCPFouCNPJ_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCPFouCNPJ_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtCPFouCNPJ_Fornecedor.Location = New System.Drawing.Point(42, 107)
+        Me.TxtCPFouCNPJ_Fornecedor.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.TxtCPFouCNPJ_Fornecedor.Location = New System.Drawing.Point(50, 107)
         Me.TxtCPFouCNPJ_Fornecedor.Name = "TxtCPFouCNPJ_Fornecedor"
         Me.TxtCPFouCNPJ_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtCPFouCNPJ_Fornecedor.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -3811,7 +3841,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtContatoSecundario_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtContatoSecundario_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.TxtContatoSecundario_Fornecedor.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtContatoSecundario_Fornecedor.Location = New System.Drawing.Point(258, 239)
+        Me.TxtContatoSecundario_Fornecedor.Location = New System.Drawing.Point(266, 239)
         Me.TxtContatoSecundario_Fornecedor.MaxLength = 16
         Me.TxtContatoSecundario_Fornecedor.Name = "TxtContatoSecundario_Fornecedor"
         Me.TxtContatoSecundario_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3849,7 +3879,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtEndereco_Fornecedor.HoverState.Parent = Me.TxtEndereco_Fornecedor
         Me.TxtEndereco_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtEndereco_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtEndereco_Fornecedor.Location = New System.Drawing.Point(181, 306)
+        Me.TxtEndereco_Fornecedor.Location = New System.Drawing.Point(189, 306)
         Me.TxtEndereco_Fornecedor.Name = "TxtEndereco_Fornecedor"
         Me.TxtEndereco_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtEndereco_Fornecedor.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -3888,7 +3918,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCEP_Fornecedor.IconLeftSize = New System.Drawing.Size(16, 16)
         Me.TxtCEP_Fornecedor.IconRightOffset = New System.Drawing.Point(5, 0)
         Me.TxtCEP_Fornecedor.IconRightSize = New System.Drawing.Size(18, 18)
-        Me.TxtCEP_Fornecedor.Location = New System.Drawing.Point(42, 306)
+        Me.TxtCEP_Fornecedor.Location = New System.Drawing.Point(50, 306)
         Me.TxtCEP_Fornecedor.MaxLength = 9
         Me.TxtCEP_Fornecedor.Name = "TxtCEP_Fornecedor"
         Me.TxtCEP_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -3926,7 +3956,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtComplemento_Fornecedor.HoverState.Parent = Me.TxtComplemento_Fornecedor
         Me.TxtComplemento_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtComplemento_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtComplemento_Fornecedor.Location = New System.Drawing.Point(42, 373)
+        Me.TxtComplemento_Fornecedor.Location = New System.Drawing.Point(50, 373)
         Me.TxtComplemento_Fornecedor.Name = "TxtComplemento_Fornecedor"
         Me.TxtComplemento_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtComplemento_Fornecedor.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -3963,7 +3993,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtCidade_Fornecedor.HoverState.Parent = Me.TxtCidade_Fornecedor
         Me.TxtCidade_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtCidade_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtCidade_Fornecedor.Location = New System.Drawing.Point(267, 373)
+        Me.TxtCidade_Fornecedor.Location = New System.Drawing.Point(275, 373)
         Me.TxtCidade_Fornecedor.Name = "TxtCidade_Fornecedor"
         Me.TxtCidade_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.TxtCidade_Fornecedor.PlaceholderForeColor = System.Drawing.Color.Gray
@@ -4001,7 +4031,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TxtUF_Fornecedor.HoverState.Parent = Me.TxtUF_Fornecedor
         Me.TxtUF_Fornecedor.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.TxtUF_Fornecedor.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtUF_Fornecedor.Location = New System.Drawing.Point(616, 373)
+        Me.TxtUF_Fornecedor.Location = New System.Drawing.Point(624, 373)
         Me.TxtUF_Fornecedor.MaxLength = 2
         Me.TxtUF_Fornecedor.Name = "TxtUF_Fornecedor"
         Me.TxtUF_Fornecedor.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -4023,7 +4053,7 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblGenero_Fornecedor, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblGenero_Fornecedor.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.LblGenero_Fornecedor.ForeColor = System.Drawing.Color.Black
-        Me.LblGenero_Fornecedor.Location = New System.Drawing.Point(41, 155)
+        Me.LblGenero_Fornecedor.Location = New System.Drawing.Point(49, 155)
         Me.LblGenero_Fornecedor.Name = "LblGenero_Fornecedor"
         Me.LblGenero_Fornecedor.Size = New System.Drawing.Size(53, 15)
         Me.LblGenero_Fornecedor.TabIndex = 269
@@ -4050,7 +4080,7 @@ Partial Class FrmCadastros_Phonebook
         Me.CbGenero_Fornecedor.ItemHeight = 30
         Me.CbGenero_Fornecedor.Items.AddRange(New Object() {"Feminino", "Masculino", "Personalizado"})
         Me.CbGenero_Fornecedor.ItemsAppearance.Parent = Me.CbGenero_Fornecedor
-        Me.CbGenero_Fornecedor.Location = New System.Drawing.Point(42, 174)
+        Me.CbGenero_Fornecedor.Location = New System.Drawing.Point(50, 174)
         Me.CbGenero_Fornecedor.Name = "CbGenero_Fornecedor"
         Me.CbGenero_Fornecedor.ShadowDecoration.Parent = Me.CbGenero_Fornecedor
         Me.CbGenero_Fornecedor.Size = New System.Drawing.Size(167, 36)
@@ -4082,7 +4112,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnInfoComplementar_Fornecedor.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
         Me.BtnInfoComplementar_Fornecedor.ImageOffset = New System.Drawing.Point(1, 0)
         Me.BtnInfoComplementar_Fornecedor.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnInfoComplementar_Fornecedor.Location = New System.Drawing.Point(40, 447)
+        Me.BtnInfoComplementar_Fornecedor.Location = New System.Drawing.Point(48, 447)
         Me.BtnInfoComplementar_Fornecedor.Name = "BtnInfoComplementar_Fornecedor"
         Me.BtnInfoComplementar_Fornecedor.ShadowDecoration.Parent = Me.BtnInfoComplementar_Fornecedor
         Me.BtnInfoComplementar_Fornecedor.Size = New System.Drawing.Size(255, 35)
@@ -4098,7 +4128,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpAnexo.Location = New System.Drawing.Point(4, 4)
         Me.TpAnexo.Name = "TpAnexo"
         Me.TpAnexo.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpAnexo.Size = New System.Drawing.Size(764, 493)
+        Me.TpAnexo.Size = New System.Drawing.Size(780, 532)
         Me.TpAnexo.TabIndex = 6
         Me.TpAnexo.Text = "Anexo"
         '
@@ -4108,8 +4138,8 @@ Partial Class FrmCadastros_Phonebook
         Me.Tpl1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
         Me.Tpl1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.Tpl1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.Tpl1.Controls.Add(Me.Panel1, 1, 1)
         Me.Tpl1.Controls.Add(Me.Guna2Panel1, 1, 2)
+        Me.Tpl1.Controls.Add(Me.Panel1, 1, 1)
         Me.SelectTransition.SetDecoration(Me.Tpl1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Tpl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Tpl1.Location = New System.Drawing.Point(3, 3)
@@ -4121,7 +4151,7 @@ Partial Class FrmCadastros_Phonebook
         Me.Tpl1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.Tpl1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.Tpl1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.Tpl1.Size = New System.Drawing.Size(758, 487)
+        Me.Tpl1.Size = New System.Drawing.Size(774, 526)
         Me.Tpl1.TabIndex = 11
         '
         'Panel1
@@ -4132,7 +4162,7 @@ Partial Class FrmCadastros_Phonebook
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(28, 33)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(702, 68)
+        Me.Panel1.Size = New System.Drawing.Size(718, 68)
         Me.Panel1.TabIndex = 8
         '
         'BtnUpload
@@ -4165,14 +4195,14 @@ Partial Class FrmCadastros_Phonebook
         '
         'Guna2Panel1
         '
-        Me.Guna2Panel1.Controls.Add(Me.DgvArquivos)
         Me.Guna2Panel1.Controls.Add(Me.PanelVoltar_Anexo)
+        Me.Guna2Panel1.Controls.Add(Me.DgvArquivos)
         Me.SelectTransition.SetDecoration(Me.Guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2Panel1.Location = New System.Drawing.Point(28, 107)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(702, 347)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(718, 386)
         Me.Guna2Panel1.TabIndex = 10
         '
         'DgvArquivos
@@ -4181,22 +4211,22 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvArquivos.AllowUserToAddRows = False
         Me.DgvArquivos.AllowUserToDeleteRows = False
         Me.DgvArquivos.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black
-        Me.DgvArquivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle53.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle53.ForeColor = System.Drawing.Color.Black
+        Me.DgvArquivos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle53
         Me.DgvArquivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DgvArquivos.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvArquivos.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DgvArquivos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DgvArquivos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvArquivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle54.BackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle54.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle54.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
+        DataGridViewCellStyle54.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvArquivos.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle54
         Me.DgvArquivos.ColumnHeadersHeight = 40
         Me.DgvArquivos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DgvColumnSelect})
         Me.DgvArquivos.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -4218,14 +4248,14 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvArquivos.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DgvArquivos.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.SelectTransition.SetDecoration(Me.DgvArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvArquivos.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle55.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle55.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle55.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle55.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle55.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvArquivos.DefaultCellStyle = DataGridViewCellStyle55
         Me.DgvArquivos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvArquivos.EnableHeadersVisualStyles = False
         Me.DgvArquivos.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -4235,18 +4265,18 @@ Partial Class FrmCadastros_Phonebook
         Me.DgvArquivos.Location = New System.Drawing.Point(0, 0)
         Me.DgvArquivos.MultiSelect = False
         Me.DgvArquivos.Name = "DgvArquivos"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Indigo
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvArquivos.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle56.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle56.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle56.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle56.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvArquivos.RowHeadersDefaultCellStyle = DataGridViewCellStyle56
         Me.DgvArquivos.RowHeadersVisible = False
         Me.DgvArquivos.RowTemplate.Height = 40
         Me.DgvArquivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvArquivos.Size = New System.Drawing.Size(702, 306)
+        Me.DgvArquivos.Size = New System.Drawing.Size(718, 386)
         Me.DgvArquivos.TabIndex = 11
         Me.DgvArquivos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -4266,10 +4296,10 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelVoltar_Anexo.Controls.Add(Me.BtnVoltar)
         Me.SelectTransition.SetDecoration(Me.PanelVoltar_Anexo, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelVoltar_Anexo.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelVoltar_Anexo.Location = New System.Drawing.Point(0, 306)
+        Me.PanelVoltar_Anexo.Location = New System.Drawing.Point(0, 345)
         Me.PanelVoltar_Anexo.Name = "PanelVoltar_Anexo"
         Me.PanelVoltar_Anexo.ShadowDecoration.Parent = Me.PanelVoltar_Anexo
-        Me.PanelVoltar_Anexo.Size = New System.Drawing.Size(702, 41)
+        Me.PanelVoltar_Anexo.Size = New System.Drawing.Size(718, 41)
         Me.PanelVoltar_Anexo.TabIndex = 10
         '
         'BtnVoltar
@@ -4293,7 +4323,7 @@ Partial Class FrmCadastros_Phonebook
         Me.BtnVoltar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnVoltar.HoverState.Parent = Me.BtnVoltar
         Me.BtnVoltar.ImageSize = New System.Drawing.Size(18, 18)
-        Me.BtnVoltar.Location = New System.Drawing.Point(577, 4)
+        Me.BtnVoltar.Location = New System.Drawing.Point(593, 4)
         Me.BtnVoltar.Name = "BtnVoltar"
         Me.BtnVoltar.ShadowDecoration.Parent = Me.BtnVoltar
         Me.BtnVoltar.Size = New System.Drawing.Size(124, 33)
@@ -4309,7 +4339,7 @@ Partial Class FrmCadastros_Phonebook
         Me.TpAguarde.Location = New System.Drawing.Point(4, 4)
         Me.TpAguarde.Name = "TpAguarde"
         Me.TpAguarde.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpAguarde.Size = New System.Drawing.Size(764, 493)
+        Me.TpAguarde.Size = New System.Drawing.Size(780, 532)
         Me.TpAguarde.TabIndex = 4
         Me.TpAguarde.Text = "Aguarde"
         '
@@ -4320,7 +4350,7 @@ Partial Class FrmCadastros_Phonebook
         Me.ProgressAguarde.BorderRadius = 4
         Me.SelectTransition.SetDecoration(Me.ProgressAguarde, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.ProgressAguarde.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ProgressAguarde.Location = New System.Drawing.Point(92, 145)
+        Me.ProgressAguarde.Location = New System.Drawing.Point(100, 165)
         Me.ProgressAguarde.Name = "ProgressAguarde"
         Me.ProgressAguarde.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.ProgressAguarde.ProgressColor2 = System.Drawing.Color.Black
@@ -4338,11 +4368,11 @@ Partial Class FrmCadastros_Phonebook
         Me.SelectTransition.SetDecoration(Me.LblLoading, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblLoading.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLoading.ForeColor = System.Drawing.Color.Black
-        Me.LblLoading.Location = New System.Drawing.Point(132, 188)
+        Me.LblLoading.Location = New System.Drawing.Point(140, 208)
         Me.LblLoading.Name = "LblLoading"
         Me.LblLoading.Size = New System.Drawing.Size(501, 160)
         Me.LblLoading.TabIndex = 196
-        Me.LblLoading.Text = "<b>Estamos processando sua solicitação...</b><br><br>"
+        Me.LblLoading.Text = "<b>Aguarde um momento, estamos processando sua solicitação...</b><br><br>"
         Me.LblLoading.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'Ofd
@@ -4381,22 +4411,22 @@ Partial Class FrmCadastros_Phonebook
         'SelectTransition
         '
         Me.SelectTransition.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.SelectTransition.DefaultAnimation = Animation1
+        Animation7.AnimateOnlyDifferences = True
+        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
+        Animation7.LeafCoeff = 0!
+        Animation7.MaxTime = 1.0!
+        Animation7.MinTime = 0!
+        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
+        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
+        Animation7.MosaicSize = 0
+        Animation7.Padding = New System.Windows.Forms.Padding(0)
+        Animation7.RotateCoeff = 0!
+        Animation7.RotateLimit = 0!
+        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
+        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
+        Animation7.TimeCoeff = 0!
+        Animation7.TransparencyCoeff = 0!
+        Me.SelectTransition.DefaultAnimation = Animation7
         '
         'LblSelectRegister_Cliente
         '
@@ -4449,7 +4479,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelSelect_Anexo.Controls.Add(Me.LblAquivos_Anexo)
         Me.SelectTransition.SetDecoration(Me.PanelSelect_Anexo, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSelect_Anexo.FillColor = System.Drawing.Color.White
-        Me.PanelSelect_Anexo.Location = New System.Drawing.Point(223, 5)
+        Me.PanelSelect_Anexo.Location = New System.Drawing.Point(231, 5)
         Me.PanelSelect_Anexo.Name = "PanelSelect_Anexo"
         Me.PanelSelect_Anexo.ShadowColor = System.Drawing.Color.Black
         Me.PanelSelect_Anexo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal
@@ -4583,7 +4613,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelFilter.CustomizableEdges.TopRight = False
         Me.SelectTransition.SetDecoration(Me.PanelFilter, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelFilter.FillColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.PanelFilter.Location = New System.Drawing.Point(35, 75)
+        Me.PanelFilter.Location = New System.Drawing.Point(43, 94)
         Me.PanelFilter.Name = "PanelFilter"
         Me.PanelFilter.ShadowDecoration.Parent = Me.PanelFilter
         Me.PanelFilter.Size = New System.Drawing.Size(461, 320)
@@ -5131,7 +5161,7 @@ Partial Class FrmCadastros_Phonebook
         Me.PanelSelect.Controls.Add(Me.Guna2HtmlLabel8)
         Me.SelectTransition.SetDecoration(Me.PanelSelect, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSelect.FillColor = System.Drawing.Color.White
-        Me.PanelSelect.Location = New System.Drawing.Point(198, 5)
+        Me.PanelSelect.Location = New System.Drawing.Point(206, 5)
         Me.PanelSelect.Name = "PanelSelect"
         Me.PanelSelect.ShadowColor = System.Drawing.Color.Black
         Me.PanelSelect.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal
@@ -5300,12 +5330,15 @@ Partial Class FrmCadastros_Phonebook
         'TimerDel_Fornecedor
         '
         '
+        'TimerDownload
+        '
+        '
         'FrmCadastros_Phonebook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(772, 526)
+        Me.ClientSize = New System.Drawing.Size(788, 565)
         Me.Controls.Add(Me.TabControl_CadCons)
         Me.Controls.Add(Me.PanelFilter)
         Me.Controls.Add(Me.PanelSelect)
@@ -5592,4 +5625,7 @@ Partial Class FrmCadastros_Phonebook
     Friend WithEvents LblId_Interno As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnVoltarLista As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents VoltarMenu As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents LblIdInterno_Cliente As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Fbd As FolderBrowserDialog
+    Friend WithEvents TimerDownload As Timer
 End Class

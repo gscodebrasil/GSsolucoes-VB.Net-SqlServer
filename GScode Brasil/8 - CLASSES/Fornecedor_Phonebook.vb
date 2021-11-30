@@ -38,7 +38,7 @@ Public Class Fornecedor_Phonebook
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"INSERT INTO dbo.cliente_phonebook(id_interno, cpf_cnpj, name, genero, email, contato_principal, contato_secundario, celular, cep, endereco, complemento, cidade, uf, info_complementar, date_cad) VALUES ('{id_interno}','{cpf_cnpj}','{name}','{genero}','{email}','{contato_principal}','{contato_secundario}','{celular}','{cep}','{endereco}','{complemento}','{cidade}','{uf}','{info_complementar}', GETDATE());", conn)
+                Using command As SqlCommand = New SqlCommand($"INSERT INTO fornecedor_phonebook(id_interno, cpf_cnpj, name, genero, email, contato_principal, contato_secundario, celular, cep, endereco, complemento, cidade, uf, info_complementar, date_cad) VALUES ('{id_interno}','{cpf_cnpj}','{name}','{genero}','{email}','{contato_principal}','{contato_secundario}','{celular}','{cep}','{endereco}','{complemento}','{cidade}','{uf}','{info_complementar}', GETDATE());", conn)
 
                     command.ExecuteNonQuery()
                     valida = True
@@ -59,7 +59,7 @@ Public Class Fornecedor_Phonebook
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"UPDATE dbo.user_info SET cpf_cnpj='{cpf_cnpj}',nome='{name}',genero='{genero}',email='{email}',contato_principal='{contato_principal}',contato_secundario='{contato_secundario}',celular='{celular}',cep='{cep}',endereco='{endereco}',complemento='{complemento}',cidade='{cidade}',uf='{uf}',info_complementar='{info_complementar}'", conn)
+                Using command As SqlCommand = New SqlCommand($"UPDATE fornecedor_phonebook SET cpf_cnpj='{cpf_cnpj}',nome='{name}',genero='{genero}',email='{email}',contato_principal='{contato_principal}',contato_secundario='{contato_secundario}',celular='{celular}',cep='{cep}',endereco='{endereco}',complemento='{complemento}',cidade='{cidade}',uf='{uf}',info_complementar='{info_complementar}' WHERE id_interno='{id_interno}'", conn)
                     command.ExecuteNonQuery()
                     valida = True
                 End Using
@@ -77,7 +77,7 @@ Public Class Fornecedor_Phonebook
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"DELETE FROM dbo.cliente_phonebook cpf_cnpj={cpf_cnpj}", conn)
+                Using command As SqlCommand = New SqlCommand($"DELETE FROM fornecedor_phonebook WHERE id={id}", conn)
                     command.ExecuteNonQuery()
                     valida = True
                 End Using
@@ -91,15 +91,37 @@ Public Class Fornecedor_Phonebook
         End Try
     End Sub
 
-    Public Sub Busca()
+    Public Sub BuscarFornecedor()
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT * FROM dbo.cliente_phonebook WHERE cpf_cnpj='{cpf_cnpj}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT * FROM fornecedor_phonebook WHERE name='{name}'", conn)
+                    Using dr = cmd.ExecuteReader()
+                        If dr.HasRows Then
+                            valida = True
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+
+                FrmLogin.ErroNoBancoDeDados()
+                valida = False
+            End If
+        End Try
+    End Sub
+
+    Public Sub ValidaCodigoInterno()
+        Try
+            Using conn As SqlConnection = Getconnection()
+                conn.Open()
+                Using cmd As SqlCommand = New SqlCommand($"SELECT id_interno FROM fornecedor_phonebook WHERE id_interno='{id_interno}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
-                                If dr("cpf_cnpj") = cpf_cnpj Then
+                                If dr("id_interno") = id_interno Then
                                     valida = True
                                 End If
                             End If
@@ -113,6 +135,8 @@ Public Class Fornecedor_Phonebook
 
                 FrmLogin.ErroNoBancoDeDados()
                 valida = False
+            Else
+                Application.Restart()
             End If
         End Try
     End Sub

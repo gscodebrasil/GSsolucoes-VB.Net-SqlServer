@@ -453,7 +453,10 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub BtnLocalizacao_Click(sender As Object, e As EventArgs) Handles BtnLocalizacao.Click
-
+        If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
+            HideSubMenu(PanelConfig, PanelSMConfig)
+            ActiveFormClose()
+        End If
     End Sub
 
     Private Sub BtnHome_Phonebook_Click(sender As Object, e As EventArgs) Handles BtnHome_Phonebook.Click
