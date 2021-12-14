@@ -29,8 +29,8 @@ Partial Class FrmAguarde
         Me.lblAguarde = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TimerAguarde = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Me.btnClose = New Bunifu.UI.WinForms.BunifuImageButton()
         Me.ProgressAguarde = New Guna.UI2.WinForms.Guna2ProgressBar()
+        Me.btnClose = New Bunifu.UI.WinForms.BunifuImageButton()
         Me.Guna2GradientPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,9 +60,9 @@ Partial Class FrmAguarde
         'Guna2GradientPanel1
         '
         Me.Guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2GradientPanel1.Controls.Add(Me.btnClose)
         Me.Guna2GradientPanel1.Controls.Add(Me.ProgressAguarde)
         Me.Guna2GradientPanel1.Controls.Add(Me.lblAguarde)
+        Me.Guna2GradientPanel1.Controls.Add(Me.btnClose)
         Me.Guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.Guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
@@ -71,6 +71,22 @@ Partial Class FrmAguarde
         Me.Guna2GradientPanel1.ShadowDecoration.Parent = Me.Guna2GradientPanel1
         Me.Guna2GradientPanel1.Size = New System.Drawing.Size(800, 500)
         Me.Guna2GradientPanel1.TabIndex = 185
+        '
+        'ProgressAguarde
+        '
+        Me.ProgressAguarde.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ProgressAguarde.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.ProgressAguarde.BorderRadius = 4
+        Me.ProgressAguarde.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(85, Byte), Integer))
+        Me.ProgressAguarde.Location = New System.Drawing.Point(59, 251)
+        Me.ProgressAguarde.Name = "ProgressAguarde"
+        Me.ProgressAguarde.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.ProgressAguarde.ProgressColor2 = System.Drawing.Color.WhiteSmoke
+        Me.ProgressAguarde.ShadowDecoration.Parent = Me.ProgressAguarde
+        Me.ProgressAguarde.Size = New System.Drawing.Size(683, 15)
+        Me.ProgressAguarde.TabIndex = 0
+        Me.ProgressAguarde.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.ProgressAguarde.Value = 80
         '
         'btnClose
         '
@@ -91,9 +107,9 @@ Partial Class FrmAguarde
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
         Me.btnClose.ImageActive = Nothing
         Me.btnClose.ImageLocation = Nothing
-        Me.btnClose.ImageMargin = 12
-        Me.btnClose.ImageSize = New System.Drawing.Size(14, 14)
-        Me.btnClose.ImageZoomSize = New System.Drawing.Size(26, 26)
+        Me.btnClose.ImageMargin = 7
+        Me.btnClose.ImageSize = New System.Drawing.Size(17, 17)
+        Me.btnClose.ImageZoomSize = New System.Drawing.Size(24, 24)
         Me.btnClose.InitialImage = CType(resources.GetObject("btnClose.InitialImage"), System.Drawing.Image)
         Me.btnClose.Location = New System.Drawing.Point(763, 12)
         Me.btnClose.Name = "btnClose"
@@ -102,28 +118,12 @@ Partial Class FrmAguarde
         Me.btnClose.ShowCursorChanges = True
         Me.btnClose.ShowImageBorders = True
         Me.btnClose.ShowSizeMarkers = False
-        Me.btnClose.Size = New System.Drawing.Size(26, 26)
-        Me.btnClose.TabIndex = 184
+        Me.btnClose.Size = New System.Drawing.Size(24, 24)
+        Me.btnClose.TabIndex = 185
         Me.btnClose.ToolTipText = "Fechar"
         Me.btnClose.WaitOnLoad = False
-        Me.btnClose.Zoom = 12
+        Me.btnClose.Zoom = 7
         Me.btnClose.ZoomSpeed = 10
-        '
-        'ProgressAguarde
-        '
-        Me.ProgressAguarde.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ProgressAguarde.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.ProgressAguarde.BorderRadius = 4
-        Me.ProgressAguarde.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(85, Byte), Integer))
-        Me.ProgressAguarde.Location = New System.Drawing.Point(73, 251)
-        Me.ProgressAguarde.Name = "ProgressAguarde"
-        Me.ProgressAguarde.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.ProgressAguarde.ProgressColor2 = System.Drawing.Color.WhiteSmoke
-        Me.ProgressAguarde.ShadowDecoration.Parent = Me.ProgressAguarde
-        Me.ProgressAguarde.Size = New System.Drawing.Size(655, 20)
-        Me.ProgressAguarde.TabIndex = 0
-        Me.ProgressAguarde.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
-        Me.ProgressAguarde.Value = 80
         '
         'FrmAguarde
         '

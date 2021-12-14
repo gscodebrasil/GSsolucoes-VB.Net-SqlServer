@@ -5,7 +5,8 @@ Public Class FrmPrincipal
 #Region "Ref. Local"
 
     Private CurrentFrm As Form
-    Public Cad_Cons As Integer = 0
+    Public Cad_Cons As Integer
+    Public TabSelect As String
 
 #End Region
 
@@ -35,10 +36,25 @@ Public Class FrmPrincipal
 
     'OCULTA SUBMENUS
     Private Sub HideSubMenu(Pnc As Guna2Panel, PncFlutuante As Guna2Panel)
-        For Each Btn As Guna2GradientButton In Pnc.Controls
-            Btn.Checked = False
-            Pnc.Visible = False
+        If PanelMenu.Width >= 228 Then
+            For Each Btn As Guna2GradientButton In Pnc.Controls
+                Pnc.Visible = False
+                Btn.Checked = False
+            Next
+        Else
             TimerSubMenuDeslizante.HideSync(PncFlutuante)
+            For Each Btn As Guna2GradientButton In PncFlutuante.Controls
+                Pnc.Visible = False
+                Btn.Checked = False
+            Next
+        End If
+    End Sub
+
+    Private Sub UnCheckBtn_home()
+        PanelConfig.Visible = False
+        PanelSMConfig.Visible = False
+        For Each Btn As Guna2GradientButton In New List(Of Guna2GradientButton) From {BtnAplication, BtnConfig, BtnLicencas, BtnAjuda, Btnsoftphone, BtnSMSoftphone, BtnSmtp, BtnSMSmtp, BtnBackup, BtnSMBackup, BtnArquivos, BtnSMArquivos, BtnUsuarios, BtnSMUsuarios}
+            Btn.Checked = False
         Next
     End Sub
 
@@ -92,6 +108,7 @@ Public Class FrmPrincipal
                 MostraPainelLateral_Phonebook()
 
             Case 2 'HelpDesk
+                MostraPainelLateral_Helpdesk()
 
             Case 3 'Financeiro
 
@@ -101,6 +118,24 @@ Public Class FrmPrincipal
         End Select
     End Sub
 
+    Public Sub MenuAbertoOuFechado(i As Integer)
+        If TabControlMenu.Width >= 228 Then
+            PanelAberto()
+            BtnNomes()
+            ActiveFormClose()
+            TabControlMenu.SelectTab(i)
+            AppTransition.ShowSync(TabControlMenu)
+            PanelForms.Visible = True
+        Else
+            PanelFechado()
+            BtnNotNomes()
+            ActiveFormClose()
+            TabControlMenu.SelectTab(i)
+            AppTransition.ShowSync(TabControlMenu)
+            PanelForms.Visible = True
+        End If
+    End Sub
+
 #End Region
 
 #Region "Home"
@@ -108,7 +143,8 @@ Public Class FrmPrincipal
     'FECHA O PAINEL LATERAL
     Private Sub OcultaPainelLateral()
         PanelFechado()
-        HideSubMenu(PanelConfig, PanelSMConfig)
+        PanelConfig.Visible = False
+        TimerSubMenuDeslizante.HideSync(PanelSMConfig)
         BtnNotNomes()
         TabControlMenu.Width = 55
         TimerMenuDeslizante.ShowSync(TabControlMenu)
@@ -192,25 +228,6 @@ Public Class FrmPrincipal
 
 #Region "Phonebook"
 
-    Public Sub MenuAbertoOuFechado(i As Integer)
-        If TabControlMenu.Width >= 228 Then
-            PanelAberto()
-            BtnNomes()
-            ActiveFormClose()
-            TabControlMenu.SelectTab(i)
-            AppTransition.ShowSync(TabControlMenu)
-            PanelForms.Visible = True
-        Else
-            PanelFechado()
-            BtnNotNomes()
-            ActiveFormClose()
-            TabControlMenu.SelectTab(i)
-            AppTransition.ShowSync(TabControlMenu)
-            PanelForms.Visible = True
-        End If
-    End Sub
-
-
     'FECHA O PAINEL LATERAL HOME
     Private Sub OcultaPainelLateral_Phonebook()
         PanelFechado_Phonebook()
@@ -281,18 +298,91 @@ Public Class FrmPrincipal
 
 #End Region
 
+#Region "Helpdesk"
+
+    'FECHA O PAINEL LATERAL HOME
+    Private Sub OcultaPainelLateral_Helpdesk(i As Integer)
+        PanelFechado_Helpdesk()
+        BtnNotNomes_Helpdesk()
+        TabControlMenu.Width = i
+        TimerMenuDeslizante.ShowSync(TabControlMenu)
+        TimerPanelDeslizante.ShowSync(PanelForms)
+    End Sub
+
+    Private Sub PanelFechado_Helpdesk()
+        PanelForms.Visible = False
+        TabControlMenu.Visible = False
+        PanelPerfilLeft_Helpdesk.Visible = False
+        PanelLogoFull_Helpdesk.Visible = False
+        PanelPerfilTop.Visible = True
+        PbLogoP_Helpdesk.Visible = True
+    End Sub
+
+    'ABRE O PAINEL LATERAL
+    Private Sub PanelAberto_Helpdesk()
+        BtnPerfilLeft_Helpdesk.Visible = False
+        PanelForms.Visible = False
+        PanelPerfilTop.Visible = False
+        TabControlMenu.Visible = False
+        PbLogoP_Helpdesk.Visible = False
+        PanelPerfilLeft_Helpdesk.Visible = True
+        PanelLogoFull_Helpdesk.Visible = True
+        BtnPerfilLeft_Helpdesk.Visible = True
+    End Sub
+
+    Private Sub MostraPainelLateral_Helpdesk()
+        PanelAberto_Helpdesk()
+        BtnNomes_Helpdesk()
+        TabControlMenu.Width = 228
+        TimerMenuDeslizante.ShowSync(TabControlMenu)
+        TimerPanelDeslizante.ShowSync(PanelForms)
+    End Sub
+
+    'REMOVE OS NOMES DOS BOTÕES
+    Private Sub BtnNotNomes_Helpdesk()
+
+        BtnAbrirOS_Helpdesk.Text = Nothing
+        BtnPainel_Helpdesk.Text = Nothing
+        BtnGerenciador_Helpdesk.Text = Nothing
+        BtnAgenda_Helpdesk.Text = Nothing
+        BtnRelatorio_Helpdesk.Text = Nothing
+        BtnHome_Helpdesk.Text = Nothing
+
+        BtnAbrirOS_Helpdesk.ImageOffset = New Point(0, 0)
+        BtnPainel_Helpdesk.ImageOffset = New Point(0, 0)
+        BtnGerenciador_Helpdesk.ImageOffset = New Point(0, 0)
+        BtnAgenda_Helpdesk.ImageOffset = New Point(0, 0)
+        BtnRelatorio_Helpdesk.ImageOffset = New Point(0, 0)
+        BtnHome_Helpdesk.ImageOffset = New Point(0, 0)
+
+    End Sub
+
+    'INSERE OS NOMES DOS BOTÕES
+    Private Sub BtnNomes_Helpdesk()
+
+        BtnAbrirOS_Helpdesk.Text = "Abrir OS"
+        BtnPainel_Helpdesk.Text = "Painel"
+        BtnGerenciador_Helpdesk.Text = "Gerenciador"
+        BtnAgenda_Helpdesk.Text = "Agenda"
+        BtnRelatorio_Helpdesk.Text = "Relatório"
+        BtnHome_Helpdesk.Text = "Home"
+
+        BtnAbrirOS_Helpdesk.ImageOffset = New Point(10, 0)
+        BtnPainel_Helpdesk.ImageOffset = New Point(10, 0)
+        BtnGerenciador_Helpdesk.ImageOffset = New Point(10, 0)
+        BtnAgenda_Helpdesk.ImageOffset = New Point(10, 0)
+        BtnRelatorio_Helpdesk.ImageOffset = New Point(10, 0)
+        BtnHome_Helpdesk.ImageOffset = New Point(10, 0)
+    End Sub
+
 #End Region
 
-
-
-
-
-
-
+#End Region
 
     'MAXIMIZA O FORM SEM COBRIR A BARRA DO WINDOWS
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'PanelMenu.VerticalScroll.Visible = False
+        TabControlMenu.TabMenuVisible = False
     End Sub
 
     Private Sub BtnAplication_Click(sender As Object, e As EventArgs) Handles BtnAplication.Click
@@ -304,7 +394,7 @@ Public Class FrmPrincipal
 
     Private Sub BtnConfig_Click(sender As Object, e As EventArgs) Handles BtnConfig.Click
         FrmAtivo(PanelConfig, PanelSMConfig)
-        ActiveFormClose()
+        'ActiveFormClose()
     End Sub
 
     Private Function VSubMenuAtivo()
@@ -312,6 +402,7 @@ Public Class FrmPrincipal
             If Btn.Checked Then
                 PanelConfig.Visible = True
             End If
+            Exit For
         Next
         Return True
     End Function
@@ -356,41 +447,44 @@ Public Class FrmPrincipal
 
     Private Sub BtnSMSoftphone_Click(sender As Object, e As EventArgs) Handles BtnSMSoftphone.Click
         TimerSubMenuDeslizante.HideSync(PanelSMConfig)
-        If Application.OpenForms.OfType(Of FrmUsers)().Count = 0 Then
+        If Application.OpenForms.OfType(Of FrmSoftphone)().Count = 0 Then
             Btnsoftphone.Checked = True
-            FormShow(New FrmUsers())
+            FormShow(New FrmSoftphone())
         End If
     End Sub
 
     Private Sub BtnSMSmtp_Click(sender As Object, e As EventArgs) Handles BtnSMSmtp.Click
         TimerSubMenuDeslizante.HideSync(PanelSMConfig)
-        If Application.OpenForms.OfType(Of FrmUsers)().Count = 0 Then
+        If Application.OpenForms.OfType(Of FrmSMTP)().Count = 0 Then
             BtnSmtp.Checked = True
-            FormShow(New FrmUsers())
+            FormShow(New FrmSMTP())
         End If
     End Sub
 
     Private Sub BtnSMBackup_Click(sender As Object, e As EventArgs) Handles BtnSMBackup.Click
         TimerSubMenuDeslizante.HideSync(PanelSMConfig)
-        If Application.OpenForms.OfType(Of FrmUsers)().Count = 0 Then
+        If Application.OpenForms.OfType(Of FrmBackup)().Count = 0 Then
             BtnBackup.Checked = True
-            FormShow(New FrmUsers())
+            FormShow(New FrmCarregar)
+            FrmCarregar.TimerBackup.Start()
         End If
     End Sub
 
     Private Sub BtnSMArquivos_Click(sender As Object, e As EventArgs) Handles BtnSMArquivos.Click
         TimerSubMenuDeslizante.HideSync(PanelSMConfig)
-        If Application.OpenForms.OfType(Of FrmUsers)().Count = 0 Then
+        If Application.OpenForms.OfType(Of FrmArquivos)().Count = 0 Then
             BtnArquivos.Checked = True
-            FormShow(New FrmUsers())
+            FormShow(New FrmCarregar)
+            FrmCarregar.TimerArquivos.Start()
         End If
     End Sub
 
     Private Sub BtnSMUsuarios_Click(sender As Object, e As EventArgs) Handles BtnSMUsuarios.Click
         TimerSubMenuDeslizante.HideSync(PanelSMConfig)
         If Application.OpenForms.OfType(Of FrmUsers)().Count = 0 Then
-            Btnsoftphone.Checked = True
-            FormShow(New FrmUsers())
+            BtnUsuarios.Checked = True
+            FormShow(New FrmCarregar)
+            FrmCarregar.TimerFrmUsers.Start()
         End If
     End Sub
 
@@ -418,8 +512,8 @@ Public Class FrmPrincipal
 
     Private Sub BtnPerfilLeft_Click(sender As Object, e As EventArgs) Handles BtnPerfilLeft.Click
         If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
-            HideSubMenu(PanelConfig, PanelSMConfig)
             FormShow(New FrmUserConfig())
+            UnCheckBtn_home()
         End If
     End Sub
 
@@ -439,7 +533,7 @@ Public Class FrmPrincipal
             Cad_Cons = 2
             BtnSMUsuarios.Checked = True
             FormShow(New FrmCarregar)
-            FrmCarregar.TimerCadastros_Phonebook.Start()
+            FrmCarregar.TimerPhonebook.Start()
         End If
     End Sub
 
@@ -448,13 +542,12 @@ Public Class FrmPrincipal
             Cad_Cons = 1
             BtnSMUsuarios.Checked = True
             FormShow(New FrmCarregar)
-            FrmCarregar.TimerCadastros_Phonebook.Start()
+            FrmCarregar.TimerPhonebook.Start()
         End If
     End Sub
 
     Private Sub BtnLocalizacao_Click(sender As Object, e As EventArgs) Handles BtnLocalizacao.Click
         If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
-            HideSubMenu(PanelConfig, PanelSMConfig)
             ActiveFormClose()
         End If
     End Sub
@@ -487,5 +580,55 @@ Public Class FrmPrincipal
 
     Private Sub BtnInstagram_Phonebook_Click(sender As Object, e As EventArgs) Handles BtnInstagram_Phonebook.Click
 
+    End Sub
+
+    Private Sub BtnAbrirOS_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnAbrirOS_Helpdesk.Click
+        If TabSelect <> Me.BtnAbrirOS_Helpdesk.Text Then
+            TabSelect = Me.BtnAbrirOS_Helpdesk.Text
+            FormShow(New FrmCarregar())
+            FrmCarregar.TimerHelpdesk.Start()
+        End If
+    End Sub
+
+    Private Sub BtnPainel_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnPainel_Helpdesk.Click
+        If TabSelect <> Me.BtnPainel_Helpdesk.Text Then
+            TabSelect = Me.BtnPainel_Helpdesk.Text
+            FormShow(New FrmCarregar())
+            FrmCarregar.TimerHelpdesk.Start()
+        End If
+    End Sub
+
+    Private Sub BtnGerenciador_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnGerenciador_Helpdesk.Click
+        If TabSelect <> Me.BtnGerenciador_Helpdesk.Text Then
+            TabSelect = Me.BtnGerenciador_Helpdesk.Text
+            FormShow(New FrmCarregar())
+            FrmCarregar.TimerHelpdesk.Start()
+        End If
+    End Sub
+
+    Private Sub BtnAgenda_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnAgenda_Helpdesk.Click
+        If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
+            ActiveFormClose()
+        End If
+    End Sub
+
+    Private Sub BtnRelatorio_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnRelatorio_Helpdesk.Click
+        If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
+            ActiveFormClose()
+        End If
+    End Sub
+
+    Private Sub BtnHome_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnHome_Helpdesk.Click
+        Me.BtnHome_Helpdesk.Checked = False
+        BtnAplication.Checked = False
+        MenuAbertoOuFechado(0)
+    End Sub
+
+    Private Sub BtnPanelDeslizanteLeft_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnPanelDeslizanteLeft_Helpdesk.Click
+        If TabSelect = "Painel" Then
+            OcultaPainelLateral_Helpdesk(0)
+        Else
+            OcultaPainelLateral_Helpdesk(55)
+        End If
     End Sub
 End Class

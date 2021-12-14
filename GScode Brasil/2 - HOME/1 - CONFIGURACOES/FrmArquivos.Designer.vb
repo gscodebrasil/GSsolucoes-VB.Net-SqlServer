@@ -35,6 +35,8 @@ Partial Class FrmArquivos
         Me.LblInfoServidor = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.TpGSHome = New System.Windows.Forms.TabPage()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.LblDirImagemUser = New System.Windows.Forms.Label()
+        Me.TxtDirImagemUser = New Guna.UI2.WinForms.Guna2TextBox()
         Me.LblChaveSSH = New System.Windows.Forms.Label()
         Me.Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Me.TxtChaveSSH = New Guna.UI2.WinForms.Guna2TextBox()
@@ -64,8 +66,8 @@ Partial Class FrmArquivos
         Me.LblColaborador = New System.Windows.Forms.Label()
         Me.LblClientes = New System.Windows.Forms.Label()
         Me.TxtFornecedor = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.TxtColaborador = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TxtClientes = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.TxtColaborador = New Guna.UI2.WinForms.Guna2TextBox()
         Me.TpHelpdesk = New System.Windows.Forms.TabPage()
         Me.Guna2Separator3 = New Guna.UI2.WinForms.Guna2Separator()
         Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -380,6 +382,8 @@ Partial Class FrmArquivos
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.LblDirImagemUser)
+        Me.Guna2Panel1.Controls.Add(Me.TxtDirImagemUser)
         Me.Guna2Panel1.Controls.Add(Me.LblChaveSSH)
         Me.Guna2Panel1.Controls.Add(Me.Guna2Separator1)
         Me.Guna2Panel1.Controls.Add(Me.TxtChaveSSH)
@@ -402,8 +406,53 @@ Partial Class FrmArquivos
         Me.Guna2Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(741, 531)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(741, 622)
         Me.Guna2Panel1.TabIndex = 328
+        '
+        'LblDirImagemUser
+        '
+        Me.LblDirImagemUser.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LblDirImagemUser.AutoSize = True
+        Me.LblDirImagemUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.LblDirImagemUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.LblDirImagemUser.Location = New System.Drawing.Point(167, 442)
+        Me.LblDirImagemUser.Name = "LblDirImagemUser"
+        Me.LblDirImagemUser.Size = New System.Drawing.Size(112, 15)
+        Me.LblDirImagemUser.TabIndex = 329
+        Me.LblDirImagemUser.Text = "Diretorio do usuário"
+        '
+        'TxtDirImagemUser
+        '
+        Me.TxtDirImagemUser.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtDirImagemUser.Animated = True
+        Me.TxtDirImagemUser.BackColor = System.Drawing.Color.Transparent
+        Me.TxtDirImagemUser.BorderColor = System.Drawing.Color.Silver
+        Me.TxtDirImagemUser.BorderRadius = 7
+        Me.TxtDirImagemUser.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.TxtDirImagemUser.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtDirImagemUser.DefaultText = ""
+        Me.TxtDirImagemUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtDirImagemUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtDirImagemUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtDirImagemUser.DisabledState.Parent = Me.TxtDirImagemUser
+        Me.TxtDirImagemUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtDirImagemUser.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.TxtDirImagemUser.FocusedState.Parent = Me.TxtDirImagemUser
+        Me.TxtDirImagemUser.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TxtDirImagemUser.ForeColor = System.Drawing.Color.Black
+        Me.TxtDirImagemUser.HoverState.Parent = Me.TxtDirImagemUser
+        Me.TxtDirImagemUser.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.TxtDirImagemUser.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.TxtDirImagemUser.Location = New System.Drawing.Point(170, 460)
+        Me.TxtDirImagemUser.Name = "TxtDirImagemUser"
+        Me.TxtDirImagemUser.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtDirImagemUser.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.TxtDirImagemUser.PlaceholderText = ""
+        Me.TxtDirImagemUser.SelectedText = ""
+        Me.TxtDirImagemUser.ShadowDecoration.Parent = Me.TxtDirImagemUser
+        Me.TxtDirImagemUser.Size = New System.Drawing.Size(404, 36)
+        Me.TxtDirImagemUser.TabIndex = 328
+        Me.TxtDirImagemUser.TextOffset = New System.Drawing.Point(10, 0)
         '
         'LblChaveSSH
         '
@@ -546,7 +595,7 @@ Partial Class FrmArquivos
         Me.BtnCencelarGSHome.ForeColor = System.Drawing.Color.White
         Me.BtnCencelarGSHome.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnCencelarGSHome.HoverState.Parent = Me.BtnCencelarGSHome
-        Me.BtnCencelarGSHome.Location = New System.Drawing.Point(243, 483)
+        Me.BtnCencelarGSHome.Location = New System.Drawing.Point(243, 565)
         Me.BtnCencelarGSHome.Name = "BtnCencelarGSHome"
         Me.BtnCencelarGSHome.ShadowDecoration.Parent = Me.BtnCencelarGSHome
         Me.BtnCencelarGSHome.Size = New System.Drawing.Size(124, 38)
@@ -582,7 +631,7 @@ Partial Class FrmArquivos
         Me.BtnSalvarGSHome.ForeColor = System.Drawing.Color.White
         Me.BtnSalvarGSHome.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnSalvarGSHome.HoverState.Parent = Me.BtnSalvarGSHome
-        Me.BtnSalvarGSHome.Location = New System.Drawing.Point(373, 483)
+        Me.BtnSalvarGSHome.Location = New System.Drawing.Point(373, 565)
         Me.BtnSalvarGSHome.Name = "BtnSalvarGSHome"
         Me.BtnSalvarGSHome.ShadowDecoration.Parent = Me.BtnSalvarGSHome
         Me.BtnSalvarGSHome.Size = New System.Drawing.Size(124, 38)
@@ -1002,6 +1051,40 @@ Partial Class FrmArquivos
         Me.TxtFornecedor.TabIndex = 305
         Me.TxtFornecedor.TextOffset = New System.Drawing.Point(10, 0)
         '
+        'TxtClientes
+        '
+        Me.TxtClientes.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtClientes.Animated = True
+        Me.TxtClientes.BackColor = System.Drawing.Color.Transparent
+        Me.TxtClientes.BorderColor = System.Drawing.Color.Silver
+        Me.TxtClientes.BorderRadius = 7
+        Me.TxtClientes.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.TxtClientes.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtClientes.DefaultText = ""
+        Me.TxtClientes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtClientes.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtClientes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtClientes.DisabledState.Parent = Me.TxtClientes
+        Me.TxtClientes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtClientes.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.TxtClientes.FocusedState.Parent = Me.TxtClientes
+        Me.TxtClientes.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TxtClientes.ForeColor = System.Drawing.Color.Black
+        Me.TxtClientes.HoverState.Parent = Me.TxtClientes
+        Me.TxtClientes.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.TxtClientes.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.TxtClientes.IconRightOffset = New System.Drawing.Point(3, 0)
+        Me.TxtClientes.Location = New System.Drawing.Point(139, 96)
+        Me.TxtClientes.Name = "TxtClientes"
+        Me.TxtClientes.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtClientes.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.TxtClientes.PlaceholderText = ""
+        Me.TxtClientes.SelectedText = ""
+        Me.TxtClientes.ShadowDecoration.Parent = Me.TxtClientes
+        Me.TxtClientes.Size = New System.Drawing.Size(487, 36)
+        Me.TxtClientes.TabIndex = 302
+        Me.TxtClientes.TextOffset = New System.Drawing.Point(10, 0)
+        '
         'TxtColaborador
         '
         Me.TxtColaborador.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -1037,40 +1120,6 @@ Partial Class FrmArquivos
         Me.TxtColaborador.Size = New System.Drawing.Size(487, 36)
         Me.TxtColaborador.TabIndex = 304
         Me.TxtColaborador.TextOffset = New System.Drawing.Point(10, 0)
-        '
-        'TxtClientes
-        '
-        Me.TxtClientes.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TxtClientes.Animated = True
-        Me.TxtClientes.BackColor = System.Drawing.Color.Transparent
-        Me.TxtClientes.BorderColor = System.Drawing.Color.Silver
-        Me.TxtClientes.BorderRadius = 7
-        Me.TxtClientes.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
-        Me.TxtClientes.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TxtClientes.DefaultText = ""
-        Me.TxtClientes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TxtClientes.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TxtClientes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtClientes.DisabledState.Parent = Me.TxtClientes
-        Me.TxtClientes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TxtClientes.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.TxtClientes.FocusedState.Parent = Me.TxtClientes
-        Me.TxtClientes.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TxtClientes.ForeColor = System.Drawing.Color.Black
-        Me.TxtClientes.HoverState.Parent = Me.TxtClientes
-        Me.TxtClientes.IconLeftOffset = New System.Drawing.Point(5, 0)
-        Me.TxtClientes.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.TxtClientes.IconRightOffset = New System.Drawing.Point(3, 0)
-        Me.TxtClientes.Location = New System.Drawing.Point(139, 96)
-        Me.TxtClientes.Name = "TxtClientes"
-        Me.TxtClientes.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TxtClientes.PlaceholderForeColor = System.Drawing.Color.DarkGray
-        Me.TxtClientes.PlaceholderText = ""
-        Me.TxtClientes.SelectedText = ""
-        Me.TxtClientes.ShadowDecoration.Parent = Me.TxtClientes
-        Me.TxtClientes.Size = New System.Drawing.Size(487, 36)
-        Me.TxtClientes.TabIndex = 302
-        Me.TxtClientes.TextOffset = New System.Drawing.Point(10, 0)
         '
         'TpHelpdesk
         '
@@ -1968,4 +2017,6 @@ Partial Class FrmArquivos
     Friend WithEvents TxtChaveSSH As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblDirImagemUser As Label
+    Friend WithEvents TxtDirImagemUser As Guna.UI2.WinForms.Guna2TextBox
 End Class

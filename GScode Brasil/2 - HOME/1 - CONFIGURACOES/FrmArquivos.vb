@@ -11,6 +11,7 @@
         TxtChaveSSH.Text = My.Settings.SFTP_ChaveSSH
         TxtDirBkpBD.Text = My.Settings.SFTP_BackupDatabase
         TxtDirBkpSistema.Text = My.Settings.SFTP_BackupSistema
+        LblDirImagemUser.Text = My.Settings.SFTP_ImagemUsuario
 
         TxtClientes.Text = My.Settings.SFTP_PhonebookClientes
         TxtColaborador.Text = My.Settings.SFTP_PhonebookColaborador
@@ -44,6 +45,7 @@
         My.Settings.SFTP_ChaveSSH = TxtChaveSSH.Text
         My.Settings.SFTP_BackupDatabase = TxtDirBkpBD.Text
         My.Settings.SFTP_BackupSistema = TxtDirBkpSistema.Text
+        My.Settings.SFTP_ImagemUsuario = LblDirImagemUser.Text
         My.Settings.Save()
         CarregarPastas()
 
@@ -207,5 +209,4 @@
         TabControlServidorSFTP.Visible = True
         CarregarPastas()
     End Sub
-
 End Class

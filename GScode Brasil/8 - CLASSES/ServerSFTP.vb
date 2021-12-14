@@ -107,13 +107,13 @@ Public Class ServerSFTP
                     Case False
                         Sftp.CreateDirectory($"{My.Settings.SFTP_BackupSistema}{Email}")
 
-                        Using stream As Stream = File.OpenRead($"{Application.StartupPath}\{My.Settings.SFTP_BackupSistema}")
-                            Sftp.UploadFile(stream, $"{My.Settings.SFTP_BackupSistema}{Email}/{My.Settings.SFTP_BackupSistema}")
+                        Using stream As Stream = File.OpenRead($"{Application.StartupPath}\GScode Brasil.exe.config")
+                            Sftp.UploadFile(stream, $"{My.Settings.SFTP_BackupSistema}{Email}/GScode Brasil.exe.config")
                         End Using
 
                     Case Else
-                        Using stream As Stream = File.OpenRead($"{Application.StartupPath}\{My.Settings.SFTP_BackupSistema}")
-                            Sftp.UploadFile(stream, $"{My.Settings.SFTP_BackupSistema}{Email}/{My.Settings.SFTP_BackupSistema}")
+                        Using stream As Stream = File.OpenRead($"{Application.StartupPath}\GScode Brasil.exe.config")
+                            Sftp.UploadFile(stream, $"{My.Settings.SFTP_BackupSistema}{Email}/GScode Brasil.exe.config")
                         End Using
 
                 End Select
@@ -742,7 +742,7 @@ Public Class ServerSFTP
         Return Dgv
     End Function
 
-    Public Sub FileDownload_Phonebook_Cliente(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Cliente As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl, Timer As Timer)
+    Public Sub FileDownload_Phonebook_Cliente(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Cliente As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl)
         Fbd.Description = "Selecione uma pasta para realizar o Download"
         Fbd.RootFolder = Environment.SpecialFolder.MyComputer
         Fbd.ShowNewFolderButton = True
@@ -752,21 +752,22 @@ Public Class ServerSFTP
                 Sftp.Connect()
 
                 If Fbd.ShowDialog = DialogResult.OK Then
-                    Progress.Value = 0
-                    TabControl.SelectTab(8)
-                    Timer.Start()
-
+                    Dim Valida As Boolean
                     For Each row As DataGridViewRow In Dgv.Rows()
                         If Convert.ToBoolean(row.Cells(0).Value) Then
                             Dim Files As String = row.Cells(1).Value
                             If Sftp.Exists($"{My.Settings.SFTP_PhonebookClientes}{Cliente}/{Path.GetFileName(Files)}") Then
                                 Using stream As Stream = File.OpenWrite($"{Fbd.SelectedPath}\{Files}")
                                     Sftp.DownloadFile($"{My.Settings.SFTP_PhonebookClientes}{Cliente}/{Path.GetFileName(Files)}", stream)
-                                    MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    Valida = True
                                 End Using
                             End If
                         End If
                     Next
+
+                    If Valida = True Then
+                        MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
                 End If
             End Using
         Catch ex As Exception
@@ -778,7 +779,7 @@ Public Class ServerSFTP
         End Try
     End Sub
 
-    Public Sub FileDownload_Phonebook_Colaborador(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Colaborador As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl, Timer As Timer)
+    Public Sub FileDownload_Phonebook_Colaborador(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Colaborador As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl)
         Fbd.Description = "Selecione uma pasta para realizar o Download"
         Fbd.RootFolder = Environment.SpecialFolder.MyComputer
         Fbd.ShowNewFolderButton = True
@@ -788,21 +789,22 @@ Public Class ServerSFTP
                 Sftp.Connect()
 
                 If Fbd.ShowDialog = DialogResult.OK Then
-                    Progress.Value = 0
-                    TabControl.SelectTab(8)
-                    Timer.Start()
-
+                    Dim Valida As Boolean
                     For Each row As DataGridViewRow In Dgv.Rows()
                         If Convert.ToBoolean(row.Cells(0).Value) Then
                             Dim Files As String = row.Cells(1).Value
                             If Sftp.Exists($"{My.Settings.SFTP_PhonebookColaborador}{Colaborador}/{Path.GetFileName(Files)}") Then
                                 Using stream As Stream = File.OpenWrite($"{Fbd.SelectedPath}\{Files}")
                                     Sftp.DownloadFile($"{My.Settings.SFTP_PhonebookColaborador}{Colaborador}/{Path.GetFileName(Files)}", stream)
-                                    MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    Valida = True
                                 End Using
                             End If
                         End If
                     Next
+
+                    If Valida = True Then
+                        MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
                 End If
             End Using
         Catch ex As Exception
@@ -814,7 +816,7 @@ Public Class ServerSFTP
         End Try
     End Sub
 
-    Public Sub FileDownload_Phonebook_Fornecedor(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Fornecedor As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl, Timer As Timer)
+    Public Sub FileDownload_Phonebook_Fornecedor(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Fornecedor As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl)
         Fbd.Description = "Selecione uma pasta para realizar o Download"
         Fbd.RootFolder = Environment.SpecialFolder.MyComputer
         Fbd.ShowNewFolderButton = True
@@ -824,21 +826,22 @@ Public Class ServerSFTP
                 Sftp.Connect()
 
                 If Fbd.ShowDialog = DialogResult.OK Then
-                    Progress.Value = 0
-                    TabControl.SelectTab(8)
-                    Timer.Start()
-
+                    Dim Valida As Boolean
                     For Each row As DataGridViewRow In Dgv.Rows()
                         If Convert.ToBoolean(row.Cells(0).Value) Then
                             Dim Files As String = row.Cells(1).Value
                             If Sftp.Exists($"{My.Settings.SFTP_PhonebookFornecedor}{Fornecedor}/{Path.GetFileName(Files)}") Then
                                 Using stream As Stream = File.OpenWrite($"{Fbd.SelectedPath}\{Files}")
                                     Sftp.DownloadFile($"{My.Settings.SFTP_PhonebookFornecedor}{Fornecedor}/{Path.GetFileName(Files)}", stream)
-                                    MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                    Valida = True
                                 End Using
                             End If
                         End If
                     Next
+
+                    If Valida = True Then
+                        MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
                 End If
             End Using
         Catch ex As Exception
@@ -893,5 +896,407 @@ Public Class ServerSFTP
     End Sub
 
 #End Region
+
+
+
+
+    Public Function FormataGridView_Helpdesk(ColumnChkBox As Boolean, ColumnName As String, ColumnData As String, ColumnTamanho As String, Dgv As BunifuDataGridView)
+        With Dgv
+
+            .GridColor = Color.WhiteSmoke
+            .DefaultCellStyle.Font = New Font("Segoe UI Semibold", 9)
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(223, 243, 251)
+            .AlternatingRowsDefaultCellStyle.BackColor = Color.White
+            .CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+            .RowHeadersDefaultCellStyle.Font = New Font("Segoe UI Bold", 9)
+            .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(64, 64, 64)
+            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .ColumnHeadersHeight = 40
+            .RowTemplate.Height = 40
+
+            .ColumnCount = 5
+
+            .Rows.Add(ColumnChkBox, ColumnName, ColumnData, ColumnTamanho)
+
+            .Columns(1).HeaderText = "Arquivo"
+            .Columns(2).HeaderText = "Data"
+            .Columns(3).HeaderText = "Tamanho"
+            .Columns(0).HeaderCell = New CheckHeaderCell
+
+            .Columns(0).Visible = True
+            .Columns(0).ReadOnly = False
+
+            .Sort(.Columns(2), ListSortDirection.Descending)
+            .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            .Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        End With
+        Return Dgv
+    End Function
+
+    Public Function FileList_Helpdesk(Dgv As BunifuDataGridView, Cliente As String, Finalidade As String)
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+
+                If Sftp.Exists($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/") Then
+                    Dim Files = Sftp.ListDirectory($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/")
+
+                    For Each File In Files
+                        If File.IsRegularFile Then
+                            Dim FileAtributes = Sftp.GetAttributes($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/{File.Name}")
+                            Dim Tamanho As String = FileAtributes.Size
+                            Dim MB = 1048576
+                            Dim GB = 1048576000
+
+                            If Tamanho < GB Then
+                                Tamanho /= MB
+                                Tamanho = $"{FormatNumber(Tamanho, 2).Replace(",", ".")} MB"
+
+                            Else
+                                Tamanho /= GB
+                                Tamanho = $"{FormatNumber(Tamanho, 2).Replace(",", ".")} GB"
+
+                            End If
+
+                            FormataGridView_Helpdesk(False, File.Name, FileAtributes.LastWriteTime, Tamanho, Dgv)
+
+                        End If
+                    Next
+                Else
+                    FormataGridView_Helpdesk(False, Nothing, Nothing, Nothing, Dgv)
+                    Dgv.Rows.Clear()
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Erro ao listar os arquivos.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return Dgv
+    End Function
+
+    Public Function CarregarArquivo_Helpdesk(Dgv As BunifuDataGridView, Ofd As OpenFileDialog, Cliente As String, Finalidade As String, TabControl As Guna2TabControl)
+        Ofd.Title = "Selecione Arquivo"
+        Ofd.Filter = "Todos os arquivos (*.*)|*.*"
+        Ofd.Multiselect = True
+        Ofd.CheckFileExists = True
+        Ofd.CheckPathExists = True
+        Ofd.FilterIndex = 2
+        Ofd.RestoreDirectory = True
+        Ofd.ReadOnlyChecked = True
+        Ofd.ShowReadOnly = True
+        Ofd.FileName = ""
+
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+
+                If Ofd.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    Dim FilePath() As String = Ofd.FileNames
+                    Dim FileName As String
+
+                    'VERIFICA AS INFORMAÇÕES (ULTIMA ATUALIZAÇÃO E TAMANHO) DO ARQUIVO
+                    For Each FileName In FilePath
+                        Dim FileWriteTime As String = File.GetLastWriteTime(FileName)
+                        Dim FileSize As String = File.OpenRead(FileName).Length
+                        Dim MB = 1048576
+                        Dim GB = 1048576000
+
+                        If FileSize < GB Then
+                            FileSize /= MB
+                            FileSize = $"{FormatNumber(FileSize, 2).Replace(",", ".")} MB"
+
+                        Else
+                            FileSize /= GB
+                            FileSize = $"{FormatNumber(FileSize, 2).Replace(",", ".")} GB"
+                        End If
+
+                        If Not Sftp.Exists($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}") Then
+                            Sftp.CreateDirectory($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}")
+                        End If
+
+                        If Not Sftp.Exists($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}") Then
+                            Sftp.CreateDirectory($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}")
+                        End If
+
+                        'VERIFICA SE EXISTE O ARQUIVO NO SERVIDOR
+                        If Sftp.Exists($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/{Path.GetFileName(FileName)}") Then
+                            If MessageBox.Show($"O Arquivo {Path.GetFileName(FileName)} já existe no servidor, deseja substitui-lo?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+
+                                'REMOVE A LINHA CORRESPONDENTE AO ARQUIVO QUE FOI SUBSTITUIDO
+                                For Each VFile As DataGridViewRow In Dgv.Rows
+                                    If VFile.Cells(1).Value.ToString.Contains(Path.GetFileName(FileName)) Then
+                                        Dgv.Rows.Remove(VFile)
+                                    End If
+                                Next
+
+                                'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
+                                Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
+
+                                    Sftp.UploadFile(stream, $"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/{Path.GetFileName(FileName)}")
+
+                                    If Dgv.Rows.Count > 0 Then
+                                        Dgv.Rows.Add(False, Path.GetFileName(FileName), FileWriteTime, FileSize)
+                                    Else
+                                        FormataGridView_Helpdesk(False, Path.GetFileName(FileName), FileWriteTime, FileSize, Dgv)
+                                    End If
+                                End Using
+                            End If
+
+                        Else
+
+                            'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
+                            Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
+
+                                Sftp.UploadFile(stream, $"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/{Path.GetFileName(FileName)}")
+
+                                If Dgv.Rows.Count > 0 Then
+                                    Dgv.Rows.Add(False, Path.GetFileName(FileName), FileWriteTime, FileSize)
+                                Else
+                                    FormataGridView_Helpdesk(False, Path.GetFileName(FileName), FileWriteTime, FileSize, Dgv)
+                                End If
+                            End Using
+                        End If
+                    Next
+                End If
+            End Using
+        Catch ex As Exception
+            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+
+                TabControl.SelectTab(2)
+            End If
+        End Try
+        Return Dgv
+    End Function
+
+    Public Sub FileDownload_Helpdesk(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Cliente As String, Finalidade As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl)
+        Fbd.Description = "Selecione uma pasta para realizar o Download"
+        Fbd.RootFolder = Environment.SpecialFolder.MyComputer
+        Fbd.ShowNewFolderButton = True
+
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+
+                If Fbd.ShowDialog = DialogResult.OK Then
+                    Dim Valida As Boolean
+                    For Each row As DataGridViewRow In Dgv.Rows()
+                        If Convert.ToBoolean(row.Cells(0).Value) Then
+                            Dim Files As String = row.Cells(1).Value
+                            If Sftp.Exists($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/{Path.GetFileName(Files)}") Then
+                                Using stream As Stream = File.OpenWrite($"{Fbd.SelectedPath}\{Files}")
+                                    Sftp.DownloadFile($"{My.Settings.SFTP_HelpdeskOSRemoto}{Cliente}/{Finalidade}/{Path.GetFileName(Files)}", stream)
+                                    Valida = True
+                                End Using
+                            End If
+                        End If
+                    Next
+
+                    If Valida = True Then
+                        MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    End If
+                End If
+            End Using
+        Catch ex As Exception
+            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+
+                TabControl.SelectTab(2)
+            End If
+        End Try
+    End Sub
+
+    Public Sub PathDelete_Helpdesk(Path As String)
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+                If Sftp.Exists($"{Path}") Then
+                    If Sftp.Exists($"{Path}OCORRENCIA/") Then
+                        Dim FilesOC = Sftp.ListDirectory($"{Path}OCORRENCIA/")
+                        For Each File In FilesOC
+                            If File.IsRegularFile Then
+                                Sftp.DeleteFile($"{Path}OCORRENCIA/{File.Name}")
+                            End If
+                        Next
+                        Sftp.DeleteDirectory($"{Path}OCORRENCIA/")
+                    End If
+
+                    If Sftp.Exists($"{Path}RESULTADO/") Then
+                        Dim FilesRES = Sftp.ListDirectory($"{Path}RESULTADO/")
+                        For Each File In FilesRES
+                            If File.IsRegularFile Then
+                                Sftp.DeleteFile($"{Path}RESULTADO/{File.Name}")
+                            End If
+                        Next
+                        Sftp.DeleteDirectory($"{Path}RESULTADO/")
+                    End If
+                    Sftp.DeleteDirectory($"{Path}")
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Public Function FileDelete_Helpdesk(Dgv As BunifuDataGridView, Panel As Guna2ShadowPanel, Path As String)
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+                Dim i As Integer = 0
+                While i < Dgv.Rows.Count
+                    Dim row As DataGridViewRow = Dgv.Rows(i)
+                    If Convert.ToBoolean(row.Cells(0).Value) Then
+                        Dim Files As String = row.Cells(1).Value
+                        Sftp.DeleteFile($"{Path}{Files}")
+                        Dgv.Rows.Remove(row)
+                        Panel.Visible = False
+                        i -= 1
+                    End If
+                    i += 1
+                End While
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return Dgv
+    End Function
+
+
+
+
+
+    Public Function FileList_Usuario(PbPerfil As Guna2CirclePictureBox, Usuario As String)
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+
+                If Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/") Then
+                    Dim Files = Sftp.ListDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/")
+
+                    For Each File In Files
+                        If File.IsRegularFile Then
+                            Dim MyImage = Image.FromFile($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{File.Name}")
+                            PbPerfil.Image = MyImage
+                        End If
+                    Next
+                End If
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Erro ao listar os arquivos.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return PbPerfil
+    End Function
+
+
+
+
+
+
+    Public Sub CarregarArquivo_Usuario(Ofd As OpenFileDialog, FotoUserConfig As Guna2CirclePictureBox, FotoLeft As Guna2CirclePictureBox, FotoTop As Guna2CirclePictureBox, ImgLeft As ImageList, ImgTop As ImageList, Usuario As String)
+        Ofd.Title = "Selecione a Imagem"
+        Ofd.Filter = "Todos os arquivos (*.JPG;*.JPEG;*.PNG;*.GIF)|*.JPG;*.JPEG;*.PNG;*.GIF"
+        Ofd.Multiselect = True
+        Ofd.CheckFileExists = True
+        Ofd.CheckPathExists = True
+        Ofd.FilterIndex = 2
+        Ofd.RestoreDirectory = True
+        Ofd.ReadOnlyChecked = True
+        Ofd.ShowReadOnly = True
+        Ofd.FileName = ""
+
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+
+                If Ofd.ShowDialog = Windows.Forms.DialogResult.OK Then
+                    Dim FilePath() As String = Ofd.FileNames
+                    Dim FileName As String
+
+                    'VERIFICA AS INFORMAÇÕES (ULTIMA ATUALIZAÇÃO E TAMANHO) DO ARQUIVO
+                    For Each FileName In FilePath
+
+                        If Not Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}") Then
+                            Sftp.CreateDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}")
+                        End If
+
+                        If Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{Path.GetFileName(FileName)}") Then
+                            If MessageBox.Show($"O Arquivo {Path.GetFileName(FileName)} já existe no servidor, deseja substitui-lo?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+
+                                'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
+                                Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
+                                    Sftp.UploadFile(stream, $"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{Path.GetFileName(FileName)}")
+                                    If ImgLeft.Images.Count = 2 Then
+                                        ImgLeft.Images.RemoveAt(1)
+                                        ImgTop.Images.RemoveAt(1)
+                                    End If
+
+                                    ImgLeft.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
+                                    ImgTop.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
+
+                                    FotoLeft.Image = ImgLeft.Images(1)
+                                    FotoTop.Image = ImgTop.Images(1)
+                                    FotoUserConfig.Image = ImgLeft.Images(1)
+                                End Using
+                            End If
+                        Else
+
+                            'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
+                            Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
+                                Sftp.UploadFile(stream, $"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{Path.GetFileName(FileName)}")
+                                If ImgLeft.Images.Count = 2 Then
+                                    ImgLeft.Images.RemoveAt(1)
+                                    ImgTop.Images.RemoveAt(1)
+                                End If
+
+                                ImgLeft.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
+                                ImgTop.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
+
+                                FotoLeft.Image = ImgLeft.Images(1)
+                                FotoTop.Image = ImgTop.Images(1)
+                                FotoUserConfig.Image = ImgLeft.Images(1)
+                            End Using
+                        End If
+
+                    Next
+                End If
+            End Using
+        Catch ex As Exception
+            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
+            Else
+
+            End If
+        End Try
+    End Sub
+
+
+
+
+
+
+
+
+    Public Function FileDelete_Usuario(Dgv As BunifuDataGridView, Panel As Guna2ShadowPanel, Path As String)
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+                Dim i As Integer = 0
+                While i < Dgv.Rows.Count
+                    Dim row As DataGridViewRow = Dgv.Rows(i)
+                    If Convert.ToBoolean(row.Cells(0).Value) Then
+                        Dim Files As String = row.Cells(1).Value
+                        Sftp.DeleteFile($"{Path}{Files}")
+                        Dgv.Rows.Remove(row)
+                        Panel.Visible = False
+                        i -= 1
+                    End If
+                    i += 1
+                End While
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        Return Dgv
+    End Function
 
 End Class

@@ -193,7 +193,6 @@ Partial Class FrmLogin
         Me.TimerEditarBD = New System.Windows.Forms.Timer(Me.components)
         Me.TimerRdf = New System.Windows.Forms.Timer(Me.components)
         Me.TimerRdfSenha = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerVCamposPessoais = New System.Windows.Forms.Timer(Me.components)
         Me.TimerCadastro = New System.Windows.Forms.Timer(Me.components)
         Me.tpCheckList.SuspendLayout()
         CType(Me.pbChklistAviso, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1085,9 +1084,9 @@ Partial Class FrmLogin
         Me.lblPerfilNascimento.ForeColor = System.Drawing.Color.Black
         Me.lblPerfilNascimento.Location = New System.Drawing.Point(56, 82)
         Me.lblPerfilNascimento.Name = "lblPerfilNascimento"
-        Me.lblPerfilNascimento.Size = New System.Drawing.Size(79, 15)
+        Me.lblPerfilNascimento.Size = New System.Drawing.Size(71, 15)
         Me.lblPerfilNascimento.TabIndex = 158
-        Me.lblPerfilNascimento.Text = "Nascimento *"
+        Me.lblPerfilNascimento.Text = "Nascimento"
         Me.lblPerfilNascimento.Visible = False
         '
         'lblPerfilNome
@@ -1129,12 +1128,14 @@ Partial Class FrmLogin
         Me.txtPerfilNascimento.HoverState.Parent = Me.txtPerfilNascimento
         Me.txtPerfilNascimento.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilNascimento.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilNascimento.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtPerfilNascimento.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilNascimento.Location = New System.Drawing.Point(55, 101)
         Me.txtPerfilNascimento.MaxLength = 8
         Me.txtPerfilNascimento.Name = "txtPerfilNascimento"
         Me.txtPerfilNascimento.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtPerfilNascimento.PlaceholderForeColor = System.Drawing.Color.Gray
-        Me.txtPerfilNascimento.PlaceholderText = "Nascimento... *"
+        Me.txtPerfilNascimento.PlaceholderText = "Nascimento..."
         Me.txtPerfilNascimento.SelectedText = ""
         Me.txtPerfilNascimento.ShadowDecoration.Parent = Me.txtPerfilNascimento
         Me.txtPerfilNascimento.Size = New System.Drawing.Size(166, 36)
@@ -1153,7 +1154,6 @@ Partial Class FrmLogin
         Me.btnAvPerfil.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAvPerfil.CustomImages.Parent = Me.btnAvPerfil
         Me.btnAvPerfil.DisabledState.Parent = Me.btnAvPerfil
-        Me.btnAvPerfil.Enabled = False
         Me.btnAvPerfil.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAvPerfil.FillColor2 = System.Drawing.Color.Black
         Me.btnAvPerfil.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
@@ -1276,6 +1276,8 @@ Partial Class FrmLogin
         Me.txtPerfilNome.HoverState.Parent = Me.txtPerfilNome
         Me.txtPerfilNome.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilNome.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilNome.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtPerfilNome.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilNome.Location = New System.Drawing.Point(55, 34)
         Me.txtPerfilNome.Name = "txtPerfilNome"
         Me.txtPerfilNome.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1314,7 +1316,8 @@ Partial Class FrmLogin
         Me.txtPerfilCelular.IconLeft = CType(resources.GetObject("txtPerfilCelular.IconLeft"), System.Drawing.Image)
         Me.txtPerfilCelular.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilCelular.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.txtPerfilCelular.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilCelular.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtPerfilCelular.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilCelular.Location = New System.Drawing.Point(393, 101)
         Me.txtPerfilCelular.MaxLength = 16
         Me.txtPerfilCelular.Name = "txtPerfilCelular"
@@ -1353,6 +1356,8 @@ Partial Class FrmLogin
         Me.txtPerfilEndereco.HoverState.Parent = Me.txtPerfilEndereco
         Me.txtPerfilEndereco.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilEndereco.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilEndereco.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtPerfilEndereco.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilEndereco.Location = New System.Drawing.Point(194, 168)
         Me.txtPerfilEndereco.Name = "txtPerfilEndereco"
         Me.txtPerfilEndereco.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1391,7 +1396,7 @@ Partial Class FrmLogin
         Me.txtPerfilCep.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilCep.IconLeftSize = New System.Drawing.Size(18, 18)
         Me.txtPerfilCep.IconRightOffset = New System.Drawing.Point(5, 0)
-        Me.txtPerfilCep.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilCep.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilCep.Location = New System.Drawing.Point(55, 168)
         Me.txtPerfilCep.MaxLength = 9
         Me.txtPerfilCep.Name = "txtPerfilCep"
@@ -1430,6 +1435,8 @@ Partial Class FrmLogin
         Me.txtPerfilComp.HoverState.Parent = Me.txtPerfilComp
         Me.txtPerfilComp.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilComp.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilComp.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtPerfilComp.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilComp.Location = New System.Drawing.Point(55, 235)
         Me.txtPerfilComp.Name = "txtPerfilComp"
         Me.txtPerfilComp.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1467,6 +1474,8 @@ Partial Class FrmLogin
         Me.txtPerfilCidade.HoverState.Parent = Me.txtPerfilCidade
         Me.txtPerfilCidade.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilCidade.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilCidade.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtPerfilCidade.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilCidade.Location = New System.Drawing.Point(280, 235)
         Me.txtPerfilCidade.Name = "txtPerfilCidade"
         Me.txtPerfilCidade.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -1576,7 +1585,7 @@ Partial Class FrmLogin
         Me.lblPerfilInf.AutoSize = False
         Me.lblPerfilInf.BackColor = System.Drawing.Color.Transparent
         Me.lblPerfilInf.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPerfilInf.ForeColor = System.Drawing.Color.Black
+        Me.lblPerfilInf.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblPerfilInf.Location = New System.Drawing.Point(67, 280)
         Me.lblPerfilInf.Name = "lblPerfilInf"
         Me.lblPerfilInf.Size = New System.Drawing.Size(558, 54)
@@ -1611,6 +1620,8 @@ Partial Class FrmLogin
         Me.txtPerfilUF.HoverState.Parent = Me.txtPerfilUF
         Me.txtPerfilUF.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtPerfilUF.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtPerfilUF.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtPerfilUF.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtPerfilUF.Location = New System.Drawing.Point(551, 235)
         Me.txtPerfilUF.MaxLength = 2
         Me.txtPerfilUF.Name = "txtPerfilUF"
@@ -1683,9 +1694,9 @@ Partial Class FrmLogin
         Me.lblAcessoConfPass.ForeColor = System.Drawing.Color.Black
         Me.lblAcessoConfPass.Location = New System.Drawing.Point(172, 234)
         Me.lblAcessoConfPass.Name = "lblAcessoConfPass"
-        Me.lblAcessoConfPass.Size = New System.Drawing.Size(105, 15)
+        Me.lblAcessoConfPass.Size = New System.Drawing.Size(108, 15)
         Me.lblAcessoConfPass.TabIndex = 159
-        Me.lblAcessoConfPass.Text = "Confirme a senha*"
+        Me.lblAcessoConfPass.Text = "Confirme a senha *"
         Me.lblAcessoConfPass.Visible = False
         '
         'lblAcessoPass
@@ -1697,9 +1708,9 @@ Partial Class FrmLogin
         Me.lblAcessoPass.ForeColor = System.Drawing.Color.Black
         Me.lblAcessoPass.Location = New System.Drawing.Point(172, 157)
         Me.lblAcessoPass.Name = "lblAcessoPass"
-        Me.lblAcessoPass.Size = New System.Drawing.Size(44, 15)
+        Me.lblAcessoPass.Size = New System.Drawing.Size(47, 15)
         Me.lblAcessoPass.TabIndex = 159
-        Me.lblAcessoPass.Text = "Senha*"
+        Me.lblAcessoPass.Text = "Senha *"
         Me.lblAcessoPass.Visible = False
         '
         'lblAcessoEmail
@@ -1711,9 +1722,9 @@ Partial Class FrmLogin
         Me.lblAcessoEmail.ForeColor = System.Drawing.Color.Black
         Me.lblAcessoEmail.Location = New System.Drawing.Point(172, 80)
         Me.lblAcessoEmail.Name = "lblAcessoEmail"
-        Me.lblAcessoEmail.Size = New System.Drawing.Size(46, 15)
+        Me.lblAcessoEmail.Size = New System.Drawing.Size(49, 15)
         Me.lblAcessoEmail.TabIndex = 159
-        Me.lblAcessoEmail.Text = "E-mail*"
+        Me.lblAcessoEmail.Text = "E-mail *"
         Me.lblAcessoEmail.Visible = False
         '
         'btnAvAcesso
@@ -1728,7 +1739,6 @@ Partial Class FrmLogin
         Me.btnAvAcesso.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAvAcesso.CustomImages.Parent = Me.btnAvAcesso
         Me.btnAvAcesso.DisabledState.Parent = Me.btnAvAcesso
-        Me.btnAvAcesso.Enabled = False
         Me.btnAvAcesso.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnAvAcesso.FillColor2 = System.Drawing.Color.Black
         Me.btnAvAcesso.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
@@ -1766,7 +1776,7 @@ Partial Class FrmLogin
         Me.btnVoltAcesso.ShadowDecoration.Parent = Me.btnVoltAcesso
         Me.btnVoltAcesso.Size = New System.Drawing.Size(124, 38)
         Me.btnVoltAcesso.TabIndex = 5
-        Me.btnVoltAcesso.Text = "VOLTAR"
+        Me.btnVoltAcesso.Text = "CANCELAR"
         '
         'txtCadEmail
         '
@@ -1777,6 +1787,7 @@ Partial Class FrmLogin
         Me.txtCadEmail.BorderColor = System.Drawing.Color.DimGray
         Me.txtCadEmail.BorderRadius = 17
         Me.txtCadEmail.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.txtCadEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txtCadEmail.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtCadEmail.DefaultText = ""
         Me.txtCadEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
@@ -1795,11 +1806,13 @@ Partial Class FrmLogin
         Me.txtCadEmail.IconLeftCursor = System.Windows.Forms.Cursors.Hand
         Me.txtCadEmail.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtCadEmail.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtCadEmail.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtCadEmail.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtCadEmail.Location = New System.Drawing.Point(171, 98)
         Me.txtCadEmail.Name = "txtCadEmail"
         Me.txtCadEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.txtCadEmail.PlaceholderForeColor = System.Drawing.Color.Gray
-        Me.txtCadEmail.PlaceholderText = "Digite seu E-mail..."
+        Me.txtCadEmail.PlaceholderText = "digite seu e-mail..."
         Me.txtCadEmail.SelectedText = ""
         Me.txtCadEmail.ShadowDecoration.Parent = Me.txtCadEmail
         Me.txtCadEmail.Size = New System.Drawing.Size(350, 36)
@@ -1832,6 +1845,8 @@ Partial Class FrmLogin
         Me.txtCadPass.HoverState.Parent = Me.txtCadPass
         Me.txtCadPass.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtCadPass.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtCadPass.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtCadPass.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtCadPass.Location = New System.Drawing.Point(172, 175)
         Me.txtCadPass.MaxLength = 18
         Me.txtCadPass.Name = "txtCadPass"
@@ -2146,7 +2161,8 @@ Partial Class FrmLogin
         Me.txtLoginEmail.IconLeftCursor = System.Windows.Forms.Cursors.Hand
         Me.txtLoginEmail.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtLoginEmail.IconLeftSize = New System.Drawing.Size(18, 18)
-        Me.txtLoginEmail.IconRightSize = New System.Drawing.Size(18, 18)
+        Me.txtLoginEmail.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtLoginEmail.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtLoginEmail.Location = New System.Drawing.Point(173, 204)
         Me.txtLoginEmail.Name = "txtLoginEmail"
         Me.txtLoginEmail.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2184,6 +2200,8 @@ Partial Class FrmLogin
         Me.txtLoginPassword.HoverState.Parent = Me.txtLoginPassword
         Me.txtLoginPassword.IconLeftOffset = New System.Drawing.Point(5, 0)
         Me.txtLoginPassword.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.txtLoginPassword.IconRightOffset = New System.Drawing.Point(5, 0)
+        Me.txtLoginPassword.IconRightSize = New System.Drawing.Size(16, 16)
         Me.txtLoginPassword.Location = New System.Drawing.Point(173, 270)
         Me.txtLoginPassword.Name = "txtLoginPassword"
         Me.txtLoginPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -2268,10 +2286,10 @@ Partial Class FrmLogin
         Me.bpCadUser.Location = New System.Drawing.Point(0, 126)
         Me.bpCadUser.Multiline = True
         Me.bpCadUser.Name = "bpCadUser"
-        Me.bpCadUser.Page = Me.tpUserLogin
-        Me.bpCadUser.PageIndex = 0
-        Me.bpCadUser.PageName = "tpUserLogin"
-        Me.bpCadUser.PageTitle = "Login"
+        Me.bpCadUser.Page = Me.tpPerfil
+        Me.bpCadUser.PageIndex = 2
+        Me.bpCadUser.PageName = "tpPerfil"
+        Me.bpCadUser.PageTitle = "Perfil"
         Me.bpCadUser.SelectedIndex = 0
         Me.bpCadUser.Size = New System.Drawing.Size(700, 514)
         Me.bpCadUser.TabIndex = 56
@@ -2904,7 +2922,7 @@ Partial Class FrmLogin
         Me.btnConfCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnConfCancel.CustomImages.Parent = Me.btnConfCancel
         Me.btnConfCancel.DisabledState.Parent = Me.btnConfCancel
-        Me.btnConfCancel.FillColor = System.Drawing.Color.SlateGray
+        Me.btnConfCancel.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnConfCancel.FillColor2 = System.Drawing.Color.Black
         Me.btnConfCancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnConfCancel.ForeColor = System.Drawing.Color.White
@@ -2929,7 +2947,7 @@ Partial Class FrmLogin
         Me.btnConfValidar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnConfValidar.CustomImages.Parent = Me.btnConfValidar
         Me.btnConfValidar.DisabledState.Parent = Me.btnConfValidar
-        Me.btnConfValidar.FillColor = System.Drawing.Color.SlateGray
+        Me.btnConfValidar.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnConfValidar.FillColor2 = System.Drawing.Color.Black
         Me.btnConfValidar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnConfValidar.ForeColor = System.Drawing.Color.White
@@ -3115,7 +3133,7 @@ Partial Class FrmLogin
         Me.btnCancelarBD.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancelarBD.CustomImages.Parent = Me.btnCancelarBD
         Me.btnCancelarBD.DisabledState.Parent = Me.btnCancelarBD
-        Me.btnCancelarBD.FillColor = System.Drawing.Color.SlateGray
+        Me.btnCancelarBD.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnCancelarBD.FillColor2 = System.Drawing.Color.Black
         Me.btnCancelarBD.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnCancelarBD.ForeColor = System.Drawing.Color.White
@@ -3140,7 +3158,7 @@ Partial Class FrmLogin
         Me.btnEditarBD.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEditarBD.CustomImages.Parent = Me.btnEditarBD
         Me.btnEditarBD.DisabledState.Parent = Me.btnEditarBD
-        Me.btnEditarBD.FillColor = System.Drawing.Color.SlateGray
+        Me.btnEditarBD.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.btnEditarBD.FillColor2 = System.Drawing.Color.Black
         Me.btnEditarBD.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnEditarBD.ForeColor = System.Drawing.Color.White
@@ -3752,9 +3770,6 @@ Partial Class FrmLogin
         '
         Me.TimerRdfSenha.Interval = 20
         '
-        'TimerVCamposPessoais
-        '
-        '
         'TimerCadastro
         '
         Me.TimerCadastro.Interval = 20
@@ -3975,7 +3990,6 @@ Partial Class FrmLogin
     Friend WithEvents lblRdfInvalido As Label
     Friend WithEvents lblRdfAviso As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents TimerRdfSenha As Timer
-    Friend WithEvents TimerVCamposPessoais As Timer
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents TimerCadastro As Timer
     Friend WithEvents btnAcessoBD As Bunifu.UI.WinForms.BunifuImageButton

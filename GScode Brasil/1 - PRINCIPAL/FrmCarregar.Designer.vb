@@ -28,7 +28,8 @@ Partial Class FrmCarregar
         Me.TimerArquivos = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.TimerBackup = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerCadastros_Phonebook = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerPhonebook = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerHelpdesk = New System.Windows.Forms.Timer(Me.components)
         CType(Me.Guna2CirclePictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,9 +59,13 @@ Partial Class FrmCarregar
         '
         Me.TimerBackup.Interval = 300
         '
-        'TimerCadastros_Phonebook
+        'TimerPhonebook
         '
-        Me.TimerCadastros_Phonebook.Interval = 300
+        Me.TimerPhonebook.Interval = 300
+        '
+        'TimerHelpdesk
+        '
+        Me.TimerHelpdesk.Interval = 300
         '
         'FrmCarregar
         '
@@ -81,5 +86,6 @@ Partial Class FrmCarregar
     Friend WithEvents TimerArquivos As Timer
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents TimerBackup As Timer
-    Friend WithEvents TimerCadastros_Phonebook As Timer
+    Friend WithEvents TimerPhonebook As Timer
+    Friend WithEvents TimerHelpdesk As Timer
 End Class

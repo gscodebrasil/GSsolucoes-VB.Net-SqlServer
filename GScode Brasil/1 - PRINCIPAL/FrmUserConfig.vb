@@ -8,48 +8,29 @@ Public Class FrmUserConfig
 
     Private NewThead As Thread
 
-    Private Sub bpInfo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles bpInfo.SelectedIndexChanged
-
-    End Sub
-
     Private ReadOnly clValidaData As New ValidaData
     Private ReadOnly clValidaCep As New ValidaCep
     Private ReadOnly clUser As New UserInfo
     Private ReadOnly clCifer As New Cifer
     Private ReadOnly clEmail As New Email
     Private ReadOnly clRGB As New RGBColors
+    Private ReadOnly ClServerSFTP As New ServerSFTP
 
     Private StrWhats As String
     Private StrEmail As String
     Private StrTermo As String
     Private StrColorWhats As String
     Private StrColorEmail As String
-    Private chkWhats As Integer
-    Private chkEmail As Integer
-    Private chkTermos As Integer
+    Private chkWhats As Boolean
+    Private chkEmail As Boolean
+    Private chkTermos As Boolean
     Private redefinir As Integer
 
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs)
-        bpInfo.SetPage(1)
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        EditPerfil()
     End Sub
 
     Private Sub Editar()
-        If chkPerfilWhats.Checked = True Then
-            chkWhats = 1
-        Else
-            chkWhats = 0
-        End If
-        If chkPerfilEmail.Checked = True Then
-            chkEmail = 1
-        Else
-            chkEmail = 0
-        End If
-        If chkPerfilTermos.Checked = True Then
-            chkTermos = 1
-        Else
-            chkTermos = 0
-        End If
-
         clUser.email = FrmPrincipal.LblEmailLeft.Text
         clUser.name = txtNome.Text
         clUser.nascimento = txtNascimento.Text
@@ -60,20 +41,14 @@ Public Class FrmUserConfig
         clUser.comp = txtComplemento.Text
         clUser.cidade = txtCidade.Text
         clUser.uf = txtUF.Text
-        'clUser.notwhats = chkWhats
-        'clUser.notemail = chkEmail
-        'clUser.acepttermos = chkTermos
-        'clUser.empresa = txtEmpresa.Text
-        'clUser.depart = txtDepart.Text
-        'clUser.funcao = txtFuncao.Text
-        'clUser.tellempresa = txtTel.Text
-        'clUser.ramal = txtRamal.Text
-        'clUser.permconfig = 1
-        'clUser.permphonebook = 0
-        'clUser.permhelpdesk = 0
-        'clUser.permestoque = 0
-        'clUser.permfinanceiro = 0
-        'clUser.permdashboard = 0
+        clUser.not_whats = chkPerfilWhats.Checked
+        clUser.not_email = chkPerfilEmail.Checked
+        clUser.acept_termos = chkPerfilTermos.Checked
+        clUser.empresa = txtEmpresa.Text
+        clUser.depart = txtDepart.Text
+        clUser.funcao = txtFuncao.Text
+        clUser.tell_empresa = txtTel.Text
+        clUser.ramal = txtRamal.Text
         clUser.Edita()
     End Sub
 
@@ -131,7 +106,7 @@ Public Class FrmUserConfig
     End Sub
 
     Private Sub limparClEmail()
-        clEmail.toEmail = Nothing
+        clEmail.ToEmail = Nothing
     End Sub
 
     Public Sub BuscarInfo()
@@ -142,32 +117,22 @@ Public Class FrmUserConfig
         If clUser.not_whats = True Then
             StrWhats = "Ativado"
             StrColorWhats = "Green"
-            'chkPerfilWhats.Checked = True
             pbWhats.Visible = False
         Else
             StrWhats = "Desativado"
             StrColorWhats = "Red"
-            'chkPerfilWhats.Checked = False
             pbWhats.Visible = True
         End If
         If clUser.not_email = True Then
             StrEmail = "Ativado"
             StrColorEmail = "Green"
-            'chkPerfilEmail.Checked = True
             pbEmail.Visible = False
         Else
             StrEmail = "Desativado"
             StrColorEmail = "Red"
-            'chkPerfilEmail.Checked = False
             pbEmail.Visible = True
         End If
-        If clUser.acept_termos = True Then
-            'chkPerfilTermos.Checked = True
-            pbTermos.Visible = False
-        Else
-            'chkPerfilTermos.Checked = False
-            pbTermos.Visible = True
-        End If
+
 
         lblChaveKey.Text = clUser.token
 
@@ -190,150 +155,97 @@ Public Class FrmUserConfig
 
     End Sub
 
+    Private Function CodigoInterno() As String
+        Dim senha = ""
+        Dim Rand = New Random
+        Dim Caracteres = "0123456789"
+        Dim NumeroMaximo = Caracteres.Length
+        Dim Numero As Integer
+
+        For i = 0 To 4
+            Numero = Rand.Next(NumeroMaximo)
+            senha = $"{senha}{Caracteres(Numero)}"
+        Next
+
+        Return senha
+    End Function
+
     Private Function ValidaEmail(ByVal strCheck As String) As Boolean
         Return Regex.IsMatch(strCheck, "^([0-9a-z]([-\.\w]*[0-9a-z])*@([0-9a-z][-\w]*[0-9a-z]\.)+[a-z]{2,9})$")
     End Function
 
-    Private Sub FrmUserConfig_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BuscarInfo()
-    End Sub
+    Private Function Valida_Perfil() As Boolean
 
-    Private Sub btnCopy_Click(sender As Object, e As EventArgs)
+        If txtNome.Text.Length <= 0 Then
+            txtNome.IconRight = imgRdf.Images(0)
+            Valida_Perfil = True
+        End If
+
+        If chkPerfilTermos.Checked = False Then
+            pbTermos.Visible = True
+            Valida_Perfil = True
+        End If
+
+        Return Valida_Perfil
+    End Function
+
+    Private Sub btnCopy_Click(sender As Object, e As EventArgs) Handles BtnCopy.Click
         Clipboard.SetDataObject(lblChaveKey.Text, True)
     End Sub
 
-    Private Sub chkPerfilWhats_CheckedChanged(sender As Object, e As EventArgs)
-        If chkPerfilWhats.Checked = False Then
-            pbWhats.Visible = True
-        Else
-            pbWhats.Visible = False
-        End If
-    End Sub
-
-    Private Sub chkPerfilEmail_CheckedChanged(sender As Object, e As EventArgs)
-        If chkPerfilEmail.Checked = False Then
-            pbEmail.Visible = True
-        Else
-            pbEmail.Visible = False
-        End If
-    End Sub
-
-    Private Sub chkPerfilTermos_CheckedChanged(sender As Object, e As EventArgs)
-        If chkPerfilTermos.Checked = False Then
-            pbTermos.Visible = True
-        Else
-            pbTermos.Visible = False
-        End If
-    End Sub
-
     Private Sub btnSalvar_Click(sender As Object, e As EventArgs) Handles btnSalvar.Click
-        Editar()
-        If clUser.valida = True Then
-            limparCampos()
-            limparClUser()
-            Me.Close()
-            MessageBox.Show("Cadastro alterado com sucesso.", "INFORMAÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        If Valida_Perfil() = False Then
+            If txtCep.Text.Length = 0 OrElse ValidaCEP(txtCep.Text) = True Then
+                If txtNascimento.Text.Length = 0 OrElse ValidaData(txtNascimento.Text) = True Then
+                    ProgressAguarde.Value = 0
+                    LblLoading.Text = $"<b>Aguarde um momento, estamos processando sua solicitação...</b><br><br>"
+                    TabControl_UserConfig.SelectTab(5)
+                    TimerEditar.Start()
+                End If
+            End If
         End If
     End Sub
 
     Private Sub btnDeletar_Click(sender As Object, e As EventArgs) Handles btnDeletar.Click
-        FrmPrincipal.TabControlMenu.Visible = False
-        FrmPrincipal.BtnPanelDeslizanteTop.Visible = False
         ProgressAguarde.Value = 0
-        LblLoading.Text = $"<b>Estamos processando sua solicitação...</b><br><br>
+        LblLoading.Text = $"<b>Aguarde um momento, estamos processando sua solicitação...</b><br><br>
                             <font color='DimGray'>Após a finalização, o sistema será reiniciado, para ter acesso novamente será necessário efetuar um novo cadastro.</font>"
 
-        bpInfo.SetPage(4)
+        TabControl_UserConfig.SelectTab(5)
         TimerExcluir.Start()
     End Sub
 
     Private Sub BtnEditEmail_Click(sender As Object, e As EventArgs) Handles BtnEditEmail.Click
         RdfEmail()
-        bpInfo.SetPage(2)
-        TxtNewEmail.Focus()
+        TabControl_UserConfig.SelectTab(2)
     End Sub
 
-    Private Sub btnEditSenha_Click(sender As Object, e As EventArgs)
-        bpInfo.SetPage(3)
+    Private Sub btnEditSenha_Click(sender As Object, e As EventArgs) Handles btnEditSenha.Click
+        TabControl_UserConfig.SelectTab(3)
     End Sub
 
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
-        limparCampos()
-        limparClUser()
-        Me.Close()
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        TabControl_UserConfig.SelectTab(0)
     End Sub
 
-    Private Sub btnRdfCancel_Click(sender As Object, e As EventArgs)
-        limparCampos()
-        limparClUser()
-        limparClEmail()
-        Me.Close()
-    End Sub
-
-    Private Sub btnRdfSenhaCancel_Click(sender As Object, e As EventArgs) Handles BtnSenhaCancel.Click
-
-    End Sub
-
-    Private Sub FrmUserConfig_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        limparCampos()
-        limparClUser()
-    End Sub
-
-    Private Sub LimpaRdfEmail()
-        TxtNewEmail.Clear()
-        TxtSenha.Clear()
+    Private Sub BtnSenhaCancel_Click(sender As Object, e As EventArgs) Handles BtnSenhaCancel.Click
+        TxtOldSenha.Clear()
+        TxtNewSenha.Clear()
+        TxtRetrySenha.Clear()
+        LblOldSenhaIncorreta.Visible = False
+        TabControl_UserConfig.SelectTab(0)
     End Sub
 
     Private Sub RdfEmail()
-        LimpaRdfEmail()
-        BtnEmailEnviar.Text = "ENVIAR"
-        LblNewEmail.Text = "E-mail"
+        TxtNewEmail.Clear()
+        TxtSenha.Clear()
         LblEmailInf.Text = "Por favor insira o novo e-mail no campo correspondente.<br>
             Para alterar seu e-mail é necessário uma validação.<br>
             Vamos enviar um código no e-mail informado.<br>
             Ao finalizar a substituição vamos enviar seu token no endereço de e-mail novo."
-        TxtNewEmail.PlaceholderText = "Digite o novo E-mail..."
-        TxtSenha.Visible = True
-        redefinir = 0
     End Sub
 
-    Private Sub RdfValidar()
-        LimpaRdfEmail()
-        BtnEmailEnviar.Text = "VALIDAR"
-        LblNewEmail.Text = "Código"
-        LblEmailInf.Text = "Enviamos o código no endereço de e-mail informado.
-            Para prosseguir com a substituição é necessário validar seu novo email. Insira o código no campo correspondente."
-        TxtNewEmail.PlaceholderText = "Informe o código..."
-        TxtSenha.Visible = False
-        redefinir = 1
-    End Sub
-
-    Private Sub BuscarSenha()
-        clUser.email = clUser.email
-        clUser.BuscarSenha()
-    End Sub
-
-    'Private Sub AlterarSenha()
-    '    clUser.email = FrmGSSolucoesHome.lblEmailPfLeft.Text
-    '    clUser.pass = clCifer.Criptar(TxtNewSenha.Text, clCifer.senha)
-    '    clUser.passretry = clCifer.Criptar(TxtRetrySenha.Text, clCifer.senha)
-    '    clUser.UpdateSenha()
-    'End Sub
-
-    'Private Sub btnRdfSenha_Click(sender As Object, e As EventArgs) Handles btnRdfSenha.Click
-    '    BuscarSenha()
-    '    If clUser.valida = True Then
-    '        If clUser.StrPass = clCifer.Criptar(TxtOldSenha.Text, clCifer.senha) Then
-    '            clUser.valida = False
-    '            AlterarSenha()
-    '            MessageBox.Show($"Senha alterada com sucesso.", "INFORMAÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    '        Else
-    '            lblSenha2.Visible = True
-    '        End If
-    '    End If
-    'End Sub
-
-    Private Sub txtRdfEmail_TextChanged(sender As Object, e As EventArgs)
+    Private Sub TxtNewEmail_TextChanged(sender As Object, e As EventArgs) Handles TxtNewEmail.TextChanged
         If redefinir = 0 Then
             If TxtNewEmail.Text.Length > 0 And ValidaEmail(TxtNewEmail.Text) = False Then
                 TxtNewEmail.IconRight = imgRdf.Images(0)
@@ -354,25 +266,26 @@ Public Class FrmUserConfig
         End If
     End Sub
 
-    Private Sub txtSenha_TextChanged(sender As Object, e As EventArgs)
+    Private Sub TxtSenha_TextChanged(sender As Object, e As EventArgs) Handles TxtSenha.TextChanged
         If TxtSenha.Text.Length > 0 Then
             LblSenha.Visible = True
         Else
             LblSenha.Visible = False
+            LblEmailSenhaIncorreta.Visible = False
         End If
     End Sub
 
-    Private Sub txtSenha_GotFocus(sender As Object, e As EventArgs)
+    Private Sub txtSenha_GotFocus(sender As Object, e As EventArgs) Handles TxtSenha.GotFocus
         If CapsLock Then
             LblEmailCapsLook.Visible = True
         End If
     End Sub
 
-    Private Sub txtSenha_LostFocus(sender As Object, e As EventArgs)
+    Private Sub txtSenha_LostFocus(sender As Object, e As EventArgs) Handles TxtSenha.LostFocus
         LblEmailCapsLook.Visible = False
     End Sub
 
-    Private Sub txtSenha_KeyDown(sender As Object, e As KeyEventArgs)
+    Private Sub txtSenha_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtSenha.KeyDown
         If CapsLock Then
             LblEmailCapsLook.Visible = True
         Else
@@ -380,15 +293,7 @@ Public Class FrmUserConfig
         End If
     End Sub
 
-    Private Sub txtSenha_KeyPress(sender As Object, e As KeyPressEventArgs)
-        If TxtSenha.Text.Length > 0 Then
-            If e.KeyChar = Convert.ToChar(13) Then
-                BtnEmailEnviar.PerformClick()
-            End If
-        End If
-    End Sub
-
-    Private Sub txtSenha_IconRightClick(sender As Object, e As EventArgs)
+    Private Sub txtSenha_IconRightClick(sender As Object, e As EventArgs) Handles TxtSenha.IconRightClick
         If TxtSenha.UseSystemPasswordChar = True Then
             TxtSenha.UseSystemPasswordChar = False
             TxtSenha.IconRight = imgRdf.Images(2)
@@ -396,18 +301,6 @@ Public Class FrmUserConfig
             TxtSenha.UseSystemPasswordChar = True
             TxtSenha.IconRight = imgRdf.Images(3)
         End If
-    End Sub
-
-    Private Sub btnCancel_Click_1(sender As Object, e As EventArgs) Handles btnCancel.Click
-
-    End Sub
-
-    Private Sub btnCopy_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub BtnCopy_Click_2(sender As Object, e As EventArgs) Handles BtnCopy.Click
-
     End Sub
 
     Private Sub EditPerfil()
@@ -427,24 +320,72 @@ Public Class FrmUserConfig
         txtTel.Text = clUser.tell_empresa
         txtRamal.Text = clUser.ramal
         chkPerfilWhats.Checked = clUser.not_whats
-        chkPerfilEmail.Checked = clUser.not_whats
-        chkPerfilTermos.Checked = clUser.not_whats
+        chkPerfilEmail.Checked = clUser.not_email
+        chkPerfilTermos.Checked = clUser.acept_termos
         clUser.valida = False
-        bpInfo.SetPage(1)
+
+        If clUser.not_whats = True Then
+            pbWhats.Visible = False
+        Else
+            pbWhats.Visible = True
+        End If
+        If clUser.not_email = True Then
+            pbEmail.Visible = False
+        Else
+            pbEmail.Visible = True
+        End If
+        If clUser.acept_termos = True Then
+            pbTermos.Visible = False
+        Else
+            pbTermos.Visible = True
+        End If
+
+        TabControl_UserConfig.SelectTab(1)
 
     End Sub
 
-    Private Sub btnEdit_Click_1(sender As Object, e As EventArgs) Handles btnEdit.Click
-        EditPerfil()
-    End Sub
+    Private Sub TimerEditar_Tick(sender As Object, e As EventArgs) Handles TimerEditar.Tick
 
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        ProgressAguarde.Increment(5)
 
+        Select Case ProgressAguarde.Value
+
+            Case 80
+                clUser.email = FrmPrincipal.LblEmailLeft.Text
+                clUser.name = txtNome.Text
+                clUser.nascimento = txtNascimento.Text
+                clUser.genero = cbGenero.Text
+                clUser.cell = txtCell.Text
+                clUser.cep = txtCep.Text
+                clUser.endereco = txtEndereco.Text
+                clUser.comp = txtComplemento.Text
+                clUser.cidade = txtCidade.Text
+                clUser.uf = txtUF.Text
+                clUser.not_whats = chkPerfilWhats.Checked
+                clUser.not_email = chkPerfilEmail.Checked
+                clUser.acept_termos = chkPerfilTermos.Checked
+                clUser.empresa = txtEmpresa.Text
+                clUser.depart = txtDepart.Text
+                clUser.funcao = txtFuncao.Text
+                clUser.tell_empresa = txtTel.Text
+                clUser.ramal = txtRamal.Text
+                clUser.Edita()
+
+                If clUser.valida = True Then
+                    FrmPrincipal.LblNameLeft.Text = txtNome.Text
+                End If
+
+            Case 100
+                TimerEditar.Stop()
+                MessageBox.Show("As informações foram atualizadas com sucesso!", "INFORMAÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                FrmPrincipal.ActiveFormClose()
+
+        End Select
     End Sub
 
     Private Sub TimerExcluir_Tick(sender As Object, e As EventArgs) Handles TimerExcluir.Tick
 
-        ProgressAguarde.Increment(1)
+        ProgressAguarde.Increment(5)
 
         Select Case ProgressAguarde.Value
 
@@ -502,7 +443,8 @@ Public Class FrmUserConfig
 
         If TxtSenha.Text.Length > 0 Then
             If TxtNewEmail.Text.Length > 0 Then
-                If ValidaEmail(TxtNewEmail.Text) = False Then
+                If ValidaEmail(TxtNewEmail.Text) Then
+                    clUser.valida = False
 
                     clUser.email = TxtNewEmail.Text
                     clUser.VE_FUConfig()
@@ -512,11 +454,11 @@ Public Class FrmUserConfig
                             LblEmailIncorreto.Visible = False
                             LblEmailSenhaIncorreta.Visible = False
 
-                            TimerRdfEmail.Enabled = True
-                            clEmail.toEmail = TxtNewEmail.Text
+                            clEmail.ToEmail = TxtNewEmail.Text
+                            clEmail.CodRdf_Email = CodigoInterno()
                             NewThead = New Thread(AddressOf clEmail.AlterarEmail) With {.IsBackground = True}
                             NewThead.Start()
-                            bpInfo.SetPage(5)
+                            TabControl_UserConfig.SelectTab(4)
 
                         Else
 
@@ -546,18 +488,15 @@ Public Class FrmUserConfig
             Exit Sub
         End If
 
-        If TxtValidar.Text.Length > 0 Then
-            If TxtValidar.Text = clEmail.Pass Then
-                LblCodigoIncorreto.Visible = False
+        If TxtValidar.Text = clEmail.CodRdf_Email Then
+            LblCodigoIncorreto.Visible = False
 
-                ProgressAguarde.Value = 0
-                LblLoading.Text = $"<b>Estamos processando sua solicitação...</b><br><br>
+            ProgressAguarde.Value = 0
+            LblLoading.Text = $"<b>Aguarde um momento, estamos processando sua solicitação...</b><br><br>
                                   <font color='DimGray'>Após a finalização, o sistema será reiniciado, entre com seu novo endereço de e-mail.</font>"
 
-                bpInfo.SetPage(4)
-                TimerRdfEmail.Start()
-
-            End If
+            TabControl_UserConfig.SelectTab(5)
+            TimerRdfEmail.Start()
 
         Else
 
@@ -568,7 +507,7 @@ Public Class FrmUserConfig
     End Sub
 
     Private Sub TimerRdfEmail_Tick(sender As Object, e As EventArgs) Handles TimerRdfEmail.Tick
-        ProgressAguarde.Increment(1)
+        ProgressAguarde.Increment(5)
 
         Select Case ProgressAguarde.Value
 
@@ -580,5 +519,564 @@ Public Class FrmUserConfig
                 Application.Restart()
 
         End Select
+    End Sub
+
+    Private Sub BtnEmailCancel_Click(sender As Object, e As EventArgs) Handles BtnEmailCancel.Click
+        TxtNewEmail.Clear()
+        TxtSenha.Clear()
+        LblEmailIncorreto.Visible = False
+        LblEmailSenhaIncorreta.Visible = False
+        TabControl_UserConfig.SelectTab(0)
+    End Sub
+
+    Private Sub BtnSenhaSalvar_Click(sender As Object, e As EventArgs) Handles BtnSenhaSalvar.Click
+        If TxtNewSenha.Text.Length > 0 Then
+            If TxtNewSenha.Text = TxtRetrySenha.Text Then
+                ProgressAguarde.Value = 0
+                LblLoading.Text = $"<b>Aguarde um momento, estamos processando sua solicitação...</b><br><br>
+                                  <font color='DimGray'>Após a finalização, o sistema será reiniciado, entre com sua nova senha.</font>"
+
+                TabControl_UserConfig.SelectTab(5)
+                TimerEditar_Senha.Start()
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnValidarCancelar_Click(sender As Object, e As EventArgs) Handles BtnValidarCancelar.Click
+        TxtNewEmail.Clear()
+        TxtSenha.Clear()
+        TxtValidar.Clear()
+        LblCodigoIncorreto.Visible = False
+        LblEmailIncorreto.Visible = False
+        LblEmailSenhaIncorreta.Visible = False
+        TabControl_UserConfig.SelectTab(0)
+    End Sub
+
+    Private Sub BtnSendEmail_Login_Click(sender As Object, e As EventArgs) Handles BtnSendEmail_Login.Click
+        ProgressAguarde.Value = 0
+        LblLoading.Text = $"<b>Aguarde um momento, estamos processando sua solicitação...</b><br><br>"
+
+        TabControl_UserConfig.SelectTab(5)
+        TimerEnviar_Login.Start()
+    End Sub
+
+    Private Sub TimerEnviar_Login_Tick(sender As Object, e As EventArgs) Handles TimerEnviar_Login.Tick
+        ProgressAguarde.Increment(5)
+
+        Select Case ProgressAguarde.Value
+
+            Case 80
+                clUser.email = FrmPrincipal.LblEmailLeft.Text
+                clUser.ValidarEmailRdf()
+
+                If clUser.valida = True Then
+                    clUser.valida = False
+
+                    clEmail.ToEmail = FrmPrincipal.LblEmailLeft.Text
+                    clEmail.YourSenha = clCifer.Decriptar(clUser.pass, clCifer.senha)
+                    clEmail.Token = clUser.token
+                    clEmail.EnviaCredenciais()
+                End If
+
+            Case 100
+                TimerRdfEmail.Stop()
+                TabControl_UserConfig.SelectTab(0)
+
+        End Select
+    End Sub
+
+    Private Sub txtNome_TextChanged(sender As Object, e As EventArgs) Handles txtNome.TextChanged
+        Select Case txtNome.Text.Length
+
+            Case > 0
+                LblNome.Visible = True
+                txtNome.IconRight = Nothing
+
+            Case Else
+                LblNome.Visible = False
+
+                If txtNome.IconRight IsNot Nothing Then
+                    txtNome.IconRight = Nothing
+                End If
+
+        End Select
+    End Sub
+
+    Private Sub txtNascimento_TextChanged(sender As Object, e As EventArgs) Handles txtNascimento.TextChanged
+        clValidaData.MaskData(sender)
+    End Sub
+
+    Private Sub txtCell_TextChanged(sender As Object, e As EventArgs) Handles txtCell.TextChanged
+        If txtCell.Text.Length > 0 Then
+            LblCelular.Visible = True
+        Else
+            LblCelular.Visible = False
+            txtCell.IconRight = Nothing
+        End If
+    End Sub
+
+    Private Sub txtCep_TextChanged(sender As Object, e As EventArgs) Handles txtCep.TextChanged
+        clValidaCep.MaskCep(sender)
+        If txtCep.Text.Length > 0 Then
+            LblCep.Visible = True
+        Else
+            LblCep.Visible = False
+            txtCep.IconRight = Nothing
+        End If
+    End Sub
+
+    Private Sub txtEndereco_TextChanged(sender As Object, e As EventArgs) Handles txtEndereco.TextChanged
+        If txtEndereco.Text.Length > 0 Then
+            LblEndereço.Visible = True
+        Else
+            LblEndereço.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtComplemento_TextChanged(sender As Object, e As EventArgs) Handles txtComplemento.TextChanged
+        If txtComplemento.Text.Length > 0 Then
+            LblComplemento.Visible = True
+        Else
+            LblComplemento.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtCidade_TextChanged(sender As Object, e As EventArgs) Handles txtCidade.TextChanged
+        If txtCidade.Text.Length > 0 Then
+            LblCidade.Visible = True
+        Else
+            LblCidade.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtUF_TextChanged(sender As Object, e As EventArgs) Handles txtUF.TextChanged
+        If txtUF.Text.Length > 0 Then
+            LblUF.Visible = True
+        Else
+            LblUF.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtEmpresa_TextChanged(sender As Object, e As EventArgs) Handles txtEmpresa.TextChanged
+        If txtEmpresa.Text.Length > 0 Then
+            LblEmpresa.Visible = True
+        Else
+            LblEmpresa.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtDepart_TextChanged(sender As Object, e As EventArgs) Handles txtDepart.TextChanged
+        If txtDepart.Text.Length > 0 Then
+            LblDepartamento.Visible = True
+        Else
+            LblDepartamento.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtFuncao_TextChanged(sender As Object, e As EventArgs) Handles txtFuncao.TextChanged
+        If txtFuncao.Text.Length > 0 Then
+            LblFuncao.Visible = True
+        Else
+            LblFuncao.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtTel_TextChanged(sender As Object, e As EventArgs) Handles txtTel.TextChanged
+        If txtTel.Text.Length > 0 Then
+            LblTelefone.Visible = True
+        Else
+            LblTelefone.Visible = False
+            txtTel.IconRight = Nothing
+        End If
+    End Sub
+
+    Private Sub txtRamal_TextChanged(sender As Object, e As EventArgs) Handles txtRamal.TextChanged
+        If txtRamal.Text.Length > 0 Then
+            LblRamal.Visible = True
+        Else
+            LblRamal.Visible = False
+        End If
+    End Sub
+
+    Private Sub chkPerfilWhats_Click(sender As Object, e As EventArgs) Handles chkPerfilWhats.Click
+        If chkPerfilWhats.Checked = True Then
+            pbWhats.Visible = False
+        Else
+            pbWhats.Visible = True
+        End If
+    End Sub
+
+    Private Sub TxtOldSenha_TextChanged(sender As Object, e As EventArgs) Handles TxtOldSenha.TextChanged
+        If TxtOldSenha.Text.Length > 0 Then
+            LblOldSenha.Visible = True
+        Else
+            LblOldSenha.Visible = False
+            LblOldSenha.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtNewSenha_TextChanged(sender As Object, e As EventArgs) Handles TxtNewSenha.TextChanged
+        Select Case TxtNewSenha.Text.Length
+
+            Case > 0
+                LblNewSenha.Visible = True
+
+                If TxtRetrySenha.Text.Length > 0 Then
+                    If TxtNewSenha.Text <> TxtRetrySenha.Text Then
+                        TxtRetrySenha.IconRight = imgRdf.Images(0)
+                    End If
+                End If
+
+            Case Else
+                LblNewSenha.Visible = False
+
+        End Select
+    End Sub
+
+    Private Sub TxtRetrySenha_TextChanged(sender As Object, e As EventArgs) Handles TxtRetrySenha.TextChanged
+        Select Case TxtRetrySenha.Text.Length
+
+            Case > 0
+                LblRetrySenha.Visible = True
+                If TxtRetrySenha.Text <> TxtNewSenha.Text Then
+                    TxtNewSenha.IconRight = imgRdf.Images(0)
+                Else
+                    TxtNewSenha.IconRight = Nothing
+                End If
+
+            Case Else
+                TxtNewSenha.IconRight = Nothing
+                LblRetrySenha.Visible = False
+
+        End Select
+    End Sub
+
+    Private Sub TxtValidar_TextChanged(sender As Object, e As EventArgs) Handles TxtValidar.TextChanged
+        If TxtValidar.Text.Length > 0 Then
+            LblValidarCodigo.Visible = True
+        Else
+            LblValidarCodigo.Visible = False
+            LblCodigoIncorreto.Visible = False
+        End If
+    End Sub
+
+    Private Sub cbGenero_Enter(sender As Object, e As EventArgs) Handles cbGenero.Enter
+        cbGenero.FillColor = Color.WhiteSmoke
+        LblGenero.Visible = True
+    End Sub
+
+    Private Sub cbGenero_LostFocus(sender As Object, e As EventArgs) Handles cbGenero.LostFocus
+        If cbGenero.SelectedIndex <= 0 Then
+            LblGenero.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtNome_LostFocus(sender As Object, e As EventArgs) Handles txtNome.LostFocus
+        If txtNome.Text.Length <= 0 Then
+            txtNome.IconRight = imgRdf.Images(0)
+        End If
+    End Sub
+
+    Private Sub txtNome_Enter(sender As Object, e As EventArgs) Handles txtNome.Enter
+
+    End Sub
+
+    Private Function ValidaData(strCheck As String) As Boolean
+        Return Regex.IsMatch(strCheck, "^\d{2}/\d{2}/\d{4}$")
+    End Function
+
+    Private Sub txtNascimento_LostFocus(sender As Object, e As EventArgs) Handles txtNascimento.LostFocus
+        If txtNascimento.Text.Length > 0 Then
+            If ValidaData(txtNascimento.Text) = False Then
+                txtNascimento.IconRight = imgRdf.Images(0)
+            End If
+        Else
+            txtNascimento.IconRight = Nothing
+        End If
+    End Sub
+
+    Private Sub txtNascimento_IconRightClick(sender As Object, e As EventArgs) Handles txtNascimento.IconRightClick
+
+    End Sub
+
+    Private Sub txtCell_LostFocus(sender As Object, e As EventArgs) Handles txtCell.LostFocus
+        Select Case txtCell.Text.Length
+            Case 0
+                txtCell.IconRight = Nothing
+            Case 10, 15
+                txtCell.IconRight = Nothing
+            Case Else
+                txtCell.IconRight = imgRdf.Images(0)
+        End Select
+    End Sub
+
+    Private Sub txtCell_Enter(sender As Object, e As EventArgs) Handles txtCell.Enter
+        txtCell.Text = txtCell.Text.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+        txtCell.IconRight = Nothing
+    End Sub
+
+    Private Sub txtCell_Validated(sender As Object, e As EventArgs) Handles txtCell.Validated
+        Dim mask = txtCell.Text
+        Select Case txtCell.Text.Length
+            Case 0
+                txtCell.IconRight = Nothing
+
+            Case 9
+                If Not txtCell.Text.StartsWith("0") Then
+                    txtCell.Text = mask.Insert(5, "-")
+                    txtCell.IconRight = Nothing
+                Else
+                    txtCell.IconRight = imgRdf.Images(0)
+                End If
+
+            Case 11
+                If Not txtCell.Text.StartsWith("0") Then
+                    txtCell.Text = mask.Insert(0, "(").Insert(3, ") ").Insert(10, "-")
+                    txtCell.IconRight = Nothing
+                Else
+                    txtCell.IconRight = imgRdf.Images(0)
+                End If
+        End Select
+    End Sub
+
+    Private Sub txtCell_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCell.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) OrElse Char.IsControl(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtNome_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNome.KeyPress
+        If (Char.IsNumber(e.KeyChar)) OrElse (Char.IsSymbol(e.KeyChar)) OrElse (Char.IsPunctuation(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtNascimento_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNascimento.KeyPress
+        clValidaData.ApenasNumeros(e, sender)
+    End Sub
+
+    Private Sub txtCep_Enter(sender As Object, e As EventArgs) Handles txtCep.Enter
+        txtCep.IconRight = Nothing
+    End Sub
+
+    Private Sub txtCep_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCep.KeyPress
+        clValidaCep.ApenasNumeros(e, sender)
+    End Sub
+
+    Private Function ValidaCEP(strCheck As String) As Boolean
+        Return Regex.IsMatch(strCheck, "^\d{5}-\d{3}$")
+    End Function
+
+    Private Sub txtCep_LostFocus(sender As Object, e As EventArgs) Handles txtCep.LostFocus
+        If txtCep.Text.Length > 0 Then
+            If ValidaCEP(txtCep.Text) = False Then
+                txtCep.IconRight = imgRdf.Images(0)
+            End If
+        Else
+            txtCep.IconRight = Nothing
+        End If
+    End Sub
+
+    Private Sub txtTel_Validated(sender As Object, e As EventArgs) Handles txtTel.Validated
+        Dim mask = txtTel.Text
+        Select Case txtTel.Text.Length
+            Case 0
+                txtTel.IconRight = Nothing
+            Case 8
+                If Not txtTel.Text.StartsWith("0") Then
+                    txtTel.Text = mask.Insert(4, "-")
+                    txtTel.IconRight = Nothing
+                Else
+                    txtTel.IconRight = imgRdf.Images(0)
+                End If
+
+            Case 9
+                If Not txtTel.Text.StartsWith("0") Then
+                    txtTel.Text = mask.Insert(5, "-")
+                    txtTel.IconRight = Nothing
+                Else
+                    txtTel.IconRight = imgRdf.Images(0)
+                End If
+
+            Case 10
+                If Not txtTel.Text.StartsWith("0") Then
+                    txtTel.Text = mask.Insert(0, "(").Insert(3, ") ").Insert(9, "-")
+                    txtTel.IconRight = Nothing
+                Else
+                    txtTel.IconRight = imgRdf.Images(0)
+                End If
+
+            Case 11
+                If txtTel.Text.StartsWith("0800") Then
+                    txtTel.Text = mask.Insert(4, " ").Insert(8, " ")
+                    txtTel.IconRight = Nothing
+                Else
+                    If Not txtTel.Text.StartsWith("0") Then
+                        txtTel.Text = mask.Insert(0, "(").Insert(3, ") ").Insert(10, "-")
+                        txtTel.IconRight = Nothing
+                    Else
+                        txtTel.IconRight = imgRdf.Images(0)
+                    End If
+                End If
+            Case Else
+                txtTel.IconRight = imgRdf.Images(0)
+        End Select
+    End Sub
+
+    Private Sub txtTel_LostFocus(sender As Object, e As EventArgs) Handles txtTel.LostFocus
+        Select Case txtTel.Text.Length
+            Case 0
+                txtTel.IconRight = Nothing
+            Case 9, 13, 14
+                txtTel.IconRight = Nothing
+            Case Else
+                txtTel.IconRight = imgRdf.Images(0)
+        End Select
+    End Sub
+
+    Private Sub txtTel_Enter(sender As Object, e As EventArgs) Handles txtTel.Enter
+        txtTel.Text = txtTel.Text.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+        txtTel.IconRight = Nothing
+    End Sub
+
+    Private Sub txtTel_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTel.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) OrElse Char.IsControl(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtRamal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtRamal.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) OrElse Char.IsControl(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtNewEmail_Enter(sender As Object, e As EventArgs) Handles TxtNewEmail.Enter
+        LblEmailIncorreto.Visible = False
+    End Sub
+
+    Private Sub TxtSenha_Enter(sender As Object, e As EventArgs) Handles TxtSenha.Enter
+        LblEmailIncorreto.Visible = False
+    End Sub
+
+    Private Sub chkPerfilEmail_Click(sender As Object, e As EventArgs) Handles chkPerfilEmail.Click
+        If chkPerfilEmail.Checked = True Then
+            pbEmail.Visible = False
+        Else
+            pbEmail.Visible = True
+        End If
+    End Sub
+
+    Private Sub chkPerfilTermos_Click(sender As Object, e As EventArgs) Handles chkPerfilTermos.Click
+        If chkPerfilTermos.Checked = True Then
+            pbTermos.Visible = False
+        Else
+            pbTermos.Visible = True
+        End If
+    End Sub
+
+    Private Sub txtNascimento_Enter(sender As Object, e As EventArgs) Handles txtNascimento.Enter
+        txtNascimento.IconRight = Nothing
+    End Sub
+
+    Private Sub FrmUserConfig_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        BuscarInfo()
+    End Sub
+
+    Private Sub TxtValidar_Enter(sender As Object, e As EventArgs) Handles TxtValidar.Enter
+        LblCodigoIncorreto.Visible = False
+    End Sub
+
+    Private Sub TxtValidar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtValidar.KeyPress
+        If Not (Char.IsDigit(e.KeyChar) OrElse Char.IsControl(e.KeyChar)) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TxtOldSenha_Enter(sender As Object, e As EventArgs) Handles TxtOldSenha.Enter
+        LblOldSenhaIncorreta.Visible = False
+    End Sub
+
+    Private Sub TxtRetrySenha_IconRightClick(sender As Object, e As EventArgs) Handles TxtRetrySenha.IconRightClick
+        If TxtRetrySenha.UseSystemPasswordChar = True Then
+            TxtRetrySenha.UseSystemPasswordChar = False
+            TxtNewSenha.UseSystemPasswordChar = False
+            TxtRetrySenha.IconRight = imgRdf.Images(2)
+        Else
+            TxtRetrySenha.UseSystemPasswordChar = True
+            TxtNewSenha.UseSystemPasswordChar = True
+            TxtRetrySenha.IconRight = imgRdf.Images(3)
+        End If
+    End Sub
+
+    Private Sub TxtRetrySenha_Enter(sender As Object, e As EventArgs) Handles TxtRetrySenha.Enter
+        If CapsLock Then
+            LblCapsLook.Visible = True
+        End If
+    End Sub
+
+    Private Sub TxtNewSenha_Enter(sender As Object, e As EventArgs) Handles TxtNewSenha.Enter
+        If CapsLock Then
+            LblCapsLook.Visible = True
+        End If
+    End Sub
+
+    Private Sub TxtRetrySenha_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtRetrySenha.KeyDown
+        If CapsLock Then
+            LblCapsLook.Visible = True
+        Else
+            LblCapsLook.Visible = False
+        End If
+    End Sub
+
+    Private Sub TxtNewSenha_KeyDown(sender As Object, e As KeyEventArgs) Handles TxtNewSenha.KeyDown
+        If CapsLock Then
+            LblCapsLook.Visible = True
+        Else
+            LblCapsLook.Visible = False
+        End If
+    End Sub
+
+    Private Sub TimerEditar_Senha_Tick(sender As Object, e As EventArgs) Handles TimerEditar_Senha.Tick
+        ProgressAguarde.Increment(5)
+
+        Select Case ProgressAguarde.Value
+
+            Case 80
+                clUser.valida = False
+                clUser.email = FrmPrincipal.LblEmailLeft.Text
+                clUser.BuscarSenha()
+
+                If clUser.pass = clCifer.Criptar(TxtOldSenha.Text, clCifer.senha) Then
+                    clUser.valida = False
+                    clUser.email = FrmPrincipal.LblEmailLeft.Text
+                    clUser.pass = clCifer.Criptar(TxtNewSenha.Text, clCifer.senha)
+                    clUser.pass_retry = clCifer.Criptar(TxtRetrySenha.Text, clCifer.senha)
+                    clUser.UpdateSenha()
+                Else
+                    TimerEditar_Senha.Stop()
+                    LblOldSenhaIncorreta.Visible = True
+                    TabControl_UserConfig.SelectTab(3)
+                End If
+
+            Case 100
+                TimerEditar_Senha.Stop()
+                Application.Restart()
+
+        End Select
+    End Sub
+
+    Private Sub TxtOldSenha_IconRightClick(sender As Object, e As EventArgs) Handles TxtOldSenha.IconRightClick
+        If TxtOldSenha.UseSystemPasswordChar = True Then
+            TxtOldSenha.UseSystemPasswordChar = False
+            TxtOldSenha.IconRight = imgRdf.Images(2)
+        Else
+            TxtOldSenha.UseSystemPasswordChar = True
+            TxtOldSenha.IconRight = imgRdf.Images(3)
+        End If
+    End Sub
+
+    Private Sub imgPerfil_Click(sender As Object, e As EventArgs) Handles imgPerfil.Click
+        'ClServerSFTP.CarregarArquivo_Usuario(Ofd, imgPerfil, FrmPrincipal.PbPerfilLeft, FrmPrincipal.PbPerfilTop, FrmPrincipal.ImageUserLeft, FrmPrincipal.ImageUserTop, $"{FrmPrincipal.LblEmailLeft.Text}")
     End Sub
 End Class

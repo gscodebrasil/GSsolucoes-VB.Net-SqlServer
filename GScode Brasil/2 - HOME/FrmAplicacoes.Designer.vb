@@ -164,7 +164,7 @@ Partial Class FrmAplicacoes
         Me.BtnPhonebook.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnPhonebook.CustomImages.Parent = Me.BtnPhonebook
         Me.BtnPhonebook.DisabledState.Parent = Me.BtnPhonebook
-        Me.BtnPhonebook.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnPhonebook.FillColor = System.Drawing.Color.SlateGray
         Me.BtnPhonebook.FillColor2 = System.Drawing.Color.Black
         Me.BtnPhonebook.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnPhonebook.ForeColor = System.Drawing.Color.White
@@ -192,7 +192,7 @@ Partial Class FrmAplicacoes
         Me.btnHelpdesk.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnHelpdesk.CustomImages.Parent = Me.btnHelpdesk
         Me.btnHelpdesk.DisabledState.Parent = Me.btnHelpdesk
-        Me.btnHelpdesk.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnHelpdesk.FillColor = System.Drawing.Color.SlateGray
         Me.btnHelpdesk.FillColor2 = System.Drawing.Color.Black
         Me.btnHelpdesk.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnHelpdesk.ForeColor = System.Drawing.Color.White
@@ -220,7 +220,7 @@ Partial Class FrmAplicacoes
         Me.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEstoque.CustomImages.Parent = Me.btnEstoque
         Me.btnEstoque.DisabledState.Parent = Me.btnEstoque
-        Me.btnEstoque.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnEstoque.FillColor = System.Drawing.Color.SlateGray
         Me.btnEstoque.FillColor2 = System.Drawing.Color.Black
         Me.btnEstoque.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnEstoque.ForeColor = System.Drawing.Color.White
@@ -247,7 +247,7 @@ Partial Class FrmAplicacoes
         Me.btnFinanceiro.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnFinanceiro.CustomImages.Parent = Me.btnFinanceiro
         Me.btnFinanceiro.DisabledState.Parent = Me.btnFinanceiro
-        Me.btnFinanceiro.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnFinanceiro.FillColor = System.Drawing.Color.SlateGray
         Me.btnFinanceiro.FillColor2 = System.Drawing.Color.Black
         Me.btnFinanceiro.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnFinanceiro.ForeColor = System.Drawing.Color.White
@@ -275,7 +275,7 @@ Partial Class FrmAplicacoes
         Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDashboard.CustomImages.Parent = Me.btnDashboard
         Me.btnDashboard.DisabledState.Parent = Me.btnDashboard
-        Me.btnDashboard.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnDashboard.FillColor = System.Drawing.Color.SlateGray
         Me.btnDashboard.FillColor2 = System.Drawing.Color.Black
         Me.btnDashboard.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnDashboard.ForeColor = System.Drawing.Color.White

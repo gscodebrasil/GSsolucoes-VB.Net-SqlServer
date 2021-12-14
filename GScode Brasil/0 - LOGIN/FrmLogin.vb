@@ -54,37 +54,81 @@ Public Class FrmLogin
         'Ttip.Active = True
     End Sub
 
-    Private Sub LimpaTotal()
-        txtLoginEmail.Clear()
-        txtLoginPassword.Clear()
+    Private Sub TxtEmpty()
+        For Each Txt As Guna2TextBox In New List(Of Guna2TextBox) From {txtLoginEmail, txtLoginPassword, txtCadEmail, txtCadPass, txtCadConfPass, txtPerfilNome, txtPerfilNascimento, txtPerfilCelular, txtPerfilCep, txtPerfilEndereco, txtPerfilComp, txtBusinessEmpresa, txtBusinessDepart, txtBusinessFuncao, txtBusinessTel, txtBusinessRamal}
+            Txt.Clear()
+            Txt.IconRight = Nothing
+        Next
 
-        txtCadEmail.Clear()
-        txtCadEmail.IconRight = Nothing
-        txtCadPass.Clear()
-        txtCadConfPass.Clear()
-
-        txtPerfilNome.Clear()
-        txtPerfilNome.IconRight = Nothing
-        txtPerfilNascimento.Clear()
-        txtPerfilNascimento.IconRight = Nothing
         cbPerfilGenero.SelectedIndex = -1
-        txtPerfilCelular.Clear()
-        txtPerfilCep.Clear()
-        txtPerfilCep.IconRight = Nothing
-        txtPerfilEndereco.Clear()
-        txtPerfilComp.Clear()
-        txtPerfilCidade.Clear()
-        txtPerfilUF.Clear()
+        cbPerfilGenero.FillColor = Color.WhiteSmoke
         chkPerfilWhats.Checked = False
         chkPerfilEmail.Checked = False
         chkPerfilTermos.Checked = False
+        pbWhats.Visible = False
+        pbEmail.Visible = False
+        pbTermos.Visible = False
+        lblCadEmail.Visible = False
+        lblInvalido.Visible = False
 
-        txtBusinessEmpresa.Clear()
-        txtBusinessDepart.Clear()
-        txtBusinessFuncao.Clear()
-        txtBusinessTel.Clear()
-        txtBusinessRamal.Clear()
     End Sub
+
+    Private Function Valida_Perfil() As Boolean
+
+        If txtPerfilNome.Text.Length <= 0 Then
+            txtPerfilNome.IconRight = imgLogin.Images(0)
+            Valida_Perfil = True
+        End If
+
+        If chkPerfilTermos.Checked = False Then
+            pbTermos.Visible = True
+            Valida_Perfil = True
+        End If
+
+        Return Valida_Perfil
+    End Function
+
+    Private Function Empty_Perfil() As Boolean
+        For Each Txt As Guna2TextBox In New List(Of Guna2TextBox) From {txtPerfilNome, txtPerfilCelular, txtPerfilCep, txtPerfilEndereco, txtPerfilComp, txtPerfilCidade, txtPerfilUF}
+            If Txt.Text.Length <= 0 Then
+                pbTopProfile.Visible = True
+                Empty_Perfil = True
+                Exit For
+            End If
+        Next
+
+        If txtPerfilNome.Text.Length <= 0 Then
+            txtPerfilNome.IconRight = imgLogin.Images(0)
+            pbTopProfile.Visible = True
+            Empty_Perfil = True
+        End If
+
+        If cbPerfilGenero.Text.Length <= 0 Then
+            cbPerfilGenero.FillColor = Color.FromArgb(255, 198, 198)
+            pbTopProfile.Visible = True
+            Empty_Perfil = True
+        End If
+
+        If chkPerfilWhats.Checked = False Then
+            pbWhats.Visible = True
+            pbTopProfile.Visible = True
+            Empty_Perfil = True
+        End If
+
+        If chkPerfilEmail.Checked = False Then
+            pbEmail.Visible = True
+            pbTopProfile.Visible = True
+            Empty_Perfil = True
+        End If
+
+
+        If chkPerfilTermos.Checked = False Then
+            pbTermos.Visible = True
+            pbTopProfile.Visible = True
+            Empty_Perfil = True
+        End If
+        Return Empty_Perfil
+    End Function
 
     Private Sub pagLogin()
         PanelEtapa.Visible = False
@@ -113,12 +157,18 @@ Public Class FrmLogin
 
     End Sub
 
+    Private Senha = "#"
+
     Private Sub Insert()
-        ClUserInfo.id_interno = CodigoInterno()
+        CodigoInterno()
+        ClUserInfo.id_interno = Senha
         ClUserInfo.ValidaCodigoInterno()
 
         If ClUserInfo.valida = True Then
-            ClUserInfo.id_interno = CodigoInterno()
+            ClUserInfo.valida = False
+
+            CodigoInterno()
+            ClUserInfo.id_interno = Senha
             ClUserInfo.ValidaCodigoInterno()
 
         Else
@@ -126,7 +176,7 @@ Public Class FrmLogin
             ClUserInfo.email = txtCadEmail.Text
             ClUserInfo.pass = ClCifer.Criptar(txtCadPass.Text, ClCifer.senha)
             ClUserInfo.pass_retry = ClCifer.Criptar(txtCadConfPass.Text, ClCifer.senha)
-            ClUserInfo.id_interno = CodigoInterno()
+            ClUserInfo.id_interno = Senha
             ClUserInfo.name = txtPerfilNome.Text
             ClUserInfo.foto = ""
             ClUserInfo.nascimento = txtPerfilNascimento.Text
@@ -143,11 +193,11 @@ Public Class FrmLogin
             ClUserInfo.empresa = txtBusinessEmpresa.Text
             ClUserInfo.depart = txtBusinessDepart.Text
             ClUserInfo.funcao = txtBusinessFuncao.Text
+
             ClUserInfo.tell_empresa = txtBusinessTel.Text
             ClUserInfo.ramal = txtBusinessRamal.Text
-            ClUserInfo.token = ClEmail.token
+            ClUserInfo.token = txtConfToken.Text
             ClUserInfo.Cadastra()
-
         End If
     End Sub
 
@@ -175,7 +225,7 @@ Public Class FrmLogin
             ClUserInfo.valida = False
 
             ClEmail.toEmail = ClUserInfo.email
-            ClEmail.yourSenha = ClUserInfo.pass
+            ClEmail.YourSenha = ClCifer.Decriptar(ClUserInfo.pass, ClCifer.senha)
             ClEmail.token = ClUserInfo.token
             ClEmail.EnviaCredenciais()
 
@@ -230,7 +280,6 @@ Public Class FrmLogin
 
     Private Function ValidaProfile() As Boolean
         If txtPerfilNome.Text.Length <= 0 OrElse
-            txtPerfilNascimento.Text.Length <= 0 OrElse
             cbPerfilGenero.Text.Length <= 0 OrElse
             txtPerfilCelular.Text.Length <= 0 OrElse
             txtPerfilCep.Text.Length <= 0 OrElse
@@ -253,7 +302,6 @@ Public Class FrmLogin
     End Function
 
     Private Function CodigoInterno() As String
-        Dim Senha = "#"
         Dim Rand = New Random
         Dim Caracteres = "0123456789"
         Dim NumeroMaximo = Caracteres.Length
@@ -276,7 +324,6 @@ Public Class FrmLogin
     End Sub
 
     Private Sub btnAddUser_Click(sender As Object, e As EventArgs) Handles btnAddUser.Click
-        btnAvAcesso.Enabled = False
         TimerAutoLogin.Enabled = False
         btnLogin.Text = "LOGIN"
         PanelEtapa.Visible = True
@@ -284,23 +331,12 @@ Public Class FrmLogin
     End Sub
 
     Private Sub txtLoginEmail_TextChanged(sender As Object, e As EventArgs) Handles txtLoginEmail.TextChanged
-
-        Select Case txtLoginEmail.Text.Length
-
-            Case > 0
-                If ValidaEmail(txtLoginEmail.Text) = False Then
-                    txtLoginEmail.IconRight = imgLogin.Images(0)
-                    lblLoginEmail.Visible = True
-                Else
-                    txtLoginEmail.IconRight = Nothing
-                    lblLoginEmail.Visible = True
-                End If
-
-            Case <= 0
-                txtLoginEmail.IconRight = Nothing
-                lblLoginEmail.Visible = False
-
-        End Select
+        If txtLoginEmail.Text.Length > 0 Then
+            lblLoginEmail.Visible = True
+        Else
+            lblLoginEmail.Visible = False
+            txtLoginEmail.IconRight = Nothing
+        End If
     End Sub
 
     Private Sub txtLoginPassword_TextChanged(sender As Object, e As EventArgs) Handles txtLoginPassword.TextChanged
@@ -308,6 +344,7 @@ Public Class FrmLogin
             lblLoginPass.Visible = True
         Else
             lblLoginPass.Visible = False
+            txtLoginPassword.IconRight = Nothing
         End If
     End Sub
 
@@ -384,7 +421,7 @@ Public Class FrmLogin
 #Region "PAGINA DADOS DE ACESSO"
 
     Private Sub btnVoltAcesso_Click(sender As Object, e As EventArgs) Handles btnVoltAcesso.Click
-        LimpaTotal()
+        TxtEmpty()
         pagLogin()
         bpCadUser.SetPage(0)
     End Sub
@@ -394,50 +431,30 @@ Public Class FrmLogin
         ClUserInfo.ValidaEmail()
 
         If ClUserInfo.valida = True Then
+            ClUserInfo.valida = False
             lblCadEmail.Visible = True
-            ClUserInfo.valida = False
         Else
-            ClUserInfo.valida = False
-            lblCadEmail.Visible = False
-            bpCadUser.SetPage(2)
-            txtPerfilNome.Focus()
-            bs2.LineColor = RGBColors.AvancarCadastro
-            bs3.LineColor = RGBColors.AvancarCadastro
-            pbProfile.BackColor = RGBColors.AvancarCadastro
-            btnAvPerfil.Enabled = False
-            TimerVCamposPessoais.Enabled = True
-        End If
-    End Sub
-
-    Private Sub txtCadEmail_TextChanged(sender As Guna2TextBox, e As EventArgs) Handles txtCadEmail.TextChanged
-
-        Select Case txtCadEmail.Text.Length
-
-            Case > 0
-                If ValidaEmail(txtCadEmail.Text) = False Then
-                    lblAcessoEmail.Visible = True
-                    txtCadEmail.IconRight = imgLogin.Images(0)
-                Else
-                    lblAcessoEmail.Visible = True
-                    txtCadEmail.IconRight = Nothing
+            If ValidaEmail(txtCadEmail.Text) Then
+                If txtCadPass.Text = txtCadConfPass.Text Then
+                    ClUserInfo.valida = False
+                    lblCadEmail.Visible = False
+                    bpCadUser.SetPage(2)
+                    txtPerfilNome.Focus()
+                    bs2.LineColor = RGBColors.AvancarCadastro
+                    bs3.LineColor = RGBColors.AvancarCadastro
+                    pbProfile.BackColor = RGBColors.AvancarCadastro
                 End If
-
-            Case <= 0
-                lblAcessoEmail.Visible = False
-                txtCadEmail.IconRight = Nothing
-
-        End Select
-    End Sub
-
-    Private Sub txtCadEmail_LostFocus(sender As Object, e As EventArgs) Handles txtCadEmail.LostFocus
-        If txtCadEmail.Text.Length < 0 OrElse ValidaEmail(txtCadEmail.Text) = False Then
-            txtCadEmail.IconRight = imgLogin.Images(0)
-            txtCadEmail.Focus()
+            End If
         End If
     End Sub
 
-    Private Sub txtCadEmail_GotFocus(sender As Object, e As EventArgs) Handles txtCadEmail.GotFocus
-        lblCadCapsLook.Visible = False
+    Private Sub txtCadEmail_TextChanged(sender As Object, e As EventArgs) Handles txtCadEmail.TextChanged
+        If txtCadEmail.Text.Length > 0 Then
+            lblAcessoEmail.Visible = True
+        Else
+            lblAcessoEmail.Visible = False
+            txtCadEmail.IconRight = Nothing
+        End If
     End Sub
 
     Private Sub txtCadPass_TextChanged(sender As Object, e As EventArgs) Handles txtCadPass.TextChanged
@@ -481,10 +498,8 @@ Public Class FrmLogin
                 lblAcessoConfPass.Visible = True
                 If txtCadConfPass.Text <> txtCadPass.Text Then
                     txtCadPass.IconRight = imgLogin.Images(0)
-                    btnAvAcesso.Enabled = False
                 Else
                     txtCadPass.IconRight = Nothing
-                    btnAvAcesso.Enabled = True
                 End If
 
             Case Else
@@ -533,25 +548,20 @@ Public Class FrmLogin
     End Sub
 
     Private Sub btnAvPerfil_Click(sender As Object, e As EventArgs) Handles btnAvPerfil.Click
-
-        If ValidaProfile() = True Then
-            bpCadUser.SetPage(3)
-            bs4.LineColor = RGBColors.AvancarCadastro
-            bs5.LineColor = RGBColors.AvancarCadastro
-            pbBusiness.BackColor = RGBColors.AvancarCadastro
+        If Empty_Perfil() = False Then
             pbTopProfile.Visible = False
-
-        Else
-            bpCadUser.SetPage(3)
-            bs4.LineColor = RGBColors.AvancarCadastro
-            bs5.LineColor = RGBColors.AvancarCadastro
-            pbBusiness.BackColor = RGBColors.AvancarCadastro
-            pbTopProfile.Visible = True
-
         End If
 
-        TimerVCamposPessoais.Enabled = False
-
+        If Valida_Perfil() = False Then
+            If txtPerfilCep.Text.Length = 0 OrElse ValidaCEP(txtPerfilCep.Text) = True Then
+                If txtPerfilNascimento.Text.Length = 0 OrElse ValidaData(txtPerfilNascimento.Text) = True Then
+                    bpCadUser.SetPage(3)
+                    bs4.LineColor = RGBColors.AvancarCadastro
+                    bs5.LineColor = RGBColors.AvancarCadastro
+                    pbBusiness.BackColor = RGBColors.AvancarCadastro
+                End If
+            End If
+        End If
     End Sub
 
     Private Sub txtPerfilNome_TextChanged(sender As Object, e As EventArgs) Handles txtPerfilNome.TextChanged
@@ -573,7 +583,6 @@ Public Class FrmLogin
 
     Private Sub txtPerfilNome_LostFocus(sender As Object, e As EventArgs) Handles txtPerfilNome.LostFocus
         If txtPerfilNome.Text.Length <= 0 Then
-            txtPerfilNome.Focus()
             txtPerfilNome.IconRight = imgLogin.Images(0)
         End If
     End Sub
@@ -586,30 +595,15 @@ Public Class FrmLogin
 
     Private Sub txtPerfilNascimento_TextChanged(sender As Object, e As EventArgs) Handles txtPerfilNascimento.TextChanged
         ClValidaData.MaskData(sender)
-
-        Select Case txtPerfilNascimento.Text.Length
-
-            Case > 0
-                If ValidaData(txtPerfilNascimento.Text) = False Then
-                    lblPerfilNascimento.Visible = True
-                    txtPerfilNascimento.IconRight = imgLogin.Images(0)
-                Else
-                    lblPerfilNascimento.Visible = True
-                    txtPerfilNascimento.IconRight = Nothing
-                End If
-
-            Case Else
-                lblPerfilNascimento.Visible = False
-                txtPerfilNascimento.IconRight = Nothing
-
-        End Select
     End Sub
 
     Private Sub txtPerfilNascimento_LostFocus(sender As Object, e As EventArgs) Handles txtPerfilNascimento.LostFocus
         If txtPerfilNascimento.Text.Length > 0 Then
             If ValidaData(txtPerfilNascimento.Text) = False Then
-                txtPerfilNascimento.Focus()
+                txtPerfilNascimento.IconRight = imgLogin.Images(0)
             End If
+        Else
+            txtPerfilNascimento.IconRight = Nothing
         End If
     End Sub
 
@@ -617,19 +611,12 @@ Public Class FrmLogin
         ClValidaData.ApenasNumeros(e, sender)
     End Sub
 
-    Private Sub cbPerfilGenero_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbPerfilGenero.SelectedIndexChanged
-        If cbPerfilGenero.SelectedIndex >= 0 Then
-            lblPerfilGenero.Visible = True
-        Else
-            lblPerfilGenero.Visible = False
-        End If
-    End Sub
-
     Private Sub txtPerfilCelular_TextChanged(sender As Object, e As EventArgs) Handles txtPerfilCelular.TextChanged
         If txtPerfilCelular.Text.Length > 0 Then
             lblPerfilCelular.Visible = True
         Else
             lblPerfilCelular.Visible = False
+            txtPerfilCelular.IconRight = Nothing
         End If
     End Sub
 
@@ -641,41 +628,26 @@ Public Class FrmLogin
 
     Private Sub txtPerfilCep_TextChanged(sender As Object, e As EventArgs) Handles txtPerfilCep.TextChanged
         ClValidaCep.MaskCep(sender)
-
-        Select Case txtPerfilCep.Text.Length
-
-            Case > 0
-                If ValidaCEP(txtPerfilCep.Text) = False Then
-                    lblPerfilCep.Visible = True
-                    txtPerfilCep.IconRight = imgLogin.Images(0)
-                Else
-                    lblPerfilCep.Visible = True
-                    txtPerfilCep.IconRight = imgLogin.Images(5)
-                End If
-
-            Case Else
-                lblPerfilCep.Visible = False
-                txtPerfilCep.IconRight = Nothing
-
-        End Select
+        If txtPerfilCep.Text.Length > 0 Then
+            lblPerfilCep.Visible = True
+        Else
+            lblPerfilCep.Visible = False
+            txtPerfilCep.IconRight = Nothing
+        End If
     End Sub
 
     Private Sub txtPerfilCep_LostFocus(sender As Object, e As EventArgs) Handles txtPerfilCep.LostFocus
         If txtPerfilCep.Text.Length > 0 Then
             If ValidaCEP(txtPerfilCep.Text) = False Then
-                txtPerfilCep.Focus()
+                txtPerfilCep.IconRight = imgLogin.Images(0)
             End If
+        Else
+            txtPerfilCep.IconRight = Nothing
         End If
     End Sub
 
     Private Sub txtPerfilCep_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPerfilCep.KeyPress
         ClValidaCep.ApenasNumeros(e, sender)
-    End Sub
-
-    Private Sub txtPerfilCep_IconRightClick(sender As Object, e As EventArgs) Handles txtPerfilCep.IconRightClick
-        If ValidaCEP(txtPerfilCep.Text) Then
-            MsgBox("Procurar")
-        End If
     End Sub
 
     Private Sub txtPerfilEndereco_TextChanged(sender As Object, e As EventArgs) Handles txtPerfilEndereco.TextChanged
@@ -738,28 +710,6 @@ Public Class FrmLogin
         MsgBox("Download")
     End Sub
 
-    Private Sub TimerVCamposPessoais_Tick(sender As Object, e As EventArgs) Handles TimerVCamposPessoais.Tick
-        If txtPerfilNome.Text.Length > 0 OrElse
-            ValidaData(txtPerfilNascimento.Text) = True OrElse
-            ValidaCEP(txtPerfilCep.Text) = True OrElse txtPerfilCep.Text.Length <= 0 Then
-            If ValidaData(txtPerfilNascimento.Text) = True Then
-                If ValidaCEP(txtPerfilCep.Text) = True OrElse txtPerfilCep.Text.Length <= 0 Then
-                    If chkPerfilTermos.Checked = True Then
-                        btnAvPerfil.Enabled = True
-                    Else
-                        btnAvPerfil.Enabled = False
-                    End If
-                Else
-                    btnAvPerfil.Enabled = False
-                End If
-            Else
-                btnAvPerfil.Enabled = False
-            End If
-        Else
-            btnAvPerfil.Enabled = False
-        End If
-    End Sub
-
 #End Region
 
 #Region "PAGINA DADOS PROFISSIONAIS"
@@ -776,22 +726,17 @@ Public Class FrmLogin
         bs4.LineColor = RGBColors.VoltarCadastro
         pbBusiness.BackColor = RGBColors.VoltarCadastro
         pbTopProfile.Visible = False
-        btnAvPerfil.Enabled = False
-        TimerVCamposPessoais.Enabled = True
     End Sub
 
     Private Sub btnAvBusiness_Click(sender As Object, e As EventArgs) Handles btnAvBusiness.Click
+        bpCadUser.SetPage(4)
+        bs6.LineColor = RGBColors.AvancarCadastro
+        bs7.LineColor = RGBColors.AvancarCadastro
+        pbPermissao.BackColor = RGBColors.AvancarCadastro
+
         If ValidaBusiness() Then
-            bpCadUser.SetPage(4)
-            bs6.LineColor = RGBColors.AvancarCadastro
-            bs7.LineColor = RGBColors.AvancarCadastro
-            pbPermissao.BackColor = RGBColors.AvancarCadastro
             pbTopBusiness.Visible = False
         Else
-            bpCadUser.SetPage(4)
-            bs6.LineColor = RGBColors.AvancarCadastro
-            bs7.LineColor = RGBColors.AvancarCadastro
-            pbPermissao.BackColor = RGBColors.AvancarCadastro
             pbTopBusiness.Visible = True
         End If
     End Sub
@@ -825,6 +770,7 @@ Public Class FrmLogin
             lblBusinessTelefone.Visible = True
         Else
             lblBusinessTelefone.Visible = False
+            txtBusinessTel.IconRight = Nothing
         End If
     End Sub
 
@@ -924,19 +870,10 @@ Public Class FrmLogin
     End Sub
 
     Private Sub btnChklistFinalizar_Click(sender As Object, e As EventArgs) Handles btnChklistFinalizar.Click
-        Try
-            ClUserInfo.nascimento = txtPerfilNascimento.Text
-        Catch ex As Exception
-            MessageBox.Show("Data de nascimento inválida!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Exit Sub
-        End Try
 
-        ClEmail.toEmail = txtCadEmail.Text
-        ClEmail.yourSenha = txtCadPass.Text
-
-        NewThread = New Thread(AddressOf ClEmail.CreateUser) With {.IsBackground = True}
+        ClEmail.ToEmail = txtCadEmail.Text
+        NewThread = New Thread(AddressOf ClEmail.ValidarEmail) With {.IsBackground = True}
         NewThread.Start()
-
         PanelEtapa.Visible = False
         bpCadUser.SetPage(8)
 
@@ -1279,4 +1216,161 @@ Public Class FrmLogin
 
     End Sub
 
+    Private Sub txtPerfilCep_Enter(sender As Object, e As EventArgs) Handles txtPerfilCep.Enter
+        txtPerfilCep.IconRight = Nothing
+    End Sub
+
+    Private Sub lblPerfilGenero_Enter(sender As Object, e As EventArgs) Handles lblPerfilGenero.Enter
+
+    End Sub
+
+    Private Sub cbPerfilGenero_Enter(sender As Object, e As EventArgs) Handles cbPerfilGenero.Enter
+        cbPerfilGenero.FillColor = Color.WhiteSmoke
+        lblPerfilGenero.Visible = True
+    End Sub
+
+    Private Sub cbPerfilGenero_LostFocus(sender As Object, e As EventArgs) Handles cbPerfilGenero.LostFocus
+        If cbPerfilGenero.SelectedIndex <= 0 Then
+            lblPerfilGenero.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtPerfilNascimento_Enter(sender As Object, e As EventArgs) Handles txtPerfilNascimento.Enter
+        txtPerfilNascimento.IconRight = Nothing
+    End Sub
+
+    Private Sub txtPerfilCelular_Enter(sender As Object, e As EventArgs) Handles txtPerfilCelular.Enter
+        txtPerfilCelular.Text = txtPerfilCelular.Text.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+        txtPerfilCelular.IconRight = Nothing
+    End Sub
+
+    Private Sub txtPerfilCelular_Validated(sender As Object, e As EventArgs) Handles txtPerfilCelular.Validated
+        Dim mask = txtPerfilCelular.Text
+        Select Case txtPerfilCelular.Text.Length
+            Case 0
+                txtPerfilCelular.IconRight = Nothing
+
+            Case 9
+                If Not txtPerfilCelular.Text.StartsWith("0") Then
+                    txtPerfilCelular.Text = mask.Insert(5, "-")
+                    txtPerfilCelular.IconRight = Nothing
+                Else
+                    txtPerfilCelular.IconRight = imgLogin.Images(0)
+                End If
+
+            Case 11
+                If Not txtPerfilCelular.Text.StartsWith("0") Then
+                    txtPerfilCelular.Text = mask.Insert(0, "(").Insert(3, ") ").Insert(10, "-")
+                    txtPerfilCelular.IconRight = Nothing
+                Else
+                    txtPerfilCelular.IconRight = imgLogin.Images(0)
+                End If
+        End Select
+    End Sub
+
+    Private Sub txtBusinessTel_Enter(sender As Object, e As EventArgs) Handles txtBusinessTel.Enter
+        txtBusinessTel.Text = txtBusinessTel.Text.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+        txtBusinessTel.IconRight = Nothing
+    End Sub
+
+    Private Sub txtPerfilCelular_LostFocus(sender As Object, e As EventArgs) Handles txtPerfilCelular.LostFocus
+        Select Case txtPerfilCelular.Text.Length
+            Case 0
+                txtPerfilCelular.IconRight = Nothing
+            Case 10, 15
+                txtPerfilCelular.IconRight = Nothing
+            Case Else
+                txtPerfilCelular.IconRight = imgLogin.Images(0)
+        End Select
+    End Sub
+
+    Private Sub txtBusinessTel_Validated(sender As Object, e As EventArgs) Handles txtBusinessTel.Validated
+        Dim mask = txtBusinessTel.Text
+        Select Case txtBusinessTel.Text.Length
+            Case 0
+                txtBusinessTel.IconRight = Nothing
+            Case 8
+                If Not txtBusinessTel.Text.StartsWith("0") Then
+                    txtBusinessTel.Text = mask.Insert(4, "-")
+                    txtBusinessTel.IconRight = Nothing
+                Else
+                    txtBusinessTel.IconRight = imgLogin.Images(0)
+                End If
+
+            Case 9
+                If Not txtBusinessTel.Text.StartsWith("0") Then
+                    txtBusinessTel.Text = mask.Insert(5, "-")
+                    txtBusinessTel.IconRight = Nothing
+                Else
+                    txtBusinessTel.IconRight = imgLogin.Images(0)
+                End If
+
+            Case 10
+                If Not txtBusinessTel.Text.StartsWith("0") Then
+                    txtBusinessTel.Text = mask.Insert(0, "(").Insert(3, ") ").Insert(9, "-")
+                    txtBusinessTel.IconRight = Nothing
+                Else
+                    txtBusinessTel.IconRight = imgLogin.Images(0)
+                End If
+
+            Case 11
+                If txtBusinessTel.Text.StartsWith("0800") Then
+                    txtBusinessTel.Text = mask.Insert(4, " ").Insert(8, " ")
+                    txtBusinessTel.IconRight = Nothing
+                Else
+                    If Not txtBusinessTel.Text.StartsWith("0") Then
+                        txtBusinessTel.Text = mask.Insert(0, "(").Insert(3, ") ").Insert(10, "-")
+                        txtBusinessTel.IconRight = Nothing
+                    Else
+                        txtBusinessTel.IconRight = imgLogin.Images(0)
+                    End If
+                End If
+            Case Else
+                txtBusinessTel.IconRight = imgLogin.Images(0)
+        End Select
+    End Sub
+
+    Private Sub txtBusinessTel_LostFocus(sender As Object, e As EventArgs) Handles txtBusinessTel.LostFocus
+        Select Case txtBusinessTel.Text.Length
+            Case 0
+                txtBusinessTel.IconRight = Nothing
+            Case 9, 13, 14
+                txtBusinessTel.IconRight = Nothing
+            Case Else
+                txtBusinessTel.IconRight = imgLogin.Images(0)
+        End Select
+    End Sub
+
+    Private Sub txtCadEmail_Enter(sender As Object, e As EventArgs) Handles txtCadEmail.Enter
+        txtCadEmail.IconRight = Nothing
+        lblCadCapsLook.Visible = False
+    End Sub
+
+    Private Sub txtCadEmail_LostFocus(sender As Object, e As EventArgs) Handles txtCadEmail.LostFocus
+        If txtCadEmail.Text.Length > 0 Then
+            If ValidaEmail(txtCadEmail.Text) = False Then
+                txtCadEmail.IconRight = imgLogin.Images(0)
+            Else
+                txtCadEmail.IconRight = Nothing
+            End If
+        End If
+    End Sub
+
+    Private Sub txtLoginEmail_LostFocus(sender As Object, e As EventArgs) Handles txtLoginEmail.LostFocus
+        If txtLoginEmail.Text.Length > 0 Then
+            If ValidaEmail(txtLoginEmail.Text) = False Then
+                txtLoginEmail.IconRight = imgLogin.Images(0)
+            Else
+                txtLoginEmail.IconRight = Nothing
+            End If
+        End If
+    End Sub
+
+    Private Sub txtLoginEmail_Enter(sender As Object, e As EventArgs) Handles txtLoginEmail.Enter
+        txtLoginEmail.IconRight = Nothing
+    End Sub
+
+    Private Sub txtLoginPassword_Enter(sender As Object, e As EventArgs) Handles txtLoginPassword.Enter
+        txtLoginPassword.IconRight = Nothing
+    End Sub
 End Class

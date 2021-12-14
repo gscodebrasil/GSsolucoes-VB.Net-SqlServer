@@ -188,7 +188,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("/gscode/GSHome/Usuarios/")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("/gscode/GSHome/Backup_Sistema/")>  _
         Public Property SFTP_BackupSistema() As String
             Get
                 Return CType(Me("SFTP_BackupSistema"),String)
@@ -519,6 +519,18 @@ Namespace My
             End Get
             Set
                 Me("Softphone_Local") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("/gscode/GSHome/Usuarios/")>  _
+        Public Property SFTP_ImagemUsuario() As String
+            Get
+                Return CType(Me("SFTP_ImagemUsuario"),String)
+            End Get
+            Set
+                Me("SFTP_ImagemUsuario") = value
             End Set
         End Property
     End Class

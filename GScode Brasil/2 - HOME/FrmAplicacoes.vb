@@ -1,6 +1,6 @@
 ﻿Public Class FrmAplicacoes
 
-    Private clUser As New UserInfo
+    Private ClUser As New UserInfo
 
 
     Public Sub AcessoNv0()
@@ -33,38 +33,14 @@
 
     End Sub
 
-    'PHONEBOOK
-    Private Sub pbPhonebook_Click(sender As Object, e As EventArgs)
-        FrmPrincipal.ActiveFormClose()
-        FrmPrincipal.TimerMenuDeslizante.HideSync(FrmPrincipal.PanelMenu)
-    End Sub
-
-    'HELPDESK
-    Private Sub pbHelpdesk_Click(sender As Object, e As EventArgs)
-        FrmPrincipal.ActiveFormClose()
-    End Sub
-
-    'ESTOQUE
-    Private Sub pbEstoque_Click(sender As Object, e As EventArgs)
-        FrmPrincipal.ActiveFormClose()
-    End Sub
-
-    'FINANCEIRO
-    Private Sub pbFinanceiro_Click(sender As Object, e As EventArgs)
-        FrmPrincipal.ActiveFormClose()
-    End Sub
-
-    'DASHBOARD
-    Private Sub pbDashboard_Click(sender As Object, e As EventArgs)
-        FrmPrincipal.ActiveFormClose()
-    End Sub
-
     Private Sub BtnPhonebook_Click(sender As Object, e As EventArgs) Handles BtnPhonebook.Click
+        FrmPrincipal.Cad_Cons = 0
         FrmPrincipal.MenuAbertoOuFechado(1)
     End Sub
 
-    Private Sub btnHelpdesk_Click(sender As Object, e As EventArgs)
-
+    Private Sub btnHelpdesk_Click(sender As Object, e As EventArgs) Handles btnHelpdesk.Click
+        FrmPrincipal.Cad_Cons = 0
+        FrmPrincipal.MenuAbertoOuFechado(2)
     End Sub
 
     Private Sub btnEstoque_Click(sender As Object, e As EventArgs)

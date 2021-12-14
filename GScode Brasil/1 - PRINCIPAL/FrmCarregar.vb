@@ -15,8 +15,13 @@
         FrmPrincipal.FormShow(New FrmBackup)
     End Sub
 
-    Private Sub TimerCadastros_Phonebook_Tick(sender As Object, e As EventArgs) Handles TimerCadastros_Phonebook.Tick
-        TimerCadastros_Phonebook.Stop()
+    Private Sub TimerPhonebook_Tick(sender As Object, e As EventArgs) Handles TimerPhonebook.Tick
+        TimerPhonebook.Stop()
         FrmPrincipal.FormShow(New FrmCadastros_Phonebook)
+    End Sub
+
+    Private Sub TimerHelpdesk_Tick(sender As Object, e As EventArgs) Handles TimerHelpdesk.Tick
+        TimerHelpdesk.Stop()
+        FrmPrincipal.FormShow(New FrmCadastros_Helpdesk)
     End Sub
 End Class

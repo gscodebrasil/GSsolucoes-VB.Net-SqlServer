@@ -59,7 +59,7 @@ Public Class UserInfo
     Public Property pass_retry As String
     Public Property name As String
     Public Property foto As String
-    Public Property nascimento As Date
+    Public Property nascimento As String
     Public Property genero As String
     Public Property cell As String
     Public Property cep As String
@@ -110,12 +110,12 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"INSERT INTO dbo.user_info(id_interno, email, pass, pass_retry, name, foto, nascimento, genero, cell, cep, endereco, comp, cidade, uf, not_whats, not_email, acept_termos, empresa, depart, funcao, tell_empresa, ramal, token, gssolucoes, phonebook, helpdesk, estoque, financeiro, dashboard, date_cad) VALUES ('{id_interno}','{email}','{pass}','{pass_retry}','{name}','{foto}','{nascimento}','{genero}','{cell}','{cep}','{endereco}','{comp}','{cidade}','{uf}','{not_whats}','{not_email}','{acept_termos}','{empresa}','{depart}','{funcao}','{tell_empresa}','{ramal}','{token}','{"1"}','{""}','{""}','{""}','{""}','{""}', GETDATE());", conn)
+                Using command As SqlCommand = New SqlCommand($"INSERT INTO user_info(id_interno, email, pass, pass_retry, name, foto, nascimento, genero, cell, cep, endereco, comp, cidade, uf, not_whats, not_email, acept_termos, empresa, depart, funcao, tell_empresa, ramal, token, gssolucoes, phonebook, helpdesk, estoque, financeiro, dashboard, date_cad) VALUES ('{id_interno}','{email}','{pass}','{pass_retry}','{name}','{foto}','{nascimento}','{genero}','{cell}','{cep}','{endereco}','{comp}','{cidade}','{uf}','{not_whats}','{not_email}','{acept_termos}','{empresa}','{depart}','{funcao}','{tell_empresa}','{ramal}','{token}','{"1"}','{""}','{""}','{""}','{""}','{""}', GETDATE());", conn)
 
                     command.ExecuteNonQuery()
-                valida = True
+                    valida = True
+                End Using
             End Using
-        End Using
         Catch ex As Exception
             If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
@@ -131,7 +131,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"UPDATE dbo.user_info SET name='{name}',nascimento='{nascimento}',genero='{genero}',cell='{cell}',cep='{cep}',endereco='{endereco}',comp='{comp}',cidade='{cidade}',uf='{uf}',notwhats='{not_whats}',notemail='{not_email}',acepttermos='{acept_termos}',empresa='{empresa}',depart='{depart}',funcao='{funcao}',tellempresa='{tell_empresa}',ramal='{ramal}' WHERE email='{email}'", conn)
+                Using command As SqlCommand = New SqlCommand($"UPDATE user_info SET name='{name}',nascimento='{nascimento}',genero='{genero}',cell='{cell}',cep='{cep}',endereco='{endereco}',comp='{comp}',cidade='{cidade}',uf='{uf}',not_whats='{not_whats}',not_email='{not_email}',acept_termos='{acept_termos}',empresa='{empresa}',depart='{depart}',funcao='{funcao}',tell_empresa='{tell_empresa}',ramal='{ramal}' WHERE email='{email}'", conn)
                     command.ExecuteNonQuery()
                     valida = True
                 End Using
@@ -149,7 +149,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"UPDATE dbo.user_info SET gssolucoes='{gssolucoes}',phonebook='{phonebook}',helpdesk='{helpdesk}',estoque='{estoque}',financeiro='{financeiro}',dashboard='{dashboard}' WHERE token='{token}'", conn)
+                Using command As SqlCommand = New SqlCommand($"UPDATE user_info SET gssolucoes='{gssolucoes}',phonebook='{phonebook}',helpdesk='{helpdesk}',estoque='{estoque}',financeiro='{financeiro}',dashboard='{dashboard}' WHERE token='{token}'", conn)
                     command.ExecuteNonQuery()
                     valida = True
                 End Using
@@ -169,7 +169,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"UPDATE dbo.user_info SET email='{email}' WHERE token='{token}'", conn)
+                Using command As SqlCommand = New SqlCommand($"UPDATE user_info SET email='{email}' WHERE token='{token}'", conn)
                     command.ExecuteNonQuery()
                     valida = True
                 End Using
@@ -187,7 +187,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"UPDATE dbo.user_info SET pass='{pass}',passretry='{pass_retry}' WHERE email='{email}'", conn)
+                Using command As SqlCommand = New SqlCommand($"UPDATE user_info SET pass='{pass}',pass_retry='{pass_retry}' WHERE email='{email}'", conn)
                     command.ExecuteNonQuery()
                     valida = True
                 End Using
@@ -205,7 +205,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"DELETE FROM dbo.user_info WHERE token='{token}'", conn)
+                Using command As SqlCommand = New SqlCommand($"DELETE FROM user_info WHERE token='{token}'", conn)
                     command.ExecuteNonQuery()
                     valida = True
                 End Using
@@ -223,7 +223,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass, name, foto FROM dbo.user_info WHERE email='{email}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass, name, foto FROM user_info WHERE email='{email}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
@@ -264,7 +264,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT * FROM dbo.user_info WHERE email='{email}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT * FROM user_info WHERE email='{email}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
@@ -311,11 +311,11 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT email FROM dbo.user_info WHERE email='{email}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT email FROM user_info WHERE email='{email}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
-                                If dr("email") = email Then
+                                If Not dr("email") = email Then
                                     valida = True
                                 End If
                             End If
@@ -339,7 +339,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT id_interno FROM dbo.user_info WHERE id_interno='{id_interno}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT id_interno FROM user_info WHERE id_interno='{id_interno}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
@@ -367,12 +367,11 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass, token FROM dbo.user_info WHERE email='{email}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass, token FROM user_info WHERE email='{email}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
                                 If dr("email") = email Then
-                                    email = dr("email")
                                     pass = dr("pass")
                                     token = dr("token")
                                     valida = True
@@ -396,7 +395,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT email FROM dbo.user_info WHERE email='{email}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT email FROM user_info WHERE email='{email}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
@@ -422,11 +421,11 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass FROM dbo.user_info WHERE email='{email}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass FROM user_info WHERE email='{email}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
-                                StrPass = dr("pass")
+                                pass = dr("pass")
                                 valida = True
                             End If
                         End If
@@ -449,7 +448,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT email, name, gssolucoes, phonebook, helpdesk, estoque, financeiro, dashboard FROM dbo.user_info WHERE token='{token}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT email, name, gssolucoes, phonebook, helpdesk, estoque, financeiro, dashboard FROM user_info WHERE token='{token}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then

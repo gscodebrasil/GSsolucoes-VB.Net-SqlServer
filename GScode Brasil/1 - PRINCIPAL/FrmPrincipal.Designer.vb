@@ -24,12 +24,12 @@ Partial Class FrmPrincipal
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim Animation6 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
+        Dim Animation7 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim Animation8 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim Animation9 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Dim Animation10 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation7 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation6 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.NotMessageLeftHome = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.BtnNotLeft = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.NotMessageTop = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
@@ -92,34 +92,30 @@ Partial Class FrmPrincipal
         Me.PbPerfilLeft_Phonebook = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.PbLogoP_Phonebook = New System.Windows.Forms.PictureBox()
         Me.TpHelpdesk = New System.Windows.Forms.TabPage()
-        Me.Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Panel37 = New System.Windows.Forms.Panel()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.Panel38 = New System.Windows.Forms.Panel()
-        Me.Guna2ImageButton7 = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2ImageButton8 = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2ImageButton9 = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2GradientButton10 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton11 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.Guna2GradientButton12 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton13 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton14 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton15 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton16 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton17 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton18 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Panel39 = New System.Windows.Forms.Panel()
-        Me.Guna2HtmlLabel16 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel17 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Panel40 = New System.Windows.Forms.Panel()
-        Me.Guna2HtmlLabel18 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2ImageButton10 = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.PanelMenu_Helpdesk = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnHome_Helpdesk = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.BtnRelatorio_Helpdesk = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.BtnAgenda_Helpdesk = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.BtnGerenciador_Helpdesk = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.BtnPainel_Helpdesk = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.BtnAbrirOS_Helpdesk = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.PanelLogoFull_Helpdesk = New System.Windows.Forms.Panel()
+        Me.PbLogoG_Helpdesk = New System.Windows.Forms.PictureBox()
+        Me.PanelSocial_Helpdesk = New System.Windows.Forms.Panel()
+        Me.BtnYoutube_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.BtnFacebook_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.BtnInstagram_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.PanelPerfilLeft_Helpdesk = New System.Windows.Forms.Panel()
+        Me.LblNameLeft_Helpdesk = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.LblEmailLeft_Helpdesk = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.PanelNotifiLeft_Helpdesk = New System.Windows.Forms.Panel()
+        Me.LblNotLeftHome_Helpdesk = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnNotLeft_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Panel41 = New System.Windows.Forms.Panel()
-        Me.Guna2ImageButton11 = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.Guna2CirclePictureBox2 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
-        Me.Guna2ImageButton12 = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.BtnPanelDeslizanteLeft_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.PbPerfilLeft_Helpdesk = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.BtnPerfilLeft_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.PbLogoP_Helpdesk = New System.Windows.Forms.PictureBox()
         Me.TpEstoque = New System.Windows.Forms.TabPage()
         Me.Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Panel42 = New System.Windows.Forms.Panel()
@@ -228,6 +224,8 @@ Partial Class FrmPrincipal
         Me.EditUserTransition = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
         Me.ImageIcon = New System.Windows.Forms.ImageList(Me.components)
         Me.AppTransition = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
+        Me.ImageUserLeft = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageUserTop = New System.Windows.Forms.ImageList(Me.components)
         Me.TabControlMenu.SuspendLayout()
         Me.TpHome.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
@@ -249,15 +247,14 @@ Partial Class FrmPrincipal
         CType(Me.PbPerfilLeft_Phonebook, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbLogoP_Phonebook, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpHelpdesk.SuspendLayout()
-        Me.Guna2Panel3.SuspendLayout()
-        Me.Panel37.SuspendLayout()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel38.SuspendLayout()
-        Me.Guna2Panel4.SuspendLayout()
-        Me.Panel39.SuspendLayout()
-        Me.Panel40.SuspendLayout()
-        CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelMenu_Helpdesk.SuspendLayout()
+        Me.PanelLogoFull_Helpdesk.SuspendLayout()
+        CType(Me.PbLogoG_Helpdesk, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelSocial_Helpdesk.SuspendLayout()
+        Me.PanelPerfilLeft_Helpdesk.SuspendLayout()
+        Me.PanelNotifiLeft_Helpdesk.SuspendLayout()
+        CType(Me.PbPerfilLeft_Helpdesk, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbLogoP_Helpdesk, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TpEstoque.SuspendLayout()
         Me.Guna2Panel5.SuspendLayout()
         Me.Panel42.SuspendLayout()
@@ -322,7 +319,7 @@ Partial Class FrmPrincipal
         Me.BtnNotLeft.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnNotLeft.ImageRotate = 0!
         Me.BtnNotLeft.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnNotLeft.Location = New System.Drawing.Point(25, 5)
+        Me.BtnNotLeft.Location = New System.Drawing.Point(45, 5)
         Me.BtnNotLeft.Name = "BtnNotLeft"
         Me.BtnNotLeft.PressedState.ImageSize = New System.Drawing.Size(22, 22)
         Me.BtnNotLeft.PressedState.Parent = Me.BtnNotLeft
@@ -391,22 +388,22 @@ Partial Class FrmPrincipal
         '
         Me.TimerMenuDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide
         Me.TimerMenuDeslizante.Cursor = Nothing
-        Animation8.AnimateOnlyDifferences = True
-        Animation8.BlindCoeff = CType(resources.GetObject("Animation8.BlindCoeff"), System.Drawing.PointF)
-        Animation8.LeafCoeff = 0!
-        Animation8.MaxTime = 1.0!
-        Animation8.MinTime = 0!
-        Animation8.MosaicCoeff = CType(resources.GetObject("Animation8.MosaicCoeff"), System.Drawing.PointF)
-        Animation8.MosaicShift = CType(resources.GetObject("Animation8.MosaicShift"), System.Drawing.PointF)
-        Animation8.MosaicSize = 0
-        Animation8.Padding = New System.Windows.Forms.Padding(0)
-        Animation8.RotateCoeff = 0!
-        Animation8.RotateLimit = 0!
-        Animation8.ScaleCoeff = CType(resources.GetObject("Animation8.ScaleCoeff"), System.Drawing.PointF)
-        Animation8.SlideCoeff = CType(resources.GetObject("Animation8.SlideCoeff"), System.Drawing.PointF)
-        Animation8.TimeCoeff = 0!
-        Animation8.TransparencyCoeff = 0!
-        Me.TimerMenuDeslizante.DefaultAnimation = Animation8
+        Animation6.AnimateOnlyDifferences = True
+        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
+        Animation6.LeafCoeff = 0!
+        Animation6.MaxTime = 1.0!
+        Animation6.MinTime = 0!
+        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
+        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
+        Animation6.MosaicSize = 0
+        Animation6.Padding = New System.Windows.Forms.Padding(0)
+        Animation6.RotateCoeff = 0!
+        Animation6.RotateLimit = 0!
+        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
+        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
+        Animation6.TimeCoeff = 0!
+        Animation6.TransparencyCoeff = 0!
+        Me.TimerMenuDeslizante.DefaultAnimation = Animation6
         '
         'Guna2HtmlLabel2
         '
@@ -509,10 +506,10 @@ Partial Class FrmPrincipal
         Me.AppTransition.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerSubMenuDeslizante.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TpHome.Location = New System.Drawing.Point(44, 4)
+        Me.TpHome.Location = New System.Drawing.Point(5, 4)
         Me.TpHome.Name = "TpHome"
         Me.TpHome.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpHome.Size = New System.Drawing.Size(180, 651)
+        Me.TpHome.Size = New System.Drawing.Size(219, 651)
         Me.TpHome.TabIndex = 0
         Me.TpHome.Text = "Home"
         '
@@ -537,7 +534,7 @@ Partial Class FrmPrincipal
         Me.PanelMenu.Location = New System.Drawing.Point(3, 3)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.ShadowDecoration.Parent = Me.PanelMenu
-        Me.PanelMenu.Size = New System.Drawing.Size(174, 645)
+        Me.PanelMenu.Size = New System.Drawing.Size(213, 645)
         Me.PanelMenu.TabIndex = 0
         '
         'PanelLogoFull
@@ -553,7 +550,7 @@ Partial Class FrmPrincipal
         Me.PanelLogoFull.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelLogoFull.Location = New System.Drawing.Point(0, 793)
         Me.PanelLogoFull.Name = "PanelLogoFull"
-        Me.PanelLogoFull.Size = New System.Drawing.Size(157, 149)
+        Me.PanelLogoFull.Size = New System.Drawing.Size(196, 149)
         Me.PanelLogoFull.TabIndex = 17
         '
         'PbLogoG
@@ -568,7 +565,7 @@ Partial Class FrmPrincipal
         Me.PbLogoG.Image = CType(resources.GetObject("PbLogoG.Image"), System.Drawing.Image)
         Me.PbLogoG.Location = New System.Drawing.Point(0, 36)
         Me.PbLogoG.Name = "PbLogoG"
-        Me.PbLogoG.Size = New System.Drawing.Size(157, 71)
+        Me.PbLogoG.Size = New System.Drawing.Size(196, 71)
         Me.PbLogoG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoG.TabIndex = 19
         Me.PbLogoG.TabStop = False
@@ -587,9 +584,8 @@ Partial Class FrmPrincipal
         Me.PanelSocial.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelSocial.Location = New System.Drawing.Point(0, 107)
         Me.PanelSocial.Name = "PanelSocial"
-        Me.PanelSocial.Size = New System.Drawing.Size(157, 42)
+        Me.PanelSocial.Size = New System.Drawing.Size(196, 42)
         Me.PanelSocial.TabIndex = 0
-        Me.PanelSocial.Visible = False
         '
         'BtnYoutube
         '
@@ -607,7 +603,7 @@ Partial Class FrmPrincipal
         Me.BtnYoutube.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnYoutube.ImageRotate = 0!
         Me.BtnYoutube.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnYoutube.Location = New System.Drawing.Point(91, -2)
+        Me.BtnYoutube.Location = New System.Drawing.Point(130, -2)
         Me.BtnYoutube.Name = "BtnYoutube"
         Me.BtnYoutube.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnYoutube.PressedState.Parent = Me.BtnYoutube
@@ -631,7 +627,7 @@ Partial Class FrmPrincipal
         Me.BtnFacebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnFacebook.ImageRotate = 0!
         Me.BtnFacebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnFacebook.Location = New System.Drawing.Point(48, -2)
+        Me.BtnFacebook.Location = New System.Drawing.Point(87, -2)
         Me.BtnFacebook.Name = "BtnFacebook"
         Me.BtnFacebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnFacebook.PressedState.Parent = Me.BtnFacebook
@@ -655,7 +651,7 @@ Partial Class FrmPrincipal
         Me.BtnInstagram.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnInstagram.ImageRotate = 0!
         Me.BtnInstagram.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnInstagram.Location = New System.Drawing.Point(5, -2)
+        Me.BtnInstagram.Location = New System.Drawing.Point(44, -2)
         Me.BtnInstagram.Name = "BtnInstagram"
         Me.BtnInstagram.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnInstagram.PressedState.Parent = Me.BtnInstagram
@@ -703,7 +699,7 @@ Partial Class FrmPrincipal
         Me.BtnAjuda.Name = "BtnAjuda"
         Me.BtnAjuda.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnAjuda.ShadowDecoration.Parent = Me.BtnAjuda
-        Me.BtnAjuda.Size = New System.Drawing.Size(157, 45)
+        Me.BtnAjuda.Size = New System.Drawing.Size(196, 45)
         Me.BtnAjuda.TabIndex = 16
         Me.BtnAjuda.Text = "Ajuda"
         Me.BtnAjuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -748,7 +744,7 @@ Partial Class FrmPrincipal
         Me.BtnLicencas.Name = "BtnLicencas"
         Me.BtnLicencas.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnLicencas.ShadowDecoration.Parent = Me.BtnLicencas
-        Me.BtnLicencas.Size = New System.Drawing.Size(157, 45)
+        Me.BtnLicencas.Size = New System.Drawing.Size(196, 45)
         Me.BtnLicencas.TabIndex = 15
         Me.BtnLicencas.Text = "Licenças"
         Me.BtnLicencas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -772,7 +768,7 @@ Partial Class FrmPrincipal
         Me.PanelConfig.Location = New System.Drawing.Point(0, 478)
         Me.PanelConfig.Name = "PanelConfig"
         Me.PanelConfig.ShadowDecoration.Parent = Me.PanelConfig
-        Me.PanelConfig.Size = New System.Drawing.Size(157, 225)
+        Me.PanelConfig.Size = New System.Drawing.Size(196, 225)
         Me.PanelConfig.TabIndex = 0
         Me.PanelConfig.Visible = False
         '
@@ -811,7 +807,7 @@ Partial Class FrmPrincipal
         Me.BtnUsuarios.Name = "BtnUsuarios"
         Me.BtnUsuarios.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnUsuarios.ShadowDecoration.Parent = Me.BtnUsuarios
-        Me.BtnUsuarios.Size = New System.Drawing.Size(157, 45)
+        Me.BtnUsuarios.Size = New System.Drawing.Size(196, 45)
         Me.BtnUsuarios.TabIndex = 24
         Me.BtnUsuarios.Text = "Usuários"
         Me.BtnUsuarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -851,7 +847,7 @@ Partial Class FrmPrincipal
         Me.BtnArquivos.Name = "BtnArquivos"
         Me.BtnArquivos.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnArquivos.ShadowDecoration.Parent = Me.BtnArquivos
-        Me.BtnArquivos.Size = New System.Drawing.Size(157, 45)
+        Me.BtnArquivos.Size = New System.Drawing.Size(196, 45)
         Me.BtnArquivos.TabIndex = 23
         Me.BtnArquivos.Text = "Arquivos"
         Me.BtnArquivos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -891,7 +887,7 @@ Partial Class FrmPrincipal
         Me.BtnBackup.Name = "BtnBackup"
         Me.BtnBackup.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnBackup.ShadowDecoration.Parent = Me.BtnBackup
-        Me.BtnBackup.Size = New System.Drawing.Size(157, 45)
+        Me.BtnBackup.Size = New System.Drawing.Size(196, 45)
         Me.BtnBackup.TabIndex = 22
         Me.BtnBackup.Text = "Backup"
         Me.BtnBackup.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -931,7 +927,7 @@ Partial Class FrmPrincipal
         Me.BtnSmtp.Name = "BtnSmtp"
         Me.BtnSmtp.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnSmtp.ShadowDecoration.Parent = Me.BtnSmtp
-        Me.BtnSmtp.Size = New System.Drawing.Size(157, 45)
+        Me.BtnSmtp.Size = New System.Drawing.Size(196, 45)
         Me.BtnSmtp.TabIndex = 21
         Me.BtnSmtp.Text = "SMTP"
         Me.BtnSmtp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -971,7 +967,7 @@ Partial Class FrmPrincipal
         Me.Btnsoftphone.Name = "Btnsoftphone"
         Me.Btnsoftphone.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.Btnsoftphone.ShadowDecoration.Parent = Me.Btnsoftphone
-        Me.Btnsoftphone.Size = New System.Drawing.Size(157, 45)
+        Me.Btnsoftphone.Size = New System.Drawing.Size(196, 45)
         Me.Btnsoftphone.TabIndex = 20
         Me.Btnsoftphone.Text = "Softphone"
         Me.Btnsoftphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1016,7 +1012,7 @@ Partial Class FrmPrincipal
         Me.BtnConfig.Name = "BtnConfig"
         Me.BtnConfig.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnConfig.ShadowDecoration.Parent = Me.BtnConfig
-        Me.BtnConfig.Size = New System.Drawing.Size(157, 45)
+        Me.BtnConfig.Size = New System.Drawing.Size(196, 45)
         Me.BtnConfig.TabIndex = 14
         Me.BtnConfig.Text = "Configurações"
         Me.BtnConfig.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1061,7 +1057,7 @@ Partial Class FrmPrincipal
         Me.BtnAplication.Name = "BtnAplication"
         Me.BtnAplication.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnAplication.ShadowDecoration.Parent = Me.BtnAplication
-        Me.BtnAplication.Size = New System.Drawing.Size(157, 45)
+        Me.BtnAplication.Size = New System.Drawing.Size(196, 45)
         Me.BtnAplication.TabIndex = 0
         Me.BtnAplication.Text = "Aplicações"
         Me.BtnAplication.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1084,7 +1080,7 @@ Partial Class FrmPrincipal
         Me.PanelPerfilLeft.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilLeft.Location = New System.Drawing.Point(0, 100)
         Me.PanelPerfilLeft.Name = "PanelPerfilLeft"
-        Me.PanelPerfilLeft.Size = New System.Drawing.Size(157, 288)
+        Me.PanelPerfilLeft.Size = New System.Drawing.Size(196, 288)
         Me.PanelPerfilLeft.TabIndex = 13
         '
         'LblNameLeft
@@ -1101,7 +1097,7 @@ Partial Class FrmPrincipal
         Me.LblNameLeft.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LblNameLeft.Location = New System.Drawing.Point(0, 152)
         Me.LblNameLeft.Name = "LblNameLeft"
-        Me.LblNameLeft.Size = New System.Drawing.Size(157, 19)
+        Me.LblNameLeft.Size = New System.Drawing.Size(196, 19)
         Me.LblNameLeft.TabIndex = 27
         Me.LblNameLeft.Text = "Admin"
         Me.LblNameLeft.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1120,7 +1116,7 @@ Partial Class FrmPrincipal
         Me.LblEmailLeft.ForeColor = System.Drawing.Color.DarkGray
         Me.LblEmailLeft.Location = New System.Drawing.Point(0, 171)
         Me.LblEmailLeft.Name = "LblEmailLeft"
-        Me.LblEmailLeft.Size = New System.Drawing.Size(157, 19)
+        Me.LblEmailLeft.Size = New System.Drawing.Size(196, 19)
         Me.LblEmailLeft.TabIndex = 28
         Me.LblEmailLeft.Text = "admin@gscodebrasil.com.br"
         Me.LblEmailLeft.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -1137,7 +1133,7 @@ Partial Class FrmPrincipal
         Me.PanelNotifiLeft.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelNotifiLeft.Location = New System.Drawing.Point(0, 190)
         Me.PanelNotifiLeft.Name = "PanelNotifiLeft"
-        Me.PanelNotifiLeft.Size = New System.Drawing.Size(157, 33)
+        Me.PanelNotifiLeft.Size = New System.Drawing.Size(196, 33)
         Me.PanelNotifiLeft.TabIndex = 17
         '
         'LblNotLeftHome
@@ -1151,7 +1147,7 @@ Partial Class FrmPrincipal
         Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.LblNotLeftHome.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LblNotLeftHome.ForeColor = System.Drawing.Color.White
-        Me.LblNotLeftHome.Location = New System.Drawing.Point(62, 12)
+        Me.LblNotLeftHome.Location = New System.Drawing.Point(82, 12)
         Me.LblNotLeftHome.Name = "LblNotLeftHome"
         Me.LblNotLeftHome.Size = New System.Drawing.Size(69, 17)
         Me.LblNotLeftHome.TabIndex = 0
@@ -1167,7 +1163,7 @@ Partial Class FrmPrincipal
         Me.Pn1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Pn1.Location = New System.Drawing.Point(0, 223)
         Me.Pn1.Name = "Pn1"
-        Me.Pn1.Size = New System.Drawing.Size(157, 65)
+        Me.Pn1.Size = New System.Drawing.Size(196, 65)
         Me.Pn1.TabIndex = 18
         '
         'BtnPanelDeslizanteLeft
@@ -1186,7 +1182,7 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteLeft.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnPanelDeslizanteLeft.ImageRotate = 0!
         Me.BtnPanelDeslizanteLeft.ImageSize = New System.Drawing.Size(18, 18)
-        Me.BtnPanelDeslizanteLeft.Location = New System.Drawing.Point(132, 4)
+        Me.BtnPanelDeslizanteLeft.Location = New System.Drawing.Point(171, 4)
         Me.BtnPanelDeslizanteLeft.Name = "BtnPanelDeslizanteLeft"
         Me.BtnPanelDeslizanteLeft.PressedState.ImageSize = New System.Drawing.Size(18, 18)
         Me.BtnPanelDeslizanteLeft.PressedState.Parent = Me.BtnPanelDeslizanteLeft
@@ -1196,7 +1192,7 @@ Partial Class FrmPrincipal
         '
         'BtnPerfilLeft
         '
-        Me.BtnPerfilLeft.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.BtnPerfilLeft.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnPerfilLeft.BackColor = System.Drawing.Color.Transparent
         Me.BtnPerfilLeft.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPerfilLeft.CheckedState.Parent = Me.BtnPerfilLeft
@@ -1211,7 +1207,7 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnPerfilLeft.ImageRotate = 0!
         Me.BtnPerfilLeft.ImageSize = New System.Drawing.Size(21, 21)
-        Me.BtnPerfilLeft.Location = New System.Drawing.Point(115, 109)
+        Me.BtnPerfilLeft.Location = New System.Drawing.Point(135, 109)
         Me.BtnPerfilLeft.Name = "BtnPerfilLeft"
         Me.BtnPerfilLeft.PressedState.ImageSize = New System.Drawing.Size(21, 21)
         Me.BtnPerfilLeft.PressedState.Parent = Me.BtnPerfilLeft
@@ -1222,7 +1218,7 @@ Partial Class FrmPrincipal
         '
         'PbPerfilLeft
         '
-        Me.PbPerfilLeft.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.PbPerfilLeft.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PbPerfilLeft.BackColor = System.Drawing.Color.Transparent
         Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
@@ -1231,7 +1227,7 @@ Partial Class FrmPrincipal
         Me.AppTransition.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.PbPerfilLeft.Image = CType(resources.GetObject("PbPerfilLeft.Image"), System.Drawing.Image)
         Me.PbPerfilLeft.ImageRotate = 0!
-        Me.PbPerfilLeft.Location = New System.Drawing.Point(18, 19)
+        Me.PbPerfilLeft.Location = New System.Drawing.Point(38, 19)
         Me.PbPerfilLeft.Name = "PbPerfilLeft"
         Me.PbPerfilLeft.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.PbPerfilLeft.ShadowDecoration.Parent = Me.PbPerfilLeft
@@ -1253,7 +1249,7 @@ Partial Class FrmPrincipal
         Me.PbLogoP.Image = CType(resources.GetObject("PbLogoP.Image"), System.Drawing.Image)
         Me.PbLogoP.Location = New System.Drawing.Point(0, 0)
         Me.PbLogoP.Name = "PbLogoP"
-        Me.PbLogoP.Size = New System.Drawing.Size(157, 100)
+        Me.PbLogoP.Size = New System.Drawing.Size(196, 100)
         Me.PbLogoP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoP.TabIndex = 1
         Me.PbLogoP.TabStop = False
@@ -1820,689 +1816,550 @@ Partial Class FrmPrincipal
         'TpHelpdesk
         '
         Me.TpHelpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TpHelpdesk.Controls.Add(Me.Guna2Panel3)
+        Me.TpHelpdesk.Controls.Add(Me.PanelMenu_Helpdesk)
         Me.TimerMenuDeslizante.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.EditUserTransition.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
         Me.TimerSubMenuDeslizante.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TpHelpdesk.Location = New System.Drawing.Point(44, 4)
+        Me.TpHelpdesk.Location = New System.Drawing.Point(5, 4)
         Me.TpHelpdesk.Name = "TpHelpdesk"
         Me.TpHelpdesk.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpHelpdesk.Size = New System.Drawing.Size(180, 651)
+        Me.TpHelpdesk.Size = New System.Drawing.Size(219, 651)
         Me.TpHelpdesk.TabIndex = 2
         Me.TpHelpdesk.Text = "Helpdesk"
         '
-        'Guna2Panel3
+        'PanelMenu_Helpdesk
         '
-        Me.Guna2Panel3.AutoScroll = True
-        Me.Guna2Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2Panel3.Controls.Add(Me.Panel37)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2GradientButton10)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2GradientButton11)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2Panel4)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2GradientButton17)
-        Me.Guna2Panel3.Controls.Add(Me.Guna2GradientButton18)
-        Me.Guna2Panel3.Controls.Add(Me.Panel39)
-        Me.Guna2Panel3.Controls.Add(Me.PictureBox12)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2Panel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Guna2Panel3.Location = New System.Drawing.Point(3, 3)
-        Me.Guna2Panel3.Name = "Guna2Panel3"
-        Me.Guna2Panel3.ShadowDecoration.Parent = Me.Guna2Panel3
-        Me.Guna2Panel3.Size = New System.Drawing.Size(200, 645)
-        Me.Guna2Panel3.TabIndex = 1
+        Me.PanelMenu_Helpdesk.AutoScroll = True
+        Me.PanelMenu_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.BtnHome_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.BtnRelatorio_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.BtnAgenda_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.BtnGerenciador_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.BtnPainel_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.BtnAbrirOS_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.PanelLogoFull_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.PanelPerfilLeft_Helpdesk)
+        Me.PanelMenu_Helpdesk.Controls.Add(Me.PbLogoP_Helpdesk)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelMenu_Helpdesk.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelMenu_Helpdesk.Location = New System.Drawing.Point(3, 3)
+        Me.PanelMenu_Helpdesk.Name = "PanelMenu_Helpdesk"
+        Me.PanelMenu_Helpdesk.ShadowDecoration.Parent = Me.PanelMenu_Helpdesk
+        Me.PanelMenu_Helpdesk.Size = New System.Drawing.Size(213, 645)
+        Me.PanelMenu_Helpdesk.TabIndex = 1
         '
-        'Panel37
+        'BtnHome_Helpdesk
         '
-        Me.Panel37.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel37.Controls.Add(Me.PictureBox11)
-        Me.Panel37.Controls.Add(Me.Panel38)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Panel37.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel37.Location = New System.Drawing.Point(0, 793)
-        Me.Panel37.Name = "Panel37"
-        Me.Panel37.Size = New System.Drawing.Size(183, 149)
-        Me.Panel37.TabIndex = 17
+        Me.BtnHome_Helpdesk.Animated = True
+        Me.BtnHome_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnHome_Helpdesk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnHome_Helpdesk.BorderRadius = 7
+        Me.BtnHome_Helpdesk.BorderThickness = 1
+        Me.BtnHome_Helpdesk.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.BtnHome_Helpdesk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnHome_Helpdesk.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnHome_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BtnHome_Helpdesk.CheckedState.Parent = Me.BtnHome_Helpdesk
+        Me.BtnHome_Helpdesk.CustomImages.Parent = Me.BtnHome_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnHome_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnHome_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnHome_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnHome_Helpdesk.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnHome_Helpdesk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnHome_Helpdesk.DisabledState.Parent = Me.BtnHome_Helpdesk
+        Me.BtnHome_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnHome_Helpdesk.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnHome_Helpdesk.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnHome_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnHome_Helpdesk.ForeColor = System.Drawing.Color.White
+        Me.BtnHome_Helpdesk.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnHome_Helpdesk.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnHome_Helpdesk.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnHome_Helpdesk.HoverState.Parent = Me.BtnHome_Helpdesk
+        Me.BtnHome_Helpdesk.Image = CType(resources.GetObject("BtnHome_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnHome_Helpdesk.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnHome_Helpdesk.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.BtnHome_Helpdesk.Location = New System.Drawing.Point(0, 613)
+        Me.BtnHome_Helpdesk.Name = "BtnHome_Helpdesk"
+        Me.BtnHome_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BtnHome_Helpdesk.ShadowDecoration.Parent = Me.BtnHome_Helpdesk
+        Me.BtnHome_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnHome_Helpdesk.TabIndex = 19
+        Me.BtnHome_Helpdesk.Text = "Home"
+        Me.BtnHome_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'PictureBox11
+        'BtnRelatorio_Helpdesk
         '
-        Me.PictureBox11.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.PictureBox11.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PictureBox11.Image = CType(resources.GetObject("PictureBox11.Image"), System.Drawing.Image)
-        Me.PictureBox11.Location = New System.Drawing.Point(0, 36)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(183, 71)
-        Me.PictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox11.TabIndex = 19
-        Me.PictureBox11.TabStop = False
+        Me.BtnRelatorio_Helpdesk.Animated = True
+        Me.BtnRelatorio_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.BorderRadius = 7
+        Me.BtnRelatorio_Helpdesk.BorderThickness = 1
+        Me.BtnRelatorio_Helpdesk.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.BtnRelatorio_Helpdesk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BtnRelatorio_Helpdesk.CheckedState.Parent = Me.BtnRelatorio_Helpdesk
+        Me.BtnRelatorio_Helpdesk.CustomImages.Parent = Me.BtnRelatorio_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnRelatorio_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnRelatorio_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnRelatorio_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.DisabledState.Parent = Me.BtnRelatorio_Helpdesk
+        Me.BtnRelatorio_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnRelatorio_Helpdesk.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnRelatorio_Helpdesk.ForeColor = System.Drawing.Color.White
+        Me.BtnRelatorio_Helpdesk.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnRelatorio_Helpdesk.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnRelatorio_Helpdesk.HoverState.Parent = Me.BtnRelatorio_Helpdesk
+        Me.BtnRelatorio_Helpdesk.Image = CType(resources.GetObject("BtnRelatorio_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnRelatorio_Helpdesk.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnRelatorio_Helpdesk.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.BtnRelatorio_Helpdesk.Location = New System.Drawing.Point(0, 568)
+        Me.BtnRelatorio_Helpdesk.Name = "BtnRelatorio_Helpdesk"
+        Me.BtnRelatorio_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BtnRelatorio_Helpdesk.ShadowDecoration.Parent = Me.BtnRelatorio_Helpdesk
+        Me.BtnRelatorio_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnRelatorio_Helpdesk.TabIndex = 16
+        Me.BtnRelatorio_Helpdesk.Text = "Relatório"
+        Me.BtnRelatorio_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Panel38
+        'BtnAgenda_Helpdesk
         '
-        Me.Panel38.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel38.Controls.Add(Me.Guna2ImageButton7)
-        Me.Panel38.Controls.Add(Me.Guna2ImageButton8)
-        Me.Panel38.Controls.Add(Me.Guna2ImageButton9)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Panel38.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel38.Location = New System.Drawing.Point(0, 107)
-        Me.Panel38.Name = "Panel38"
-        Me.Panel38.Size = New System.Drawing.Size(183, 42)
-        Me.Panel38.TabIndex = 0
-        Me.Panel38.Visible = False
+        Me.BtnAgenda_Helpdesk.Animated = True
+        Me.BtnAgenda_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.BorderRadius = 7
+        Me.BtnAgenda_Helpdesk.BorderThickness = 1
+        Me.BtnAgenda_Helpdesk.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.BtnAgenda_Helpdesk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BtnAgenda_Helpdesk.CheckedState.Parent = Me.BtnAgenda_Helpdesk
+        Me.BtnAgenda_Helpdesk.CustomImages.Parent = Me.BtnAgenda_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnAgenda_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnAgenda_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnAgenda_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.DisabledState.Parent = Me.BtnAgenda_Helpdesk
+        Me.BtnAgenda_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnAgenda_Helpdesk.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnAgenda_Helpdesk.ForeColor = System.Drawing.Color.White
+        Me.BtnAgenda_Helpdesk.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAgenda_Helpdesk.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnAgenda_Helpdesk.HoverState.Parent = Me.BtnAgenda_Helpdesk
+        Me.BtnAgenda_Helpdesk.Image = CType(resources.GetObject("BtnAgenda_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnAgenda_Helpdesk.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnAgenda_Helpdesk.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.BtnAgenda_Helpdesk.Location = New System.Drawing.Point(0, 523)
+        Me.BtnAgenda_Helpdesk.Name = "BtnAgenda_Helpdesk"
+        Me.BtnAgenda_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BtnAgenda_Helpdesk.ShadowDecoration.Parent = Me.BtnAgenda_Helpdesk
+        Me.BtnAgenda_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnAgenda_Helpdesk.TabIndex = 14
+        Me.BtnAgenda_Helpdesk.Text = "Agenda"
+        Me.BtnAgenda_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Guna2ImageButton7
+        'BtnGerenciador_Helpdesk
         '
-        Me.Guna2ImageButton7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ImageButton7.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton7.CheckedState.Parent = Me.Guna2ImageButton7
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2ImageButton7.HoverState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.Guna2ImageButton7.HoverState.Parent = Me.Guna2ImageButton7
-        Me.Guna2ImageButton7.Image = CType(resources.GetObject("Guna2ImageButton7.Image"), System.Drawing.Image)
-        Me.Guna2ImageButton7.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.Guna2ImageButton7.ImageRotate = 0!
-        Me.Guna2ImageButton7.ImageSize = New System.Drawing.Size(26, 26)
-        Me.Guna2ImageButton7.Location = New System.Drawing.Point(117, -2)
-        Me.Guna2ImageButton7.Name = "Guna2ImageButton7"
-        Me.Guna2ImageButton7.PressedState.ImageSize = New System.Drawing.Size(26, 26)
-        Me.Guna2ImageButton7.PressedState.Parent = Me.Guna2ImageButton7
-        Me.Guna2ImageButton7.ShadowDecoration.Parent = Me.Guna2ImageButton7
-        Me.Guna2ImageButton7.Size = New System.Drawing.Size(34, 34)
-        Me.Guna2ImageButton7.TabIndex = 25
+        Me.BtnGerenciador_Helpdesk.Animated = True
+        Me.BtnGerenciador_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.BorderRadius = 7
+        Me.BtnGerenciador_Helpdesk.BorderThickness = 1
+        Me.BtnGerenciador_Helpdesk.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.BtnGerenciador_Helpdesk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BtnGerenciador_Helpdesk.CheckedState.Parent = Me.BtnGerenciador_Helpdesk
+        Me.BtnGerenciador_Helpdesk.CustomImages.Parent = Me.BtnGerenciador_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnGerenciador_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnGerenciador_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnGerenciador_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.DisabledState.Parent = Me.BtnGerenciador_Helpdesk
+        Me.BtnGerenciador_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnGerenciador_Helpdesk.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnGerenciador_Helpdesk.ForeColor = System.Drawing.Color.White
+        Me.BtnGerenciador_Helpdesk.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnGerenciador_Helpdesk.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnGerenciador_Helpdesk.HoverState.Parent = Me.BtnGerenciador_Helpdesk
+        Me.BtnGerenciador_Helpdesk.Image = CType(resources.GetObject("BtnGerenciador_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnGerenciador_Helpdesk.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnGerenciador_Helpdesk.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.BtnGerenciador_Helpdesk.Location = New System.Drawing.Point(0, 478)
+        Me.BtnGerenciador_Helpdesk.Name = "BtnGerenciador_Helpdesk"
+        Me.BtnGerenciador_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BtnGerenciador_Helpdesk.ShadowDecoration.Parent = Me.BtnGerenciador_Helpdesk
+        Me.BtnGerenciador_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnGerenciador_Helpdesk.TabIndex = 18
+        Me.BtnGerenciador_Helpdesk.Text = "Gerenciador"
+        Me.BtnGerenciador_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Guna2ImageButton8
+        'BtnPainel_Helpdesk
         '
-        Me.Guna2ImageButton8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ImageButton8.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton8.CheckedState.Parent = Me.Guna2ImageButton8
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2ImageButton8.HoverState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.Guna2ImageButton8.HoverState.Parent = Me.Guna2ImageButton8
-        Me.Guna2ImageButton8.Image = CType(resources.GetObject("Guna2ImageButton8.Image"), System.Drawing.Image)
-        Me.Guna2ImageButton8.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.Guna2ImageButton8.ImageRotate = 0!
-        Me.Guna2ImageButton8.ImageSize = New System.Drawing.Size(26, 26)
-        Me.Guna2ImageButton8.Location = New System.Drawing.Point(74, -2)
-        Me.Guna2ImageButton8.Name = "Guna2ImageButton8"
-        Me.Guna2ImageButton8.PressedState.ImageSize = New System.Drawing.Size(26, 26)
-        Me.Guna2ImageButton8.PressedState.Parent = Me.Guna2ImageButton8
-        Me.Guna2ImageButton8.ShadowDecoration.Parent = Me.Guna2ImageButton8
-        Me.Guna2ImageButton8.Size = New System.Drawing.Size(34, 34)
-        Me.Guna2ImageButton8.TabIndex = 24
+        Me.BtnPainel_Helpdesk.Animated = True
+        Me.BtnPainel_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnPainel_Helpdesk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnPainel_Helpdesk.BorderRadius = 7
+        Me.BtnPainel_Helpdesk.BorderThickness = 1
+        Me.BtnPainel_Helpdesk.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.BtnPainel_Helpdesk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnPainel_Helpdesk.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnPainel_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BtnPainel_Helpdesk.CheckedState.Parent = Me.BtnPainel_Helpdesk
+        Me.BtnPainel_Helpdesk.CustomImages.Parent = Me.BtnPainel_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnPainel_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnPainel_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnPainel_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnPainel_Helpdesk.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnPainel_Helpdesk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnPainel_Helpdesk.DisabledState.Parent = Me.BtnPainel_Helpdesk
+        Me.BtnPainel_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnPainel_Helpdesk.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnPainel_Helpdesk.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnPainel_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnPainel_Helpdesk.ForeColor = System.Drawing.Color.White
+        Me.BtnPainel_Helpdesk.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnPainel_Helpdesk.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnPainel_Helpdesk.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnPainel_Helpdesk.HoverState.Parent = Me.BtnPainel_Helpdesk
+        Me.BtnPainel_Helpdesk.Image = CType(resources.GetObject("BtnPainel_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnPainel_Helpdesk.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnPainel_Helpdesk.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.BtnPainel_Helpdesk.Location = New System.Drawing.Point(0, 433)
+        Me.BtnPainel_Helpdesk.Name = "BtnPainel_Helpdesk"
+        Me.BtnPainel_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BtnPainel_Helpdesk.ShadowDecoration.Parent = Me.BtnPainel_Helpdesk
+        Me.BtnPainel_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnPainel_Helpdesk.TabIndex = 15
+        Me.BtnPainel_Helpdesk.Text = "Painel"
+        Me.BtnPainel_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Guna2ImageButton9
+        'BtnAbrirOS_Helpdesk
         '
-        Me.Guna2ImageButton9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ImageButton9.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton9.CheckedState.Parent = Me.Guna2ImageButton9
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2ImageButton9.HoverState.ImageSize = New System.Drawing.Size(30, 30)
-        Me.Guna2ImageButton9.HoverState.Parent = Me.Guna2ImageButton9
-        Me.Guna2ImageButton9.Image = CType(resources.GetObject("Guna2ImageButton9.Image"), System.Drawing.Image)
-        Me.Guna2ImageButton9.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.Guna2ImageButton9.ImageRotate = 0!
-        Me.Guna2ImageButton9.ImageSize = New System.Drawing.Size(26, 26)
-        Me.Guna2ImageButton9.Location = New System.Drawing.Point(31, -2)
-        Me.Guna2ImageButton9.Name = "Guna2ImageButton9"
-        Me.Guna2ImageButton9.PressedState.ImageSize = New System.Drawing.Size(26, 26)
-        Me.Guna2ImageButton9.PressedState.Parent = Me.Guna2ImageButton9
-        Me.Guna2ImageButton9.ShadowDecoration.Parent = Me.Guna2ImageButton9
-        Me.Guna2ImageButton9.Size = New System.Drawing.Size(34, 34)
-        Me.Guna2ImageButton9.TabIndex = 23
+        Me.BtnAbrirOS_Helpdesk.Animated = True
+        Me.BtnAbrirOS_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.BorderRadius = 7
+        Me.BtnAbrirOS_Helpdesk.BorderThickness = 1
+        Me.BtnAbrirOS_Helpdesk.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.BtnAbrirOS_Helpdesk.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.BtnAbrirOS_Helpdesk.CheckedState.Parent = Me.BtnAbrirOS_Helpdesk
+        Me.BtnAbrirOS_Helpdesk.CustomImages.Parent = Me.BtnAbrirOS_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnAbrirOS_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnAbrirOS_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnAbrirOS_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.DisabledState.Parent = Me.BtnAbrirOS_Helpdesk
+        Me.BtnAbrirOS_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BtnAbrirOS_Helpdesk.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnAbrirOS_Helpdesk.ForeColor = System.Drawing.Color.White
+        Me.BtnAbrirOS_Helpdesk.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.BtnAbrirOS_Helpdesk.HoverState.ForeColor = System.Drawing.Color.White
+        Me.BtnAbrirOS_Helpdesk.HoverState.Parent = Me.BtnAbrirOS_Helpdesk
+        Me.BtnAbrirOS_Helpdesk.Image = CType(resources.GetObject("BtnAbrirOS_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnAbrirOS_Helpdesk.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnAbrirOS_Helpdesk.ImageOffset = New System.Drawing.Point(10, 0)
+        Me.BtnAbrirOS_Helpdesk.Location = New System.Drawing.Point(0, 388)
+        Me.BtnAbrirOS_Helpdesk.Name = "BtnAbrirOS_Helpdesk"
+        Me.BtnAbrirOS_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.BtnAbrirOS_Helpdesk.ShadowDecoration.Parent = Me.BtnAbrirOS_Helpdesk
+        Me.BtnAbrirOS_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnAbrirOS_Helpdesk.TabIndex = 0
+        Me.BtnAbrirOS_Helpdesk.Text = "Abrir OS"
+        Me.BtnAbrirOS_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Guna2GradientButton10
+        'PanelLogoFull_Helpdesk
         '
-        Me.Guna2GradientButton10.Animated = True
-        Me.Guna2GradientButton10.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton10.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton10.BorderRadius = 7
-        Me.Guna2GradientButton10.BorderThickness = 1
-        Me.Guna2GradientButton10.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton10.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton10.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton10.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2GradientButton10.CheckedState.Parent = Me.Guna2GradientButton10
-        Me.Guna2GradientButton10.CustomImages.Parent = Me.Guna2GradientButton10
-        Me.Guna2GradientButton10.CustomizableEdges.BottomRight = False
-        Me.Guna2GradientButton10.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton10.DisabledState.Parent = Me.Guna2GradientButton10
-        Me.Guna2GradientButton10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton10.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton10.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton10.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton10.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton10.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton10.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton10.HoverState.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton10.HoverState.Parent = Me.Guna2GradientButton10
-        Me.Guna2GradientButton10.Image = CType(resources.GetObject("Guna2GradientButton10.Image"), System.Drawing.Image)
-        Me.Guna2GradientButton10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton10.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton10.Location = New System.Drawing.Point(0, 748)
-        Me.Guna2GradientButton10.Name = "Guna2GradientButton10"
-        Me.Guna2GradientButton10.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Guna2GradientButton10.ShadowDecoration.Parent = Me.Guna2GradientButton10
-        Me.Guna2GradientButton10.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton10.TabIndex = 16
-        Me.Guna2GradientButton10.Text = "Ajuda"
-        Me.Guna2GradientButton10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.PanelLogoFull_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.PanelLogoFull_Helpdesk.Controls.Add(Me.PbLogoG_Helpdesk)
+        Me.PanelLogoFull_Helpdesk.Controls.Add(Me.PanelSocial_Helpdesk)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelLogoFull_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PanelLogoFull_Helpdesk.Location = New System.Drawing.Point(0, 658)
+        Me.PanelLogoFull_Helpdesk.Name = "PanelLogoFull_Helpdesk"
+        Me.PanelLogoFull_Helpdesk.Size = New System.Drawing.Size(196, 149)
+        Me.PanelLogoFull_Helpdesk.TabIndex = 17
         '
-        'Guna2GradientButton11
+        'PbLogoG_Helpdesk
         '
-        Me.Guna2GradientButton11.Animated = True
-        Me.Guna2GradientButton11.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton11.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton11.BorderRadius = 7
-        Me.Guna2GradientButton11.BorderThickness = 1
-        Me.Guna2GradientButton11.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton11.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton11.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton11.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2GradientButton11.CheckedState.Parent = Me.Guna2GradientButton11
-        Me.Guna2GradientButton11.CustomImages.Parent = Me.Guna2GradientButton11
-        Me.Guna2GradientButton11.CustomizableEdges.BottomRight = False
-        Me.Guna2GradientButton11.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton11.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton11.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton11.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton11.DisabledState.Parent = Me.Guna2GradientButton11
-        Me.Guna2GradientButton11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton11.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton11.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton11.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton11.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton11.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton11.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton11.HoverState.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton11.HoverState.Parent = Me.Guna2GradientButton11
-        Me.Guna2GradientButton11.Image = CType(resources.GetObject("Guna2GradientButton11.Image"), System.Drawing.Image)
-        Me.Guna2GradientButton11.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton11.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton11.Location = New System.Drawing.Point(0, 703)
-        Me.Guna2GradientButton11.Name = "Guna2GradientButton11"
-        Me.Guna2GradientButton11.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Guna2GradientButton11.ShadowDecoration.Parent = Me.Guna2GradientButton11
-        Me.Guna2GradientButton11.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton11.TabIndex = 15
-        Me.Guna2GradientButton11.Text = "Licenças"
-        Me.Guna2GradientButton11.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.PbLogoG_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PbLogoG_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PbLogoG_Helpdesk.Image = CType(resources.GetObject("PbLogoG_Helpdesk.Image"), System.Drawing.Image)
+        Me.PbLogoG_Helpdesk.Location = New System.Drawing.Point(0, 36)
+        Me.PbLogoG_Helpdesk.Name = "PbLogoG_Helpdesk"
+        Me.PbLogoG_Helpdesk.Size = New System.Drawing.Size(196, 71)
+        Me.PbLogoG_Helpdesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PbLogoG_Helpdesk.TabIndex = 19
+        Me.PbLogoG_Helpdesk.TabStop = False
         '
-        'Guna2Panel4
+        'PanelSocial_Helpdesk
         '
-        Me.Guna2Panel4.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2Panel4.Controls.Add(Me.Guna2GradientButton12)
-        Me.Guna2Panel4.Controls.Add(Me.Guna2GradientButton13)
-        Me.Guna2Panel4.Controls.Add(Me.Guna2GradientButton14)
-        Me.Guna2Panel4.Controls.Add(Me.Guna2GradientButton15)
-        Me.Guna2Panel4.Controls.Add(Me.Guna2GradientButton16)
-        Me.Guna2Panel4.CustomizableEdges.BottomRight = False
-        Me.Guna2Panel4.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2Panel4.Location = New System.Drawing.Point(0, 478)
-        Me.Guna2Panel4.Name = "Guna2Panel4"
-        Me.Guna2Panel4.ShadowDecoration.Parent = Me.Guna2Panel4
-        Me.Guna2Panel4.Size = New System.Drawing.Size(183, 225)
-        Me.Guna2Panel4.TabIndex = 0
-        Me.Guna2Panel4.Visible = False
+        Me.PanelSocial_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.PanelSocial_Helpdesk.Controls.Add(Me.BtnYoutube_Helpdesk)
+        Me.PanelSocial_Helpdesk.Controls.Add(Me.BtnFacebook_Helpdesk)
+        Me.PanelSocial_Helpdesk.Controls.Add(Me.BtnInstagram_Helpdesk)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelSocial_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PanelSocial_Helpdesk.Location = New System.Drawing.Point(0, 107)
+        Me.PanelSocial_Helpdesk.Name = "PanelSocial_Helpdesk"
+        Me.PanelSocial_Helpdesk.Size = New System.Drawing.Size(196, 42)
+        Me.PanelSocial_Helpdesk.TabIndex = 0
         '
-        'Guna2GradientButton12
+        'BtnYoutube_Helpdesk
         '
-        Me.Guna2GradientButton12.Animated = True
-        Me.Guna2GradientButton12.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton12.BorderColor = System.Drawing.Color.Empty
-        Me.Guna2GradientButton12.BorderRadius = 7
-        Me.Guna2GradientButton12.BorderThickness = 1
-        Me.Guna2GradientButton12.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton12.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton12.CheckedState.Parent = Me.Guna2GradientButton12
-        Me.Guna2GradientButton12.CustomImages.Parent = Me.Guna2GradientButton12
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton12.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton12.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton12.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton12.DisabledState.Parent = Me.Guna2GradientButton12
-        Me.Guna2GradientButton12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton12.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2GradientButton12.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton12.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton12.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton12.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton12.HoverState.Parent = Me.Guna2GradientButton12
-        Me.Guna2GradientButton12.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton12.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton12.Location = New System.Drawing.Point(0, 180)
-        Me.Guna2GradientButton12.Name = "Guna2GradientButton12"
-        Me.Guna2GradientButton12.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
-        Me.Guna2GradientButton12.ShadowDecoration.Parent = Me.Guna2GradientButton12
-        Me.Guna2GradientButton12.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton12.TabIndex = 24
-        Me.Guna2GradientButton12.Text = "Usuários"
-        Me.Guna2GradientButton12.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnYoutube_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnYoutube_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnYoutube_Helpdesk.CheckedState.Parent = Me.BtnYoutube_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnYoutube_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.BtnYoutube_Helpdesk.HoverState.Parent = Me.BtnYoutube_Helpdesk
+        Me.BtnYoutube_Helpdesk.Image = CType(resources.GetObject("BtnYoutube_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnYoutube_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnYoutube_Helpdesk.ImageRotate = 0!
+        Me.BtnYoutube_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
+        Me.BtnYoutube_Helpdesk.Location = New System.Drawing.Point(130, -2)
+        Me.BtnYoutube_Helpdesk.Name = "BtnYoutube_Helpdesk"
+        Me.BtnYoutube_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
+        Me.BtnYoutube_Helpdesk.PressedState.Parent = Me.BtnYoutube_Helpdesk
+        Me.BtnYoutube_Helpdesk.ShadowDecoration.Parent = Me.BtnYoutube_Helpdesk
+        Me.BtnYoutube_Helpdesk.Size = New System.Drawing.Size(34, 34)
+        Me.BtnYoutube_Helpdesk.TabIndex = 25
         '
-        'Guna2GradientButton13
+        'BtnFacebook_Helpdesk
         '
-        Me.Guna2GradientButton13.Animated = True
-        Me.Guna2GradientButton13.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton13.BorderColor = System.Drawing.Color.Empty
-        Me.Guna2GradientButton13.BorderRadius = 7
-        Me.Guna2GradientButton13.BorderThickness = 1
-        Me.Guna2GradientButton13.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton13.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton13.CheckedState.Parent = Me.Guna2GradientButton13
-        Me.Guna2GradientButton13.CustomImages.Parent = Me.Guna2GradientButton13
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton13.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton13.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton13.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton13.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton13.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton13.DisabledState.Parent = Me.Guna2GradientButton13
-        Me.Guna2GradientButton13.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton13.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2GradientButton13.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton13.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton13.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton13.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton13.HoverState.Parent = Me.Guna2GradientButton13
-        Me.Guna2GradientButton13.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton13.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton13.Location = New System.Drawing.Point(0, 135)
-        Me.Guna2GradientButton13.Name = "Guna2GradientButton13"
-        Me.Guna2GradientButton13.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
-        Me.Guna2GradientButton13.ShadowDecoration.Parent = Me.Guna2GradientButton13
-        Me.Guna2GradientButton13.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton13.TabIndex = 23
-        Me.Guna2GradientButton13.Text = "Arquivos"
-        Me.Guna2GradientButton13.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnFacebook_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnFacebook_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnFacebook_Helpdesk.CheckedState.Parent = Me.BtnFacebook_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnFacebook_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.BtnFacebook_Helpdesk.HoverState.Parent = Me.BtnFacebook_Helpdesk
+        Me.BtnFacebook_Helpdesk.Image = CType(resources.GetObject("BtnFacebook_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnFacebook_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnFacebook_Helpdesk.ImageRotate = 0!
+        Me.BtnFacebook_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
+        Me.BtnFacebook_Helpdesk.Location = New System.Drawing.Point(87, -2)
+        Me.BtnFacebook_Helpdesk.Name = "BtnFacebook_Helpdesk"
+        Me.BtnFacebook_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
+        Me.BtnFacebook_Helpdesk.PressedState.Parent = Me.BtnFacebook_Helpdesk
+        Me.BtnFacebook_Helpdesk.ShadowDecoration.Parent = Me.BtnFacebook_Helpdesk
+        Me.BtnFacebook_Helpdesk.Size = New System.Drawing.Size(34, 34)
+        Me.BtnFacebook_Helpdesk.TabIndex = 24
         '
-        'Guna2GradientButton14
+        'BtnInstagram_Helpdesk
         '
-        Me.Guna2GradientButton14.Animated = True
-        Me.Guna2GradientButton14.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton14.BorderColor = System.Drawing.Color.Empty
-        Me.Guna2GradientButton14.BorderRadius = 7
-        Me.Guna2GradientButton14.BorderThickness = 1
-        Me.Guna2GradientButton14.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton14.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton14.CheckedState.Parent = Me.Guna2GradientButton14
-        Me.Guna2GradientButton14.CustomImages.Parent = Me.Guna2GradientButton14
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton14.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton14.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton14.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton14.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton14.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton14.DisabledState.Parent = Me.Guna2GradientButton14
-        Me.Guna2GradientButton14.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton14.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2GradientButton14.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton14.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton14.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton14.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton14.HoverState.Parent = Me.Guna2GradientButton14
-        Me.Guna2GradientButton14.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton14.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton14.Location = New System.Drawing.Point(0, 90)
-        Me.Guna2GradientButton14.Name = "Guna2GradientButton14"
-        Me.Guna2GradientButton14.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
-        Me.Guna2GradientButton14.ShadowDecoration.Parent = Me.Guna2GradientButton14
-        Me.Guna2GradientButton14.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton14.TabIndex = 22
-        Me.Guna2GradientButton14.Text = "Backup"
-        Me.Guna2GradientButton14.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BtnInstagram_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnInstagram_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnInstagram_Helpdesk.CheckedState.Parent = Me.BtnInstagram_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnInstagram_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(30, 30)
+        Me.BtnInstagram_Helpdesk.HoverState.Parent = Me.BtnInstagram_Helpdesk
+        Me.BtnInstagram_Helpdesk.Image = CType(resources.GetObject("BtnInstagram_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnInstagram_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnInstagram_Helpdesk.ImageRotate = 0!
+        Me.BtnInstagram_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
+        Me.BtnInstagram_Helpdesk.Location = New System.Drawing.Point(44, -2)
+        Me.BtnInstagram_Helpdesk.Name = "BtnInstagram_Helpdesk"
+        Me.BtnInstagram_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
+        Me.BtnInstagram_Helpdesk.PressedState.Parent = Me.BtnInstagram_Helpdesk
+        Me.BtnInstagram_Helpdesk.ShadowDecoration.Parent = Me.BtnInstagram_Helpdesk
+        Me.BtnInstagram_Helpdesk.Size = New System.Drawing.Size(34, 34)
+        Me.BtnInstagram_Helpdesk.TabIndex = 23
         '
-        'Guna2GradientButton15
+        'PanelPerfilLeft_Helpdesk
         '
-        Me.Guna2GradientButton15.Animated = True
-        Me.Guna2GradientButton15.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton15.BorderColor = System.Drawing.Color.Empty
-        Me.Guna2GradientButton15.BorderRadius = 7
-        Me.Guna2GradientButton15.BorderThickness = 1
-        Me.Guna2GradientButton15.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton15.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton15.CheckedState.Parent = Me.Guna2GradientButton15
-        Me.Guna2GradientButton15.CustomImages.Parent = Me.Guna2GradientButton15
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton15.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton15.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton15.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton15.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton15.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton15.DisabledState.Parent = Me.Guna2GradientButton15
-        Me.Guna2GradientButton15.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton15.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2GradientButton15.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton15.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton15.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton15.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton15.HoverState.Parent = Me.Guna2GradientButton15
-        Me.Guna2GradientButton15.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton15.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton15.Location = New System.Drawing.Point(0, 45)
-        Me.Guna2GradientButton15.Name = "Guna2GradientButton15"
-        Me.Guna2GradientButton15.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
-        Me.Guna2GradientButton15.ShadowDecoration.Parent = Me.Guna2GradientButton15
-        Me.Guna2GradientButton15.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton15.TabIndex = 21
-        Me.Guna2GradientButton15.Text = "SMTP"
-        Me.Guna2GradientButton15.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.PanelPerfilLeft_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.LblNameLeft_Helpdesk)
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.LblEmailLeft_Helpdesk)
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.PanelNotifiLeft_Helpdesk)
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.Panel41)
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.BtnPanelDeslizanteLeft_Helpdesk)
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.PbPerfilLeft_Helpdesk)
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.BtnPerfilLeft_Helpdesk)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelPerfilLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelPerfilLeft_Helpdesk.Location = New System.Drawing.Point(0, 100)
+        Me.PanelPerfilLeft_Helpdesk.Name = "PanelPerfilLeft_Helpdesk"
+        Me.PanelPerfilLeft_Helpdesk.Size = New System.Drawing.Size(196, 288)
+        Me.PanelPerfilLeft_Helpdesk.TabIndex = 13
         '
-        'Guna2GradientButton16
+        'LblNameLeft_Helpdesk
         '
-        Me.Guna2GradientButton16.Animated = True
-        Me.Guna2GradientButton16.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton16.BorderColor = System.Drawing.Color.Empty
-        Me.Guna2GradientButton16.BorderRadius = 7
-        Me.Guna2GradientButton16.BorderThickness = 1
-        Me.Guna2GradientButton16.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton16.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton16.CheckedState.Parent = Me.Guna2GradientButton16
-        Me.Guna2GradientButton16.CustomImages.Parent = Me.Guna2GradientButton16
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton16.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton16.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton16.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton16.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton16.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton16.DisabledState.Parent = Me.Guna2GradientButton16
-        Me.Guna2GradientButton16.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton16.FillColor = System.Drawing.Color.DimGray
-        Me.Guna2GradientButton16.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton16.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton16.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton16.HoverState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton16.HoverState.Parent = Me.Guna2GradientButton16
-        Me.Guna2GradientButton16.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton16.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton16.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2GradientButton16.Name = "Guna2GradientButton16"
-        Me.Guna2GradientButton16.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
-        Me.Guna2GradientButton16.ShadowDecoration.Parent = Me.Guna2GradientButton16
-        Me.Guna2GradientButton16.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton16.TabIndex = 20
-        Me.Guna2GradientButton16.Text = "Softphone"
-        Me.Guna2GradientButton16.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.LblNameLeft_Helpdesk.AutoSize = False
+        Me.LblNameLeft_Helpdesk.BackColor = System.Drawing.Color.Transparent
+        Me.AppTransition.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.LblNameLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblNameLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LblNameLeft_Helpdesk.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LblNameLeft_Helpdesk.Location = New System.Drawing.Point(0, 152)
+        Me.LblNameLeft_Helpdesk.Name = "LblNameLeft_Helpdesk"
+        Me.LblNameLeft_Helpdesk.Size = New System.Drawing.Size(196, 19)
+        Me.LblNameLeft_Helpdesk.TabIndex = 27
+        Me.LblNameLeft_Helpdesk.Text = "Admin"
+        Me.LblNameLeft_Helpdesk.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2GradientButton17
+        'LblEmailLeft_Helpdesk
         '
-        Me.Guna2GradientButton17.Animated = True
-        Me.Guna2GradientButton17.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton17.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton17.BorderRadius = 7
-        Me.Guna2GradientButton17.BorderThickness = 1
-        Me.Guna2GradientButton17.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton17.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton17.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton17.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2GradientButton17.CheckedState.Parent = Me.Guna2GradientButton17
-        Me.Guna2GradientButton17.CustomImages.Parent = Me.Guna2GradientButton17
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton17.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton17.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton17.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton17.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton17.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton17.DisabledState.Parent = Me.Guna2GradientButton17
-        Me.Guna2GradientButton17.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton17.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton17.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton17.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton17.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton17.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton17.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton17.HoverState.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton17.HoverState.Parent = Me.Guna2GradientButton17
-        Me.Guna2GradientButton17.Image = CType(resources.GetObject("Guna2GradientButton17.Image"), System.Drawing.Image)
-        Me.Guna2GradientButton17.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton17.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton17.Location = New System.Drawing.Point(0, 433)
-        Me.Guna2GradientButton17.Name = "Guna2GradientButton17"
-        Me.Guna2GradientButton17.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Guna2GradientButton17.ShadowDecoration.Parent = Me.Guna2GradientButton17
-        Me.Guna2GradientButton17.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton17.TabIndex = 14
-        Me.Guna2GradientButton17.Text = "Configurações"
-        Me.Guna2GradientButton17.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.LblEmailLeft_Helpdesk.AutoSize = False
+        Me.LblEmailLeft_Helpdesk.BackColor = System.Drawing.Color.Transparent
+        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.LblEmailLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblEmailLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEmailLeft_Helpdesk.ForeColor = System.Drawing.Color.DarkGray
+        Me.LblEmailLeft_Helpdesk.Location = New System.Drawing.Point(0, 171)
+        Me.LblEmailLeft_Helpdesk.Name = "LblEmailLeft_Helpdesk"
+        Me.LblEmailLeft_Helpdesk.Size = New System.Drawing.Size(196, 19)
+        Me.LblEmailLeft_Helpdesk.TabIndex = 28
+        Me.LblEmailLeft_Helpdesk.Text = "admin@gscodebrasil.com.br"
+        Me.LblEmailLeft_Helpdesk.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Guna2GradientButton18
+        'PanelNotifiLeft_Helpdesk
         '
-        Me.Guna2GradientButton18.Animated = True
-        Me.Guna2GradientButton18.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton18.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton18.BorderRadius = 7
-        Me.Guna2GradientButton18.BorderThickness = 1
-        Me.Guna2GradientButton18.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
-        Me.Guna2GradientButton18.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton18.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton18.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2GradientButton18.CheckedState.Parent = Me.Guna2GradientButton18
-        Me.Guna2GradientButton18.CustomImages.Parent = Me.Guna2GradientButton18
-        Me.Guna2GradientButton18.CustomizableEdges.BottomRight = False
-        Me.Guna2GradientButton18.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2GradientButton18.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton18.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton18.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton18.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton18.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton18.DisabledState.Parent = Me.Guna2GradientButton18
-        Me.Guna2GradientButton18.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2GradientButton18.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton18.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton18.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GradientButton18.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton18.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Guna2GradientButton18.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Guna2GradientButton18.HoverState.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton18.HoverState.Parent = Me.Guna2GradientButton18
-        Me.Guna2GradientButton18.Image = CType(resources.GetObject("Guna2GradientButton18.Image"), System.Drawing.Image)
-        Me.Guna2GradientButton18.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
-        Me.Guna2GradientButton18.ImageOffset = New System.Drawing.Point(10, 0)
-        Me.Guna2GradientButton18.Location = New System.Drawing.Point(0, 388)
-        Me.Guna2GradientButton18.Name = "Guna2GradientButton18"
-        Me.Guna2GradientButton18.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Guna2GradientButton18.ShadowDecoration.Parent = Me.Guna2GradientButton18
-        Me.Guna2GradientButton18.Size = New System.Drawing.Size(183, 45)
-        Me.Guna2GradientButton18.TabIndex = 0
-        Me.Guna2GradientButton18.Text = "Aplicações"
-        Me.Guna2GradientButton18.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.PanelNotifiLeft_Helpdesk.Controls.Add(Me.LblNotLeftHome_Helpdesk)
+        Me.PanelNotifiLeft_Helpdesk.Controls.Add(Me.BtnNotLeft_Helpdesk)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PanelNotifiLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.PanelNotifiLeft_Helpdesk.Location = New System.Drawing.Point(0, 190)
+        Me.PanelNotifiLeft_Helpdesk.Name = "PanelNotifiLeft_Helpdesk"
+        Me.PanelNotifiLeft_Helpdesk.Size = New System.Drawing.Size(196, 33)
+        Me.PanelNotifiLeft_Helpdesk.TabIndex = 17
         '
-        'Panel39
+        'LblNotLeftHome_Helpdesk
         '
-        Me.Panel39.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.Panel39.Controls.Add(Me.Guna2HtmlLabel16)
-        Me.Panel39.Controls.Add(Me.Guna2HtmlLabel17)
-        Me.Panel39.Controls.Add(Me.Panel40)
-        Me.Panel39.Controls.Add(Me.Panel41)
-        Me.Panel39.Controls.Add(Me.Guna2ImageButton11)
-        Me.Panel39.Controls.Add(Me.Guna2CirclePictureBox2)
-        Me.Panel39.Controls.Add(Me.Guna2ImageButton12)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Panel39.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel39.Location = New System.Drawing.Point(0, 100)
-        Me.Panel39.Name = "Panel39"
-        Me.Panel39.Size = New System.Drawing.Size(183, 288)
-        Me.Panel39.TabIndex = 13
+        Me.LblNotLeftHome_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LblNotLeftHome_Helpdesk.BackColor = System.Drawing.Color.Transparent
+        Me.AppTransition.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.LblNotLeftHome_Helpdesk.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.LblNotLeftHome_Helpdesk.ForeColor = System.Drawing.Color.White
+        Me.LblNotLeftHome_Helpdesk.Location = New System.Drawing.Point(82, 12)
+        Me.LblNotLeftHome_Helpdesk.Name = "LblNotLeftHome_Helpdesk"
+        Me.LblNotLeftHome_Helpdesk.Size = New System.Drawing.Size(69, 17)
+        Me.LblNotLeftHome_Helpdesk.TabIndex = 0
+        Me.LblNotLeftHome_Helpdesk.Text = "Notificações"
         '
-        'Guna2HtmlLabel16
+        'BtnNotLeft_Helpdesk
         '
-        Me.Guna2HtmlLabel16.AutoSize = False
-        Me.Guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2HtmlLabel16.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Guna2HtmlLabel16.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2HtmlLabel16.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Guna2HtmlLabel16.Location = New System.Drawing.Point(0, 152)
-        Me.Guna2HtmlLabel16.Name = "Guna2HtmlLabel16"
-        Me.Guna2HtmlLabel16.Size = New System.Drawing.Size(183, 19)
-        Me.Guna2HtmlLabel16.TabIndex = 27
-        Me.Guna2HtmlLabel16.Text = "Admin"
-        Me.Guna2HtmlLabel16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Guna2HtmlLabel17
-        '
-        Me.Guna2HtmlLabel17.AutoSize = False
-        Me.Guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2HtmlLabel17.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Guna2HtmlLabel17.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel17.ForeColor = System.Drawing.Color.DarkGray
-        Me.Guna2HtmlLabel17.Location = New System.Drawing.Point(0, 171)
-        Me.Guna2HtmlLabel17.Name = "Guna2HtmlLabel17"
-        Me.Guna2HtmlLabel17.Size = New System.Drawing.Size(183, 19)
-        Me.Guna2HtmlLabel17.TabIndex = 28
-        Me.Guna2HtmlLabel17.Text = "admin@gscodebrasil.com.br"
-        Me.Guna2HtmlLabel17.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel40
-        '
-        Me.Panel40.Controls.Add(Me.Guna2HtmlLabel18)
-        Me.Panel40.Controls.Add(Me.Guna2ImageButton10)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Panel40.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel40.Location = New System.Drawing.Point(0, 190)
-        Me.Panel40.Name = "Panel40"
-        Me.Panel40.Size = New System.Drawing.Size(183, 33)
-        Me.Panel40.TabIndex = 17
-        '
-        'Guna2HtmlLabel18
-        '
-        Me.Guna2HtmlLabel18.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2HtmlLabel18.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2HtmlLabel18.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel18.Location = New System.Drawing.Point(75, 12)
-        Me.Guna2HtmlLabel18.Name = "Guna2HtmlLabel18"
-        Me.Guna2HtmlLabel18.Size = New System.Drawing.Size(69, 17)
-        Me.Guna2HtmlLabel18.TabIndex = 0
-        Me.Guna2HtmlLabel18.Text = "Notificações"
-        '
-        'Guna2ImageButton10
-        '
-        Me.Guna2ImageButton10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Guna2ImageButton10.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton10.CheckedState.Parent = Me.Guna2ImageButton10
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2ImageButton10.HoverState.ImageSize = New System.Drawing.Size(26, 26)
-        Me.Guna2ImageButton10.HoverState.Parent = Me.Guna2ImageButton10
-        Me.Guna2ImageButton10.Image = CType(resources.GetObject("Guna2ImageButton10.Image"), System.Drawing.Image)
-        Me.Guna2ImageButton10.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.Guna2ImageButton10.ImageRotate = 0!
-        Me.Guna2ImageButton10.ImageSize = New System.Drawing.Size(22, 22)
-        Me.Guna2ImageButton10.Location = New System.Drawing.Point(38, 5)
-        Me.Guna2ImageButton10.Name = "Guna2ImageButton10"
-        Me.Guna2ImageButton10.PressedState.ImageSize = New System.Drawing.Size(22, 22)
-        Me.Guna2ImageButton10.PressedState.Parent = Me.Guna2ImageButton10
-        Me.Guna2ImageButton10.ShadowDecoration.Parent = Me.Guna2ImageButton10
-        Me.Guna2ImageButton10.Size = New System.Drawing.Size(41, 24)
-        Me.Guna2ImageButton10.TabIndex = 32
+        Me.BtnNotLeft_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnNotLeft_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnNotLeft_Helpdesk.CheckedState.Parent = Me.BtnNotLeft_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnNotLeft_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(26, 26)
+        Me.BtnNotLeft_Helpdesk.HoverState.Parent = Me.BtnNotLeft_Helpdesk
+        Me.BtnNotLeft_Helpdesk.Image = CType(resources.GetObject("BtnNotLeft_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnNotLeft_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnNotLeft_Helpdesk.ImageRotate = 0!
+        Me.BtnNotLeft_Helpdesk.ImageSize = New System.Drawing.Size(22, 22)
+        Me.BtnNotLeft_Helpdesk.Location = New System.Drawing.Point(45, 5)
+        Me.BtnNotLeft_Helpdesk.Name = "BtnNotLeft_Helpdesk"
+        Me.BtnNotLeft_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(22, 22)
+        Me.BtnNotLeft_Helpdesk.PressedState.Parent = Me.BtnNotLeft_Helpdesk
+        Me.BtnNotLeft_Helpdesk.ShadowDecoration.Parent = Me.BtnNotLeft_Helpdesk
+        Me.BtnNotLeft_Helpdesk.Size = New System.Drawing.Size(41, 24)
+        Me.BtnNotLeft_Helpdesk.TabIndex = 32
         '
         'Panel41
         '
@@ -2514,95 +2371,95 @@ Partial Class FrmPrincipal
         Me.Panel41.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel41.Location = New System.Drawing.Point(0, 223)
         Me.Panel41.Name = "Panel41"
-        Me.Panel41.Size = New System.Drawing.Size(183, 65)
+        Me.Panel41.Size = New System.Drawing.Size(196, 65)
         Me.Panel41.TabIndex = 18
         '
-        'Guna2ImageButton11
+        'BtnPanelDeslizanteLeft_Helpdesk
         '
-        Me.Guna2ImageButton11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ImageButton11.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton11.CheckedState.Parent = Me.Guna2ImageButton11
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2ImageButton11.HoverState.ImageSize = New System.Drawing.Size(21, 21)
-        Me.Guna2ImageButton11.HoverState.Parent = Me.Guna2ImageButton11
-        Me.Guna2ImageButton11.Image = CType(resources.GetObject("Guna2ImageButton11.Image"), System.Drawing.Image)
-        Me.Guna2ImageButton11.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.Guna2ImageButton11.ImageRotate = 0!
-        Me.Guna2ImageButton11.ImageSize = New System.Drawing.Size(18, 18)
-        Me.Guna2ImageButton11.Location = New System.Drawing.Point(158, 4)
-        Me.Guna2ImageButton11.Name = "Guna2ImageButton11"
-        Me.Guna2ImageButton11.PressedState.ImageSize = New System.Drawing.Size(18, 18)
-        Me.Guna2ImageButton11.PressedState.Parent = Me.Guna2ImageButton11
-        Me.Guna2ImageButton11.ShadowDecoration.Parent = Me.Guna2ImageButton11
-        Me.Guna2ImageButton11.Size = New System.Drawing.Size(21, 21)
-        Me.Guna2ImageButton11.TabIndex = 0
+        Me.BtnPanelDeslizanteLeft_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.CheckedState.Parent = Me.BtnPanelDeslizanteLeft_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(21, 21)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.HoverState.Parent = Me.BtnPanelDeslizanteLeft_Helpdesk
+        Me.BtnPanelDeslizanteLeft_Helpdesk.Image = CType(resources.GetObject("BtnPanelDeslizanteLeft_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.ImageRotate = 0!
+        Me.BtnPanelDeslizanteLeft_Helpdesk.ImageSize = New System.Drawing.Size(18, 18)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.Location = New System.Drawing.Point(171, 4)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.Name = "BtnPanelDeslizanteLeft_Helpdesk"
+        Me.BtnPanelDeslizanteLeft_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(18, 18)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.PressedState.Parent = Me.BtnPanelDeslizanteLeft_Helpdesk
+        Me.BtnPanelDeslizanteLeft_Helpdesk.ShadowDecoration.Parent = Me.BtnPanelDeslizanteLeft_Helpdesk
+        Me.BtnPanelDeslizanteLeft_Helpdesk.Size = New System.Drawing.Size(21, 21)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.TabIndex = 0
         '
-        'Guna2CirclePictureBox2
+        'PbPerfilLeft_Helpdesk
         '
-        Me.Guna2CirclePictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2CirclePictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2CirclePictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2CirclePictureBox2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2CirclePictureBox2.Image = CType(resources.GetObject("Guna2CirclePictureBox2.Image"), System.Drawing.Image)
-        Me.Guna2CirclePictureBox2.ImageRotate = 0!
-        Me.Guna2CirclePictureBox2.Location = New System.Drawing.Point(31, 19)
-        Me.Guna2CirclePictureBox2.Name = "Guna2CirclePictureBox2"
-        Me.Guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.Guna2CirclePictureBox2.ShadowDecoration.Parent = Me.Guna2CirclePictureBox2
-        Me.Guna2CirclePictureBox2.Size = New System.Drawing.Size(120, 120)
-        Me.Guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.Guna2CirclePictureBox2.TabIndex = 0
-        Me.Guna2CirclePictureBox2.TabStop = False
-        Me.Guna2CirclePictureBox2.UseTransparentBackground = True
+        Me.PbPerfilLeft_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PbPerfilLeft_Helpdesk.BackColor = System.Drawing.Color.Transparent
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PbPerfilLeft_Helpdesk.Image = CType(resources.GetObject("PbPerfilLeft_Helpdesk.Image"), System.Drawing.Image)
+        Me.PbPerfilLeft_Helpdesk.ImageRotate = 0!
+        Me.PbPerfilLeft_Helpdesk.Location = New System.Drawing.Point(38, 19)
+        Me.PbPerfilLeft_Helpdesk.Name = "PbPerfilLeft_Helpdesk"
+        Me.PbPerfilLeft_Helpdesk.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.PbPerfilLeft_Helpdesk.ShadowDecoration.Parent = Me.PbPerfilLeft_Helpdesk
+        Me.PbPerfilLeft_Helpdesk.Size = New System.Drawing.Size(120, 120)
+        Me.PbPerfilLeft_Helpdesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbPerfilLeft_Helpdesk.TabIndex = 0
+        Me.PbPerfilLeft_Helpdesk.TabStop = False
+        Me.PbPerfilLeft_Helpdesk.UseTransparentBackground = True
         '
-        'Guna2ImageButton12
+        'BtnPerfilLeft_Helpdesk
         '
-        Me.Guna2ImageButton12.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Guna2ImageButton12.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton12.CheckedState.Parent = Me.Guna2ImageButton12
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.Guna2ImageButton12.HoverState.ImageSize = New System.Drawing.Size(24, 24)
-        Me.Guna2ImageButton12.HoverState.Parent = Me.Guna2ImageButton12
-        Me.Guna2ImageButton12.Image = CType(resources.GetObject("Guna2ImageButton12.Image"), System.Drawing.Image)
-        Me.Guna2ImageButton12.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.Guna2ImageButton12.ImageRotate = 0!
-        Me.Guna2ImageButton12.ImageSize = New System.Drawing.Size(21, 21)
-        Me.Guna2ImageButton12.Location = New System.Drawing.Point(128, 109)
-        Me.Guna2ImageButton12.Name = "Guna2ImageButton12"
-        Me.Guna2ImageButton12.PressedState.ImageSize = New System.Drawing.Size(21, 21)
-        Me.Guna2ImageButton12.PressedState.Parent = Me.Guna2ImageButton12
-        Me.Guna2ImageButton12.ShadowDecoration.Parent = Me.Guna2ImageButton12
-        Me.Guna2ImageButton12.Size = New System.Drawing.Size(32, 32)
-        Me.Guna2ImageButton12.TabIndex = 29
+        Me.BtnPerfilLeft_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BtnPerfilLeft_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnPerfilLeft_Helpdesk.CheckedState.Parent = Me.BtnPerfilLeft_Helpdesk
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.BtnPerfilLeft_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(24, 24)
+        Me.BtnPerfilLeft_Helpdesk.HoverState.Parent = Me.BtnPerfilLeft_Helpdesk
+        Me.BtnPerfilLeft_Helpdesk.Image = CType(resources.GetObject("BtnPerfilLeft_Helpdesk.Image"), System.Drawing.Image)
+        Me.BtnPerfilLeft_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnPerfilLeft_Helpdesk.ImageRotate = 0!
+        Me.BtnPerfilLeft_Helpdesk.ImageSize = New System.Drawing.Size(21, 21)
+        Me.BtnPerfilLeft_Helpdesk.Location = New System.Drawing.Point(135, 109)
+        Me.BtnPerfilLeft_Helpdesk.Name = "BtnPerfilLeft_Helpdesk"
+        Me.BtnPerfilLeft_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(21, 21)
+        Me.BtnPerfilLeft_Helpdesk.PressedState.Parent = Me.BtnPerfilLeft_Helpdesk
+        Me.BtnPerfilLeft_Helpdesk.ShadowDecoration.Parent = Me.BtnPerfilLeft_Helpdesk
+        Me.BtnPerfilLeft_Helpdesk.Size = New System.Drawing.Size(32, 32)
+        Me.BtnPerfilLeft_Helpdesk.TabIndex = 29
         '
-        'PictureBox12
+        'PbLogoP_Helpdesk
         '
-        Me.PictureBox12.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox12, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.PictureBox12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox12.Image = CType(resources.GetObject("PictureBox12.Image"), System.Drawing.Image)
-        Me.PictureBox12.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(183, 100)
-        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox12.TabIndex = 1
-        Me.PictureBox12.TabStop = False
-        Me.PictureBox12.Visible = False
+        Me.PbLogoP_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.EditUserTransition.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.PbLogoP_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PbLogoP_Helpdesk.Image = CType(resources.GetObject("PbLogoP_Helpdesk.Image"), System.Drawing.Image)
+        Me.PbLogoP_Helpdesk.Location = New System.Drawing.Point(0, 0)
+        Me.PbLogoP_Helpdesk.Name = "PbLogoP_Helpdesk"
+        Me.PbLogoP_Helpdesk.Size = New System.Drawing.Size(196, 100)
+        Me.PbLogoP_Helpdesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PbLogoP_Helpdesk.TabIndex = 1
+        Me.PbLogoP_Helpdesk.TabStop = False
+        Me.PbLogoP_Helpdesk.Visible = False
         '
         'TpEstoque
         '
@@ -5299,43 +5156,43 @@ Partial Class FrmPrincipal
         '
         Me.TimerSubMenuDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide
         Me.TimerSubMenuDeslizante.Cursor = Nothing
-        Animation9.AnimateOnlyDifferences = True
-        Animation9.BlindCoeff = CType(resources.GetObject("Animation9.BlindCoeff"), System.Drawing.PointF)
-        Animation9.LeafCoeff = 0!
-        Animation9.MaxTime = 1.0!
-        Animation9.MinTime = 0!
-        Animation9.MosaicCoeff = CType(resources.GetObject("Animation9.MosaicCoeff"), System.Drawing.PointF)
-        Animation9.MosaicShift = CType(resources.GetObject("Animation9.MosaicShift"), System.Drawing.PointF)
-        Animation9.MosaicSize = 0
-        Animation9.Padding = New System.Windows.Forms.Padding(0)
-        Animation9.RotateCoeff = 0!
-        Animation9.RotateLimit = 0!
-        Animation9.ScaleCoeff = CType(resources.GetObject("Animation9.ScaleCoeff"), System.Drawing.PointF)
-        Animation9.SlideCoeff = CType(resources.GetObject("Animation9.SlideCoeff"), System.Drawing.PointF)
-        Animation9.TimeCoeff = 0!
-        Animation9.TransparencyCoeff = 0!
-        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation9
+        Animation7.AnimateOnlyDifferences = True
+        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
+        Animation7.LeafCoeff = 0!
+        Animation7.MaxTime = 1.0!
+        Animation7.MinTime = 0!
+        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
+        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
+        Animation7.MosaicSize = 0
+        Animation7.Padding = New System.Windows.Forms.Padding(0)
+        Animation7.RotateCoeff = 0!
+        Animation7.RotateLimit = 0!
+        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
+        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
+        Animation7.TimeCoeff = 0!
+        Animation7.TransparencyCoeff = 0!
+        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation7
         '
         'TimerPanelDeslizante
         '
         Me.TimerPanelDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
         Me.TimerPanelDeslizante.Cursor = Nothing
-        Animation10.AnimateOnlyDifferences = True
-        Animation10.BlindCoeff = CType(resources.GetObject("Animation10.BlindCoeff"), System.Drawing.PointF)
-        Animation10.LeafCoeff = 0!
-        Animation10.MaxTime = 1.0!
-        Animation10.MinTime = 0!
-        Animation10.MosaicCoeff = CType(resources.GetObject("Animation10.MosaicCoeff"), System.Drawing.PointF)
-        Animation10.MosaicShift = CType(resources.GetObject("Animation10.MosaicShift"), System.Drawing.PointF)
-        Animation10.MosaicSize = 0
-        Animation10.Padding = New System.Windows.Forms.Padding(0)
-        Animation10.RotateCoeff = 0!
-        Animation10.RotateLimit = 0!
-        Animation10.ScaleCoeff = CType(resources.GetObject("Animation10.ScaleCoeff"), System.Drawing.PointF)
-        Animation10.SlideCoeff = CType(resources.GetObject("Animation10.SlideCoeff"), System.Drawing.PointF)
-        Animation10.TimeCoeff = 0!
-        Animation10.TransparencyCoeff = 1.0!
-        Me.TimerPanelDeslizante.DefaultAnimation = Animation10
+        Animation8.AnimateOnlyDifferences = True
+        Animation8.BlindCoeff = CType(resources.GetObject("Animation8.BlindCoeff"), System.Drawing.PointF)
+        Animation8.LeafCoeff = 0!
+        Animation8.MaxTime = 1.0!
+        Animation8.MinTime = 0!
+        Animation8.MosaicCoeff = CType(resources.GetObject("Animation8.MosaicCoeff"), System.Drawing.PointF)
+        Animation8.MosaicShift = CType(resources.GetObject("Animation8.MosaicShift"), System.Drawing.PointF)
+        Animation8.MosaicSize = 0
+        Animation8.Padding = New System.Windows.Forms.Padding(0)
+        Animation8.RotateCoeff = 0!
+        Animation8.RotateLimit = 0!
+        Animation8.ScaleCoeff = CType(resources.GetObject("Animation8.ScaleCoeff"), System.Drawing.PointF)
+        Animation8.SlideCoeff = CType(resources.GetObject("Animation8.SlideCoeff"), System.Drawing.PointF)
+        Animation8.TimeCoeff = 0!
+        Animation8.TransparencyCoeff = 1.0!
+        Me.TimerPanelDeslizante.DefaultAnimation = Animation8
         Me.TimerPanelDeslizante.Interval = 5
         Me.TimerPanelDeslizante.MaxAnimationTime = 800
         Me.TimerPanelDeslizante.TimeStep = 0.05!
@@ -5397,22 +5254,22 @@ Partial Class FrmPrincipal
         '
         Me.EditUserTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
         Me.EditUserTransition.Cursor = Nothing
-        Animation7.AnimateOnlyDifferences = True
-        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
-        Animation7.LeafCoeff = 0!
-        Animation7.MaxTime = 1.0!
-        Animation7.MinTime = 0!
-        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
-        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
-        Animation7.MosaicSize = 0
-        Animation7.Padding = New System.Windows.Forms.Padding(0)
-        Animation7.RotateCoeff = 0!
-        Animation7.RotateLimit = 0!
-        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
-        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
-        Animation7.TimeCoeff = 0!
-        Animation7.TransparencyCoeff = 1.0!
-        Me.EditUserTransition.DefaultAnimation = Animation7
+        Animation9.AnimateOnlyDifferences = True
+        Animation9.BlindCoeff = CType(resources.GetObject("Animation9.BlindCoeff"), System.Drawing.PointF)
+        Animation9.LeafCoeff = 0!
+        Animation9.MaxTime = 1.0!
+        Animation9.MinTime = 0!
+        Animation9.MosaicCoeff = CType(resources.GetObject("Animation9.MosaicCoeff"), System.Drawing.PointF)
+        Animation9.MosaicShift = CType(resources.GetObject("Animation9.MosaicShift"), System.Drawing.PointF)
+        Animation9.MosaicSize = 0
+        Animation9.Padding = New System.Windows.Forms.Padding(0)
+        Animation9.RotateCoeff = 0!
+        Animation9.RotateLimit = 0!
+        Animation9.ScaleCoeff = CType(resources.GetObject("Animation9.ScaleCoeff"), System.Drawing.PointF)
+        Animation9.SlideCoeff = CType(resources.GetObject("Animation9.SlideCoeff"), System.Drawing.PointF)
+        Animation9.TimeCoeff = 0!
+        Animation9.TransparencyCoeff = 1.0!
+        Me.EditUserTransition.DefaultAnimation = Animation9
         '
         'ImageIcon
         '
@@ -5424,23 +5281,35 @@ Partial Class FrmPrincipal
         '
         Me.AppTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
         Me.AppTransition.Cursor = Nothing
-        Animation6.AnimateOnlyDifferences = True
-        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
-        Animation6.LeafCoeff = 0!
-        Animation6.MaxTime = 1.0!
-        Animation6.MinTime = 0!
-        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
-        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
-        Animation6.MosaicSize = 0
-        Animation6.Padding = New System.Windows.Forms.Padding(0)
-        Animation6.RotateCoeff = 0!
-        Animation6.RotateLimit = 0!
-        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
-        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
-        Animation6.TimeCoeff = 0!
-        Animation6.TransparencyCoeff = 1.0!
-        Me.AppTransition.DefaultAnimation = Animation6
+        Animation10.AnimateOnlyDifferences = True
+        Animation10.BlindCoeff = CType(resources.GetObject("Animation10.BlindCoeff"), System.Drawing.PointF)
+        Animation10.LeafCoeff = 0!
+        Animation10.MaxTime = 1.0!
+        Animation10.MinTime = 0!
+        Animation10.MosaicCoeff = CType(resources.GetObject("Animation10.MosaicCoeff"), System.Drawing.PointF)
+        Animation10.MosaicShift = CType(resources.GetObject("Animation10.MosaicShift"), System.Drawing.PointF)
+        Animation10.MosaicSize = 0
+        Animation10.Padding = New System.Windows.Forms.Padding(0)
+        Animation10.RotateCoeff = 0!
+        Animation10.RotateLimit = 0!
+        Animation10.ScaleCoeff = CType(resources.GetObject("Animation10.ScaleCoeff"), System.Drawing.PointF)
+        Animation10.SlideCoeff = CType(resources.GetObject("Animation10.SlideCoeff"), System.Drawing.PointF)
+        Animation10.TimeCoeff = 0!
+        Animation10.TransparencyCoeff = 1.0!
+        Me.AppTransition.DefaultAnimation = Animation10
         Me.AppTransition.TimeStep = 0.01!
+        '
+        'ImageUserLeft
+        '
+        Me.ImageUserLeft.ImageStream = CType(resources.GetObject("ImageUserLeft.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageUserLeft.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageUserLeft.Images.SetKeyName(0, "addImage 96x96.png")
+        '
+        'ImageUserTop
+        '
+        Me.ImageUserTop.ImageStream = CType(resources.GetObject("ImageUserTop.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageUserTop.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageUserTop.Images.SetKeyName(0, "addImage 96x96.png")
         '
         'FrmPrincipal
         '
@@ -5484,16 +5353,15 @@ Partial Class FrmPrincipal
         CType(Me.PbPerfilLeft_Phonebook, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbLogoP_Phonebook, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpHelpdesk.ResumeLayout(False)
-        Me.Guna2Panel3.ResumeLayout(False)
-        Me.Panel37.ResumeLayout(False)
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel38.ResumeLayout(False)
-        Me.Guna2Panel4.ResumeLayout(False)
-        Me.Panel39.ResumeLayout(False)
-        Me.Panel40.ResumeLayout(False)
-        Me.Panel40.PerformLayout()
-        CType(Me.Guna2CirclePictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelMenu_Helpdesk.ResumeLayout(False)
+        Me.PanelLogoFull_Helpdesk.ResumeLayout(False)
+        CType(Me.PbLogoG_Helpdesk, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelSocial_Helpdesk.ResumeLayout(False)
+        Me.PanelPerfilLeft_Helpdesk.ResumeLayout(False)
+        Me.PanelNotifiLeft_Helpdesk.ResumeLayout(False)
+        Me.PanelNotifiLeft_Helpdesk.PerformLayout()
+        CType(Me.PbPerfilLeft_Helpdesk, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbLogoP_Helpdesk, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TpEstoque.ResumeLayout(False)
         Me.Guna2Panel5.ResumeLayout(False)
         Me.Panel42.ResumeLayout(False)
@@ -5613,34 +5481,28 @@ Partial Class FrmPrincipal
     Friend WithEvents PbPerfilLeft_Phonebook As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents BtnPerfilLeft_Phonebook As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents PbLogoP_Phonebook As PictureBox
-    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Panel37 As Panel
-    Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents Panel38 As Panel
-    Friend WithEvents Guna2ImageButton7 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents Guna2ImageButton8 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents Guna2ImageButton9 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents Guna2GradientButton10 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton11 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2GradientButton12 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton13 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton14 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton15 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton16 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton17 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton18 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Panel39 As Panel
-    Friend WithEvents Guna2HtmlLabel16 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel17 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Panel40 As Panel
-    Friend WithEvents Guna2HtmlLabel18 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2ImageButton10 As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents PanelMenu_Helpdesk As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PanelLogoFull_Helpdesk As Panel
+    Friend WithEvents PbLogoG_Helpdesk As PictureBox
+    Friend WithEvents PanelSocial_Helpdesk As Panel
+    Friend WithEvents BtnYoutube_Helpdesk As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents BtnFacebook_Helpdesk As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents BtnInstagram_Helpdesk As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents BtnRelatorio_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents BtnPainel_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents BtnAgenda_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents BtnAbrirOS_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents PanelPerfilLeft_Helpdesk As Panel
+    Friend WithEvents LblNameLeft_Helpdesk As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblEmailLeft_Helpdesk As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents PanelNotifiLeft_Helpdesk As Panel
+    Friend WithEvents LblNotLeftHome_Helpdesk As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents BtnNotLeft_Helpdesk As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents Panel41 As Panel
-    Friend WithEvents Guna2ImageButton11 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents Guna2CirclePictureBox2 As Guna.UI2.WinForms.Guna2CirclePictureBox
-    Friend WithEvents Guna2ImageButton12 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents BtnPanelDeslizanteLeft_Helpdesk As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents PbPerfilLeft_Helpdesk As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents BtnPerfilLeft_Helpdesk As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents PbLogoP_Helpdesk As PictureBox
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Panel42 As Panel
     Friend WithEvents PictureBox13 As PictureBox
@@ -5732,4 +5594,8 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnSMSmtp As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnSMSoftphone As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents AppTransition As Bunifu.UI.WinForms.BunifuTransition
+    Friend WithEvents BtnHome_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents BtnGerenciador_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents ImageUserLeft As ImageList
+    Friend WithEvents ImageUserTop As ImageList
 End Class

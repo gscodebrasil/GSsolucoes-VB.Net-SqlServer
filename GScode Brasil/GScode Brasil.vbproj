@@ -96,6 +96,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo11-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Charts.WinForms, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.1\lib\Bunifu.Charts.WinForms.dll</HintPath>
@@ -297,21 +300,28 @@
     <Compile Include="3 - PHONEBOOK\FrmCadastros_Phonebook.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="3 - PHONEBOOK\FrmContatos.Designer.vb">
-      <DependentUpon>FrmContatos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="3 - PHONEBOOK\FrmContatos.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="3 - PHONEBOOK\FrmLocalizacao.Designer.vb">
       <DependentUpon>FrmLocalizacao.vb</DependentUpon>
     </Compile>
     <Compile Include="3 - PHONEBOOK\FrmLocalizacao.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="4 - HELPDESK\FrmCadastros_Helpdesk.Designer.vb">
+      <DependentUpon>FrmCadastros_Helpdesk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="4 - HELPDESK\FrmCadastros_Helpdesk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4 - HELPDESK\FrmOS.Designer.vb">
+      <DependentUpon>FrmOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="4 - HELPDESK\FrmOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="8 - CLASSES\Cliente_Phonebook.vb" />
     <Compile Include="8 - CLASSES\Colaborador_Phonebook.vb" />
     <Compile Include="8 - CLASSES\Fornecedor_Phonebook.vb" />
+    <Compile Include="8 - CLASSES\OS_Helpdesk.vb" />
     <Compile Include="8 - CLASSES\ServerSFTP_Phonebook.vb" />
     <Compile Include="8 - CLASSES\ValidaCNPJ_CPF.vb" />
     <Compile Include="ApplicationEvents.vb" />
@@ -402,11 +412,11 @@
     <EmbeddedResource Include="3 - PHONEBOOK\FrmCadastros_Phonebook.resx">
       <DependentUpon>FrmCadastros_Phonebook.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="3 - PHONEBOOK\FrmContatos.resx">
-      <DependentUpon>FrmContatos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="3 - PHONEBOOK\FrmLocalizacao.resx">
       <DependentUpon>FrmLocalizacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4 - HELPDESK\FrmCadastros_Helpdesk.resx">
+      <DependentUpon>FrmCadastros_Helpdesk.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -437,7 +447,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="4 - HELPDESK\" />
     <Folder Include="5 - ESTOQUE\" />
     <Folder Include="6 - FINANCEIRO\" />
     <Folder Include="7 - DASHBOARD\" />
@@ -445,6 +454,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo11-removebg-preview.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

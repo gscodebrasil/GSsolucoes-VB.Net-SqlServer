@@ -36,7 +36,7 @@
       <Value Profile="(Default)">/sql/backup/</Value>
     </Setting>
     <Setting Name="SFTP_BackupSistema" Type="System.String" Scope="User">
-      <Value Profile="(Default)">/gscode/GSHome/Usuarios/</Value>
+      <Value Profile="(Default)">/gscode/GSHome/Backup_Sistema/</Value>
     </Setting>
     <Setting Name="SFTP_PhonebookClientes" Type="System.String" Scope="User">
       <Value Profile="(Default)">/gscode/Phonebook/Clientes/</Value>
@@ -118,6 +118,9 @@
     </Setting>
     <Setting Name="Softphone_Local" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SFTP_ImagemUsuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/gscode/GSHome/Usuarios/</Value>
     </Setting>
   </Settings>
 </SettingsFile>

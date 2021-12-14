@@ -7,6 +7,7 @@ Public Class FrmAguarde
     Private clCifer As New Cifer
     Private clEmail As New Email
     Private clRGB As New RGBColors
+    Private ClServerSFTP As New ServerSFTP
 
     Private TH_aguarde As Thread
     Private LembrarAcesso As Boolean = My.Settings.LembrarAcesso
@@ -65,14 +66,15 @@ Public Class FrmAguarde
         FrmPrincipal.LblNameTop.Text = clUserInfo.StrNome
         FrmPrincipal.LblEmailTop.Text = clUserInfo.StrEmail
 
-
-        If clUserInfo.StrFoto.Length > 0 Then
-            FrmPrincipal.PbPerfilLeft.Image = Image.FromFile(clUserInfo.StrFoto)
-            FrmPrincipal.pbPerfilTop.Image = Image.FromFile(clUserInfo.StrFoto)
-        Else
-            'FrmGSSolucoesHome.imgPfLeft.Image = Image.FromFile("\\dominio\Publico\System GScode\Users\Imagens\addImage 96x96.png")
-            'FrmGSSolucoesHome.imgPfTop.Image = Image.FromFile("\\dominio\Publico\System GScode\Users\Imagens\addImage 96x96.png")
-        End If
+        'If FrmPrincipal.ImageUserLeft.Images.Count = 2 Then
+        '    FrmPrincipal.PbPerfilLeft.Image = FrmPrincipal.ImageUserLeft.Images(1)
+        '    FrmPrincipal.PbPerfilTop.Image = FrmPrincipal.ImageUserTop.Images(1)
+        '    FrmUserConfig.imgPerfil.Image = FrmPrincipal.ImageUserLeft.Images(1)
+        'Else
+        '    FrmPrincipal.PbPerfilLeft.Image = FrmPrincipal.ImageUserLeft.Images(0)
+        '    FrmPrincipal.PbPerfilTop.Image = FrmPrincipal.ImageUserTop.Images(0)
+        '    FrmUserConfig.imgPerfil.Image = FrmPrincipal.ImageUserLeft.Images(0)
+        'End If
 
         clUserInfo.StrEmail = Nothing
         clUserInfo.StrPass = Nothing
@@ -121,6 +123,6 @@ Public Class FrmAguarde
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Application.Restart()
+        Application.Exit()
     End Sub
 End Class

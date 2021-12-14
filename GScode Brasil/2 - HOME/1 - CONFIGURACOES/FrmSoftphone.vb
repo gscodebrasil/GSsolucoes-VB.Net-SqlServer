@@ -48,5 +48,4 @@ Public Class FrmSoftphone
             LblSoftphone.Visible = True
         End If
     End Sub
-
 End Class
