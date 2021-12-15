@@ -24,8 +24,6 @@ Partial Class FrmAplicacoes
     <Obsolete>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAplicacoes))
-        Me.lblUpdateFinanceiro = New Bunifu.UI.WinForms.BunifuLabel()
-        Me.lblUpdatePhonebook = New Bunifu.UI.WinForms.BunifuLabel()
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -57,43 +55,6 @@ Partial Class FrmAplicacoes
         Me.Guna2ShadowPanel4.SuspendLayout()
         Me.Guna2ShadowPanel5.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'lblUpdateFinanceiro
-        '
-        Me.lblUpdateFinanceiro.AllowParentOverrides = False
-        Me.lblUpdateFinanceiro.AutoEllipsis = False
-        Me.lblUpdateFinanceiro.AutoSize = False
-        Me.lblUpdateFinanceiro.CursorType = Nothing
-        Me.lblUpdateFinanceiro.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblUpdateFinanceiro.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblUpdateFinanceiro.ForeColor = System.Drawing.Color.BlueViolet
-        Me.lblUpdateFinanceiro.Location = New System.Drawing.Point(0, 0)
-        Me.lblUpdateFinanceiro.Name = "lblUpdateFinanceiro"
-        Me.lblUpdateFinanceiro.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblUpdateFinanceiro.Size = New System.Drawing.Size(170, 36)
-        Me.lblUpdateFinanceiro.TabIndex = 13
-        Me.lblUpdateFinanceiro.Text = "Atuaizado"
-        Me.lblUpdateFinanceiro.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblUpdateFinanceiro.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
-        '
-        'lblUpdatePhonebook
-        '
-        Me.lblUpdatePhonebook.AllowParentOverrides = False
-        Me.lblUpdatePhonebook.AutoEllipsis = False
-        Me.lblUpdatePhonebook.AutoSize = False
-        Me.lblUpdatePhonebook.Cursor = System.Windows.Forms.Cursors.Default
-        Me.lblUpdatePhonebook.CursorType = System.Windows.Forms.Cursors.Default
-        Me.lblUpdatePhonebook.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblUpdatePhonebook.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.lblUpdatePhonebook.ForeColor = System.Drawing.Color.BlueViolet
-        Me.lblUpdatePhonebook.Location = New System.Drawing.Point(0, 0)
-        Me.lblUpdatePhonebook.Name = "lblUpdatePhonebook"
-        Me.lblUpdatePhonebook.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblUpdatePhonebook.Size = New System.Drawing.Size(170, 36)
-        Me.lblUpdatePhonebook.TabIndex = 12
-        Me.lblUpdatePhonebook.Text = "Atuaizado"
-        Me.lblUpdatePhonebook.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.lblUpdatePhonebook.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.[Default]
         '
         'Guna2ShadowPanel1
         '
@@ -548,8 +509,6 @@ Partial Class FrmAplicacoes
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents lblUpdateFinanceiro As Bunifu.UI.WinForms.BunifuLabel
-    Friend WithEvents lblUpdatePhonebook As Bunifu.UI.WinForms.BunifuLabel
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents BtnPhonebook As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents btnHelpdesk As Guna.UI2.WinForms.Guna2GradientButton

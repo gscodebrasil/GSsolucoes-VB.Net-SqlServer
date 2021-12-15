@@ -475,7 +475,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Perfil.Controls.Add(Me.TableLayoutPanel2)
         Me.TpEditar_Perfil.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Perfil.Name = "TpEditar_Perfil"
-        Me.TpEditar_Perfil.Size = New System.Drawing.Size(780, 556)
+        Me.TpEditar_Perfil.Size = New System.Drawing.Size(780, 527)
         Me.TpEditar_Perfil.TabIndex = 1
         Me.TpEditar_Perfil.Text = "Editar Perfil"
         '
@@ -1532,7 +1532,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Email.Controls.Add(Me.TableLayoutPanel3)
         Me.TpEditar_Email.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Email.Name = "TpEditar_Email"
-        Me.TpEditar_Email.Size = New System.Drawing.Size(780, 556)
+        Me.TpEditar_Email.Size = New System.Drawing.Size(780, 527)
         Me.TpEditar_Email.TabIndex = 2
         Me.TpEditar_Email.Text = "Editar Email"
         '
@@ -1791,7 +1791,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Senha.Controls.Add(Me.TableLayoutPanel4)
         Me.TpEditar_Senha.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Senha.Name = "TpEditar_Senha"
-        Me.TpEditar_Senha.Size = New System.Drawing.Size(780, 556)
+        Me.TpEditar_Senha.Size = New System.Drawing.Size(780, 527)
         Me.TpEditar_Senha.TabIndex = 3
         Me.TpEditar_Senha.Text = "Editar Senha"
         '
@@ -2094,7 +2094,7 @@ Partial Class FrmUserConfig
         Me.TpValidar.Controls.Add(Me.LblValidarInf)
         Me.TpValidar.Location = New System.Drawing.Point(4, 4)
         Me.TpValidar.Name = "TpValidar"
-        Me.TpValidar.Size = New System.Drawing.Size(780, 556)
+        Me.TpValidar.Size = New System.Drawing.Size(780, 527)
         Me.TpValidar.TabIndex = 0
         Me.TpValidar.Text = "Validar"
         '
@@ -2235,7 +2235,7 @@ Partial Class FrmUserConfig
         Me.TpAguarde.Controls.Add(Me.LblLoading)
         Me.TpAguarde.Location = New System.Drawing.Point(4, 4)
         Me.TpAguarde.Name = "TpAguarde"
-        Me.TpAguarde.Size = New System.Drawing.Size(780, 556)
+        Me.TpAguarde.Size = New System.Drawing.Size(780, 527)
         Me.TpAguarde.TabIndex = 4
         Me.TpAguarde.Text = "Aguarde"
         '
@@ -2246,7 +2246,7 @@ Partial Class FrmUserConfig
         Me.ProgressAguarde.BackColor = System.Drawing.Color.Transparent
         Me.ProgressAguarde.BorderRadius = 6
         Me.ProgressAguarde.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ProgressAguarde.Location = New System.Drawing.Point(49, 164)
+        Me.ProgressAguarde.Location = New System.Drawing.Point(49, 149)
         Me.ProgressAguarde.Name = "ProgressAguarde"
         Me.ProgressAguarde.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ProgressAguarde.ProgressColor2 = System.Drawing.Color.Black
@@ -2263,7 +2263,7 @@ Partial Class FrmUserConfig
         Me.LblLoading.BackColor = System.Drawing.Color.Transparent
         Me.LblLoading.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLoading.ForeColor = System.Drawing.Color.Black
-        Me.LblLoading.Location = New System.Drawing.Point(97, 203)
+        Me.LblLoading.Location = New System.Drawing.Point(97, 188)
         Me.LblLoading.Name = "LblLoading"
         Me.LblLoading.Size = New System.Drawing.Size(587, 160)
         Me.LblLoading.TabIndex = 194

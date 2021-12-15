@@ -33,7 +33,7 @@ Public Class FrmLogin
 
     Public Sub ErroNoBancoDeDados()
         PanelEtapa.Visible = False
-        bpCadUser.SetPage(9)
+        bpCadUser.SelectTab(9)
     End Sub
 
     Public Sub LimpaPGLogin()
@@ -232,7 +232,7 @@ Public Class FrmLogin
         Else
 
             lblRdfInvalido.Visible = True
-            bpCadUser.SetPage(7)
+            bpCadUser.SelectTab(6)
 
         End If
     End Sub
@@ -327,7 +327,7 @@ Public Class FrmLogin
         TimerAutoLogin.Enabled = False
         btnLogin.Text = "LOGIN"
         PanelEtapa.Visible = True
-        bpCadUser.SetPage(1)
+        bpCadUser.SelectTab(1)
     End Sub
 
     Private Sub txtLoginEmail_TextChanged(sender As Object, e As EventArgs) Handles txtLoginEmail.TextChanged
@@ -377,7 +377,7 @@ Public Class FrmLogin
     Private Sub lblLoginRdf_Click(sender As Object, e As EventArgs) Handles lblLoginRdf.Click
 
         PanelEtapa.Visible = False
-        bpCadUser.SetPage(7)
+        bpCadUser.SelectTab(6)
 
     End Sub
 
@@ -423,7 +423,7 @@ Public Class FrmLogin
     Private Sub btnVoltAcesso_Click(sender As Object, e As EventArgs) Handles btnVoltAcesso.Click
         TxtEmpty()
         pagLogin()
-        bpCadUser.SetPage(0)
+        bpCadUser.SelectTab(0)
     End Sub
 
     Private Sub btnAvAcesso_Click(sender As Object, e As EventArgs) Handles btnAvAcesso.Click
@@ -438,11 +438,11 @@ Public Class FrmLogin
                 If txtCadPass.Text = txtCadConfPass.Text Then
                     ClUserInfo.valida = False
                     lblCadEmail.Visible = False
-                    bpCadUser.SetPage(2)
+                    bpCadUser.SelectTab(2)
                     txtPerfilNome.Focus()
-                    bs2.LineColor = RGBColors.AvancarCadastro
-                    bs3.LineColor = RGBColors.AvancarCadastro
-                    pbProfile.BackColor = RGBColors.AvancarCadastro
+                    bs2.FillColor = RGBColors.AvancarCadastro
+                    bs3.FillColor = RGBColors.AvancarCadastro
+                    pbProfile.FillColor2 = RGBColors.AvancarCadastro
                 End If
             End If
         End If
@@ -540,10 +540,10 @@ Public Class FrmLogin
 #Region "PAGINA DADOS PESSOAIS"
 
     Private Sub btnVoltPerfil_Click(sender As Object, e As EventArgs) Handles btnVoltPerfil.Click
-        bpCadUser.SetPage(1)
-        bs3.LineColor = RGBColors.VoltarCadastro
-        bs2.LineColor = RGBColors.VoltarCadastro
-        pbProfile.BackColor = RGBColors.VoltarCadastro
+        bpCadUser.SelectTab(1)
+        bs3.FillColor = RGBColors.VoltarCadastro
+        bs2.FillColor = RGBColors.VoltarCadastro
+        pbProfile.FillColor2 = RGBColors.VoltarCadastro
         pbTopProfile.Visible = False
     End Sub
 
@@ -555,10 +555,10 @@ Public Class FrmLogin
         If Valida_Perfil() = False Then
             If txtPerfilCep.Text.Length = 0 OrElse ValidaCEP(txtPerfilCep.Text) = True Then
                 If txtPerfilNascimento.Text.Length = 0 OrElse ValidaData(txtPerfilNascimento.Text) = True Then
-                    bpCadUser.SetPage(3)
-                    bs4.LineColor = RGBColors.AvancarCadastro
-                    bs5.LineColor = RGBColors.AvancarCadastro
-                    pbBusiness.BackColor = RGBColors.AvancarCadastro
+                    bpCadUser.SelectTab(3)
+                    bs4.FillColor = RGBColors.AvancarCadastro
+                    bs5.FillColor = RGBColors.AvancarCadastro
+                    pbBusiness.FillColor2 = RGBColors.AvancarCadastro
                 End If
             End If
         End If
@@ -595,6 +595,12 @@ Public Class FrmLogin
 
     Private Sub txtPerfilNascimento_TextChanged(sender As Object, e As EventArgs) Handles txtPerfilNascimento.TextChanged
         ClValidaData.MaskData(sender)
+        If txtPerfilNascimento.Text.Length > 0 Then
+            lblPerfilNascimento.Visible = True
+        Else
+            lblPerfilNascimento.Visible = False
+            txtPerfilNascimento.IconRight = Nothing
+        End If
     End Sub
 
     Private Sub txtPerfilNascimento_LostFocus(sender As Object, e As EventArgs) Handles txtPerfilNascimento.LostFocus
@@ -721,18 +727,18 @@ Public Class FrmLogin
         If chkPerfilEmail.Checked = False Then
             pbEmail.Visible = True
         End If
-        bpCadUser.SetPage(2)
-        bs5.LineColor = RGBColors.VoltarCadastro
-        bs4.LineColor = RGBColors.VoltarCadastro
-        pbBusiness.BackColor = RGBColors.VoltarCadastro
+        bpCadUser.SelectTab(2)
+        bs5.FillColor = RGBColors.VoltarCadastro
+        bs4.FillColor = RGBColors.VoltarCadastro
+        pbBusiness.FillColor2 = RGBColors.VoltarCadastro
         pbTopProfile.Visible = False
     End Sub
 
     Private Sub btnAvBusiness_Click(sender As Object, e As EventArgs) Handles btnAvBusiness.Click
-        bpCadUser.SetPage(4)
-        bs6.LineColor = RGBColors.AvancarCadastro
-        bs7.LineColor = RGBColors.AvancarCadastro
-        pbPermissao.BackColor = RGBColors.AvancarCadastro
+        bpCadUser.SelectTab(4)
+        bs6.FillColor = RGBColors.AvancarCadastro
+        bs7.FillColor = RGBColors.AvancarCadastro
+        pbPermissao.FillColor2 = RGBColors.AvancarCadastro
 
         If ValidaBusiness() Then
             pbTopBusiness.Visible = False
@@ -836,10 +842,10 @@ Public Class FrmLogin
 #Region "PAGINA PERMISSAO"
 
     Private Sub btnPermVoltar_Click(sender As Object, e As EventArgs) Handles btnPermVoltar.Click
-        bpCadUser.SetPage(3)
-        bs6.LineColor = RGBColors.VoltarCadastro
-        bs7.LineColor = RGBColors.VoltarCadastro
-        pbPermissao.BackColor = RGBColors.VoltarCadastro
+        bpCadUser.SelectTab(3)
+        bs6.FillColor = RGBColors.VoltarCadastro
+        bs7.FillColor = RGBColors.VoltarCadastro
+        pbPermissao.FillColor2 = RGBColors.VoltarCadastro
         pbTopBusiness.Visible = False
     End Sub
 
@@ -847,15 +853,15 @@ Public Class FrmLogin
         If ValidaCampos() = True Then
             pbChklistAviso.Image = imgLogin1.Images(0)
             lblChklistAviso.Text = "Todos os campos foram preenchidos corretamente, clique em finalizar para realizar o cadastro."
-            bpCadUser.SetPage(5)
-            bs8.LineColor = RGBColors.AvancarCadastro
-            pbChecklist.BackColor = RGBColors.AvancarCadastro
+            bpCadUser.SelectTab(5)
+            bs8.FillColor = RGBColors.AvancarCadastro
+            pbChecklist.FillColor2 = RGBColors.AvancarCadastro
         Else
             pbChklistAviso.Image = imgLogin1.Images(1)
             lblChklistAviso.Text = "Existem campos sem preencher, mas isso não vai impedir o cadastro, caso desejar finalizar seu cadastro mais tarde, vá até seu perfil!"
-            bpCadUser.SetPage(5)
-            bs8.LineColor = RGBColors.AvancarCadastro
-            pbChecklist.BackColor = RGBColors.AvancarCadastro
+            bpCadUser.SelectTab(5)
+            bs8.FillColor = RGBColors.AvancarCadastro
+            pbChecklist.FillColor2 = RGBColors.AvancarCadastro
         End If
     End Sub
 
@@ -864,9 +870,9 @@ Public Class FrmLogin
 #Region "PAGINA CHECKLIST"
 
     Private Sub btnChklistVoltar_Click(sender As Object, e As EventArgs) Handles btnChklistVoltar.Click
-        bpCadUser.SetPage(4)
-        bs8.LineColor = RGBColors.VoltarCadastro
-        pbChecklist.BackColor = RGBColors.VoltarCadastro
+        bpCadUser.SelectTab(4)
+        bs8.FillColor = RGBColors.VoltarCadastro
+        pbChecklist.FillColor2 = RGBColors.VoltarCadastro
     End Sub
 
     Private Sub btnChklistFinalizar_Click(sender As Object, e As EventArgs) Handles btnChklistFinalizar.Click
@@ -875,7 +881,7 @@ Public Class FrmLogin
         NewThread = New Thread(AddressOf ClEmail.ValidarEmail) With {.IsBackground = True}
         NewThread.Start()
         PanelEtapa.Visible = False
-        bpCadUser.SetPage(8)
+        bpCadUser.SelectTab(8)
 
     End Sub
 
@@ -891,17 +897,16 @@ Public Class FrmLogin
                 txtBDPorta.Text = My.Settings.Database_Porta
                 txtBDBanco.Text = My.Settings.Database_Banco
                 txtBDUser.Text = My.Settings.Database_Usuario
-                txtBDSenha.Text = My.Settings.Database_Senha
-
+                txtBDSenha.Text = ClCifer.Decriptar(My.Settings.Database_Senha, ClCifer.senha)
                 lblBDAviso.Text = $"
                 <b><font color='maroon'>Caminho padrão do banco de dados</font></b><br>
-                <b>Servidor</b>: 192.168.2.225  
+                <b>Servidor</b>: 192.168.2.110  
                 <b>Porta:</b> 1433  
                 <b>Banco:</b> gscode<br>
                 <b>Usuário:</b> sa<br>
                 <b>Senha:</b> ysQLa5ihU1gRA4cRtUuyCnOJZXm5UFE5LRn7UhkkTbI="
 
-                bpCadUser.SetPage(6)
+                bpCadUser.SelectTab(6)
             Else
                 lblEditarBDInvalido.Visible = True
                 TimerEditarBD.Start()
@@ -1060,7 +1065,7 @@ Public Class FrmLogin
             LblLoading.Text = $"<b>Estamos processando sua solicitação...</b><br><br>
                                   <font color='DimGray'>Após a finalização o sistema será reiniciado, ao iniciar entre com suas credênciais.</font>"
 
-            bpCadUser.SetPage(10)
+            bpCadUser.SelectTab(10)
             btnAcessoBD.Visible = False
             TimerRdfSenha.Start()
 
@@ -1069,7 +1074,7 @@ Public Class FrmLogin
     End Sub
 
     Private Sub btnRdfCancel_Click(sender As Object, e As EventArgs) Handles btnRdfCancel.Click
-        bpCadUser.SetPage(0)
+        bpCadUser.SelectTab(0)
         btnAcessoBD.Visible = True
     End Sub
 
@@ -1125,14 +1130,14 @@ Public Class FrmLogin
         End If
 
         If txtConfToken.Text.Length > 0 Then
-            If txtConfToken.Text = ClEmail.token Then
+            If txtConfToken.Text = ClEmail.Token Then
                 lblConfInvalido.Visible = False
 
                 ProgressAguarde.Value = 0
                 LblLoading.Text = $"<b>Estamos processando sua solicitação...</b><br><br>
                                   <font color='DimGray'>Após a finalização o sistema será reiniciado, ao iniciar entre com suas credênciais.</font>"
 
-                bpCadUser.SetPage(10)
+                bpCadUser.SelectTab(10)
                 btnAcessoBD.Visible = False
                 TimerCadastro.Start()
 
@@ -1147,7 +1152,7 @@ Public Class FrmLogin
     End Sub
 
     Private Sub btnConfCancel_Click(sender As Object, e As EventArgs) Handles btnConfCancel.Click
-        bpCadUser.SetPage(5)
+        bpCadUser.SelectTab(5)
         btnAcessoBD.Visible = True
         PanelEtapa.Visible = True
     End Sub
@@ -1201,7 +1206,7 @@ Public Class FrmLogin
     End Sub
 
     Private Sub btnAcessoBD_Click(sender As Object, e As EventArgs) Handles btnAcessoBD.Click
-        bpCadUser.SetPage(9)
+        bpCadUser.SelectTab(9)
     End Sub
 
     Private Sub btnInstagram_Click(sender As Object, e As EventArgs) Handles btnInstagram.Click
@@ -1218,10 +1223,6 @@ Public Class FrmLogin
 
     Private Sub txtPerfilCep_Enter(sender As Object, e As EventArgs) Handles txtPerfilCep.Enter
         txtPerfilCep.IconRight = Nothing
-    End Sub
-
-    Private Sub lblPerfilGenero_Enter(sender As Object, e As EventArgs) Handles lblPerfilGenero.Enter
-
     End Sub
 
     Private Sub cbPerfilGenero_Enter(sender As Object, e As EventArgs) Handles cbPerfilGenero.Enter

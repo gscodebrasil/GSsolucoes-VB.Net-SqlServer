@@ -1059,5 +1059,4 @@ Public Class FrmUsers
     Private Sub FrmUsers_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
         PanelFilter.Location = TxtFilter.Location + New Point(35, 71)
     End Sub
-
 End Class

@@ -761,7 +761,7 @@ Public Class FrmCadastros_Helpdesk
 
             Dim StatusColor As String = DgvPainel.Rows(Intx).Cells(29).Value.ToString
 
-            If StatusColor = "Encerrado - Cliente sem Contrato" Then
+            If StatusColor = "Encerrado - Cliente S/ Contrato" Then
                 DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Red
                 DgvPainel.Rows(Intx).DefaultCellStyle.ForeColor = Color.White
             End If
@@ -798,7 +798,7 @@ Public Class FrmCadastros_Helpdesk
                     linha.Cells(1).Value = IMG_list.Images(3)
             End Select
 
-            If linha.Cells(30).Value = "Encerrado - Cliente de Contrato" OrElse linha.Cells(30).Value = "Encerrado - Cliente sem Contrato" OrElse linha.Cells(30).Value = "Encerrado - Sem Cobrança" OrElse linha.Cells(30).Value = "Cancelado pela Erimat" OrElse linha.Cells(30).Value = "Cancelado pelo Cliente" OrElse linha.Cells(30).Value = "Necessário abrir OS para ir ao local" Then
+            If linha.Cells(30).Value = "Encerrado - Cliente de Contrato" OrElse linha.Cells(30).Value = "Encerrado - Cliente S/ Contrato" OrElse linha.Cells(30).Value = "Encerrado - Sem Cobrança" OrElse linha.Cells(30).Value = "Cancelado pela Erimat" OrElse linha.Cells(30).Value = "Cancelado pelo Cliente" OrElse linha.Cells(30).Value = "Necessário abrir OS para ir ao local" Then
                 linha.Cells(1).Value = IMG_list.Images(4)
             End If
         Next
@@ -807,7 +807,7 @@ Public Class FrmCadastros_Helpdesk
 
             Dim StatusColor As String = DgvPainel.Rows(Intx).Cells(30).Value.ToString
 
-            If StatusColor = "Encerrado - Cliente sem Contrato" Then
+            If StatusColor = "Encerrado - Cliente S/ Contrato" Then
                 DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Red
                 DgvPainel.Rows(Intx).DefaultCellStyle.ForeColor = Color.White
             End If
@@ -869,7 +869,7 @@ Public Class FrmCadastros_Helpdesk
     End Sub
 
     Private Sub CBStatus_Validated(sender As Object, e As EventArgs) Handles CBStatus.Validated
-        ColumnStatus = $" = '{CBStatus.Text}' And"
+        ColumnStatus = $"status = '{CBStatus.Text}' And"
     End Sub
 
     Private Sub TimerPainel_Tick(sender As Object, e As EventArgs) Handles TimerPainel.Tick

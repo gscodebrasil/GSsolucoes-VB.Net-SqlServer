@@ -5,7 +5,7 @@ Imports System.Guid
 Public Class Email
 
 #Region "Ref. de classes"
-    Private ReadOnly clCifer As New Cifer
+    Private ReadOnly ClCifer As New Cifer
     Private ReadOnly ClOS_Helpdesk As New OS_Helpdesk
 
     Public Property id_interno As String

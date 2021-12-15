@@ -21,6 +21,7 @@ Partial Class FrmCadastros_Helpdesk
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
+    <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -195,15 +196,15 @@ Partial Class FrmCadastros_Helpdesk
         Me.DataInicial = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.BtnSelectIntervalo = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.PanelSelect_Anexo = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.BtnSelectFechar_Arquivos = New Bunifu.UI.WinForms.BunifuImageButton()
         Me.BtnExcluir = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BtnDownload = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.LblAquivos_Anexo = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnSelectFechar_Arquivos = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.PanelSelect = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.BtnSelectFechar = New Bunifu.UI.WinForms.BunifuImageButton()
         Me.BtnSelectApagar = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BtnInfo = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.LblRegistrosSelect_Gerenciador = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnSelectFechar = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.SelectTransition = New Guna.UI2.WinForms.Guna2Transition()
         Me.Ofd = New System.Windows.Forms.OpenFileDialog()
         Me.ImageList = New System.Windows.Forms.ImageList(Me.components)
@@ -2924,7 +2925,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.CbStatus_Resultado.HoverState.BorderColor = System.Drawing.Color.Gray
         Me.CbStatus_Resultado.HoverState.Parent = Me.CbStatus_Resultado
         Me.CbStatus_Resultado.ItemHeight = 30
-        Me.CbStatus_Resultado.Items.AddRange(New Object() {"Encerrado - Cliente sem Contrato", "Encerrado - Sem Cobrança", "Encerrado - Cliente de Contrato", "Chamado está em andamento", "Aguardando Pendência da Erimat", "Aguardando Pendência do Cliente", "Cancelado pela Erimat", "Cancelado pelo Cliente", "Necessário abrir OS para ir ao local"})
+        Me.CbStatus_Resultado.Items.AddRange(New Object() {"Encerrado - Cliente S/ Contrato", "Encerrado - Sem Cobrança", "Encerrado - Cliente de Contrato", "Chamado está em andamento", "Aguardando Pendência da Erimat", "Aguardando Pendência do Cliente", "Cancelado pela Erimat", "Cancelado pelo Cliente", "Necessário abrir OS para ir ao local"})
         Me.CbStatus_Resultado.ItemsAppearance.Parent = Me.CbStatus_Resultado
         Me.CbStatus_Resultado.Location = New System.Drawing.Point(89, 48)
         Me.CbStatus_Resultado.MaxLength = 20
@@ -3264,15 +3265,15 @@ Partial Class FrmCadastros_Helpdesk
         Me.CBStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.CBStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBStatus.FillColor = System.Drawing.Color.FromArgb(CType(CType(241, Byte), Integer), CType(CType(246, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.CBStatus.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.CBStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(125, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.CBStatus.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.CBStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(145, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
         Me.CBStatus.FocusedState.Parent = Me.CBStatus
         Me.CBStatus.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.CBStatus.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CBStatus.HoverState.BorderColor = System.Drawing.Color.Gray
         Me.CBStatus.HoverState.Parent = Me.CBStatus
         Me.CBStatus.ItemHeight = 30
-        Me.CBStatus.Items.AddRange(New Object() {"Encerrado - Cliente sem Contrato", "Encerrado - Sem Cobrança", "Encerrado - Cliente de Contrato", "Chamado está em andamento", "Aguardando Pendência da Erimat", "Aguardando Pendência do Cliente", "Cancelado pela Erimat", "Cancelado pelo Cliente", "Necessário abrir OS para ir ao local", "OS Aberta"})
+        Me.CBStatus.Items.AddRange(New Object() {"Encerrado - Cliente S/ Contrato", "Encerrado - Sem Cobrança", "Encerrado - Cliente de Contrato", "Chamado está em andamento", "Aguardando Pendência da Erimat", "Aguardando Pendência do Cliente", "Cancelado pela Erimat", "Cancelado pelo Cliente", "Necessário abrir OS para ir ao local", "OS Aberta"})
         Me.CBStatus.ItemsAppearance.Parent = Me.CBStatus
         Me.CBStatus.Location = New System.Drawing.Point(12, 29)
         Me.CBStatus.MaxLength = 20
@@ -4179,10 +4180,10 @@ Partial Class FrmCadastros_Helpdesk
         '
         Me.PanelSelect_Anexo.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PanelSelect_Anexo.BackColor = System.Drawing.Color.Transparent
-        Me.PanelSelect_Anexo.Controls.Add(Me.BtnSelectFechar_Arquivos)
         Me.PanelSelect_Anexo.Controls.Add(Me.BtnExcluir)
         Me.PanelSelect_Anexo.Controls.Add(Me.BtnDownload)
         Me.PanelSelect_Anexo.Controls.Add(Me.LblAquivos_Anexo)
+        Me.PanelSelect_Anexo.Controls.Add(Me.BtnSelectFechar_Arquivos)
         Me.SelectTransition.SetDecoration(Me.PanelSelect_Anexo, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSelect_Anexo.FillColor = System.Drawing.Color.White
         Me.PanelSelect_Anexo.Location = New System.Drawing.Point(231, 5)
@@ -4192,44 +4193,6 @@ Partial Class FrmCadastros_Helpdesk
         Me.PanelSelect_Anexo.Size = New System.Drawing.Size(326, 89)
         Me.PanelSelect_Anexo.TabIndex = 16
         Me.PanelSelect_Anexo.Visible = False
-        '
-        'BtnSelectFechar_Arquivos
-        '
-        Me.BtnSelectFechar_Arquivos.ActiveImage = Nothing
-        Me.BtnSelectFechar_Arquivos.AllowAnimations = True
-        Me.BtnSelectFechar_Arquivos.AllowBuffering = False
-        Me.BtnSelectFechar_Arquivos.AllowToggling = False
-        Me.BtnSelectFechar_Arquivos.AllowZooming = True
-        Me.BtnSelectFechar_Arquivos.AllowZoomingOnFocus = False
-        Me.BtnSelectFechar_Arquivos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSelectFechar_Arquivos.BackColor = System.Drawing.Color.White
-        Me.BtnSelectFechar_Arquivos.CausesValidation = False
-        Me.BtnSelectFechar_Arquivos.Cursor = System.Windows.Forms.Cursors.Default
-        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar_Arquivos, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.BtnSelectFechar_Arquivos.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnSelectFechar_Arquivos.ErrorImage = CType(resources.GetObject("BtnSelectFechar_Arquivos.ErrorImage"), System.Drawing.Image)
-        Me.BtnSelectFechar_Arquivos.FadeWhenInactive = False
-        Me.BtnSelectFechar_Arquivos.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal
-        Me.BtnSelectFechar_Arquivos.Image = CType(resources.GetObject("BtnSelectFechar_Arquivos.Image"), System.Drawing.Image)
-        Me.BtnSelectFechar_Arquivos.ImageActive = Nothing
-        Me.BtnSelectFechar_Arquivos.ImageLocation = Nothing
-        Me.BtnSelectFechar_Arquivos.ImageMargin = 7
-        Me.BtnSelectFechar_Arquivos.ImageSize = New System.Drawing.Size(13, 13)
-        Me.BtnSelectFechar_Arquivos.ImageZoomSize = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar_Arquivos.InitialImage = CType(resources.GetObject("BtnSelectFechar_Arquivos.InitialImage"), System.Drawing.Image)
-        Me.BtnSelectFechar_Arquivos.Location = New System.Drawing.Point(295, 6)
-        Me.BtnSelectFechar_Arquivos.Name = "BtnSelectFechar_Arquivos"
-        Me.BtnSelectFechar_Arquivos.Rotation = 0
-        Me.BtnSelectFechar_Arquivos.ShowActiveImage = True
-        Me.BtnSelectFechar_Arquivos.ShowCursorChanges = True
-        Me.BtnSelectFechar_Arquivos.ShowImageBorders = True
-        Me.BtnSelectFechar_Arquivos.ShowSizeMarkers = False
-        Me.BtnSelectFechar_Arquivos.Size = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar_Arquivos.TabIndex = 19
-        Me.BtnSelectFechar_Arquivos.ToolTipText = "Fechar"
-        Me.BtnSelectFechar_Arquivos.WaitOnLoad = False
-        Me.BtnSelectFechar_Arquivos.Zoom = 7
-        Me.BtnSelectFechar_Arquivos.ZoomSpeed = 10
         '
         'BtnExcluir
         '
@@ -4300,14 +4263,34 @@ Partial Class FrmCadastros_Helpdesk
         Me.LblAquivos_Anexo.TabIndex = 16
         Me.LblAquivos_Anexo.Text = "Arquivos selecionados (1)"
         '
+        'BtnSelectFechar_Arquivos
+        '
+        Me.BtnSelectFechar_Arquivos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSelectFechar_Arquivos.BackColor = System.Drawing.Color.White
+        Me.BtnSelectFechar_Arquivos.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnSelectFechar_Arquivos.CheckedState.Parent = Me.BtnSelectFechar_Arquivos
+        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar_Arquivos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.BtnSelectFechar_Arquivos.HoverState.Parent = Me.BtnSelectFechar_Arquivos
+        Me.BtnSelectFechar_Arquivos.Image = CType(resources.GetObject("BtnSelectFechar_Arquivos.Image"), System.Drawing.Image)
+        Me.BtnSelectFechar_Arquivos.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnSelectFechar_Arquivos.ImageRotate = 0!
+        Me.BtnSelectFechar_Arquivos.ImageSize = New System.Drawing.Size(16, 16)
+        Me.BtnSelectFechar_Arquivos.Location = New System.Drawing.Point(295, 6)
+        Me.BtnSelectFechar_Arquivos.Name = "BtnSelectFechar_Arquivos"
+        Me.BtnSelectFechar_Arquivos.PressedState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.BtnSelectFechar_Arquivos.PressedState.Parent = Me.BtnSelectFechar_Arquivos
+        Me.BtnSelectFechar_Arquivos.ShadowDecoration.Parent = Me.BtnSelectFechar_Arquivos
+        Me.BtnSelectFechar_Arquivos.Size = New System.Drawing.Size(20, 20)
+        Me.BtnSelectFechar_Arquivos.TabIndex = 192
+        '
         'PanelSelect
         '
         Me.PanelSelect.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PanelSelect.BackColor = System.Drawing.Color.Transparent
-        Me.PanelSelect.Controls.Add(Me.BtnSelectFechar)
         Me.PanelSelect.Controls.Add(Me.BtnSelectApagar)
         Me.PanelSelect.Controls.Add(Me.BtnInfo)
         Me.PanelSelect.Controls.Add(Me.LblRegistrosSelect_Gerenciador)
+        Me.PanelSelect.Controls.Add(Me.BtnSelectFechar)
         Me.SelectTransition.SetDecoration(Me.PanelSelect, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSelect.FillColor = System.Drawing.Color.White
         Me.PanelSelect.Location = New System.Drawing.Point(231, 5)
@@ -4317,44 +4300,6 @@ Partial Class FrmCadastros_Helpdesk
         Me.PanelSelect.Size = New System.Drawing.Size(326, 89)
         Me.PanelSelect.TabIndex = 18
         Me.PanelSelect.Visible = False
-        '
-        'BtnSelectFechar
-        '
-        Me.BtnSelectFechar.ActiveImage = Nothing
-        Me.BtnSelectFechar.AllowAnimations = True
-        Me.BtnSelectFechar.AllowBuffering = False
-        Me.BtnSelectFechar.AllowToggling = False
-        Me.BtnSelectFechar.AllowZooming = True
-        Me.BtnSelectFechar.AllowZoomingOnFocus = False
-        Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
-        Me.BtnSelectFechar.CausesValidation = False
-        Me.BtnSelectFechar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.BtnSelectFechar.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnSelectFechar.ErrorImage = CType(resources.GetObject("BtnSelectFechar.ErrorImage"), System.Drawing.Image)
-        Me.BtnSelectFechar.FadeWhenInactive = False
-        Me.BtnSelectFechar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal
-        Me.BtnSelectFechar.Image = CType(resources.GetObject("BtnSelectFechar.Image"), System.Drawing.Image)
-        Me.BtnSelectFechar.ImageActive = Nothing
-        Me.BtnSelectFechar.ImageLocation = Nothing
-        Me.BtnSelectFechar.ImageMargin = 7
-        Me.BtnSelectFechar.ImageSize = New System.Drawing.Size(13, 13)
-        Me.BtnSelectFechar.ImageZoomSize = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar.InitialImage = CType(resources.GetObject("BtnSelectFechar.InitialImage"), System.Drawing.Image)
-        Me.BtnSelectFechar.Location = New System.Drawing.Point(295, 6)
-        Me.BtnSelectFechar.Name = "BtnSelectFechar"
-        Me.BtnSelectFechar.Rotation = 0
-        Me.BtnSelectFechar.ShowActiveImage = True
-        Me.BtnSelectFechar.ShowCursorChanges = True
-        Me.BtnSelectFechar.ShowImageBorders = True
-        Me.BtnSelectFechar.ShowSizeMarkers = False
-        Me.BtnSelectFechar.Size = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar.TabIndex = 19
-        Me.BtnSelectFechar.ToolTipText = "Fechar"
-        Me.BtnSelectFechar.WaitOnLoad = False
-        Me.BtnSelectFechar.Zoom = 7
-        Me.BtnSelectFechar.ZoomSpeed = 10
         '
         'BtnSelectApagar
         '
@@ -4424,6 +4369,26 @@ Partial Class FrmCadastros_Helpdesk
         Me.LblRegistrosSelect_Gerenciador.Size = New System.Drawing.Size(157, 19)
         Me.LblRegistrosSelect_Gerenciador.TabIndex = 16
         Me.LblRegistrosSelect_Gerenciador.Text = "Registros selecionados (1)"
+        '
+        'BtnSelectFechar
+        '
+        Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
+        Me.BtnSelectFechar.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnSelectFechar.CheckedState.Parent = Me.BtnSelectFechar
+        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.BtnSelectFechar.HoverState.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.Image = CType(resources.GetObject("BtnSelectFechar.Image"), System.Drawing.Image)
+        Me.BtnSelectFechar.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnSelectFechar.ImageRotate = 0!
+        Me.BtnSelectFechar.ImageSize = New System.Drawing.Size(16, 16)
+        Me.BtnSelectFechar.Location = New System.Drawing.Point(295, 6)
+        Me.BtnSelectFechar.Name = "BtnSelectFechar"
+        Me.BtnSelectFechar.PressedState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.BtnSelectFechar.PressedState.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.ShadowDecoration.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.Size = New System.Drawing.Size(20, 20)
+        Me.BtnSelectFechar.TabIndex = 191
         '
         'SelectTransition
         '
@@ -4646,12 +4611,10 @@ Partial Class FrmCadastros_Helpdesk
     Friend WithEvents DataInicial As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents BtnSelectIntervalo As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents PanelSelect_Anexo As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents BtnSelectFechar_Arquivos As Bunifu.UI.WinForms.BunifuImageButton
     Friend WithEvents BtnExcluir As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnDownload As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents LblAquivos_Anexo As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PanelSelect As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents BtnSelectFechar As Bunifu.UI.WinForms.BunifuImageButton
     Friend WithEvents BtnSelectApagar As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnInfo As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents LblRegistrosSelect_Gerenciador As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -4737,4 +4700,6 @@ Partial Class FrmCadastros_Helpdesk
     Friend WithEvents LblFaturamento As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Fbd As FolderBrowserDialog
     Friend WithEvents TimerDownload As Timer
+    Friend WithEvents BtnSelectFechar As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents BtnSelectFechar_Arquivos As Guna.UI2.WinForms.Guna2ImageButton
 End Class

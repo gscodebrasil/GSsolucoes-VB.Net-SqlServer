@@ -26,20 +26,18 @@ Partial Class FrmUsers
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsers))
         Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsers))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.BunifuThinButton21 = New Bunifu.Framework.UI.BunifuThinButton2()
-        Me.BunifuThinButton24 = New Bunifu.Framework.UI.BunifuThinButton2()
         Me.SelectTransition = New Guna.UI2.WinForms.Guna2Transition()
         Me.PanelSelect = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.BtnSelectFechar = New Bunifu.UI.WinForms.BunifuImageButton()
         Me.BtnSelectApagar = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BtnInfoUsuario = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.HtmlLblSelect = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnSelectFechar = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.PanelFilter = New Guna.UI2.WinForms.Guna2Panel()
         Me.GBoxOpcoes = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.BtnEmail = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -92,7 +90,7 @@ Partial Class FrmUsers
         Me.BtnCopy = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.LblChaveKey = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblUserInfo = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.ImgPerfil = New Bunifu.UI.WinForms.BunifuPictureBox()
+        Me.ImgPerfil = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.TpPermissoes = New System.Windows.Forms.TabPage()
         Me.TlpPermissoes = New System.Windows.Forms.TableLayoutPanel()
         Me.PanelPermissoes = New System.Windows.Forms.Panel()
@@ -189,60 +187,6 @@ Partial Class FrmUsers
         Me.PanelNextPrevio.SuspendLayout()
         Me.SuspendLayout()
         '
-        'BunifuThinButton21
-        '
-        Me.BunifuThinButton21.ActiveBorderThickness = 1
-        Me.BunifuThinButton21.ActiveCornerRadius = 33
-        Me.BunifuThinButton21.ActiveFillColor = System.Drawing.Color.LightSkyBlue
-        Me.BunifuThinButton21.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton21.ActiveLineColor = System.Drawing.Color.LightSkyBlue
-        Me.BunifuThinButton21.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.BunifuThinButton21.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.BunifuThinButton21.BackgroundImage = CType(resources.GetObject("BunifuThinButton21.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton21.ButtonText = "Próximo"
-        Me.BunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SelectTransition.SetDecoration(Me.BunifuThinButton21, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.BunifuThinButton21.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton21.ForeColor = System.Drawing.Color.White
-        Me.BunifuThinButton21.IdleBorderThickness = 1
-        Me.BunifuThinButton21.IdleCornerRadius = 33
-        Me.BunifuThinButton21.IdleFillColor = System.Drawing.Color.DodgerBlue
-        Me.BunifuThinButton21.IdleForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton21.IdleLineColor = System.Drawing.Color.DodgerBlue
-        Me.BunifuThinButton21.Location = New System.Drawing.Point(469, 278)
-        Me.BunifuThinButton21.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.BunifuThinButton21.Name = "BunifuThinButton21"
-        Me.BunifuThinButton21.Size = New System.Drawing.Size(127, 44)
-        Me.BunifuThinButton21.TabIndex = 31
-        Me.BunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'BunifuThinButton24
-        '
-        Me.BunifuThinButton24.ActiveBorderThickness = 1
-        Me.BunifuThinButton24.ActiveCornerRadius = 33
-        Me.BunifuThinButton24.ActiveFillColor = System.Drawing.Color.LightSkyBlue
-        Me.BunifuThinButton24.ActiveForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton24.ActiveLineColor = System.Drawing.Color.LightSkyBlue
-        Me.BunifuThinButton24.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.BunifuThinButton24.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.BunifuThinButton24.BackgroundImage = CType(resources.GetObject("BunifuThinButton24.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuThinButton24.ButtonText = "Voltar"
-        Me.BunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.SelectTransition.SetDecoration(Me.BunifuThinButton24, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.BunifuThinButton24.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuThinButton24.ForeColor = System.Drawing.Color.White
-        Me.BunifuThinButton24.IdleBorderThickness = 1
-        Me.BunifuThinButton24.IdleCornerRadius = 33
-        Me.BunifuThinButton24.IdleFillColor = System.Drawing.Color.DodgerBlue
-        Me.BunifuThinButton24.IdleForecolor = System.Drawing.Color.White
-        Me.BunifuThinButton24.IdleLineColor = System.Drawing.Color.DodgerBlue
-        Me.BunifuThinButton24.Location = New System.Drawing.Point(336, 278)
-        Me.BunifuThinButton24.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.BunifuThinButton24.Name = "BunifuThinButton24"
-        Me.BunifuThinButton24.Size = New System.Drawing.Size(127, 44)
-        Me.BunifuThinButton24.TabIndex = 30
-        Me.BunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'SelectTransition
         '
         Me.SelectTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.VertSlide
@@ -270,10 +214,10 @@ Partial Class FrmUsers
         '
         Me.PanelSelect.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PanelSelect.BackColor = System.Drawing.Color.Transparent
-        Me.PanelSelect.Controls.Add(Me.BtnSelectFechar)
         Me.PanelSelect.Controls.Add(Me.BtnSelectApagar)
         Me.PanelSelect.Controls.Add(Me.BtnInfoUsuario)
         Me.PanelSelect.Controls.Add(Me.HtmlLblSelect)
+        Me.PanelSelect.Controls.Add(Me.BtnSelectFechar)
         Me.SelectTransition.SetDecoration(Me.PanelSelect, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSelect.FillColor = System.Drawing.Color.White
         Me.PanelSelect.Location = New System.Drawing.Point(227, 5)
@@ -283,44 +227,6 @@ Partial Class FrmUsers
         Me.PanelSelect.Size = New System.Drawing.Size(326, 89)
         Me.PanelSelect.TabIndex = 5
         Me.PanelSelect.Visible = False
-        '
-        'BtnSelectFechar
-        '
-        Me.BtnSelectFechar.ActiveImage = Nothing
-        Me.BtnSelectFechar.AllowAnimations = True
-        Me.BtnSelectFechar.AllowBuffering = False
-        Me.BtnSelectFechar.AllowToggling = False
-        Me.BtnSelectFechar.AllowZooming = True
-        Me.BtnSelectFechar.AllowZoomingOnFocus = False
-        Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
-        Me.BtnSelectFechar.CausesValidation = False
-        Me.BtnSelectFechar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.BtnSelectFechar.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnSelectFechar.ErrorImage = CType(resources.GetObject("BtnSelectFechar.ErrorImage"), System.Drawing.Image)
-        Me.BtnSelectFechar.FadeWhenInactive = False
-        Me.BtnSelectFechar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal
-        Me.BtnSelectFechar.Image = CType(resources.GetObject("BtnSelectFechar.Image"), System.Drawing.Image)
-        Me.BtnSelectFechar.ImageActive = Nothing
-        Me.BtnSelectFechar.ImageLocation = Nothing
-        Me.BtnSelectFechar.ImageMargin = 7
-        Me.BtnSelectFechar.ImageSize = New System.Drawing.Size(13, 13)
-        Me.BtnSelectFechar.ImageZoomSize = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar.InitialImage = CType(resources.GetObject("BtnSelectFechar.InitialImage"), System.Drawing.Image)
-        Me.BtnSelectFechar.Location = New System.Drawing.Point(295, 6)
-        Me.BtnSelectFechar.Name = "BtnSelectFechar"
-        Me.BtnSelectFechar.Rotation = 0
-        Me.BtnSelectFechar.ShowActiveImage = True
-        Me.BtnSelectFechar.ShowCursorChanges = True
-        Me.BtnSelectFechar.ShowImageBorders = True
-        Me.BtnSelectFechar.ShowSizeMarkers = False
-        Me.BtnSelectFechar.Size = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar.TabIndex = 19
-        Me.BtnSelectFechar.ToolTipText = "Fechar"
-        Me.BtnSelectFechar.WaitOnLoad = False
-        Me.BtnSelectFechar.Zoom = 7
-        Me.BtnSelectFechar.ZoomSpeed = 10
         '
         'BtnSelectApagar
         '
@@ -390,6 +296,26 @@ Partial Class FrmUsers
         Me.HtmlLblSelect.Size = New System.Drawing.Size(153, 19)
         Me.HtmlLblSelect.TabIndex = 16
         Me.HtmlLblSelect.Text = "Usuários selecionados (1)"
+        '
+        'BtnSelectFechar
+        '
+        Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
+        Me.BtnSelectFechar.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnSelectFechar.CheckedState.Parent = Me.BtnSelectFechar
+        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.BtnSelectFechar.HoverState.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.Image = CType(resources.GetObject("BtnSelectFechar.Image"), System.Drawing.Image)
+        Me.BtnSelectFechar.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnSelectFechar.ImageRotate = 0!
+        Me.BtnSelectFechar.ImageSize = New System.Drawing.Size(16, 16)
+        Me.BtnSelectFechar.Location = New System.Drawing.Point(295, 6)
+        Me.BtnSelectFechar.Name = "BtnSelectFechar"
+        Me.BtnSelectFechar.PressedState.ImageSize = New System.Drawing.Size(16, 16)
+        Me.BtnSelectFechar.PressedState.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.ShadowDecoration.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.Size = New System.Drawing.Size(20, 20)
+        Me.BtnSelectFechar.TabIndex = 188
         '
         'PanelFilter
         '
@@ -1721,7 +1647,7 @@ Partial Class FrmUsers
         Me.SelectTransition.SetDecoration(Me.LblChaveKey, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblChaveKey.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblChaveKey.ForeColor = System.Drawing.Color.Black
-        Me.LblChaveKey.Location = New System.Drawing.Point(132, 187)
+        Me.LblChaveKey.Location = New System.Drawing.Point(133, 187)
         Me.LblChaveKey.Name = "LblChaveKey"
         Me.LblChaveKey.Size = New System.Drawing.Size(434, 21)
         Me.LblChaveKey.TabIndex = 192
@@ -1744,22 +1670,20 @@ Partial Class FrmUsers
         '
         'ImgPerfil
         '
-        Me.ImgPerfil.AllowFocused = False
         Me.ImgPerfil.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ImgPerfil.AutoSizeHeight = True
-        Me.ImgPerfil.BackColor = System.Drawing.Color.White
-        Me.ImgPerfil.BorderRadius = 65
-        Me.ImgPerfil.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ImgPerfil.BackColor = System.Drawing.Color.Transparent
         Me.SelectTransition.SetDecoration(Me.ImgPerfil, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.ImgPerfil.Image = CType(resources.GetObject("ImgPerfil.Image"), System.Drawing.Image)
-        Me.ImgPerfil.IsCircle = True
-        Me.ImgPerfil.Location = New System.Drawing.Point(284, 38)
+        Me.ImgPerfil.ImageRotate = 0!
+        Me.ImgPerfil.Location = New System.Drawing.Point(290, 54)
         Me.ImgPerfil.Name = "ImgPerfil"
-        Me.ImgPerfil.Size = New System.Drawing.Size(130, 130)
-        Me.ImgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ImgPerfil.TabIndex = 191
+        Me.ImgPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.ImgPerfil.ShadowDecoration.Parent = Me.ImgPerfil
+        Me.ImgPerfil.Size = New System.Drawing.Size(120, 120)
+        Me.ImgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ImgPerfil.TabIndex = 285
         Me.ImgPerfil.TabStop = False
-        Me.ImgPerfil.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
+        Me.ImgPerfil.UseTransparentBackground = True
         '
         'TpPermissoes
         '
@@ -3173,15 +3097,12 @@ Partial Class FrmUsers
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents BunifuThinButton21 As Bunifu.Framework.UI.BunifuThinButton2
-    Friend WithEvents BunifuThinButton24 As Bunifu.Framework.UI.BunifuThinButton2
     Friend WithEvents ImgUsers As ImageList
     Friend WithEvents PanelSelect As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents BtnSelectApagar As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnInfoUsuario As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents HtmlLblSelect As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents SelectTransition As Guna.UI2.WinForms.Guna2Transition
-    Friend WithEvents BtnSelectFechar As BunifuImageButton
     Friend WithEvents TimerSalvar As Timer
     Friend WithEvents DataGridViewCheckBoxColumn1 As DataGridViewCheckBoxColumn
     Friend WithEvents PanelFilter As Guna.UI2.WinForms.Guna2Panel
@@ -3283,7 +3204,6 @@ Partial Class FrmUsers
     Friend WithEvents BtnCopy As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents LblChaveKey As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblUserInfo As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents ImgPerfil As BunifuPictureBox
     Friend WithEvents BtnListarUsuarios As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents ShPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents LblUsuario As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -3293,4 +3213,6 @@ Partial Class FrmUsers
     Friend WithEvents Lbl1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Lbl2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Panel8 As Panel
+    Friend WithEvents BtnSelectFechar As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents ImgPerfil As Guna.UI2.WinForms.Guna2CirclePictureBox
 End Class

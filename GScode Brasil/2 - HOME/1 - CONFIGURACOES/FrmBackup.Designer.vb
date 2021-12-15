@@ -24,17 +24,18 @@ Partial Class FrmBackup
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBackup))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PanelSelect = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.BtnRestoreBkp = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.BtnSelectFechar = New Bunifu.UI.WinForms.BunifuImageButton()
         Me.BtnSelectApagar = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BtnDownloadBkp = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.LblSelect = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.BtnSelectFechar = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Ofd = New System.Windows.Forms.OpenFileDialog()
         Me.TimerDatabaseConfig = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSystemBkp = New System.Windows.Forms.Timer(Me.components)
@@ -65,7 +66,7 @@ Partial Class FrmBackup
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnUploadBkp = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Me.DgvBackup = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.DgvBackup = New Bunifu.UI.WinForms.BunifuDataGridView()
         Me.DgvColumnSelect = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PanelPaginacao = New Guna.UI2.WinForms.Guna2Panel()
         Me.LblSelectRegister = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -121,10 +122,10 @@ Partial Class FrmBackup
         Me.PanelSelect.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PanelSelect.BackColor = System.Drawing.Color.Transparent
         Me.PanelSelect.Controls.Add(Me.BtnRestoreBkp)
-        Me.PanelSelect.Controls.Add(Me.BtnSelectFechar)
         Me.PanelSelect.Controls.Add(Me.BtnSelectApagar)
         Me.PanelSelect.Controls.Add(Me.BtnDownloadBkp)
         Me.PanelSelect.Controls.Add(Me.LblSelect)
+        Me.PanelSelect.Controls.Add(Me.BtnSelectFechar)
         Me.SelectTransition.SetDecoration(Me.PanelSelect, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSelect.FillColor = System.Drawing.Color.White
         Me.PanelSelect.Location = New System.Drawing.Point(185, 5)
@@ -162,44 +163,6 @@ Partial Class FrmBackup
         Me.BtnRestoreBkp.Size = New System.Drawing.Size(85, 32)
         Me.BtnRestoreBkp.TabIndex = 20
         Me.BtnRestoreBkp.Text = "Restaurar"
-        '
-        'BtnSelectFechar
-        '
-        Me.BtnSelectFechar.ActiveImage = Nothing
-        Me.BtnSelectFechar.AllowAnimations = True
-        Me.BtnSelectFechar.AllowBuffering = False
-        Me.BtnSelectFechar.AllowToggling = False
-        Me.BtnSelectFechar.AllowZooming = True
-        Me.BtnSelectFechar.AllowZoomingOnFocus = False
-        Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
-        Me.BtnSelectFechar.CausesValidation = False
-        Me.BtnSelectFechar.Cursor = System.Windows.Forms.Cursors.Default
-        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.BtnSelectFechar.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.BtnSelectFechar.ErrorImage = CType(resources.GetObject("BtnSelectFechar.ErrorImage"), System.Drawing.Image)
-        Me.BtnSelectFechar.FadeWhenInactive = False
-        Me.BtnSelectFechar.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal
-        Me.BtnSelectFechar.Image = CType(resources.GetObject("BtnSelectFechar.Image"), System.Drawing.Image)
-        Me.BtnSelectFechar.ImageActive = Nothing
-        Me.BtnSelectFechar.ImageLocation = Nothing
-        Me.BtnSelectFechar.ImageMargin = 7
-        Me.BtnSelectFechar.ImageSize = New System.Drawing.Size(13, 13)
-        Me.BtnSelectFechar.ImageZoomSize = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar.InitialImage = CType(resources.GetObject("BtnSelectFechar.InitialImage"), System.Drawing.Image)
-        Me.BtnSelectFechar.Location = New System.Drawing.Point(337, 6)
-        Me.BtnSelectFechar.Name = "BtnSelectFechar"
-        Me.BtnSelectFechar.Rotation = 0
-        Me.BtnSelectFechar.ShowActiveImage = True
-        Me.BtnSelectFechar.ShowCursorChanges = True
-        Me.BtnSelectFechar.ShowImageBorders = True
-        Me.BtnSelectFechar.ShowSizeMarkers = False
-        Me.BtnSelectFechar.Size = New System.Drawing.Size(20, 20)
-        Me.BtnSelectFechar.TabIndex = 19
-        Me.BtnSelectFechar.ToolTipText = "Fechar"
-        Me.BtnSelectFechar.WaitOnLoad = False
-        Me.BtnSelectFechar.Zoom = 7
-        Me.BtnSelectFechar.ZoomSpeed = 10
         '
         'BtnSelectApagar
         '
@@ -269,6 +232,27 @@ Partial Class FrmBackup
         Me.LblSelect.TabIndex = 16
         Me.LblSelect.Text = "Usuários selecionados (1)"
         '
+        'BtnSelectFechar
+        '
+        Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
+        Me.BtnSelectFechar.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.BtnSelectFechar.CheckedState.Parent = Me.BtnSelectFechar
+        Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.BtnSelectFechar.HoverState.ImageSize = New System.Drawing.Size(22, 22)
+        Me.BtnSelectFechar.HoverState.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.Image = CType(resources.GetObject("BtnSelectFechar.Image"), System.Drawing.Image)
+        Me.BtnSelectFechar.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.BtnSelectFechar.ImageRotate = 0!
+        Me.BtnSelectFechar.ImageSize = New System.Drawing.Size(16, 16)
+        Me.BtnSelectFechar.Location = New System.Drawing.Point(337, 6)
+        Me.BtnSelectFechar.Name = "BtnSelectFechar"
+        Me.BtnSelectFechar.PressedState.ImageSize = New System.Drawing.Size(18, 18)
+        Me.BtnSelectFechar.PressedState.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.ShadowDecoration.Parent = Me.BtnSelectFechar
+        Me.BtnSelectFechar.Size = New System.Drawing.Size(20, 20)
+        Me.BtnSelectFechar.TabIndex = 187
+        '
         'TimerDatabaseConfig
         '
         '
@@ -287,22 +271,22 @@ Partial Class FrmBackup
         'SelectTransition
         '
         Me.SelectTransition.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.SelectTransition.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.SelectTransition.DefaultAnimation = Animation1
         '
         'TabControlBackup
         '
@@ -760,67 +744,79 @@ Partial Class FrmBackup
         '
         'DgvBackup
         '
+        Me.DgvBackup.AllowCustomTheming = False
         Me.DgvBackup.AllowUserToAddRows = False
         Me.DgvBackup.AllowUserToDeleteRows = False
         Me.DgvBackup.AllowUserToResizeRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.DgvBackup.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
+        Me.DgvBackup.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DgvBackup.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DgvBackup.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DgvBackup.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DgvBackup.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
+        Me.DgvBackup.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.DgvBackup.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DgvBackup.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvBackup.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DgvBackup.ColumnHeadersHeight = 40
         Me.DgvBackup.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DgvColumnSelect})
+        Me.DgvBackup.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvBackup.CurrentTheme.AlternatingRowsStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.DgvBackup.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.DgvBackup.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvBackup.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black
+        Me.DgvBackup.CurrentTheme.BackColor = System.Drawing.Color.White
+        Me.DgvBackup.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvBackup.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue
+        Me.DgvBackup.CurrentTheme.HeaderStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 11.75!, System.Drawing.FontStyle.Bold)
+        Me.DgvBackup.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White
+        Me.DgvBackup.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(204, Byte), Integer))
+        Me.DgvBackup.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.DgvBackup.CurrentTheme.Name = Nothing
+        Me.DgvBackup.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White
+        Me.DgvBackup.CurrentTheme.RowsStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.DgvBackup.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black
+        Me.DgvBackup.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvBackup.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.SelectTransition.SetDecoration(Me.DgvBackup, Guna.UI2.AnimatorNS.DecorationType.None)
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DgvBackup.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(210, Byte), Integer), CType(CType(232, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DgvBackup.DefaultCellStyle = DataGridViewCellStyle3
         Me.DgvBackup.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvBackup.EnableHeadersVisualStyles = False
-        Me.DgvBackup.GridColor = System.Drawing.Color.WhiteSmoke
+        Me.DgvBackup.GridColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DgvBackup.HeaderBackColor = System.Drawing.Color.DodgerBlue
+        Me.DgvBackup.HeaderBgColor = System.Drawing.Color.Empty
+        Me.DgvBackup.HeaderForeColor = System.Drawing.Color.White
         Me.DgvBackup.Location = New System.Drawing.Point(0, 0)
+        Me.DgvBackup.MultiSelect = False
         Me.DgvBackup.Name = "DgvBackup"
         Me.DgvBackup.ReadOnly = True
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Indigo
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DgvBackup.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DgvBackup.RowHeadersVisible = False
         Me.DgvBackup.RowTemplate.Height = 40
         Me.DgvBackup.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvBackup.Size = New System.Drawing.Size(718, 337)
-        Me.DgvBackup.TabIndex = 235
-        Me.DgvBackup.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvBackup.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Me.DgvBackup.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty
-        Me.DgvBackup.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty
-        Me.DgvBackup.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty
-        Me.DgvBackup.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.DgvBackup.ThemeStyle.GridColor = System.Drawing.Color.WhiteSmoke
-        Me.DgvBackup.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvBackup.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.DgvBackup.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvBackup.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
-        Me.DgvBackup.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.DgvBackup.ThemeStyle.HeaderStyle.Height = 40
-        Me.DgvBackup.ThemeStyle.ReadOnly = True
-        Me.DgvBackup.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
-        Me.DgvBackup.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
-        Me.DgvBackup.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        Me.DgvBackup.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.DgvBackup.ThemeStyle.RowsStyle.Height = 40
-        Me.DgvBackup.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.DgvBackup.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.DgvBackup.TabIndex = 11
+        Me.DgvBackup.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
         'DgvColumnSelect
         '
@@ -1443,7 +1439,6 @@ Partial Class FrmBackup
     End Sub
 
     Friend WithEvents PanelSelect As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents BtnSelectFechar As Bunifu.UI.WinForms.BunifuImageButton
     Friend WithEvents BtnSelectApagar As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnDownloadBkp As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents LblSelect As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -1510,6 +1505,7 @@ Partial Class FrmBackup
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents TimerDatabaseRestore As Timer
-    Friend WithEvents DgvBackup As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents BtnSelectFechar As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents DgvBackup As Bunifu.UI.WinForms.BunifuDataGridView
     Friend WithEvents DgvColumnSelect As DataGridViewCheckBoxColumn
 End Class

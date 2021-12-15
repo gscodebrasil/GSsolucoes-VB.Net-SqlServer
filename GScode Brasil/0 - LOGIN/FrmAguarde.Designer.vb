@@ -30,7 +30,7 @@ Partial Class FrmAguarde
         Me.TimerAguarde = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.ProgressAguarde = New Guna.UI2.WinForms.Guna2ProgressBar()
-        Me.btnClose = New Bunifu.UI.WinForms.BunifuImageButton()
+        Me.btnClose = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2GradientPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,40 +90,22 @@ Partial Class FrmAguarde
         '
         'btnClose
         '
-        Me.btnClose.ActiveImage = Nothing
-        Me.btnClose.AllowAnimations = True
-        Me.btnClose.AllowBuffering = False
-        Me.btnClose.AllowToggling = False
-        Me.btnClose.AllowZooming = True
-        Me.btnClose.AllowZoomingOnFocus = False
         Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.btnClose.CausesValidation = False
-        Me.btnClose.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.None
-        Me.btnClose.ErrorImage = CType(resources.GetObject("btnClose.ErrorImage"), System.Drawing.Image)
-        Me.btnClose.FadeWhenInactive = False
-        Me.btnClose.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal
+        Me.btnClose.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.btnClose.CheckedState.Parent = Me.btnClose
+        Me.btnClose.HoverState.ImageSize = New System.Drawing.Size(22, 22)
+        Me.btnClose.HoverState.Parent = Me.btnClose
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.ImageActive = Nothing
-        Me.btnClose.ImageLocation = Nothing
-        Me.btnClose.ImageMargin = 7
-        Me.btnClose.ImageSize = New System.Drawing.Size(17, 17)
-        Me.btnClose.ImageZoomSize = New System.Drawing.Size(24, 24)
-        Me.btnClose.InitialImage = CType(resources.GetObject("btnClose.InitialImage"), System.Drawing.Image)
+        Me.btnClose.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.btnClose.ImageRotate = 0!
+        Me.btnClose.ImageSize = New System.Drawing.Size(18, 18)
         Me.btnClose.Location = New System.Drawing.Point(763, 12)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Rotation = 0
-        Me.btnClose.ShowActiveImage = True
-        Me.btnClose.ShowCursorChanges = True
-        Me.btnClose.ShowImageBorders = True
-        Me.btnClose.ShowSizeMarkers = False
-        Me.btnClose.Size = New System.Drawing.Size(24, 24)
-        Me.btnClose.TabIndex = 185
-        Me.btnClose.ToolTipText = "Fechar"
-        Me.btnClose.WaitOnLoad = False
-        Me.btnClose.Zoom = 7
-        Me.btnClose.ZoomSpeed = 10
+        Me.btnClose.PressedState.ImageSize = New System.Drawing.Size(18, 18)
+        Me.btnClose.PressedState.Parent = Me.btnClose
+        Me.btnClose.ShadowDecoration.Parent = Me.btnClose
+        Me.btnClose.Size = New System.Drawing.Size(22, 22)
+        Me.btnClose.TabIndex = 186
         '
         'FrmAguarde
         '
@@ -144,5 +126,5 @@ Partial Class FrmAguarde
     Friend WithEvents TimerAguarde As Timer
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents ProgressAguarde As Guna.UI2.WinForms.Guna2ProgressBar
-    Friend WithEvents btnClose As Bunifu.UI.WinForms.BunifuImageButton
+    Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2ImageButton
 End Class

@@ -6,6 +6,8 @@ Imports Bunifu.UI.WinForms
 
 Public Class ServerSFTP
 
+    Private ReadOnly ClCifer As New Cifer
+
 #Region "Geral"
 
     Public Sub Connect()
@@ -22,7 +24,7 @@ Public Class ServerSFTP
     End Sub
 
     Private Function Getconnection() As SftpClient
-        Dim Sftp As New SftpClient(My.Settings.SFTP_Servidor, My.Settings.SFTP_Porta, My.Settings.SFTP_Usuario, My.Settings.SFTP_Senha)
+        Dim Sftp As New SftpClient(My.Settings.SFTP_Servidor, My.Settings.SFTP_Porta, My.Settings.SFTP_Usuario, ClCifer.Decriptar(My.Settings.SFTP_Senha, ClCifer.senha))
         Return Sftp
     End Function
 
@@ -30,7 +32,7 @@ Public Class ServerSFTP
 
 #Region "Backup"
 
-    Private Function FormataGridView(ColumnChkBox As Boolean, ColumnName As String, ColumnData As String, ColumnTamanho As String, Dgv As Guna2DataGridView)
+    Private Function FormataGridView(ColumnChkBox As Boolean, ColumnName As String, ColumnData As String, ColumnTamanho As String, Dgv As BunifuDataGridView)
         With Dgv
 
             .GridColor = Color.WhiteSmoke
@@ -61,7 +63,7 @@ Public Class ServerSFTP
         Return Dgv
     End Function
 
-    Public Function FileList(Dgv As Guna2DataGridView)
+    Public Function FileList(Dgv As BunifuDataGridView)
         Try
             Using Sftp As SftpClient = Getconnection()
                 Sftp.Connect()
@@ -162,7 +164,7 @@ Public Class ServerSFTP
         End Try
     End Sub
 
-    Public Function CarregarBackup(Dgv As Guna2DataGridView, Ofd As OpenFileDialog, TabControl As Guna2TabControl)
+    Public Function CarregarBackup(Dgv As BunifuDataGridView, Ofd As OpenFileDialog, TabControl As Guna2TabControl)
         Ofd.Title = "Selecione Arquivo"
         Ofd.Filter = "Arquivos (*.bak)|*.bak"
         Ofd.Multiselect = True
@@ -250,7 +252,7 @@ Public Class ServerSFTP
         Return Dgv
     End Function
 
-    Public Sub FileDownload(Dgv As Guna2DataGridView, Fbd As FolderBrowserDialog, Inf As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl, Timer As Timer)
+    Public Sub FileDownload(Dgv As BunifuDataGridView, Fbd As FolderBrowserDialog, Inf As String, Progress As Guna2ProgressBar, TabControl As Guna2TabControl, Timer As Timer)
         Fbd.Description = "Selecione uma pasta para realizar o Download"
         Fbd.RootFolder = Environment.SpecialFolder.MyComputer
         Fbd.ShowNewFolderButton = True
@@ -286,7 +288,7 @@ Public Class ServerSFTP
         End Try
     End Sub
 
-    Public Function FileDelete(Dgv As Guna2DataGridView, Panel As Guna2ShadowPanel)
+    Public Function FileDelete(Dgv As BunifuDataGridView, Panel As Guna2ShadowPanel)
         Try
             Using Sftp As SftpClient = Getconnection()
                 Sftp.Connect()
@@ -481,29 +483,14 @@ Public Class ServerSFTP
 
                         'VERIFICA SE EXISTE O ARQUIVO NO SERVIDOR
                         If Sftp.Exists($"{My.Settings.SFTP_PhonebookColaborador}{Colaborador}/{Path.GetFileName(FileName)}") Then
-                                If MessageBox.Show($"O Arquivo {Path.GetFileName(FileName)} já existe no servidor, deseja substitui-lo?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+                            If MessageBox.Show($"O Arquivo {Path.GetFileName(FileName)} já existe no servidor, deseja substitui-lo?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
 
-                                    'REMOVE A LINHA CORRESPONDENTE AO ARQUIVO QUE FOI SUBSTITUIDO
-                                    For Each VFile As DataGridViewRow In Dgv.Rows
-                                        If VFile.Cells(1).Value.ToString.Contains(Path.GetFileName(FileName)) Then
-                                            Dgv.Rows.Remove(VFile)
-                                        End If
-                                    Next
-
-                                    'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
-                                    Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
-
-                                        Sftp.UploadFile(stream, $"{My.Settings.SFTP_PhonebookColaborador}{Colaborador}/{Path.GetFileName(FileName)}")
-
-                                        If Dgv.Rows.Count > 0 Then
-                                            Dgv.Rows.Add(False, Path.GetFileName(FileName), FileWriteTime, FileSize)
-                                        Else
-                                            FormataGridView_Phonebook(False, Path.GetFileName(FileName), FileWriteTime, FileSize, Dgv)
-                                        End If
-                                    End Using
-                                End If
-
-                            Else
+                                'REMOVE A LINHA CORRESPONDENTE AO ARQUIVO QUE FOI SUBSTITUIDO
+                                For Each VFile As DataGridViewRow In Dgv.Rows
+                                    If VFile.Cells(1).Value.ToString.Contains(Path.GetFileName(FileName)) Then
+                                        Dgv.Rows.Remove(VFile)
+                                    End If
+                                Next
 
                                 'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
                                 Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
@@ -517,6 +504,21 @@ Public Class ServerSFTP
                                     End If
                                 End Using
                             End If
+
+                        Else
+
+                            'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
+                            Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
+
+                                Sftp.UploadFile(stream, $"{My.Settings.SFTP_PhonebookColaborador}{Colaborador}/{Path.GetFileName(FileName)}")
+
+                                If Dgv.Rows.Count > 0 Then
+                                    Dgv.Rows.Add(False, Path.GetFileName(FileName), FileWriteTime, FileSize)
+                                Else
+                                    FormataGridView_Phonebook(False, Path.GetFileName(FileName), FileWriteTime, FileSize, Dgv)
+                                End If
+                            End Using
+                        End If
                     Next
                 End If
             End Using

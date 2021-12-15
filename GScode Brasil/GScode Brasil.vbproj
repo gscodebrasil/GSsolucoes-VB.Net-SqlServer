@@ -99,6 +99,9 @@
   <PropertyGroup>
     <ApplicationIcon>logo11-removebg-preview.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Charts.WinForms, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.1\lib\Bunifu.Charts.WinForms.dll</HintPath>
@@ -300,35 +303,20 @@
     <Compile Include="3 - PHONEBOOK\FrmCadastros_Phonebook.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="3 - PHONEBOOK\FrmLocalizacao.Designer.vb">
-      <DependentUpon>FrmLocalizacao.vb</DependentUpon>
-    </Compile>
-    <Compile Include="3 - PHONEBOOK\FrmLocalizacao.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="4 - HELPDESK\FrmCadastros_Helpdesk.Designer.vb">
       <DependentUpon>FrmCadastros_Helpdesk.vb</DependentUpon>
     </Compile>
     <Compile Include="4 - HELPDESK\FrmCadastros_Helpdesk.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="4 - HELPDESK\FrmOS.Designer.vb">
-      <DependentUpon>FrmOS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="4 - HELPDESK\FrmOS.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="8 - CLASSES\Cliente_Phonebook.vb" />
     <Compile Include="8 - CLASSES\Colaborador_Phonebook.vb" />
     <Compile Include="8 - CLASSES\Fornecedor_Phonebook.vb" />
     <Compile Include="8 - CLASSES\OS_Helpdesk.vb" />
-    <Compile Include="8 - CLASSES\ServerSFTP_Phonebook.vb" />
-    <Compile Include="8 - CLASSES\ValidaCNPJ_CPF.vb" />
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="8 - CLASSES\Backup.vb" />
     <Compile Include="8 - CLASSES\CheckHeaderCell.vb" />
     <Compile Include="8 - CLASSES\Cifer.vb" />
-    <Compile Include="8 - CLASSES\CustomRenderer.vb" />
     <Compile Include="8 - CLASSES\Email.vb" />
     <Compile Include="8 - CLASSES\RGBColors.vb" />
     <Compile Include="8 - CLASSES\ServerSFTP.vb" />
@@ -354,7 +342,6 @@
     <Compile Include="0 - LOGIN\FrmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="9 - MODULOS\conection.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -412,11 +399,11 @@
     <EmbeddedResource Include="3 - PHONEBOOK\FrmCadastros_Phonebook.resx">
       <DependentUpon>FrmCadastros_Phonebook.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="3 - PHONEBOOK\FrmLocalizacao.resx">
-      <DependentUpon>FrmLocalizacao.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="4 - HELPDESK\FrmCadastros_Helpdesk.resx">
       <DependentUpon>FrmCadastros_Helpdesk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -430,6 +417,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

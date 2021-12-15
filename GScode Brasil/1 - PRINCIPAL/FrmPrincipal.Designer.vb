@@ -24,18 +24,16 @@ Partial Class FrmPrincipal
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation6 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
+        Dim Animation3 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation4 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
-        Dim Animation7 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation8 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation9 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
-        Dim Animation10 As Bunifu.UI.WinForms.BunifuAnimatorNS.Animation = New Bunifu.UI.WinForms.BunifuAnimatorNS.Animation()
         Me.NotMessageLeftHome = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.BtnNotLeft = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.NotMessageTop = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.BtnNotTop = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.LblNameTop = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.TimerMenuDeslizante = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PanelForms = New System.Windows.Forms.Panel()
@@ -214,18 +212,18 @@ Partial Class FrmPrincipal
         Me.BtnSMBackup = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BtnSMSmtp = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BtnSMSoftphone = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.TimerSubMenuDeslizante = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
-        Me.TimerPanelDeslizante = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
         Me.NotMessageLeftPhonebook = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.NotMessageLeftHelpdesk = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.NotMessageLeftEstoque = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.NotMessageLeftFinanceiro = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.NotMessageLeftDashboard = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
-        Me.EditUserTransition = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
         Me.ImageIcon = New System.Windows.Forms.ImageList(Me.components)
-        Me.AppTransition = New Bunifu.UI.WinForms.BunifuTransition(Me.components)
         Me.ImageUserLeft = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageUserTop = New System.Windows.Forms.ImageList(Me.components)
+        Me.TimerMenuDeslizante = New Guna.UI2.WinForms.Guna2Transition()
+        Me.TimerSubMenuDeslizante = New Guna.UI2.WinForms.Guna2Transition()
+        Me.TimerPanelDeslizante = New Guna.UI2.WinForms.Guna2Transition()
+        Me.AppTransition = New Guna.UI2.WinForms.Guna2Transition()
         Me.TabControlMenu.SuspendLayout()
         Me.TpHome.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
@@ -308,11 +306,10 @@ Partial Class FrmPrincipal
         Me.BtnNotLeft.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.BtnNotLeft.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnNotLeft.CheckedState.Parent = Me.BtnNotLeft
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnNotLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnNotLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnNotLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnNotLeft.HoverState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnNotLeft.HoverState.Parent = Me.BtnNotLeft
         Me.BtnNotLeft.Image = CType(resources.GetObject("BtnNotLeft.Image"), System.Drawing.Image)
@@ -345,11 +342,10 @@ Partial Class FrmPrincipal
         Me.BtnNotTop.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.BtnNotTop.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnNotTop.CheckedState.Parent = Me.BtnNotTop
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnNotTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnNotTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnNotTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotTop, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnNotTop.HoverState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnNotTop.HoverState.Parent = Me.BtnNotTop
         Me.BtnNotTop.Image = CType(resources.GetObject("BtnNotTop.Image"), System.Drawing.Image)
@@ -370,11 +366,10 @@ Partial Class FrmPrincipal
         Me.LblNameTop.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblNameTop.AutoSize = False
         Me.LblNameTop.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblNameTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblNameTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNameTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameTop, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNameTop.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LblNameTop.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.LblNameTop.Location = New System.Drawing.Point(139, 14)
@@ -384,36 +379,14 @@ Partial Class FrmPrincipal
         Me.LblNameTop.Text = "..."
         Me.LblNameTop.TextAlignment = System.Drawing.ContentAlignment.BottomRight
         '
-        'TimerMenuDeslizante
-        '
-        Me.TimerMenuDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlide
-        Me.TimerMenuDeslizante.Cursor = Nothing
-        Animation6.AnimateOnlyDifferences = True
-        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
-        Animation6.LeafCoeff = 0!
-        Animation6.MaxTime = 1.0!
-        Animation6.MinTime = 0!
-        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
-        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
-        Animation6.MosaicSize = 0
-        Animation6.Padding = New System.Windows.Forms.Padding(0)
-        Animation6.RotateCoeff = 0!
-        Animation6.RotateLimit = 0!
-        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
-        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
-        Animation6.TimeCoeff = 0!
-        Animation6.TransparencyCoeff = 0!
-        Me.TimerMenuDeslizante.DefaultAnimation = Animation6
-        '
         'Guna2HtmlLabel2
         '
         Me.Guna2HtmlLabel2.AutoSize = False
         Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.5!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.DarkGray
@@ -428,11 +401,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel1.AutoSize = False
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.White
@@ -446,11 +418,10 @@ Partial Class FrmPrincipal
         'PanelForms
         '
         Me.PanelForms.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelForms, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelForms, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelForms, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelForms, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelForms, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelForms, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelForms, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelForms, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelForms, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelForms.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelForms.Location = New System.Drawing.Point(228, 59)
         Me.PanelForms.Name = "PanelForms"
@@ -466,11 +437,10 @@ Partial Class FrmPrincipal
         Me.TabControlMenu.Controls.Add(Me.TpEstoque)
         Me.TabControlMenu.Controls.Add(Me.TpFinanceiro)
         Me.TabControlMenu.Controls.Add(Me.TpDashboard)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.TabControlMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.TabControlMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.TabControlMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.TabControlMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.TabControlMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.TabControlMenu, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.TabControlMenu, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.TabControlMenu, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.TabControlMenu, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TabControlMenu.Dock = System.Windows.Forms.DockStyle.Left
         Me.TabControlMenu.ItemSize = New System.Drawing.Size(40, 40)
         Me.TabControlMenu.Location = New System.Drawing.Point(0, 0)
@@ -501,11 +471,10 @@ Partial Class FrmPrincipal
         '
         Me.TpHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.TpHome.Controls.Add(Me.PanelMenu)
-        Me.TimerMenuDeslizante.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpHome, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.TpHome, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.TpHome, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.TpHome, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TpHome.Location = New System.Drawing.Point(5, 4)
         Me.TpHome.Name = "TpHome"
         Me.TpHome.Padding = New System.Windows.Forms.Padding(3)
@@ -525,11 +494,10 @@ Partial Class FrmPrincipal
         Me.PanelMenu.Controls.Add(Me.BtnAplication)
         Me.PanelMenu.Controls.Add(Me.PanelPerfilLeft)
         Me.PanelMenu.Controls.Add(Me.PbLogoP)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelMenu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelMenu, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelMenu, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelMenu, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelMenu, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelMenu.Location = New System.Drawing.Point(3, 3)
         Me.PanelMenu.Name = "PanelMenu"
@@ -542,11 +510,10 @@ Partial Class FrmPrincipal
         Me.PanelLogoFull.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.PanelLogoFull.Controls.Add(Me.PbLogoG)
         Me.PanelLogoFull.Controls.Add(Me.PanelSocial)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelLogoFull, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelLogoFull, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelLogoFull, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelLogoFull, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelLogoFull, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelLogoFull, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelLogoFull, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelLogoFull, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelLogoFull, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelLogoFull.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelLogoFull.Location = New System.Drawing.Point(0, 793)
         Me.PanelLogoFull.Name = "PanelLogoFull"
@@ -556,11 +523,10 @@ Partial Class FrmPrincipal
         'PbLogoG
         '
         Me.PbLogoG.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoG, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoG, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbLogoG, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbLogoG, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoG, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoG, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoG, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoG, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoG, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbLogoG.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PbLogoG.Image = CType(resources.GetObject("PbLogoG.Image"), System.Drawing.Image)
         Me.PbLogoG.Location = New System.Drawing.Point(0, 36)
@@ -576,11 +542,10 @@ Partial Class FrmPrincipal
         Me.PanelSocial.Controls.Add(Me.BtnYoutube)
         Me.PanelSocial.Controls.Add(Me.BtnFacebook)
         Me.PanelSocial.Controls.Add(Me.BtnInstagram)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSocial, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelSocial, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSocial, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSocial, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelSocial, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelSocial, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSocial, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSocial, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSocial, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSocial.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelSocial.Location = New System.Drawing.Point(0, 107)
         Me.PanelSocial.Name = "PanelSocial"
@@ -592,11 +557,10 @@ Partial Class FrmPrincipal
         Me.BtnYoutube.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnYoutube.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnYoutube.CheckedState.Parent = Me.BtnYoutube
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnYoutube, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnYoutube, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnYoutube, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnYoutube, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnYoutube, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnYoutube, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnYoutube, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnYoutube, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnYoutube, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnYoutube.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnYoutube.HoverState.Parent = Me.BtnYoutube
         Me.BtnYoutube.Image = CType(resources.GetObject("BtnYoutube.Image"), System.Drawing.Image)
@@ -616,11 +580,10 @@ Partial Class FrmPrincipal
         Me.BtnFacebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnFacebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnFacebook.CheckedState.Parent = Me.BtnFacebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnFacebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnFacebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnFacebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnFacebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnFacebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnFacebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnFacebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnFacebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnFacebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnFacebook.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnFacebook.HoverState.Parent = Me.BtnFacebook
         Me.BtnFacebook.Image = CType(resources.GetObject("BtnFacebook.Image"), System.Drawing.Image)
@@ -640,11 +603,10 @@ Partial Class FrmPrincipal
         Me.BtnInstagram.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnInstagram.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnInstagram.CheckedState.Parent = Me.BtnInstagram
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnInstagram, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnInstagram, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnInstagram, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnInstagram, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnInstagram, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnInstagram, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnInstagram, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnInstagram, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnInstagram, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnInstagram.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnInstagram.HoverState.Parent = Me.BtnInstagram
         Me.BtnInstagram.Image = CType(resources.GetObject("BtnInstagram.Image"), System.Drawing.Image)
@@ -672,11 +634,10 @@ Partial Class FrmPrincipal
         Me.BtnAjuda.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnAjuda.CheckedState.Parent = Me.BtnAjuda
         Me.BtnAjuda.CustomImages.Parent = Me.BtnAjuda
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAjuda, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAjuda, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAjuda, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnAjuda, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnAjuda, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnAjuda, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAjuda, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAjuda, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAjuda, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnAjuda.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnAjuda.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnAjuda.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -717,11 +678,10 @@ Partial Class FrmPrincipal
         Me.BtnLicencas.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnLicencas.CheckedState.Parent = Me.BtnLicencas
         Me.BtnLicencas.CustomImages.Parent = Me.BtnLicencas
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnLicencas, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnLicencas, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnLicencas, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnLicencas, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnLicencas, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnLicencas, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnLicencas, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnLicencas, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnLicencas, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnLicencas.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnLicencas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnLicencas.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -759,11 +719,10 @@ Partial Class FrmPrincipal
         Me.PanelConfig.Controls.Add(Me.Btnsoftphone)
         Me.PanelConfig.CustomizableEdges.BottomRight = False
         Me.PanelConfig.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelConfig, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelConfig.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelConfig.Location = New System.Drawing.Point(0, 478)
         Me.PanelConfig.Name = "PanelConfig"
@@ -783,11 +742,10 @@ Partial Class FrmPrincipal
         Me.BtnUsuarios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnUsuarios.CheckedState.Parent = Me.BtnUsuarios
         Me.BtnUsuarios.CustomImages.Parent = Me.BtnUsuarios
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -823,11 +781,10 @@ Partial Class FrmPrincipal
         Me.BtnArquivos.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnArquivos.CheckedState.Parent = Me.BtnArquivos
         Me.BtnArquivos.CustomImages.Parent = Me.BtnArquivos
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnArquivos.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnArquivos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnArquivos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -863,11 +820,10 @@ Partial Class FrmPrincipal
         Me.BtnBackup.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnBackup.CheckedState.Parent = Me.BtnBackup
         Me.BtnBackup.CustomImages.Parent = Me.BtnBackup
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnBackup, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnBackup, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnBackup, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnBackup, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnBackup.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnBackup.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnBackup.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -903,11 +859,10 @@ Partial Class FrmPrincipal
         Me.BtnSmtp.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnSmtp.CheckedState.Parent = Me.BtnSmtp
         Me.BtnSmtp.CustomImages.Parent = Me.BtnSmtp
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnSmtp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnSmtp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnSmtp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -943,11 +898,10 @@ Partial Class FrmPrincipal
         Me.Btnsoftphone.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Btnsoftphone.CheckedState.Parent = Me.Btnsoftphone
         Me.Btnsoftphone.CustomImages.Parent = Me.Btnsoftphone
-        Me.TimerPanelDeslizante.SetDecoration(Me.Btnsoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Btnsoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Btnsoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Btnsoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Btnsoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Btnsoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Btnsoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Btnsoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Btnsoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Btnsoftphone.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Btnsoftphone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Btnsoftphone.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -985,11 +939,10 @@ Partial Class FrmPrincipal
         Me.BtnConfig.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnConfig.CheckedState.Parent = Me.BtnConfig
         Me.BtnConfig.CustomImages.Parent = Me.BtnConfig
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnConfig, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnConfig.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnConfig.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnConfig.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1030,11 +983,10 @@ Partial Class FrmPrincipal
         Me.BtnAplication.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnAplication.CheckedState.Parent = Me.BtnAplication
         Me.BtnAplication.CustomImages.Parent = Me.BtnAplication
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAplication, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAplication, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAplication, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnAplication, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnAplication, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnAplication, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAplication, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAplication, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAplication, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnAplication.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnAplication.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnAplication.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1072,11 +1024,10 @@ Partial Class FrmPrincipal
         Me.PanelPerfilLeft.Controls.Add(Me.BtnPanelDeslizanteLeft)
         Me.PanelPerfilLeft.Controls.Add(Me.BtnPerfilLeft)
         Me.PanelPerfilLeft.Controls.Add(Me.PbPerfilLeft)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelPerfilLeft.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilLeft.Location = New System.Drawing.Point(0, 100)
         Me.PanelPerfilLeft.Name = "PanelPerfilLeft"
@@ -1087,11 +1038,10 @@ Partial Class FrmPrincipal
         '
         Me.LblNameLeft.AutoSize = False
         Me.LblNameLeft.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblNameLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblNameLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNameLeft.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LblNameLeft.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LblNameLeft.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -1106,11 +1056,10 @@ Partial Class FrmPrincipal
         '
         Me.LblEmailLeft.AutoSize = False
         Me.LblEmailLeft.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblEmailLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblEmailLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEmailLeft.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LblEmailLeft.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmailLeft.ForeColor = System.Drawing.Color.DarkGray
@@ -1125,11 +1074,10 @@ Partial Class FrmPrincipal
         '
         Me.PanelNotifiLeft.Controls.Add(Me.LblNotLeftHome)
         Me.PanelNotifiLeft.Controls.Add(Me.BtnNotLeft)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelNotifiLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelNotifiLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelNotifiLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelNotifiLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelNotifiLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelNotifiLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelNotifiLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelNotifiLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelNotifiLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelNotifiLeft.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelNotifiLeft.Location = New System.Drawing.Point(0, 190)
         Me.PanelNotifiLeft.Name = "PanelNotifiLeft"
@@ -1140,11 +1088,10 @@ Partial Class FrmPrincipal
         '
         Me.LblNotLeftHome.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LblNotLeftHome.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblNotLeftHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblNotLeftHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNotLeftHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNotLeftHome, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNotLeftHome, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNotLeftHome.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LblNotLeftHome.ForeColor = System.Drawing.Color.White
         Me.LblNotLeftHome.Location = New System.Drawing.Point(82, 12)
@@ -1155,11 +1102,10 @@ Partial Class FrmPrincipal
         '
         'Pn1
         '
-        Me.TimerPanelDeslizante.SetDecoration(Me.Pn1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Pn1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Pn1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Pn1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Pn1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Pn1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Pn1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Pn1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Pn1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Pn1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Pn1.Location = New System.Drawing.Point(0, 223)
         Me.Pn1.Name = "Pn1"
@@ -1171,11 +1117,10 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteLeft.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnPanelDeslizanteLeft.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPanelDeslizanteLeft.CheckedState.Parent = Me.BtnPanelDeslizanteLeft
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPanelDeslizanteLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPanelDeslizanteLeft.HoverState.ImageSize = New System.Drawing.Size(21, 21)
         Me.BtnPanelDeslizanteLeft.HoverState.Parent = Me.BtnPanelDeslizanteLeft
         Me.BtnPanelDeslizanteLeft.Image = CType(resources.GetObject("BtnPanelDeslizanteLeft.Image"), System.Drawing.Image)
@@ -1196,11 +1141,10 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft.BackColor = System.Drawing.Color.Transparent
         Me.BtnPerfilLeft.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPerfilLeft.CheckedState.Parent = Me.BtnPerfilLeft
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPerfilLeft.HoverState.ImageSize = New System.Drawing.Size(24, 24)
         Me.BtnPerfilLeft.HoverState.Parent = Me.BtnPerfilLeft
         Me.BtnPerfilLeft.Image = CType(resources.GetObject("BtnPerfilLeft.Image"), System.Drawing.Image)
@@ -1220,11 +1164,10 @@ Partial Class FrmPrincipal
         '
         Me.PbPerfilLeft.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PbPerfilLeft.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbPerfilLeft, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbPerfilLeft.Image = CType(resources.GetObject("PbPerfilLeft.Image"), System.Drawing.Image)
         Me.PbPerfilLeft.ImageRotate = 0!
         Me.PbPerfilLeft.Location = New System.Drawing.Point(38, 19)
@@ -1240,11 +1183,10 @@ Partial Class FrmPrincipal
         'PbLogoP
         '
         Me.PbLogoP.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoP, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoP, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbLogoP, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbLogoP, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoP, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoP, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoP, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoP, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoP, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbLogoP.Dock = System.Windows.Forms.DockStyle.Top
         Me.PbLogoP.Image = CType(resources.GetObject("PbLogoP.Image"), System.Drawing.Image)
         Me.PbLogoP.Location = New System.Drawing.Point(0, 0)
@@ -1259,11 +1201,10 @@ Partial Class FrmPrincipal
         '
         Me.TpPhonebook.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.TpPhonebook.Controls.Add(Me.PanelMenu_Phonebook)
-        Me.TimerMenuDeslizante.SetDecoration(Me.TpPhonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.TpPhonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.TpPhonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.TpPhonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpPhonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpPhonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.TpPhonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.TpPhonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.TpPhonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TpPhonebook.Location = New System.Drawing.Point(5, 4)
         Me.TpPhonebook.Name = "TpPhonebook"
         Me.TpPhonebook.Padding = New System.Windows.Forms.Padding(3)
@@ -1282,11 +1223,10 @@ Partial Class FrmPrincipal
         Me.PanelMenu_Phonebook.Controls.Add(Me.BtnCadastros_Phonebook)
         Me.PanelMenu_Phonebook.Controls.Add(Me.PanelPerfilLeft_Phonebook)
         Me.PanelMenu_Phonebook.Controls.Add(Me.PbLogoP_Phonebook)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelMenu_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelMenu_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelMenu_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelMenu_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelMenu_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelMenu_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelMenu_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelMenu_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelMenu_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelMenu_Phonebook.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelMenu_Phonebook.Location = New System.Drawing.Point(3, 3)
         Me.PanelMenu_Phonebook.Name = "PanelMenu_Phonebook"
@@ -1299,11 +1239,10 @@ Partial Class FrmPrincipal
         Me.PanelLogoFull_Phonebook.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.PanelLogoFull_Phonebook.Controls.Add(Me.PbLogoG_Phonebook)
         Me.PanelLogoFull_Phonebook.Controls.Add(Me.PanelSocial_Phonebook)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelLogoFull_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelLogoFull_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelLogoFull_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelLogoFull_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelLogoFull_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelLogoFull_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelLogoFull_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelLogoFull_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelLogoFull_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelLogoFull_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelLogoFull_Phonebook.Location = New System.Drawing.Point(0, 568)
         Me.PanelLogoFull_Phonebook.Name = "PanelLogoFull_Phonebook"
@@ -1313,11 +1252,10 @@ Partial Class FrmPrincipal
         'PbLogoG_Phonebook
         '
         Me.PbLogoG_Phonebook.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoG_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoG_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbLogoG_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbLogoG_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoG_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoG_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoG_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoG_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoG_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbLogoG_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PbLogoG_Phonebook.Image = CType(resources.GetObject("PbLogoG_Phonebook.Image"), System.Drawing.Image)
         Me.PbLogoG_Phonebook.Location = New System.Drawing.Point(0, 36)
@@ -1333,11 +1271,10 @@ Partial Class FrmPrincipal
         Me.PanelSocial_Phonebook.Controls.Add(Me.BtnYoutube_Phonebook)
         Me.PanelSocial_Phonebook.Controls.Add(Me.BtnFacebook_Phonebook)
         Me.PanelSocial_Phonebook.Controls.Add(Me.BtnInstagram_Phonebook)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSocial_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelSocial_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSocial_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSocial_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelSocial_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelSocial_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSocial_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSocial_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSocial_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSocial_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelSocial_Phonebook.Location = New System.Drawing.Point(0, 107)
         Me.PanelSocial_Phonebook.Name = "PanelSocial_Phonebook"
@@ -1349,11 +1286,10 @@ Partial Class FrmPrincipal
         Me.BtnYoutube_Phonebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnYoutube_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnYoutube_Phonebook.CheckedState.Parent = Me.BtnYoutube_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnYoutube_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnYoutube_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnYoutube_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnYoutube_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnYoutube_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnYoutube_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnYoutube_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnYoutube_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnYoutube_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnYoutube_Phonebook.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnYoutube_Phonebook.HoverState.Parent = Me.BtnYoutube_Phonebook
         Me.BtnYoutube_Phonebook.Image = CType(resources.GetObject("BtnYoutube_Phonebook.Image"), System.Drawing.Image)
@@ -1373,11 +1309,10 @@ Partial Class FrmPrincipal
         Me.BtnFacebook_Phonebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnFacebook_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnFacebook_Phonebook.CheckedState.Parent = Me.BtnFacebook_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnFacebook_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnFacebook_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnFacebook_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnFacebook_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnFacebook_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnFacebook_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnFacebook_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnFacebook_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnFacebook_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnFacebook_Phonebook.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnFacebook_Phonebook.HoverState.Parent = Me.BtnFacebook_Phonebook
         Me.BtnFacebook_Phonebook.Image = CType(resources.GetObject("BtnFacebook_Phonebook.Image"), System.Drawing.Image)
@@ -1397,11 +1332,10 @@ Partial Class FrmPrincipal
         Me.BtnInstagram_Phonebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnInstagram_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnInstagram_Phonebook.CheckedState.Parent = Me.BtnInstagram_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnInstagram_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnInstagram_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnInstagram_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnInstagram_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnInstagram_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnInstagram_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnInstagram_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnInstagram_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnInstagram_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnInstagram_Phonebook.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnInstagram_Phonebook.HoverState.Parent = Me.BtnInstagram_Phonebook
         Me.BtnInstagram_Phonebook.Image = CType(resources.GetObject("BtnInstagram_Phonebook.Image"), System.Drawing.Image)
@@ -1429,11 +1363,10 @@ Partial Class FrmPrincipal
         Me.BtnHome_Phonebook.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnHome_Phonebook.CheckedState.Parent = Me.BtnHome_Phonebook
         Me.BtnHome_Phonebook.CustomImages.Parent = Me.BtnHome_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnHome_Phonebook.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnHome_Phonebook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnHome_Phonebook.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1474,11 +1407,10 @@ Partial Class FrmPrincipal
         Me.BtnLocalizacao.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnLocalizacao.CheckedState.Parent = Me.BtnLocalizacao
         Me.BtnLocalizacao.CustomImages.Parent = Me.BtnLocalizacao
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnLocalizacao, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnLocalizacao, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnLocalizacao, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnLocalizacao, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnLocalizacao, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnLocalizacao, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnLocalizacao, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnLocalizacao, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnLocalizacao, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnLocalizacao.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnLocalizacao.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnLocalizacao.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1519,11 +1451,10 @@ Partial Class FrmPrincipal
         Me.BtnContatos.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnContatos.CheckedState.Parent = Me.BtnContatos
         Me.BtnContatos.CustomImages.Parent = Me.BtnContatos
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnContatos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnContatos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnContatos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnContatos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnContatos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnContatos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnContatos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnContatos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnContatos, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnContatos.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnContatos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnContatos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1564,11 +1495,10 @@ Partial Class FrmPrincipal
         Me.BtnCadastros_Phonebook.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnCadastros_Phonebook.CheckedState.Parent = Me.BtnCadastros_Phonebook
         Me.BtnCadastros_Phonebook.CustomImages.Parent = Me.BtnCadastros_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnCadastros_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnCadastros_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnCadastros_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnCadastros_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnCadastros_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnCadastros_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnCadastros_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnCadastros_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnCadastros_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnCadastros_Phonebook.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnCadastros_Phonebook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnCadastros_Phonebook.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1606,11 +1536,10 @@ Partial Class FrmPrincipal
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.BtnPanelDeslizanteLeft_Phonebook)
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.BtnPerfilLeft_Phonebook)
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.PbPerfilLeft_Phonebook)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelPerfilLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilLeft_Phonebook.Location = New System.Drawing.Point(0, 100)
         Me.PanelPerfilLeft_Phonebook.Name = "PanelPerfilLeft_Phonebook"
@@ -1621,11 +1550,10 @@ Partial Class FrmPrincipal
         '
         Me.LblNameLeft_Phonebook.AutoSize = False
         Me.LblNameLeft_Phonebook.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblNameLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblNameLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNameLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LblNameLeft_Phonebook.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LblNameLeft_Phonebook.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -1640,11 +1568,10 @@ Partial Class FrmPrincipal
         '
         Me.LblEmailLeft_Phonebook.AutoSize = False
         Me.LblEmailLeft_Phonebook.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblEmailLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEmailLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LblEmailLeft_Phonebook.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmailLeft_Phonebook.ForeColor = System.Drawing.Color.DarkGray
@@ -1659,11 +1586,10 @@ Partial Class FrmPrincipal
         '
         Me.PanelNotifiLeft_Phonebook.Controls.Add(Me.LblNotLeftHome_Phonebook)
         Me.PanelNotifiLeft_Phonebook.Controls.Add(Me.BtnNotLeft_Phonebook)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelNotifiLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelNotifiLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelNotifiLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelNotifiLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelNotifiLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelNotifiLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelNotifiLeft_Phonebook.Location = New System.Drawing.Point(0, 190)
         Me.PanelNotifiLeft_Phonebook.Name = "PanelNotifiLeft_Phonebook"
@@ -1674,11 +1600,10 @@ Partial Class FrmPrincipal
         '
         Me.LblNotLeftHome_Phonebook.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LblNotLeftHome_Phonebook.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblNotLeftHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblNotLeftHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNotLeftHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNotLeftHome_Phonebook.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LblNotLeftHome_Phonebook.ForeColor = System.Drawing.Color.White
         Me.LblNotLeftHome_Phonebook.Location = New System.Drawing.Point(82, 12)
@@ -1692,11 +1617,10 @@ Partial Class FrmPrincipal
         Me.BtnNotLeft_Phonebook.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.BtnNotLeft_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnNotLeft_Phonebook.CheckedState.Parent = Me.BtnNotLeft_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnNotLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnNotLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnNotLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnNotLeft_Phonebook.HoverState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnNotLeft_Phonebook.HoverState.Parent = Me.BtnNotLeft_Phonebook
         Me.BtnNotLeft_Phonebook.Image = CType(resources.GetObject("BtnNotLeft_Phonebook.Image"), System.Drawing.Image)
@@ -1713,11 +1637,10 @@ Partial Class FrmPrincipal
         '
         'Panel36
         '
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel36, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel36, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel36, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel36, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel36.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel36.Location = New System.Drawing.Point(0, 223)
         Me.Panel36.Name = "Panel36"
@@ -1729,11 +1652,10 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteLeft_Phonebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnPanelDeslizanteLeft_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPanelDeslizanteLeft_Phonebook.CheckedState.Parent = Me.BtnPanelDeslizanteLeft_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPanelDeslizanteLeft_Phonebook.HoverState.ImageSize = New System.Drawing.Size(21, 21)
         Me.BtnPanelDeslizanteLeft_Phonebook.HoverState.Parent = Me.BtnPanelDeslizanteLeft_Phonebook
         Me.BtnPanelDeslizanteLeft_Phonebook.Image = CType(resources.GetObject("BtnPanelDeslizanteLeft_Phonebook.Image"), System.Drawing.Image)
@@ -1754,11 +1676,10 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft_Phonebook.BackColor = System.Drawing.Color.Transparent
         Me.BtnPerfilLeft_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPerfilLeft_Phonebook.CheckedState.Parent = Me.BtnPerfilLeft_Phonebook
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPerfilLeft_Phonebook.HoverState.ImageSize = New System.Drawing.Size(24, 24)
         Me.BtnPerfilLeft_Phonebook.HoverState.Parent = Me.BtnPerfilLeft_Phonebook
         Me.BtnPerfilLeft_Phonebook.Image = CType(resources.GetObject("BtnPerfilLeft_Phonebook.Image"), System.Drawing.Image)
@@ -1778,11 +1699,10 @@ Partial Class FrmPrincipal
         '
         Me.PbPerfilLeft_Phonebook.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PbPerfilLeft_Phonebook.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbPerfilLeft_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbPerfilLeft_Phonebook.Image = CType(resources.GetObject("PbPerfilLeft_Phonebook.Image"), System.Drawing.Image)
         Me.PbPerfilLeft_Phonebook.ImageRotate = 0!
         Me.PbPerfilLeft_Phonebook.Location = New System.Drawing.Point(38, 19)
@@ -1798,11 +1718,10 @@ Partial Class FrmPrincipal
         'PbLogoP_Phonebook
         '
         Me.PbLogoP_Phonebook.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoP_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoP_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbLogoP_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbLogoP_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoP_Phonebook, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoP_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoP_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoP_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoP_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbLogoP_Phonebook.Dock = System.Windows.Forms.DockStyle.Top
         Me.PbLogoP_Phonebook.Image = CType(resources.GetObject("PbLogoP_Phonebook.Image"), System.Drawing.Image)
         Me.PbLogoP_Phonebook.Location = New System.Drawing.Point(0, 0)
@@ -1817,11 +1736,10 @@ Partial Class FrmPrincipal
         '
         Me.TpHelpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.TpHelpdesk.Controls.Add(Me.PanelMenu_Helpdesk)
-        Me.TimerMenuDeslizante.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpHelpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpHelpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.TpHelpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.TpHelpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.TpHelpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TpHelpdesk.Location = New System.Drawing.Point(5, 4)
         Me.TpHelpdesk.Name = "TpHelpdesk"
         Me.TpHelpdesk.Padding = New System.Windows.Forms.Padding(3)
@@ -1842,11 +1760,10 @@ Partial Class FrmPrincipal
         Me.PanelMenu_Helpdesk.Controls.Add(Me.PanelLogoFull_Helpdesk)
         Me.PanelMenu_Helpdesk.Controls.Add(Me.PanelPerfilLeft_Helpdesk)
         Me.PanelMenu_Helpdesk.Controls.Add(Me.PbLogoP_Helpdesk)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelMenu_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelMenu_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelMenu_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelMenu_Helpdesk.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelMenu_Helpdesk.Location = New System.Drawing.Point(3, 3)
         Me.PanelMenu_Helpdesk.Name = "PanelMenu_Helpdesk"
@@ -1867,11 +1784,10 @@ Partial Class FrmPrincipal
         Me.BtnHome_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnHome_Helpdesk.CheckedState.Parent = Me.BtnHome_Helpdesk
         Me.BtnHome_Helpdesk.CustomImages.Parent = Me.BtnHome_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnHome_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnHome_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnHome_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1912,11 +1828,10 @@ Partial Class FrmPrincipal
         Me.BtnRelatorio_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnRelatorio_Helpdesk.CheckedState.Parent = Me.BtnRelatorio_Helpdesk
         Me.BtnRelatorio_Helpdesk.CustomImages.Parent = Me.BtnRelatorio_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnRelatorio_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnRelatorio_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnRelatorio_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnRelatorio_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnRelatorio_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnRelatorio_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -1957,11 +1872,10 @@ Partial Class FrmPrincipal
         Me.BtnAgenda_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnAgenda_Helpdesk.CheckedState.Parent = Me.BtnAgenda_Helpdesk
         Me.BtnAgenda_Helpdesk.CustomImages.Parent = Me.BtnAgenda_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnAgenda_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnAgenda_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAgenda_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnAgenda_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnAgenda_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnAgenda_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2002,11 +1916,10 @@ Partial Class FrmPrincipal
         Me.BtnGerenciador_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnGerenciador_Helpdesk.CheckedState.Parent = Me.BtnGerenciador_Helpdesk
         Me.BtnGerenciador_Helpdesk.CustomImages.Parent = Me.BtnGerenciador_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnGerenciador_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnGerenciador_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnGerenciador_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnGerenciador_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnGerenciador_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnGerenciador_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2047,11 +1960,10 @@ Partial Class FrmPrincipal
         Me.BtnPainel_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnPainel_Helpdesk.CheckedState.Parent = Me.BtnPainel_Helpdesk
         Me.BtnPainel_Helpdesk.CustomImages.Parent = Me.BtnPainel_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPainel_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPainel_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPainel_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPainel_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnPainel_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnPainel_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2092,11 +2004,10 @@ Partial Class FrmPrincipal
         Me.BtnAbrirOS_Helpdesk.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.BtnAbrirOS_Helpdesk.CheckedState.Parent = Me.BtnAbrirOS_Helpdesk
         Me.BtnAbrirOS_Helpdesk.CustomImages.Parent = Me.BtnAbrirOS_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnAbrirOS_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnAbrirOS_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnAbrirOS_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnAbrirOS_Helpdesk.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnAbrirOS_Helpdesk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnAbrirOS_Helpdesk.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2129,11 +2040,10 @@ Partial Class FrmPrincipal
         Me.PanelLogoFull_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.PanelLogoFull_Helpdesk.Controls.Add(Me.PbLogoG_Helpdesk)
         Me.PanelLogoFull_Helpdesk.Controls.Add(Me.PanelSocial_Helpdesk)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelLogoFull_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelLogoFull_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelLogoFull_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelLogoFull_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelLogoFull_Helpdesk.Location = New System.Drawing.Point(0, 658)
         Me.PanelLogoFull_Helpdesk.Name = "PanelLogoFull_Helpdesk"
@@ -2143,11 +2053,10 @@ Partial Class FrmPrincipal
         'PbLogoG_Helpdesk
         '
         Me.PbLogoG_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoG_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoG_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbLogoG_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PbLogoG_Helpdesk.Image = CType(resources.GetObject("PbLogoG_Helpdesk.Image"), System.Drawing.Image)
         Me.PbLogoG_Helpdesk.Location = New System.Drawing.Point(0, 36)
@@ -2163,11 +2072,10 @@ Partial Class FrmPrincipal
         Me.PanelSocial_Helpdesk.Controls.Add(Me.BtnYoutube_Helpdesk)
         Me.PanelSocial_Helpdesk.Controls.Add(Me.BtnFacebook_Helpdesk)
         Me.PanelSocial_Helpdesk.Controls.Add(Me.BtnInstagram_Helpdesk)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelSocial_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelSocial_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSocial_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSocial_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelSocial_Helpdesk.Location = New System.Drawing.Point(0, 107)
         Me.PanelSocial_Helpdesk.Name = "PanelSocial_Helpdesk"
@@ -2179,11 +2087,10 @@ Partial Class FrmPrincipal
         Me.BtnYoutube_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnYoutube_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnYoutube_Helpdesk.CheckedState.Parent = Me.BtnYoutube_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnYoutube_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnYoutube_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnYoutube_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnYoutube_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnYoutube_Helpdesk.HoverState.Parent = Me.BtnYoutube_Helpdesk
         Me.BtnYoutube_Helpdesk.Image = CType(resources.GetObject("BtnYoutube_Helpdesk.Image"), System.Drawing.Image)
@@ -2203,11 +2110,10 @@ Partial Class FrmPrincipal
         Me.BtnFacebook_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnFacebook_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnFacebook_Helpdesk.CheckedState.Parent = Me.BtnFacebook_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnFacebook_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnFacebook_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnFacebook_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnFacebook_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnFacebook_Helpdesk.HoverState.Parent = Me.BtnFacebook_Helpdesk
         Me.BtnFacebook_Helpdesk.Image = CType(resources.GetObject("BtnFacebook_Helpdesk.Image"), System.Drawing.Image)
@@ -2227,11 +2133,10 @@ Partial Class FrmPrincipal
         Me.BtnInstagram_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnInstagram_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnInstagram_Helpdesk.CheckedState.Parent = Me.BtnInstagram_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnInstagram_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnInstagram_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnInstagram_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnInstagram_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.BtnInstagram_Helpdesk.HoverState.Parent = Me.BtnInstagram_Helpdesk
         Me.BtnInstagram_Helpdesk.Image = CType(resources.GetObject("BtnInstagram_Helpdesk.Image"), System.Drawing.Image)
@@ -2256,11 +2161,10 @@ Partial Class FrmPrincipal
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.BtnPanelDeslizanteLeft_Helpdesk)
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.PbPerfilLeft_Helpdesk)
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.BtnPerfilLeft_Helpdesk)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelPerfilLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilLeft_Helpdesk.Location = New System.Drawing.Point(0, 100)
         Me.PanelPerfilLeft_Helpdesk.Name = "PanelPerfilLeft_Helpdesk"
@@ -2271,11 +2175,10 @@ Partial Class FrmPrincipal
         '
         Me.LblNameLeft_Helpdesk.AutoSize = False
         Me.LblNameLeft_Helpdesk.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNameLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LblNameLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LblNameLeft_Helpdesk.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -2290,11 +2193,10 @@ Partial Class FrmPrincipal
         '
         Me.LblEmailLeft_Helpdesk.AutoSize = False
         Me.LblEmailLeft_Helpdesk.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEmailLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LblEmailLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmailLeft_Helpdesk.ForeColor = System.Drawing.Color.DarkGray
@@ -2309,11 +2211,10 @@ Partial Class FrmPrincipal
         '
         Me.PanelNotifiLeft_Helpdesk.Controls.Add(Me.LblNotLeftHome_Helpdesk)
         Me.PanelNotifiLeft_Helpdesk.Controls.Add(Me.BtnNotLeft_Helpdesk)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelNotifiLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelNotifiLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelNotifiLeft_Helpdesk.Location = New System.Drawing.Point(0, 190)
         Me.PanelNotifiLeft_Helpdesk.Name = "PanelNotifiLeft_Helpdesk"
@@ -2324,11 +2225,10 @@ Partial Class FrmPrincipal
         '
         Me.LblNotLeftHome_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LblNotLeftHome_Helpdesk.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNotLeftHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNotLeftHome_Helpdesk.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LblNotLeftHome_Helpdesk.ForeColor = System.Drawing.Color.White
         Me.LblNotLeftHome_Helpdesk.Location = New System.Drawing.Point(82, 12)
@@ -2342,11 +2242,10 @@ Partial Class FrmPrincipal
         Me.BtnNotLeft_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.BtnNotLeft_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnNotLeft_Helpdesk.CheckedState.Parent = Me.BtnNotLeft_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnNotLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnNotLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnNotLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnNotLeft_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnNotLeft_Helpdesk.HoverState.Parent = Me.BtnNotLeft_Helpdesk
         Me.BtnNotLeft_Helpdesk.Image = CType(resources.GetObject("BtnNotLeft_Helpdesk.Image"), System.Drawing.Image)
@@ -2363,11 +2262,10 @@ Partial Class FrmPrincipal
         '
         'Panel41
         '
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel41, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel41, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel41, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel41, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel41.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel41.Location = New System.Drawing.Point(0, 223)
         Me.Panel41.Name = "Panel41"
@@ -2379,11 +2277,10 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteLeft_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnPanelDeslizanteLeft_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPanelDeslizanteLeft_Helpdesk.CheckedState.Parent = Me.BtnPanelDeslizanteLeft_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPanelDeslizanteLeft_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(21, 21)
         Me.BtnPanelDeslizanteLeft_Helpdesk.HoverState.Parent = Me.BtnPanelDeslizanteLeft_Helpdesk
         Me.BtnPanelDeslizanteLeft_Helpdesk.Image = CType(resources.GetObject("BtnPanelDeslizanteLeft_Helpdesk.Image"), System.Drawing.Image)
@@ -2402,11 +2299,10 @@ Partial Class FrmPrincipal
         '
         Me.PbPerfilLeft_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PbPerfilLeft_Helpdesk.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbPerfilLeft_Helpdesk.Image = CType(resources.GetObject("PbPerfilLeft_Helpdesk.Image"), System.Drawing.Image)
         Me.PbPerfilLeft_Helpdesk.ImageRotate = 0!
         Me.PbPerfilLeft_Helpdesk.Location = New System.Drawing.Point(38, 19)
@@ -2424,11 +2320,10 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.BtnPerfilLeft_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPerfilLeft_Helpdesk.CheckedState.Parent = Me.BtnPerfilLeft_Helpdesk
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPerfilLeft_Helpdesk.HoverState.ImageSize = New System.Drawing.Size(24, 24)
         Me.BtnPerfilLeft_Helpdesk.HoverState.Parent = Me.BtnPerfilLeft_Helpdesk
         Me.BtnPerfilLeft_Helpdesk.Image = CType(resources.GetObject("BtnPerfilLeft_Helpdesk.Image"), System.Drawing.Image)
@@ -2446,11 +2341,10 @@ Partial Class FrmPrincipal
         'PbLogoP_Helpdesk
         '
         Me.PbLogoP_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbLogoP_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbLogoP_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbLogoP_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
         Me.PbLogoP_Helpdesk.Image = CType(resources.GetObject("PbLogoP_Helpdesk.Image"), System.Drawing.Image)
         Me.PbLogoP_Helpdesk.Location = New System.Drawing.Point(0, 0)
@@ -2465,11 +2359,10 @@ Partial Class FrmPrincipal
         '
         Me.TpEstoque.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.TpEstoque.Controls.Add(Me.Guna2Panel5)
-        Me.TimerMenuDeslizante.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpEstoque, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TpEstoque.Location = New System.Drawing.Point(5, 4)
         Me.TpEstoque.Name = "TpEstoque"
         Me.TpEstoque.Size = New System.Drawing.Size(219, 651)
@@ -2488,11 +2381,10 @@ Partial Class FrmPrincipal
         Me.Guna2Panel5.Controls.Add(Me.Guna2GradientButton27)
         Me.Guna2Panel5.Controls.Add(Me.Panel44)
         Me.Guna2Panel5.Controls.Add(Me.PictureBox14)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2Panel5, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel5, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel5, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel5, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2Panel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2Panel5.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel5.Name = "Guna2Panel5"
@@ -2505,11 +2397,10 @@ Partial Class FrmPrincipal
         Me.Panel42.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.Panel42.Controls.Add(Me.PictureBox13)
         Me.Panel42.Controls.Add(Me.Panel43)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel42, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel42, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel42, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel42, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel42.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel42.Location = New System.Drawing.Point(0, 793)
         Me.Panel42.Name = "Panel42"
@@ -2519,11 +2410,10 @@ Partial Class FrmPrincipal
         'PictureBox13
         '
         Me.PictureBox13.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox13, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PictureBox13, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox13, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox13, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PictureBox13.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
         Me.PictureBox13.Location = New System.Drawing.Point(0, 36)
@@ -2539,11 +2429,10 @@ Partial Class FrmPrincipal
         Me.Panel43.Controls.Add(Me.Guna2ImageButton13)
         Me.Panel43.Controls.Add(Me.Guna2ImageButton14)
         Me.Panel43.Controls.Add(Me.Guna2ImageButton15)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel43, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel43, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel43, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel43, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel43.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel43.Location = New System.Drawing.Point(0, 107)
         Me.Panel43.Name = "Panel43"
@@ -2556,11 +2445,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton13.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton13.CheckedState.Parent = Me.Guna2ImageButton13
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton13, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton13, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton13, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton13, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton13, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton13.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton13.HoverState.Parent = Me.Guna2ImageButton13
         Me.Guna2ImageButton13.Image = CType(resources.GetObject("Guna2ImageButton13.Image"), System.Drawing.Image)
@@ -2580,11 +2468,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton14.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton14.CheckedState.Parent = Me.Guna2ImageButton14
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton14, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton14, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton14, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton14, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton14.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton14.HoverState.Parent = Me.Guna2ImageButton14
         Me.Guna2ImageButton14.Image = CType(resources.GetObject("Guna2ImageButton14.Image"), System.Drawing.Image)
@@ -2604,11 +2491,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton15.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton15.CheckedState.Parent = Me.Guna2ImageButton15
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton15, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton15, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton15, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton15, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton15.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton15.HoverState.Parent = Me.Guna2ImageButton15
         Me.Guna2ImageButton15.Image = CType(resources.GetObject("Guna2ImageButton15.Image"), System.Drawing.Image)
@@ -2638,11 +2524,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton19.CustomImages.Parent = Me.Guna2GradientButton19
         Me.Guna2GradientButton19.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton19.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton19, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton19.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton19.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton19.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2685,11 +2570,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton20.CustomImages.Parent = Me.Guna2GradientButton20
         Me.Guna2GradientButton20.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton20.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton20, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton20.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton20.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton20.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2727,11 +2611,10 @@ Partial Class FrmPrincipal
         Me.Guna2Panel6.Controls.Add(Me.Guna2GradientButton25)
         Me.Guna2Panel6.CustomizableEdges.BottomRight = False
         Me.Guna2Panel6.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2Panel6, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel6, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel6, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel6, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel6.Location = New System.Drawing.Point(0, 478)
         Me.Guna2Panel6.Name = "Guna2Panel6"
@@ -2751,11 +2634,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton21.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton21.CheckedState.Parent = Me.Guna2GradientButton21
         Me.Guna2GradientButton21.CustomImages.Parent = Me.Guna2GradientButton21
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton21, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton21.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton21.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton21.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2791,11 +2673,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton22.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton22.CheckedState.Parent = Me.Guna2GradientButton22
         Me.Guna2GradientButton22.CustomImages.Parent = Me.Guna2GradientButton22
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton22, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton22.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton22.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton22.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2831,11 +2712,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton23.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton23.CheckedState.Parent = Me.Guna2GradientButton23
         Me.Guna2GradientButton23.CustomImages.Parent = Me.Guna2GradientButton23
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton23, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton23.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton23.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton23.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2871,11 +2751,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton24.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton24.CheckedState.Parent = Me.Guna2GradientButton24
         Me.Guna2GradientButton24.CustomImages.Parent = Me.Guna2GradientButton24
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton24, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton24.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton24.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton24.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2911,11 +2790,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton25.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton25.CheckedState.Parent = Me.Guna2GradientButton25
         Me.Guna2GradientButton25.CustomImages.Parent = Me.Guna2GradientButton25
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton25, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton25.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton25.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton25.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -2953,11 +2831,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton26.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Guna2GradientButton26.CheckedState.Parent = Me.Guna2GradientButton26
         Me.Guna2GradientButton26.CustomImages.Parent = Me.Guna2GradientButton26
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton26, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton26.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton26.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton26.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3000,11 +2877,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton27.CustomImages.Parent = Me.Guna2GradientButton27
         Me.Guna2GradientButton27.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton27.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton27, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton27.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton27.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton27.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3042,11 +2918,10 @@ Partial Class FrmPrincipal
         Me.Panel44.Controls.Add(Me.Guna2ImageButton17)
         Me.Panel44.Controls.Add(Me.Guna2CirclePictureBox3)
         Me.Panel44.Controls.Add(Me.Guna2ImageButton18)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel44, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel44, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel44, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel44, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel44.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel44.Location = New System.Drawing.Point(0, 100)
         Me.Panel44.Name = "Panel44"
@@ -3057,11 +2932,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel19.AutoSize = False
         Me.Guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel19, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel19.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel19.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel19.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -3076,11 +2950,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel20.AutoSize = False
         Me.Guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel20, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel20.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel20.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel20.ForeColor = System.Drawing.Color.DarkGray
@@ -3095,11 +2968,10 @@ Partial Class FrmPrincipal
         '
         Me.Panel45.Controls.Add(Me.Guna2HtmlLabel21)
         Me.Panel45.Controls.Add(Me.Guna2ImageButton16)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel45, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel45, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel45, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel45, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel45.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel45.Location = New System.Drawing.Point(0, 190)
         Me.Panel45.Name = "Panel45"
@@ -3110,11 +2982,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel21.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel21, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel21.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel21.ForeColor = System.Drawing.Color.White
         Me.Guna2HtmlLabel21.Location = New System.Drawing.Point(75, 12)
@@ -3128,11 +2999,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton16.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2ImageButton16.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton16.CheckedState.Parent = Me.Guna2ImageButton16
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton16, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton16, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton16, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton16, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton16.HoverState.ImageSize = New System.Drawing.Size(26, 26)
         Me.Guna2ImageButton16.HoverState.Parent = Me.Guna2ImageButton16
         Me.Guna2ImageButton16.Image = CType(resources.GetObject("Guna2ImageButton16.Image"), System.Drawing.Image)
@@ -3149,11 +3019,10 @@ Partial Class FrmPrincipal
         '
         'Panel46
         '
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel46, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel46, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel46, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel46, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel46, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel46, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel46, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel46, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel46, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel46.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel46.Location = New System.Drawing.Point(0, 223)
         Me.Panel46.Name = "Panel46"
@@ -3165,11 +3034,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton17.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton17.CheckedState.Parent = Me.Guna2ImageButton17
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton17, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton17, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton17, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton17, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton17.HoverState.ImageSize = New System.Drawing.Size(21, 21)
         Me.Guna2ImageButton17.HoverState.Parent = Me.Guna2ImageButton17
         Me.Guna2ImageButton17.Image = CType(resources.GetObject("Guna2ImageButton17.Image"), System.Drawing.Image)
@@ -3188,11 +3056,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2CirclePictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2CirclePictureBox3.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2CirclePictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2CirclePictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2CirclePictureBox3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2CirclePictureBox3, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox3, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox3, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2CirclePictureBox3, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2CirclePictureBox3.Image = CType(resources.GetObject("Guna2CirclePictureBox3.Image"), System.Drawing.Image)
         Me.Guna2CirclePictureBox3.ImageRotate = 0!
         Me.Guna2CirclePictureBox3.Location = New System.Drawing.Point(31, 19)
@@ -3210,11 +3077,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton18.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2ImageButton18.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton18.CheckedState.Parent = Me.Guna2ImageButton18
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton18, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton18, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton18, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton18, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton18.HoverState.ImageSize = New System.Drawing.Size(24, 24)
         Me.Guna2ImageButton18.HoverState.Parent = Me.Guna2ImageButton18
         Me.Guna2ImageButton18.Image = CType(resources.GetObject("Guna2ImageButton18.Image"), System.Drawing.Image)
@@ -3232,11 +3098,10 @@ Partial Class FrmPrincipal
         'PictureBox14
         '
         Me.PictureBox14.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox14, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox14, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PictureBox14, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox14, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox14, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PictureBox14.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox14.Image = CType(resources.GetObject("PictureBox14.Image"), System.Drawing.Image)
         Me.PictureBox14.Location = New System.Drawing.Point(0, 0)
@@ -3251,11 +3116,10 @@ Partial Class FrmPrincipal
         '
         Me.TpFinanceiro.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.TpFinanceiro.Controls.Add(Me.Guna2Panel7)
-        Me.TimerMenuDeslizante.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpFinanceiro, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpFinanceiro, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.TpFinanceiro, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.TpFinanceiro, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.TpFinanceiro, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TpFinanceiro.Location = New System.Drawing.Point(5, 4)
         Me.TpFinanceiro.Name = "TpFinanceiro"
         Me.TpFinanceiro.Size = New System.Drawing.Size(219, 651)
@@ -3274,11 +3138,10 @@ Partial Class FrmPrincipal
         Me.Guna2Panel7.Controls.Add(Me.Guna2GradientButton36)
         Me.Guna2Panel7.Controls.Add(Me.Panel49)
         Me.Guna2Panel7.Controls.Add(Me.PictureBox16)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2Panel7, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel7, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel7, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel7, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2Panel7.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2Panel7.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel7.Name = "Guna2Panel7"
@@ -3291,11 +3154,10 @@ Partial Class FrmPrincipal
         Me.Panel47.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.Panel47.Controls.Add(Me.PictureBox15)
         Me.Panel47.Controls.Add(Me.Panel48)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel47, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel47, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel47, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel47, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel47, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel47, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel47, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel47, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel47, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel47.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel47.Location = New System.Drawing.Point(0, 793)
         Me.Panel47.Name = "Panel47"
@@ -3305,11 +3167,10 @@ Partial Class FrmPrincipal
         'PictureBox15
         '
         Me.PictureBox15.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox15, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox15, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PictureBox15, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox15, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox15, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PictureBox15.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PictureBox15.Image = CType(resources.GetObject("PictureBox15.Image"), System.Drawing.Image)
         Me.PictureBox15.Location = New System.Drawing.Point(0, 36)
@@ -3325,11 +3186,10 @@ Partial Class FrmPrincipal
         Me.Panel48.Controls.Add(Me.Guna2ImageButton19)
         Me.Panel48.Controls.Add(Me.Guna2ImageButton20)
         Me.Panel48.Controls.Add(Me.Guna2ImageButton21)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel48, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel48, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel48, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel48, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel48, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel48, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel48, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel48, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel48, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel48.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel48.Location = New System.Drawing.Point(0, 107)
         Me.Panel48.Name = "Panel48"
@@ -3342,11 +3202,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton19.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton19.CheckedState.Parent = Me.Guna2ImageButton19
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton19, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton19, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton19, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton19.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton19.HoverState.Parent = Me.Guna2ImageButton19
         Me.Guna2ImageButton19.Image = CType(resources.GetObject("Guna2ImageButton19.Image"), System.Drawing.Image)
@@ -3366,11 +3225,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton20.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton20.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton20.CheckedState.Parent = Me.Guna2ImageButton20
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton20, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton20, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton20, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton20.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton20.HoverState.Parent = Me.Guna2ImageButton20
         Me.Guna2ImageButton20.Image = CType(resources.GetObject("Guna2ImageButton20.Image"), System.Drawing.Image)
@@ -3390,11 +3248,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton21.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton21.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton21.CheckedState.Parent = Me.Guna2ImageButton21
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton21, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton21, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton21, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton21.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton21.HoverState.Parent = Me.Guna2ImageButton21
         Me.Guna2ImageButton21.Image = CType(resources.GetObject("Guna2ImageButton21.Image"), System.Drawing.Image)
@@ -3424,11 +3281,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton28.CustomImages.Parent = Me.Guna2GradientButton28
         Me.Guna2GradientButton28.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton28.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton28, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton28, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton28, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton28, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton28.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton28.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton28.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3471,11 +3327,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton29.CustomImages.Parent = Me.Guna2GradientButton29
         Me.Guna2GradientButton29.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton29.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton29, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton29, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton29, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton29, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton29.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton29.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton29.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3513,11 +3368,10 @@ Partial Class FrmPrincipal
         Me.Guna2Panel8.Controls.Add(Me.Guna2GradientButton34)
         Me.Guna2Panel8.CustomizableEdges.BottomRight = False
         Me.Guna2Panel8.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2Panel8, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel8, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel8, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel8, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel8.Location = New System.Drawing.Point(0, 478)
         Me.Guna2Panel8.Name = "Guna2Panel8"
@@ -3537,11 +3391,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton30.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton30.CheckedState.Parent = Me.Guna2GradientButton30
         Me.Guna2GradientButton30.CustomImages.Parent = Me.Guna2GradientButton30
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton30, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton30, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton30, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton30, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton30.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton30.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton30.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3577,11 +3430,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton31.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton31.CheckedState.Parent = Me.Guna2GradientButton31
         Me.Guna2GradientButton31.CustomImages.Parent = Me.Guna2GradientButton31
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton31, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton31, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton31, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton31, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton31, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton31.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton31.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton31.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3617,11 +3469,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton32.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton32.CheckedState.Parent = Me.Guna2GradientButton32
         Me.Guna2GradientButton32.CustomImages.Parent = Me.Guna2GradientButton32
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton32, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton32, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton32, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton32, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton32, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton32.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton32.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton32.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3657,11 +3508,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton33.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton33.CheckedState.Parent = Me.Guna2GradientButton33
         Me.Guna2GradientButton33.CustomImages.Parent = Me.Guna2GradientButton33
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton33, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton33, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton33, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton33, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton33, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton33.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton33.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton33.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3697,11 +3547,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton34.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton34.CheckedState.Parent = Me.Guna2GradientButton34
         Me.Guna2GradientButton34.CustomImages.Parent = Me.Guna2GradientButton34
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton34, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton34, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton34, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton34, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton34, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton34, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton34, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton34, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton34, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton34.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton34.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton34.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3739,11 +3588,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton35.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Guna2GradientButton35.CheckedState.Parent = Me.Guna2GradientButton35
         Me.Guna2GradientButton35.CustomImages.Parent = Me.Guna2GradientButton35
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton35, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton35, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton35, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton35, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton35, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton35.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton35.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton35.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3786,11 +3634,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton36.CustomImages.Parent = Me.Guna2GradientButton36
         Me.Guna2GradientButton36.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton36.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton36, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton36, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton36, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton36, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton36, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton36.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton36.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton36.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -3828,11 +3675,10 @@ Partial Class FrmPrincipal
         Me.Panel49.Controls.Add(Me.Guna2ImageButton23)
         Me.Panel49.Controls.Add(Me.Guna2CirclePictureBox4)
         Me.Panel49.Controls.Add(Me.Guna2ImageButton24)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel49, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel49, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel49, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel49, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel49, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel49, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel49, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel49, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel49, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel49.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel49.Location = New System.Drawing.Point(0, 100)
         Me.Panel49.Name = "Panel49"
@@ -3843,11 +3689,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel22.AutoSize = False
         Me.Guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel22, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel22.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel22.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel22.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -3862,11 +3707,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel23.AutoSize = False
         Me.Guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel23, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel23.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel23.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel23.ForeColor = System.Drawing.Color.DarkGray
@@ -3881,11 +3725,10 @@ Partial Class FrmPrincipal
         '
         Me.Panel50.Controls.Add(Me.Guna2HtmlLabel24)
         Me.Panel50.Controls.Add(Me.Guna2ImageButton22)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel50, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel50, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel50, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel50, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel50, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel50, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel50, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel50, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel50, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel50.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel50.Location = New System.Drawing.Point(0, 190)
         Me.Panel50.Name = "Panel50"
@@ -3896,11 +3739,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel24.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel24, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel24.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel24.ForeColor = System.Drawing.Color.White
         Me.Guna2HtmlLabel24.Location = New System.Drawing.Point(75, 12)
@@ -3914,11 +3756,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton22.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2ImageButton22.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton22.CheckedState.Parent = Me.Guna2ImageButton22
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton22, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton22, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton22, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton22.HoverState.ImageSize = New System.Drawing.Size(26, 26)
         Me.Guna2ImageButton22.HoverState.Parent = Me.Guna2ImageButton22
         Me.Guna2ImageButton22.Image = CType(resources.GetObject("Guna2ImageButton22.Image"), System.Drawing.Image)
@@ -3935,11 +3776,10 @@ Partial Class FrmPrincipal
         '
         'Panel51
         '
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel51, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel51, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel51, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel51, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel51, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel51, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel51, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel51, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel51, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel51.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel51.Location = New System.Drawing.Point(0, 223)
         Me.Panel51.Name = "Panel51"
@@ -3951,11 +3791,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton23.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton23.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton23.CheckedState.Parent = Me.Guna2ImageButton23
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton23, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton23, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton23, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton23.HoverState.ImageSize = New System.Drawing.Size(21, 21)
         Me.Guna2ImageButton23.HoverState.Parent = Me.Guna2ImageButton23
         Me.Guna2ImageButton23.Image = CType(resources.GetObject("Guna2ImageButton23.Image"), System.Drawing.Image)
@@ -3974,11 +3813,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2CirclePictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2CirclePictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2CirclePictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2CirclePictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2CirclePictureBox4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2CirclePictureBox4, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox4, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox4, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2CirclePictureBox4, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2CirclePictureBox4.Image = CType(resources.GetObject("Guna2CirclePictureBox4.Image"), System.Drawing.Image)
         Me.Guna2CirclePictureBox4.ImageRotate = 0!
         Me.Guna2CirclePictureBox4.Location = New System.Drawing.Point(31, 19)
@@ -3996,11 +3834,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton24.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2ImageButton24.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton24.CheckedState.Parent = Me.Guna2ImageButton24
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton24, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton24, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton24, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton24.HoverState.ImageSize = New System.Drawing.Size(24, 24)
         Me.Guna2ImageButton24.HoverState.Parent = Me.Guna2ImageButton24
         Me.Guna2ImageButton24.Image = CType(resources.GetObject("Guna2ImageButton24.Image"), System.Drawing.Image)
@@ -4018,11 +3855,10 @@ Partial Class FrmPrincipal
         'PictureBox16
         '
         Me.PictureBox16.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox16, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PictureBox16, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox16, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox16, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PictureBox16.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox16.Image = CType(resources.GetObject("PictureBox16.Image"), System.Drawing.Image)
         Me.PictureBox16.Location = New System.Drawing.Point(0, 0)
@@ -4037,11 +3873,10 @@ Partial Class FrmPrincipal
         '
         Me.TpDashboard.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.TpDashboard.Controls.Add(Me.Guna2Panel9)
-        Me.TimerMenuDeslizante.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpDashboard, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.TpDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.TpDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.TpDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.TpDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TpDashboard.Location = New System.Drawing.Point(5, 4)
         Me.TpDashboard.Name = "TpDashboard"
         Me.TpDashboard.Size = New System.Drawing.Size(219, 651)
@@ -4060,11 +3895,10 @@ Partial Class FrmPrincipal
         Me.Guna2Panel9.Controls.Add(Me.Guna2GradientButton45)
         Me.Guna2Panel9.Controls.Add(Me.Panel54)
         Me.Guna2Panel9.Controls.Add(Me.PictureBox18)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel9, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2Panel9, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel9, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel9, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel9, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2Panel9.Dock = System.Windows.Forms.DockStyle.Left
         Me.Guna2Panel9.Location = New System.Drawing.Point(0, 0)
         Me.Guna2Panel9.Name = "Guna2Panel9"
@@ -4077,11 +3911,10 @@ Partial Class FrmPrincipal
         Me.Panel52.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.Panel52.Controls.Add(Me.PictureBox17)
         Me.Panel52.Controls.Add(Me.Panel53)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel52, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel52, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel52, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel52, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel52, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel52, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel52, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel52, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel52, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel52.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel52.Location = New System.Drawing.Point(0, 793)
         Me.Panel52.Name = "Panel52"
@@ -4091,11 +3924,10 @@ Partial Class FrmPrincipal
         'PictureBox17
         '
         Me.PictureBox17.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox17, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox17, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PictureBox17, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox17, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox17, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PictureBox17.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PictureBox17.Image = CType(resources.GetObject("PictureBox17.Image"), System.Drawing.Image)
         Me.PictureBox17.Location = New System.Drawing.Point(0, 36)
@@ -4111,11 +3943,10 @@ Partial Class FrmPrincipal
         Me.Panel53.Controls.Add(Me.Guna2ImageButton25)
         Me.Panel53.Controls.Add(Me.Guna2ImageButton26)
         Me.Panel53.Controls.Add(Me.Guna2ImageButton27)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel53, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel53, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel53, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel53, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel53, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel53, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel53, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel53, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel53, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel53.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel53.Location = New System.Drawing.Point(0, 107)
         Me.Panel53.Name = "Panel53"
@@ -4128,11 +3959,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton25.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton25.CheckedState.Parent = Me.Guna2ImageButton25
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton25, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton25.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton25.HoverState.Parent = Me.Guna2ImageButton25
         Me.Guna2ImageButton25.Image = CType(resources.GetObject("Guna2ImageButton25.Image"), System.Drawing.Image)
@@ -4152,11 +3982,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton26.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton26.CheckedState.Parent = Me.Guna2ImageButton26
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton26, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton26.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton26.HoverState.Parent = Me.Guna2ImageButton26
         Me.Guna2ImageButton26.Image = CType(resources.GetObject("Guna2ImageButton26.Image"), System.Drawing.Image)
@@ -4176,11 +4005,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton27.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton27.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton27.CheckedState.Parent = Me.Guna2ImageButton27
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton27, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton27.HoverState.ImageSize = New System.Drawing.Size(30, 30)
         Me.Guna2ImageButton27.HoverState.Parent = Me.Guna2ImageButton27
         Me.Guna2ImageButton27.Image = CType(resources.GetObject("Guna2ImageButton27.Image"), System.Drawing.Image)
@@ -4210,11 +4038,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton37.CustomImages.Parent = Me.Guna2GradientButton37
         Me.Guna2GradientButton37.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton37.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton37, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton37, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton37, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton37, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton37, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton37.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton37.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton37.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4257,11 +4084,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton38.CustomImages.Parent = Me.Guna2GradientButton38
         Me.Guna2GradientButton38.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton38.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton38, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton38, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton38, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton38, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton38, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton38.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton38.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton38.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4299,11 +4125,10 @@ Partial Class FrmPrincipal
         Me.Guna2Panel10.Controls.Add(Me.Guna2GradientButton43)
         Me.Guna2Panel10.CustomizableEdges.BottomRight = False
         Me.Guna2Panel10.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2Panel10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2Panel10, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2Panel10, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2Panel10, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2Panel10, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2Panel10, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2Panel10.Dock = System.Windows.Forms.DockStyle.Top
         Me.Guna2Panel10.Location = New System.Drawing.Point(0, 478)
         Me.Guna2Panel10.Name = "Guna2Panel10"
@@ -4323,11 +4148,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton39.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton39.CheckedState.Parent = Me.Guna2GradientButton39
         Me.Guna2GradientButton39.CustomImages.Parent = Me.Guna2GradientButton39
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton39, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton39, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton39, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton39, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton39, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton39.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton39.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton39.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4363,11 +4187,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton40.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton40.CheckedState.Parent = Me.Guna2GradientButton40
         Me.Guna2GradientButton40.CustomImages.Parent = Me.Guna2GradientButton40
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton40, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton40, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton40, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton40, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton40, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton40.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton40.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton40.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4403,11 +4226,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton41.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton41.CheckedState.Parent = Me.Guna2GradientButton41
         Me.Guna2GradientButton41.CustomImages.Parent = Me.Guna2GradientButton41
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton41, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton41, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton41, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton41, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton41, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton41.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton41.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton41.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4443,11 +4265,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton42.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton42.CheckedState.Parent = Me.Guna2GradientButton42
         Me.Guna2GradientButton42.CustomImages.Parent = Me.Guna2GradientButton42
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton42, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton42, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton42, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton42, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton42, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton42.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton42.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton42.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4483,11 +4304,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton43.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.Guna2GradientButton43.CheckedState.Parent = Me.Guna2GradientButton43
         Me.Guna2GradientButton43.CustomImages.Parent = Me.Guna2GradientButton43
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton43, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton43, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton43, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton43, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton43, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton43.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton43.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton43.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4525,11 +4345,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton44.CheckedState.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.Guna2GradientButton44.CheckedState.Parent = Me.Guna2GradientButton44
         Me.Guna2GradientButton44.CustomImages.Parent = Me.Guna2GradientButton44
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton44, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton44, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton44, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton44, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton44, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton44.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton44.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton44.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4572,11 +4391,10 @@ Partial Class FrmPrincipal
         Me.Guna2GradientButton45.CustomImages.Parent = Me.Guna2GradientButton45
         Me.Guna2GradientButton45.CustomizableEdges.BottomRight = False
         Me.Guna2GradientButton45.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2GradientButton45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2GradientButton45, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2GradientButton45, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2GradientButton45, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2GradientButton45, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2GradientButton45, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2GradientButton45.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton45.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton45.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -4614,11 +4432,10 @@ Partial Class FrmPrincipal
         Me.Panel54.Controls.Add(Me.Guna2ImageButton29)
         Me.Panel54.Controls.Add(Me.Guna2CirclePictureBox5)
         Me.Panel54.Controls.Add(Me.Guna2ImageButton30)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel54, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel54, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel54, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel54, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel54, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel54, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel54, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel54, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel54, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel54.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel54.Location = New System.Drawing.Point(0, 100)
         Me.Panel54.Name = "Panel54"
@@ -4629,11 +4446,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel25.AutoSize = False
         Me.Guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel25, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel25, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel25.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel25.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel25.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -4648,11 +4464,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel26.AutoSize = False
         Me.Guna2HtmlLabel26.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel26, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel26, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel26, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel26.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Guna2HtmlLabel26.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel26.ForeColor = System.Drawing.Color.DarkGray
@@ -4667,11 +4482,10 @@ Partial Class FrmPrincipal
         '
         Me.Panel55.Controls.Add(Me.Guna2HtmlLabel27)
         Me.Panel55.Controls.Add(Me.Guna2ImageButton28)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel55, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel55, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel55, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel55, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel55, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel55, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel55, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel55, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel55, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel55.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel55.Location = New System.Drawing.Point(0, 190)
         Me.Panel55.Name = "Panel55"
@@ -4682,11 +4496,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2HtmlLabel27.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2HtmlLabel27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel27, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2HtmlLabel27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2HtmlLabel27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel27, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2HtmlLabel27, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel27.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2HtmlLabel27.ForeColor = System.Drawing.Color.White
         Me.Guna2HtmlLabel27.Location = New System.Drawing.Point(75, 12)
@@ -4700,11 +4513,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton28.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2ImageButton28.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton28.CheckedState.Parent = Me.Guna2ImageButton28
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton28, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton28, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton28, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton28, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton28, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton28.HoverState.ImageSize = New System.Drawing.Size(26, 26)
         Me.Guna2ImageButton28.HoverState.Parent = Me.Guna2ImageButton28
         Me.Guna2ImageButton28.Image = CType(resources.GetObject("Guna2ImageButton28.Image"), System.Drawing.Image)
@@ -4721,11 +4533,10 @@ Partial Class FrmPrincipal
         '
         'Panel56
         '
-        Me.TimerPanelDeslizante.SetDecoration(Me.Panel56, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Panel56, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Panel56, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel56, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Panel56, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Panel56, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Panel56, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Panel56, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Panel56, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Panel56.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel56.Location = New System.Drawing.Point(0, 223)
         Me.Panel56.Name = "Panel56"
@@ -4737,11 +4548,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton29.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2ImageButton29.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton29.CheckedState.Parent = Me.Guna2ImageButton29
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton29, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton29, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton29, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton29, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton29, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton29.HoverState.ImageSize = New System.Drawing.Size(21, 21)
         Me.Guna2ImageButton29.HoverState.Parent = Me.Guna2ImageButton29
         Me.Guna2ImageButton29.Image = CType(resources.GetObject("Guna2ImageButton29.Image"), System.Drawing.Image)
@@ -4760,11 +4570,10 @@ Partial Class FrmPrincipal
         '
         Me.Guna2CirclePictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Guna2CirclePictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2CirclePictureBox5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2CirclePictureBox5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2CirclePictureBox5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2CirclePictureBox5, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox5, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2CirclePictureBox5, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2CirclePictureBox5, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2CirclePictureBox5.Image = CType(resources.GetObject("Guna2CirclePictureBox5.Image"), System.Drawing.Image)
         Me.Guna2CirclePictureBox5.ImageRotate = 0!
         Me.Guna2CirclePictureBox5.Location = New System.Drawing.Point(31, 19)
@@ -4782,11 +4591,10 @@ Partial Class FrmPrincipal
         Me.Guna2ImageButton30.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Guna2ImageButton30.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.Guna2ImageButton30.CheckedState.Parent = Me.Guna2ImageButton30
-        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.Guna2ImageButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.Guna2ImageButton30, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.Guna2ImageButton30, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.Guna2ImageButton30, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.Guna2ImageButton30, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.Guna2ImageButton30, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ImageButton30.HoverState.ImageSize = New System.Drawing.Size(24, 24)
         Me.Guna2ImageButton30.HoverState.Parent = Me.Guna2ImageButton30
         Me.Guna2ImageButton30.Image = CType(resources.GetObject("Guna2ImageButton30.Image"), System.Drawing.Image)
@@ -4804,11 +4612,10 @@ Partial Class FrmPrincipal
         'PictureBox18
         '
         Me.PictureBox18.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PictureBox18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PictureBox18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox18, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PictureBox18, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PictureBox18, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PictureBox18, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PictureBox18, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PictureBox18.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox18.Image = CType(resources.GetObject("PictureBox18.Image"), System.Drawing.Image)
         Me.PictureBox18.Location = New System.Drawing.Point(0, 0)
@@ -4828,11 +4635,10 @@ Partial Class FrmPrincipal
         Me.PanelPerfilTop.Controls.Add(Me.BtnPanelDeslizanteTop)
         Me.PanelPerfilTop.Controls.Add(Me.PbPerfilTop)
         Me.PanelPerfilTop.Controls.Add(Me.BtnPerfilTop)
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelPerfilTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilTop.Location = New System.Drawing.Point(228, 0)
         Me.PanelPerfilTop.Name = "PanelPerfilTop"
@@ -4846,11 +4652,10 @@ Partial Class FrmPrincipal
         Me.LblEmailTop.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LblEmailTop.AutoSize = False
         Me.LblEmailTop.BackColor = System.Drawing.Color.Transparent
-        Me.AppTransition.SetDecoration(Me.LblEmailTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.LblEmailTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblEmailTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailTop, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblEmailTop.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEmailTop.ForeColor = System.Drawing.Color.DarkGray
         Me.LblEmailTop.Location = New System.Drawing.Point(139, 31)
@@ -4865,11 +4670,10 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteTop.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.BtnPanelDeslizanteTop.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPanelDeslizanteTop.CheckedState.Parent = Me.BtnPanelDeslizanteTop
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPanelDeslizanteTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPanelDeslizanteTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPanelDeslizanteTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPanelDeslizanteTop, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPanelDeslizanteTop.HoverState.ImageSize = New System.Drawing.Size(21, 21)
         Me.BtnPanelDeslizanteTop.HoverState.Parent = Me.BtnPanelDeslizanteTop
         Me.BtnPanelDeslizanteTop.Image = CType(resources.GetObject("BtnPanelDeslizanteTop.Image"), System.Drawing.Image)
@@ -4888,11 +4692,10 @@ Partial Class FrmPrincipal
         '
         Me.PbPerfilTop.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.PbPerfilTop.BackColor = System.Drawing.Color.Transparent
-        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PbPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PbPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PbPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PbPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PbPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbPerfilTop.Image = CType(resources.GetObject("PbPerfilTop.Image"), System.Drawing.Image)
         Me.PbPerfilTop.ImageRotate = 0!
         Me.PbPerfilTop.Location = New System.Drawing.Point(705, 2)
@@ -4911,11 +4714,10 @@ Partial Class FrmPrincipal
         Me.BtnPerfilTop.BackColor = System.Drawing.Color.Transparent
         Me.BtnPerfilTop.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPerfilTop.CheckedState.Parent = Me.BtnPerfilTop
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnPerfilTop, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnPerfilTop.HoverState.Parent = Me.BtnPerfilTop
         Me.BtnPerfilTop.Image = CType(resources.GetObject("BtnPerfilTop.Image"), System.Drawing.Image)
         Me.BtnPerfilTop.ImageOffset = New System.Drawing.Point(0, 0)
@@ -4940,11 +4742,10 @@ Partial Class FrmPrincipal
         Me.PanelSMConfig.Controls.Add(Me.BtnSMSoftphone)
         Me.PanelSMConfig.CustomizableEdges.BottomRight = False
         Me.PanelSMConfig.CustomizableEdges.TopRight = False
-        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSMConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.PanelSMConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSMConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSMConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.PanelSMConfig, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.PanelSMConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.PanelSMConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelSMConfig, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.PanelSMConfig, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelSMConfig.Location = New System.Drawing.Point(230, 485)
         Me.PanelSMConfig.Name = "PanelSMConfig"
         Me.PanelSMConfig.ShadowDecoration.Parent = Me.PanelSMConfig
@@ -4963,11 +4764,10 @@ Partial Class FrmPrincipal
         Me.BtnSMUsuarios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnSMUsuarios.CheckedState.Parent = Me.BtnSMUsuarios
         Me.BtnSMUsuarios.CustomImages.Parent = Me.BtnSMUsuarios
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnSMUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnSMUsuarios, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnSMUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMUsuarios, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnSMUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -5003,11 +4803,10 @@ Partial Class FrmPrincipal
         Me.BtnSMArquivos.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnSMArquivos.CheckedState.Parent = Me.BtnSMArquivos
         Me.BtnSMArquivos.CustomImages.Parent = Me.BtnSMArquivos
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnSMArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnSMArquivos, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnSMArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMArquivos, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnSMArquivos.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMArquivos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMArquivos.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -5043,11 +4842,10 @@ Partial Class FrmPrincipal
         Me.BtnSMBackup.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnSMBackup.CheckedState.Parent = Me.BtnSMBackup
         Me.BtnSMBackup.CustomImages.Parent = Me.BtnSMBackup
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnSMBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnSMBackup, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnSMBackup, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMBackup, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMBackup, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMBackup, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnSMBackup.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMBackup.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMBackup.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -5083,11 +4881,10 @@ Partial Class FrmPrincipal
         Me.BtnSMSmtp.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnSMSmtp.CheckedState.Parent = Me.BtnSMSmtp
         Me.BtnSMSmtp.CustomImages.Parent = Me.BtnSMSmtp
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnSMSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnSMSmtp, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnSMSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMSmtp, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnSMSmtp.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMSmtp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMSmtp.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -5123,11 +4920,10 @@ Partial Class FrmPrincipal
         Me.BtnSMSoftphone.CheckedState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.BtnSMSoftphone.CheckedState.Parent = Me.BtnSMSoftphone
         Me.BtnSMSoftphone.CustomImages.Parent = Me.BtnSMSoftphone
-        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMSoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMSoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMSoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me.BtnSMSoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me.BtnSMSoftphone, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.BtnSMSoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.BtnSMSoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.BtnSMSoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me.BtnSMSoftphone, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.BtnSMSoftphone.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMSoftphone.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BtnSMSoftphone.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -5151,51 +4947,6 @@ Partial Class FrmPrincipal
         Me.BtnSMSoftphone.TabIndex = 20
         Me.BtnSMSoftphone.Text = "Softphone"
         Me.BtnSMSoftphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'TimerSubMenuDeslizante
-        '
-        Me.TimerSubMenuDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.VertSlide
-        Me.TimerSubMenuDeslizante.Cursor = Nothing
-        Animation7.AnimateOnlyDifferences = True
-        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
-        Animation7.LeafCoeff = 0!
-        Animation7.MaxTime = 1.0!
-        Animation7.MinTime = 0!
-        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
-        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
-        Animation7.MosaicSize = 0
-        Animation7.Padding = New System.Windows.Forms.Padding(0)
-        Animation7.RotateCoeff = 0!
-        Animation7.RotateLimit = 0!
-        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
-        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
-        Animation7.TimeCoeff = 0!
-        Animation7.TransparencyCoeff = 0!
-        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation7
-        '
-        'TimerPanelDeslizante
-        '
-        Me.TimerPanelDeslizante.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
-        Me.TimerPanelDeslizante.Cursor = Nothing
-        Animation8.AnimateOnlyDifferences = True
-        Animation8.BlindCoeff = CType(resources.GetObject("Animation8.BlindCoeff"), System.Drawing.PointF)
-        Animation8.LeafCoeff = 0!
-        Animation8.MaxTime = 1.0!
-        Animation8.MinTime = 0!
-        Animation8.MosaicCoeff = CType(resources.GetObject("Animation8.MosaicCoeff"), System.Drawing.PointF)
-        Animation8.MosaicShift = CType(resources.GetObject("Animation8.MosaicShift"), System.Drawing.PointF)
-        Animation8.MosaicSize = 0
-        Animation8.Padding = New System.Windows.Forms.Padding(0)
-        Animation8.RotateCoeff = 0!
-        Animation8.RotateLimit = 0!
-        Animation8.ScaleCoeff = CType(resources.GetObject("Animation8.ScaleCoeff"), System.Drawing.PointF)
-        Animation8.SlideCoeff = CType(resources.GetObject("Animation8.SlideCoeff"), System.Drawing.PointF)
-        Animation8.TimeCoeff = 0!
-        Animation8.TransparencyCoeff = 1.0!
-        Me.TimerPanelDeslizante.DefaultAnimation = Animation8
-        Me.TimerPanelDeslizante.Interval = 5
-        Me.TimerPanelDeslizante.MaxAnimationTime = 800
-        Me.TimerPanelDeslizante.TimeStep = 0.05!
         '
         'NotMessageLeftPhonebook
         '
@@ -5250,54 +5001,11 @@ Partial Class FrmPrincipal
         Me.NotMessageLeftDashboard.Size = New System.Drawing.Size(16, 13)
         Me.NotMessageLeftDashboard.Text = "9+"
         '
-        'EditUserTransition
-        '
-        Me.EditUserTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
-        Me.EditUserTransition.Cursor = Nothing
-        Animation9.AnimateOnlyDifferences = True
-        Animation9.BlindCoeff = CType(resources.GetObject("Animation9.BlindCoeff"), System.Drawing.PointF)
-        Animation9.LeafCoeff = 0!
-        Animation9.MaxTime = 1.0!
-        Animation9.MinTime = 0!
-        Animation9.MosaicCoeff = CType(resources.GetObject("Animation9.MosaicCoeff"), System.Drawing.PointF)
-        Animation9.MosaicShift = CType(resources.GetObject("Animation9.MosaicShift"), System.Drawing.PointF)
-        Animation9.MosaicSize = 0
-        Animation9.Padding = New System.Windows.Forms.Padding(0)
-        Animation9.RotateCoeff = 0!
-        Animation9.RotateLimit = 0!
-        Animation9.ScaleCoeff = CType(resources.GetObject("Animation9.ScaleCoeff"), System.Drawing.PointF)
-        Animation9.SlideCoeff = CType(resources.GetObject("Animation9.SlideCoeff"), System.Drawing.PointF)
-        Animation9.TimeCoeff = 0!
-        Animation9.TransparencyCoeff = 1.0!
-        Me.EditUserTransition.DefaultAnimation = Animation9
-        '
         'ImageIcon
         '
         Me.ImageIcon.ImageStream = CType(resources.GetObject("ImageIcon.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageIcon.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageIcon.Images.SetKeyName(0, "LogoP-removebg-preview.ico")
-        '
-        'AppTransition
-        '
-        Me.AppTransition.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Transparent
-        Me.AppTransition.Cursor = Nothing
-        Animation10.AnimateOnlyDifferences = True
-        Animation10.BlindCoeff = CType(resources.GetObject("Animation10.BlindCoeff"), System.Drawing.PointF)
-        Animation10.LeafCoeff = 0!
-        Animation10.MaxTime = 1.0!
-        Animation10.MinTime = 0!
-        Animation10.MosaicCoeff = CType(resources.GetObject("Animation10.MosaicCoeff"), System.Drawing.PointF)
-        Animation10.MosaicShift = CType(resources.GetObject("Animation10.MosaicShift"), System.Drawing.PointF)
-        Animation10.MosaicSize = 0
-        Animation10.Padding = New System.Windows.Forms.Padding(0)
-        Animation10.RotateCoeff = 0!
-        Animation10.RotateLimit = 0!
-        Animation10.ScaleCoeff = CType(resources.GetObject("Animation10.ScaleCoeff"), System.Drawing.PointF)
-        Animation10.SlideCoeff = CType(resources.GetObject("Animation10.SlideCoeff"), System.Drawing.PointF)
-        Animation10.TimeCoeff = 0!
-        Animation10.TransparencyCoeff = 1.0!
-        Me.AppTransition.DefaultAnimation = Animation10
-        Me.AppTransition.TimeStep = 0.01!
         '
         'ImageUserLeft
         '
@@ -5311,6 +5019,96 @@ Partial Class FrmPrincipal
         Me.ImageUserTop.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageUserTop.Images.SetKeyName(0, "addImage 96x96.png")
         '
+        'TimerMenuDeslizante
+        '
+        Me.TimerMenuDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
+        Me.TimerMenuDeslizante.Cursor = Nothing
+        Animation3.AnimateOnlyDifferences = True
+        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
+        Animation3.LeafCoeff = 0!
+        Animation3.MaxTime = 1.0!
+        Animation3.MinTime = 0!
+        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
+        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
+        Animation3.MosaicSize = 0
+        Animation3.Padding = New System.Windows.Forms.Padding(0)
+        Animation3.RotateCoeff = 0!
+        Animation3.RotateLimit = 0!
+        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
+        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
+        Animation3.TimeCoeff = 0!
+        Animation3.TransparencyCoeff = 0!
+        Me.TimerMenuDeslizante.DefaultAnimation = Animation3
+        '
+        'TimerSubMenuDeslizante
+        '
+        Me.TimerSubMenuDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.VertSlide
+        Me.TimerSubMenuDeslizante.Cursor = Nothing
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation2
+        '
+        'TimerPanelDeslizante
+        '
+        Me.TimerPanelDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
+        Me.TimerPanelDeslizante.Cursor = Nothing
+        Animation4.AnimateOnlyDifferences = True
+        Animation4.BlindCoeff = CType(resources.GetObject("Animation4.BlindCoeff"), System.Drawing.PointF)
+        Animation4.LeafCoeff = 0!
+        Animation4.MaxTime = 1.0!
+        Animation4.MinTime = 0!
+        Animation4.MosaicCoeff = CType(resources.GetObject("Animation4.MosaicCoeff"), System.Drawing.PointF)
+        Animation4.MosaicShift = CType(resources.GetObject("Animation4.MosaicShift"), System.Drawing.PointF)
+        Animation4.MosaicSize = 0
+        Animation4.Padding = New System.Windows.Forms.Padding(0)
+        Animation4.RotateCoeff = 0!
+        Animation4.RotateLimit = 0!
+        Animation4.ScaleCoeff = CType(resources.GetObject("Animation4.ScaleCoeff"), System.Drawing.PointF)
+        Animation4.SlideCoeff = CType(resources.GetObject("Animation4.SlideCoeff"), System.Drawing.PointF)
+        Animation4.TimeCoeff = 0!
+        Animation4.TransparencyCoeff = 1.0!
+        Me.TimerPanelDeslizante.DefaultAnimation = Animation4
+        Me.TimerPanelDeslizante.Interval = 5
+        Me.TimerPanelDeslizante.MaxAnimationTime = 800
+        Me.TimerPanelDeslizante.TimeStep = 0.05!
+        '
+        'AppTransition
+        '
+        Me.AppTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
+        Me.AppTransition.Cursor = Nothing
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 1.0!
+        Me.AppTransition.DefaultAnimation = Animation1
+        Me.AppTransition.Interval = 5
+        Me.AppTransition.MaxAnimationTime = 1000
+        Me.AppTransition.TimeStep = 0.01!
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5321,11 +5119,10 @@ Partial Class FrmPrincipal
         Me.Controls.Add(Me.PanelSMConfig)
         Me.Controls.Add(Me.PanelPerfilTop)
         Me.Controls.Add(Me.TabControlMenu)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.EditUserTransition.SetDecoration(Me, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
-        Me.AppTransition.SetDecoration(Me, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None)
+        Me.TimerPanelDeslizante.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmPrincipal"
         Me.Text = "GScode Brasil"
@@ -5404,9 +5201,6 @@ Partial Class FrmPrincipal
 
     Friend WithEvents NotMessageLeftHome As Guna.UI2.WinForms.Guna2NotificationPaint
     Friend WithEvents NotMessageTop As Guna.UI2.WinForms.Guna2NotificationPaint
-    Friend WithEvents TimerMenuDeslizante As Bunifu.UI.WinForms.BunifuTransition
-    Friend WithEvents TimerSubMenuDeslizante As Bunifu.UI.WinForms.BunifuTransition
-    Friend WithEvents TimerPanelDeslizante As Bunifu.UI.WinForms.BunifuTransition
     Friend WithEvents LblNameTop As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -5416,7 +5210,6 @@ Partial Class FrmPrincipal
     Friend WithEvents NotMessageLeftFinanceiro As Guna.UI2.WinForms.Guna2NotificationPaint
     Friend WithEvents NotMessageLeftDashboard As Guna.UI2.WinForms.Guna2NotificationPaint
     Friend WithEvents PanelForms As Panel
-    Friend WithEvents EditUserTransition As Bunifu.UI.WinForms.BunifuTransition
     Friend WithEvents ImageIcon As ImageList
     Friend WithEvents PanelPerfilTop As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents LblEmailTop As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -5593,9 +5386,12 @@ Partial Class FrmPrincipal
     Friend WithEvents BtnSMBackup As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnSMSmtp As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnSMSoftphone As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents AppTransition As Bunifu.UI.WinForms.BunifuTransition
     Friend WithEvents BtnHome_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnGerenciador_Helpdesk As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents ImageUserLeft As ImageList
     Friend WithEvents ImageUserTop As ImageList
+    Friend WithEvents TimerMenuDeslizante As Guna.UI2.WinForms.Guna2Transition
+    Friend WithEvents TimerPanelDeslizante As Guna.UI2.WinForms.Guna2Transition
+    Friend WithEvents TimerSubMenuDeslizante As Guna.UI2.WinForms.Guna2Transition
+    Friend WithEvents AppTransition As Guna.UI2.WinForms.Guna2Transition
 End Class
