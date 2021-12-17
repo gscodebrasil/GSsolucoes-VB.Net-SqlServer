@@ -58,6 +58,18 @@ Public Class FrmPrincipal
         Next
     End Sub
 
+    Private Sub UnCheckBtn_Phonebook()
+        For Each Btn As Guna2GradientButton In New List(Of Guna2GradientButton) From {BtnCadastros_Phonebook, BtnContatos, BtnLocalizacao}
+            Btn.Checked = False
+        Next
+    End Sub
+
+    Private Sub UnCheckBtn_Helpdesk()
+        For Each Btn As Guna2GradientButton In New List(Of Guna2GradientButton) From {BtnAbrirOS_Helpdesk, BtnPainel_Helpdesk, BtnGerenciador_Helpdesk, BtnAgenda_Helpdesk, BtnRelatorio_Helpdesk}
+            Btn.Checked = False
+        Next
+    End Sub
+
     'VERIFICA SE TEM SUB MENUS ATIVOS
     Private Sub FrmAtivo(Pnc As Guna2Panel, PncFlutuante As Guna2Panel)
         If TabControlMenu.Width >= 228 Then
@@ -124,15 +136,11 @@ Public Class FrmPrincipal
             BtnNomes()
             ActiveFormClose()
             TabControlMenu.SelectTab(i)
-            AppTransition.ShowSync(TabControlMenu)
-            PanelForms.Visible = True
         Else
             PanelFechado()
             BtnNotNomes()
             ActiveFormClose()
             TabControlMenu.SelectTab(i)
-            AppTransition.ShowSync(TabControlMenu)
-            PanelForms.Visible = True
         End If
     End Sub
 
@@ -142,6 +150,7 @@ Public Class FrmPrincipal
 
     'FECHA O PAINEL LATERAL
     Private Sub OcultaPainelLateral()
+        TabControlMenu.Visible = False
         PanelFechado()
         PanelConfig.Visible = False
         TimerSubMenuDeslizante.HideSync(PanelSMConfig)
@@ -152,9 +161,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub PanelFechado()
-        PanelForms.Visible = False
         PanelSMConfig.Visible = False
-        TabControlMenu.Visible = False
         PanelPerfilLeft.Visible = False
         PanelLogoFull.Visible = False
         PanelPerfilTop.Visible = True
@@ -163,18 +170,16 @@ Public Class FrmPrincipal
 
     'ABRE O PAINEL LATERAL
     Private Sub PanelAberto()
-        BtnPerfilLeft.Visible = False
-        PanelForms.Visible = False
-        PanelPerfilTop.Visible = False
         PanelSMConfig.Visible = False
-        TabControlMenu.Visible = False
         PbLogoP.Visible = False
+        PanelPerfilTop.Visible = False
         PanelPerfilLeft.Visible = True
         PanelLogoFull.Visible = True
         BtnPerfilLeft.Visible = True
     End Sub
 
     Private Sub MostraPainelLateral()
+        TabControlMenu.Visible = False
         PanelAberto()
         BtnNomes()
         VSubMenuAtivo()
@@ -230,6 +235,7 @@ Public Class FrmPrincipal
 
     'FECHA O PAINEL LATERAL HOME
     Private Sub OcultaPainelLateral_Phonebook()
+        TabControlMenu.Visible = False
         PanelFechado_Phonebook()
         BtnNotNomes_Phonebook()
         TabControlMenu.Width = 55
@@ -238,8 +244,6 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub PanelFechado_Phonebook()
-        PanelForms.Visible = False
-        TabControlMenu.Visible = False
         PanelPerfilLeft_Phonebook.Visible = False
         PanelLogoFull_Phonebook.Visible = False
         PanelPerfilTop.Visible = True
@@ -248,17 +252,14 @@ Public Class FrmPrincipal
 
     'ABRE O PAINEL LATERAL
     Private Sub PanelAberto_Phonebook()
-        BtnPerfilLeft_Phonebook.Visible = False
-        PanelForms.Visible = False
         PanelPerfilTop.Visible = False
-        TabControlMenu.Visible = False
         PbLogoP_Phonebook.Visible = False
         PanelPerfilLeft_Phonebook.Visible = True
         PanelLogoFull_Phonebook.Visible = True
-        BtnPerfilLeft_Phonebook.Visible = True
     End Sub
 
     Private Sub MostraPainelLateral_Phonebook()
+        TabControlMenu.Visible = False
         PanelAberto_Phonebook()
         BtnNomes_Phonebook()
         TabControlMenu.Width = 228
@@ -302,6 +303,7 @@ Public Class FrmPrincipal
 
     'FECHA O PAINEL LATERAL HOME
     Private Sub OcultaPainelLateral_Helpdesk(i As Integer)
+        TabControlMenu.Visible = False
         PanelFechado_Helpdesk()
         BtnNotNomes_Helpdesk()
         TabControlMenu.Width = i
@@ -310,8 +312,6 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub PanelFechado_Helpdesk()
-        PanelForms.Visible = False
-        TabControlMenu.Visible = False
         PanelPerfilLeft_Helpdesk.Visible = False
         PanelLogoFull_Helpdesk.Visible = False
         PanelPerfilTop.Visible = True
@@ -320,17 +320,14 @@ Public Class FrmPrincipal
 
     'ABRE O PAINEL LATERAL
     Private Sub PanelAberto_Helpdesk()
-        BtnPerfilLeft_Helpdesk.Visible = False
-        PanelForms.Visible = False
         PanelPerfilTop.Visible = False
-        TabControlMenu.Visible = False
         PbLogoP_Helpdesk.Visible = False
         PanelPerfilLeft_Helpdesk.Visible = True
         PanelLogoFull_Helpdesk.Visible = True
-        BtnPerfilLeft_Helpdesk.Visible = True
     End Sub
 
     Private Sub MostraPainelLateral_Helpdesk()
+        TabControlMenu.Visible = False
         PanelAberto_Helpdesk()
         BtnNomes_Helpdesk()
         TabControlMenu.Width = 228
@@ -377,6 +374,34 @@ Public Class FrmPrincipal
     End Sub
 
 #End Region
+
+    Public Sub MenuAbertoOuFechado_Phonebook(i As Integer)
+        If TabControlMenu.Width >= 228 Then
+            PanelAberto_Phonebook()
+            BtnNomes_Phonebook()
+            ActiveFormClose()
+            TabControlMenu.SelectTab(i)
+        Else
+            PanelFechado_Phonebook()
+            BtnNotNomes_Phonebook()
+            ActiveFormClose()
+            TabControlMenu.SelectTab(i)
+        End If
+    End Sub
+
+    Public Sub MenuAbertoOuFechado_Helpdesk(i As Integer)
+        If TabControlMenu.Width >= 228 Then
+            PanelAberto_Helpdesk()
+            BtnNomes_Helpdesk()
+            ActiveFormClose()
+            TabControlMenu.SelectTab(i)
+        Else
+            PanelFechado_Helpdesk()
+            BtnNotNomes_Helpdesk()
+            ActiveFormClose()
+            TabControlMenu.SelectTab(i)
+        End If
+    End Sub
 
 #End Region
 
@@ -511,7 +536,7 @@ Public Class FrmPrincipal
         MostraPanelAtivo()
     End Sub
 
-    Private Sub BtnPerfilLeft_Click(sender As Object, e As EventArgs) Handles BtnPerfilLeft.Click
+    Private Sub BtnPerfilLeft_Click(sender As Object, e As EventArgs) Handles BtnPerfilLeft.click
         If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
             FormShow(New FrmUserConfig())
             UnCheckBtn_home()
@@ -563,12 +588,12 @@ Public Class FrmPrincipal
         OcultaPainelLateral_Phonebook()
     End Sub
 
+
     Private Sub BtnPerfilLeft_Phonebook_Click(sender As Object, e As EventArgs) Handles BtnPerfilLeft_Phonebook.Click
-
-    End Sub
-
-    Private Sub BtnNotLeft_Phonebook_Click(sender As Object, e As EventArgs)
-
+        If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
+            FormShow(New FrmUserConfig())
+            UnCheckBtn_Phonebook()
+        End If
     End Sub
 
     Private Sub BtnYoutube_Phonebook_Click(sender As Object, e As EventArgs) Handles BtnYoutube_Phonebook.Click
@@ -630,6 +655,20 @@ Public Class FrmPrincipal
             OcultaPainelLateral_Helpdesk(0)
         Else
             OcultaPainelLateral_Helpdesk(55)
+        End If
+    End Sub
+
+    Private Sub BtnPerfilTop_Click(sender As Object, e As EventArgs) Handles BtnPerfilTop.Click
+        If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
+            FormShow(New FrmUserConfig())
+            UnCheckBtn_home()
+        End If
+    End Sub
+
+    Private Sub BtnPerfilLeft_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnPerfilLeft_Helpdesk.Click
+        If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
+            FormShow(New FrmUserConfig())
+            UnCheckBtn_Helpdesk()
         End If
     End Sub
 End Class

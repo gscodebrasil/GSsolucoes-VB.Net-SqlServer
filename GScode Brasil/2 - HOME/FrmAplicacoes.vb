@@ -35,12 +35,12 @@
 
     Private Sub BtnPhonebook_Click(sender As Object, e As EventArgs) Handles BtnPhonebook.Click
         FrmPrincipal.Cad_Cons = 0
-        FrmPrincipal.MenuAbertoOuFechado(1)
+        FrmPrincipal.MenuAbertoOuFechado_Phonebook(1)
     End Sub
 
     Private Sub btnHelpdesk_Click(sender As Object, e As EventArgs) Handles btnHelpdesk.Click
         FrmPrincipal.Cad_Cons = 0
-        FrmPrincipal.MenuAbertoOuFechado(2)
+        FrmPrincipal.MenuAbertoOuFechado_Helpdesk(2)
     End Sub
 
     Private Sub btnEstoque_Click(sender As Object, e As EventArgs)

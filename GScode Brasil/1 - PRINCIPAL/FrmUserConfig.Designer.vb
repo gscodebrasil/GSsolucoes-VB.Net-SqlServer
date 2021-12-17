@@ -316,7 +316,7 @@ Partial Class FrmUserConfig
         Me.BtnCopy.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnCopy.CustomImages.Parent = Me.BtnCopy
         Me.BtnCopy.DisabledState.Parent = Me.BtnCopy
-        Me.BtnCopy.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnCopy.FillColor = System.Drawing.Color.SlateGray
         Me.BtnCopy.FillColor2 = System.Drawing.Color.Black
         Me.BtnCopy.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnCopy.ForeColor = System.Drawing.Color.WhiteSmoke
@@ -344,7 +344,7 @@ Partial Class FrmUserConfig
         Me.btnEditSenha.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEditSenha.CustomImages.Parent = Me.btnEditSenha
         Me.btnEditSenha.DisabledState.Parent = Me.btnEditSenha
-        Me.btnEditSenha.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnEditSenha.FillColor = System.Drawing.Color.SlateGray
         Me.btnEditSenha.FillColor2 = System.Drawing.Color.Black
         Me.btnEditSenha.Font = New System.Drawing.Font("Segoe UI", 6.5!, System.Drawing.FontStyle.Bold)
         Me.btnEditSenha.ForeColor = System.Drawing.Color.White
@@ -371,7 +371,7 @@ Partial Class FrmUserConfig
         Me.BtnEditEmail.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnEditEmail.CustomImages.Parent = Me.BtnEditEmail
         Me.BtnEditEmail.DisabledState.Parent = Me.BtnEditEmail
-        Me.BtnEditEmail.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnEditEmail.FillColor = System.Drawing.Color.SlateGray
         Me.BtnEditEmail.FillColor2 = System.Drawing.Color.Black
         Me.BtnEditEmail.Font = New System.Drawing.Font("Segoe UI", 6.5!, System.Drawing.FontStyle.Bold)
         Me.BtnEditEmail.ForeColor = System.Drawing.Color.White
@@ -425,7 +425,7 @@ Partial Class FrmUserConfig
         Me.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEdit.CustomImages.Parent = Me.btnEdit
         Me.btnEdit.DisabledState.Parent = Me.btnEdit
-        Me.btnEdit.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnEdit.FillColor = System.Drawing.Color.SlateGray
         Me.btnEdit.FillColor2 = System.Drawing.Color.Black
         Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnEdit.ForeColor = System.Drawing.Color.White
@@ -475,7 +475,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Perfil.Controls.Add(Me.TableLayoutPanel2)
         Me.TpEditar_Perfil.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Perfil.Name = "TpEditar_Perfil"
-        Me.TpEditar_Perfil.Size = New System.Drawing.Size(780, 527)
+        Me.TpEditar_Perfil.Size = New System.Drawing.Size(780, 556)
         Me.TpEditar_Perfil.TabIndex = 1
         Me.TpEditar_Perfil.Text = "Editar Perfil"
         '
@@ -1532,7 +1532,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Email.Controls.Add(Me.TableLayoutPanel3)
         Me.TpEditar_Email.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Email.Name = "TpEditar_Email"
-        Me.TpEditar_Email.Size = New System.Drawing.Size(780, 527)
+        Me.TpEditar_Email.Size = New System.Drawing.Size(780, 556)
         Me.TpEditar_Email.TabIndex = 2
         Me.TpEditar_Email.Text = "Editar Email"
         '
@@ -1791,7 +1791,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Senha.Controls.Add(Me.TableLayoutPanel4)
         Me.TpEditar_Senha.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Senha.Name = "TpEditar_Senha"
-        Me.TpEditar_Senha.Size = New System.Drawing.Size(780, 527)
+        Me.TpEditar_Senha.Size = New System.Drawing.Size(780, 556)
         Me.TpEditar_Senha.TabIndex = 3
         Me.TpEditar_Senha.Text = "Editar Senha"
         '
@@ -2094,7 +2094,7 @@ Partial Class FrmUserConfig
         Me.TpValidar.Controls.Add(Me.LblValidarInf)
         Me.TpValidar.Location = New System.Drawing.Point(4, 4)
         Me.TpValidar.Name = "TpValidar"
-        Me.TpValidar.Size = New System.Drawing.Size(780, 527)
+        Me.TpValidar.Size = New System.Drawing.Size(780, 556)
         Me.TpValidar.TabIndex = 0
         Me.TpValidar.Text = "Validar"
         '
@@ -2235,7 +2235,7 @@ Partial Class FrmUserConfig
         Me.TpAguarde.Controls.Add(Me.LblLoading)
         Me.TpAguarde.Location = New System.Drawing.Point(4, 4)
         Me.TpAguarde.Name = "TpAguarde"
-        Me.TpAguarde.Size = New System.Drawing.Size(780, 527)
+        Me.TpAguarde.Size = New System.Drawing.Size(780, 556)
         Me.TpAguarde.TabIndex = 4
         Me.TpAguarde.Text = "Aguarde"
         '
