@@ -488,7 +488,7 @@ Public Class FrmCadastros_Helpdesk
         TxtResultado.Clear()
         TxtContato_Resultado.Clear()
         CbTempo_Resultado.SelectedIndex = -1
-        CBStatus.SelectedIndex = -1
+        CbStatus_Resultado.SelectedIndex = -1
     End Sub
 
     Private Cad_Cons As Integer
@@ -869,7 +869,11 @@ Public Class FrmCadastros_Helpdesk
     End Sub
 
     Private Sub CBStatus_Validated(sender As Object, e As EventArgs) Handles CBStatus.Validated
-        ColumnStatus = $"status = '{CBStatus.Text}' And"
+        If CBStatus.Text = "OS Aberta" Then
+            ColumnStatus = $"status Like '%andamento' OR status = '' And"
+        Else
+            ColumnStatus = $"status = '{CBStatus.Text}' And"
+        End If
     End Sub
 
     Private Sub TimerPainel_Tick(sender As Object, e As EventArgs) Handles TimerPainel.Tick
@@ -994,21 +998,24 @@ Public Class FrmCadastros_Helpdesk
         For Each Btn As Guna2GradientButton In New List(Of Guna2GradientButton) From {BtnEmail, BtnCnpj_Cpf, BtnCidade, BtnUF, BtnEquipamento, BtnNSerie, BtnID, BtnBaixa, BtnMedia, BtnAlta, BtnUrgente, BtnCContrato, BtnSContrato, BtnGarantia, BtnMesAtual, BtnUltimoMes, BtnUltimos3Meses}
             If Btn.Checked Then
                 Btn.Checked = False
-                BtnNome.Checked = True
-                GBoxDataInicial.Visible = False
-                GBoxDataFinal.Visible = False
-                BtnSelectIntervalo.Visible = True
-                CBStatus.SelectedIndex = -1
-                TxtFilter.Clear()
-                TxtFilter.PlaceholderText = "Informe o Nome..."
-                ColumnData = ""
-                ColumnPrioridade = ""
-                ColumnCondicao = ""
-                ColumnStatus = ""
-                ColumnOpcoes = "name"
-                SelectTransition.HideSync(PanelFilter)
             End If
         Next
+
+        BtnNome.Checked = True
+        GBoxDataInicial.Visible = False
+        GBoxDataFinal.Visible = False
+        BtnAplicar.Visible = False
+        BtnSelectIntervalo.Visible = True
+        BtnLimpar.Visible = False
+        CBStatus.SelectedIndex = -1
+        TxtFilter.Clear()
+        TxtFilter.PlaceholderText = "Informe o Nome..."
+        ColumnData = ""
+        ColumnPrioridade = ""
+        ColumnCondicao = ""
+        ColumnStatus = ""
+        ColumnOpcoes = "name"
+        SelectTransition.HideSync(PanelFilter)
     End Sub
 
     Private Sub BtnLimpar_Click(sender As Object, e As EventArgs) Handles BtnLimpar.Click

@@ -210,7 +210,6 @@ Partial Class FrmUserConfig
         Me.TabControl_UserConfig.TabIndex = 172
         Me.TabControl_UserConfig.TabMenuBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.TabControl_UserConfig.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalBottom
-        Me.TabControl_UserConfig.TabMenuVisible = False
         '
         'TpPerfil
         '
@@ -220,7 +219,7 @@ Partial Class FrmUserConfig
         Me.TpPerfil.Location = New System.Drawing.Point(4, 4)
         Me.TpPerfil.Name = "TpPerfil"
         Me.TpPerfil.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpPerfil.Size = New System.Drawing.Size(780, 556)
+        Me.TpPerfil.Size = New System.Drawing.Size(780, 527)
         Me.TpPerfil.TabIndex = 5
         Me.TpPerfil.Text = "Perfil"
         '
@@ -475,7 +474,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Perfil.Controls.Add(Me.TableLayoutPanel2)
         Me.TpEditar_Perfil.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Perfil.Name = "TpEditar_Perfil"
-        Me.TpEditar_Perfil.Size = New System.Drawing.Size(780, 556)
+        Me.TpEditar_Perfil.Size = New System.Drawing.Size(780, 527)
         Me.TpEditar_Perfil.TabIndex = 1
         Me.TpEditar_Perfil.Text = "Editar Perfil"
         '
@@ -741,7 +740,7 @@ Partial Class FrmUserConfig
         Me.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnSalvar.CustomImages.Parent = Me.btnSalvar
         Me.btnSalvar.DisabledState.Parent = Me.btnSalvar
-        Me.btnSalvar.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnSalvar.FillColor = System.Drawing.Color.SlateGray
         Me.btnSalvar.FillColor2 = System.Drawing.Color.Black
         Me.btnSalvar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnSalvar.ForeColor = System.Drawing.Color.White
@@ -777,8 +776,8 @@ Partial Class FrmUserConfig
         Me.cbGenero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbGenero.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.cbGenero.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.cbGenero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.cbGenero.FocusedColor = System.Drawing.Color.SlateGray
+        Me.cbGenero.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.cbGenero.FocusedState.Parent = Me.cbGenero
         Me.cbGenero.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cbGenero.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -842,7 +841,7 @@ Partial Class FrmUserConfig
         Me.txtCidade.DisabledState.Parent = Me.txtCidade
         Me.txtCidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtCidade.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtCidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtCidade.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtCidade.FocusedState.Parent = Me.txtCidade
         Me.txtCidade.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtCidade.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -895,7 +894,7 @@ Partial Class FrmUserConfig
         Me.txtComplemento.DisabledState.Parent = Me.txtComplemento
         Me.txtComplemento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtComplemento.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtComplemento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtComplemento.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtComplemento.FocusedState.Parent = Me.txtComplemento
         Me.txtComplemento.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtComplemento.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -948,7 +947,7 @@ Partial Class FrmUserConfig
         Me.txtCep.DisabledState.Parent = Me.txtCep
         Me.txtCep.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtCep.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtCep.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtCep.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtCep.FocusedState.Parent = Me.txtCep
         Me.txtCep.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtCep.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1003,7 +1002,7 @@ Partial Class FrmUserConfig
         Me.txtEndereco.DisabledState.Parent = Me.txtEndereco
         Me.txtEndereco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEndereco.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtEndereco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtEndereco.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtEndereco.FocusedState.Parent = Me.txtEndereco
         Me.txtEndereco.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtEndereco.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1057,7 +1056,7 @@ Partial Class FrmUserConfig
         Me.txtCell.DisabledState.Parent = Me.txtCell
         Me.txtCell.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtCell.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtCell.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtCell.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtCell.FocusedState.Parent = Me.txtCell
         Me.txtCell.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtCell.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1113,7 +1112,7 @@ Partial Class FrmUserConfig
         Me.txtNome.DisabledState.Parent = Me.txtNome
         Me.txtNome.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNome.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtNome.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtNome.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtNome.FocusedState.Parent = Me.txtNome
         Me.txtNome.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtNome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1174,7 +1173,7 @@ Partial Class FrmUserConfig
         Me.txtUF.DisabledState.Parent = Me.txtUF
         Me.txtUF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtUF.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtUF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtUF.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtUF.FocusedState.Parent = Me.txtUF
         Me.txtUF.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtUF.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1236,7 +1235,7 @@ Partial Class FrmUserConfig
         Me.txtNascimento.DisabledState.Parent = Me.txtNascimento
         Me.txtNascimento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNascimento.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtNascimento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtNascimento.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtNascimento.FocusedState.Parent = Me.txtNascimento
         Me.txtNascimento.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtNascimento.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1297,7 +1296,7 @@ Partial Class FrmUserConfig
         Me.txtRamal.DisabledState.Parent = Me.txtRamal
         Me.txtRamal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtRamal.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtRamal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtRamal.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtRamal.FocusedState.Parent = Me.txtRamal
         Me.txtRamal.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtRamal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1337,7 +1336,7 @@ Partial Class FrmUserConfig
         Me.txtTel.DisabledState.Parent = Me.txtTel
         Me.txtTel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtTel.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtTel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtTel.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtTel.FocusedState.Parent = Me.txtTel
         Me.txtTel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtTel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1371,7 +1370,7 @@ Partial Class FrmUserConfig
         Me.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancel.CustomImages.Parent = Me.btnCancel
         Me.btnCancel.DisabledState.Parent = Me.btnCancel
-        Me.btnCancel.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.btnCancel.FillColor = System.Drawing.Color.SlateGray
         Me.btnCancel.FillColor2 = System.Drawing.Color.Black
         Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.btnCancel.ForeColor = System.Drawing.Color.White
@@ -1401,7 +1400,7 @@ Partial Class FrmUserConfig
         Me.txtFuncao.DisabledState.Parent = Me.txtFuncao
         Me.txtFuncao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtFuncao.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtFuncao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtFuncao.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtFuncao.FocusedState.Parent = Me.txtFuncao
         Me.txtFuncao.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtFuncao.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1440,7 +1439,7 @@ Partial Class FrmUserConfig
         Me.txtDepart.DisabledState.Parent = Me.txtDepart
         Me.txtDepart.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDepart.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtDepart.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtDepart.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtDepart.FocusedState.Parent = Me.txtDepart
         Me.txtDepart.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtDepart.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1479,7 +1478,7 @@ Partial Class FrmUserConfig
         Me.txtEmpresa.DisabledState.Parent = Me.txtEmpresa
         Me.txtEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtEmpresa.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.txtEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.txtEmpresa.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.txtEmpresa.FocusedState.Parent = Me.txtEmpresa
         Me.txtEmpresa.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtEmpresa.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1532,7 +1531,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Email.Controls.Add(Me.TableLayoutPanel3)
         Me.TpEditar_Email.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Email.Name = "TpEditar_Email"
-        Me.TpEditar_Email.Size = New System.Drawing.Size(780, 556)
+        Me.TpEditar_Email.Size = New System.Drawing.Size(780, 527)
         Me.TpEditar_Email.TabIndex = 2
         Me.TpEditar_Email.Text = "Editar Email"
         '
@@ -1657,7 +1656,7 @@ Partial Class FrmUserConfig
         Me.TxtSenha.DisabledState.Parent = Me.TxtSenha
         Me.TxtSenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.TxtSenha.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.TxtSenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.TxtSenha.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.TxtSenha.FocusedState.Parent = Me.TxtSenha
         Me.TxtSenha.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtSenha.ForeColor = System.Drawing.Color.Black
@@ -1694,7 +1693,7 @@ Partial Class FrmUserConfig
         Me.BtnEmailCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnEmailCancel.CustomImages.Parent = Me.BtnEmailCancel
         Me.BtnEmailCancel.DisabledState.Parent = Me.BtnEmailCancel
-        Me.BtnEmailCancel.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnEmailCancel.FillColor = System.Drawing.Color.SlateGray
         Me.BtnEmailCancel.FillColor2 = System.Drawing.Color.Black
         Me.BtnEmailCancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnEmailCancel.ForeColor = System.Drawing.Color.White
@@ -1718,7 +1717,7 @@ Partial Class FrmUserConfig
         Me.BtnEmailEnviar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnEmailEnviar.CustomImages.Parent = Me.BtnEmailEnviar
         Me.BtnEmailEnviar.DisabledState.Parent = Me.BtnEmailEnviar
-        Me.BtnEmailEnviar.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnEmailEnviar.FillColor = System.Drawing.Color.SlateGray
         Me.BtnEmailEnviar.FillColor2 = System.Drawing.Color.Black
         Me.BtnEmailEnviar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnEmailEnviar.ForeColor = System.Drawing.Color.White
@@ -1748,7 +1747,7 @@ Partial Class FrmUserConfig
         Me.TxtNewEmail.DisabledState.Parent = Me.TxtNewEmail
         Me.TxtNewEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.TxtNewEmail.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.TxtNewEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.TxtNewEmail.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.TxtNewEmail.FocusedState.Parent = Me.TxtNewEmail
         Me.TxtNewEmail.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtNewEmail.ForeColor = System.Drawing.Color.Black
@@ -1791,7 +1790,7 @@ Partial Class FrmUserConfig
         Me.TpEditar_Senha.Controls.Add(Me.TableLayoutPanel4)
         Me.TpEditar_Senha.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_Senha.Name = "TpEditar_Senha"
-        Me.TpEditar_Senha.Size = New System.Drawing.Size(780, 556)
+        Me.TpEditar_Senha.Size = New System.Drawing.Size(780, 527)
         Me.TpEditar_Senha.TabIndex = 3
         Me.TpEditar_Senha.Text = "Editar Senha"
         '
@@ -1892,7 +1891,7 @@ Partial Class FrmUserConfig
         Me.TxtNewSenha.DisabledState.Parent = Me.TxtNewSenha
         Me.TxtNewSenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.TxtNewSenha.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.TxtNewSenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.TxtNewSenha.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.TxtNewSenha.FocusedState.Parent = Me.TxtNewSenha
         Me.TxtNewSenha.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtNewSenha.ForeColor = System.Drawing.Color.Black
@@ -1957,7 +1956,7 @@ Partial Class FrmUserConfig
         Me.TxtRetrySenha.DisabledState.Parent = Me.TxtRetrySenha
         Me.TxtRetrySenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.TxtRetrySenha.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.TxtRetrySenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.TxtRetrySenha.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.TxtRetrySenha.FocusedState.Parent = Me.TxtRetrySenha
         Me.TxtRetrySenha.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtRetrySenha.ForeColor = System.Drawing.Color.Black
@@ -1994,7 +1993,7 @@ Partial Class FrmUserConfig
         Me.BtnSenhaCancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnSenhaCancel.CustomImages.Parent = Me.BtnSenhaCancel
         Me.BtnSenhaCancel.DisabledState.Parent = Me.BtnSenhaCancel
-        Me.BtnSenhaCancel.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnSenhaCancel.FillColor = System.Drawing.Color.SlateGray
         Me.BtnSenhaCancel.FillColor2 = System.Drawing.Color.Black
         Me.BtnSenhaCancel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnSenhaCancel.ForeColor = System.Drawing.Color.White
@@ -2018,7 +2017,7 @@ Partial Class FrmUserConfig
         Me.BtnSenhaSalvar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnSenhaSalvar.CustomImages.Parent = Me.BtnSenhaSalvar
         Me.BtnSenhaSalvar.DisabledState.Parent = Me.BtnSenhaSalvar
-        Me.BtnSenhaSalvar.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnSenhaSalvar.FillColor = System.Drawing.Color.SlateGray
         Me.BtnSenhaSalvar.FillColor2 = System.Drawing.Color.Black
         Me.BtnSenhaSalvar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnSenhaSalvar.ForeColor = System.Drawing.Color.White
@@ -2059,7 +2058,7 @@ Partial Class FrmUserConfig
         Me.TxtOldSenha.DisabledState.Parent = Me.TxtOldSenha
         Me.TxtOldSenha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.TxtOldSenha.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.TxtOldSenha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.TxtOldSenha.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.TxtOldSenha.FocusedState.Parent = Me.TxtOldSenha
         Me.TxtOldSenha.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtOldSenha.ForeColor = System.Drawing.Color.Black
@@ -2094,7 +2093,7 @@ Partial Class FrmUserConfig
         Me.TpValidar.Controls.Add(Me.LblValidarInf)
         Me.TpValidar.Location = New System.Drawing.Point(4, 4)
         Me.TpValidar.Name = "TpValidar"
-        Me.TpValidar.Size = New System.Drawing.Size(780, 556)
+        Me.TpValidar.Size = New System.Drawing.Size(780, 527)
         Me.TpValidar.TabIndex = 0
         Me.TpValidar.Text = "Validar"
         '
@@ -2136,7 +2135,7 @@ Partial Class FrmUserConfig
         Me.BtnValidarCancelar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnValidarCancelar.CustomImages.Parent = Me.BtnValidarCancelar
         Me.BtnValidarCancelar.DisabledState.Parent = Me.BtnValidarCancelar
-        Me.BtnValidarCancelar.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnValidarCancelar.FillColor = System.Drawing.Color.SlateGray
         Me.BtnValidarCancelar.FillColor2 = System.Drawing.Color.Black
         Me.BtnValidarCancelar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnValidarCancelar.ForeColor = System.Drawing.Color.White
@@ -2160,7 +2159,7 @@ Partial Class FrmUserConfig
         Me.BtnValidar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.BtnValidar.CustomImages.Parent = Me.BtnValidar
         Me.BtnValidar.DisabledState.Parent = Me.BtnValidar
-        Me.BtnValidar.FillColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.BtnValidar.FillColor = System.Drawing.Color.SlateGray
         Me.BtnValidar.FillColor2 = System.Drawing.Color.Black
         Me.BtnValidar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
         Me.BtnValidar.ForeColor = System.Drawing.Color.White
@@ -2189,7 +2188,7 @@ Partial Class FrmUserConfig
         Me.TxtValidar.DisabledState.Parent = Me.TxtValidar
         Me.TxtValidar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.TxtValidar.FillColor = System.Drawing.Color.WhiteSmoke
-        Me.TxtValidar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.TxtValidar.FocusedState.BorderColor = System.Drawing.Color.SlateGray
         Me.TxtValidar.FocusedState.Parent = Me.TxtValidar
         Me.TxtValidar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtValidar.ForeColor = System.Drawing.Color.Black
@@ -2235,7 +2234,7 @@ Partial Class FrmUserConfig
         Me.TpAguarde.Controls.Add(Me.LblLoading)
         Me.TpAguarde.Location = New System.Drawing.Point(4, 4)
         Me.TpAguarde.Name = "TpAguarde"
-        Me.TpAguarde.Size = New System.Drawing.Size(780, 556)
+        Me.TpAguarde.Size = New System.Drawing.Size(780, 527)
         Me.TpAguarde.TabIndex = 4
         Me.TpAguarde.Text = "Aguarde"
         '
@@ -2246,9 +2245,9 @@ Partial Class FrmUserConfig
         Me.ProgressAguarde.BackColor = System.Drawing.Color.Transparent
         Me.ProgressAguarde.BorderRadius = 6
         Me.ProgressAguarde.FillColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ProgressAguarde.Location = New System.Drawing.Point(49, 149)
+        Me.ProgressAguarde.Location = New System.Drawing.Point(49, 134)
         Me.ProgressAguarde.Name = "ProgressAguarde"
-        Me.ProgressAguarde.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.ProgressAguarde.ProgressColor = System.Drawing.Color.SlateGray
         Me.ProgressAguarde.ProgressColor2 = System.Drawing.Color.Black
         Me.ProgressAguarde.ShadowDecoration.Parent = Me.ProgressAguarde
         Me.ProgressAguarde.Size = New System.Drawing.Size(683, 15)
@@ -2263,7 +2262,7 @@ Partial Class FrmUserConfig
         Me.LblLoading.BackColor = System.Drawing.Color.Transparent
         Me.LblLoading.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblLoading.ForeColor = System.Drawing.Color.Black
-        Me.LblLoading.Location = New System.Drawing.Point(97, 188)
+        Me.LblLoading.Location = New System.Drawing.Point(97, 173)
         Me.LblLoading.Name = "LblLoading"
         Me.LblLoading.Size = New System.Drawing.Size(587, 160)
         Me.LblLoading.TabIndex = 194

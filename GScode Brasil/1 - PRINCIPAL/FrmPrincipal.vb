@@ -150,12 +150,12 @@ Public Class FrmPrincipal
 
     'FECHA O PAINEL LATERAL
     Private Sub OcultaPainelLateral()
+        PanelForms.Visible = False
         TabControlMenu.Visible = False
         PanelFechado()
-        PanelConfig.Visible = False
-        TimerSubMenuDeslizante.HideSync(PanelSMConfig)
         BtnNotNomes()
         TabControlMenu.Width = 55
+        TimerSubMenuDeslizante.HideSync(PanelSMConfig)
         TimerMenuDeslizante.ShowSync(TabControlMenu)
         TimerPanelDeslizante.ShowSync(PanelForms)
     End Sub
@@ -164,6 +164,7 @@ Public Class FrmPrincipal
         PanelSMConfig.Visible = False
         PanelPerfilLeft.Visible = False
         PanelLogoFull.Visible = False
+        PanelConfig.Visible = False
         PanelPerfilTop.Visible = True
         PbLogoP.Visible = True
     End Sub
@@ -179,6 +180,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub MostraPainelLateral()
+        PanelForms.Visible = False
         TabControlMenu.Visible = False
         PanelAberto()
         BtnNomes()
@@ -235,6 +237,7 @@ Public Class FrmPrincipal
 
     'FECHA O PAINEL LATERAL HOME
     Private Sub OcultaPainelLateral_Phonebook()
+        PanelForms.Visible = False
         TabControlMenu.Visible = False
         PanelFechado_Phonebook()
         BtnNotNomes_Phonebook()
@@ -259,6 +262,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub MostraPainelLateral_Phonebook()
+        PanelForms.Visible = False
         TabControlMenu.Visible = False
         PanelAberto_Phonebook()
         BtnNomes_Phonebook()
@@ -303,6 +307,7 @@ Public Class FrmPrincipal
 
     'FECHA O PAINEL LATERAL HOME
     Private Sub OcultaPainelLateral_Helpdesk(i As Integer)
+        PanelForms.Visible = False
         TabControlMenu.Visible = False
         PanelFechado_Helpdesk()
         BtnNotNomes_Helpdesk()
@@ -327,6 +332,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub MostraPainelLateral_Helpdesk()
+        PanelForms.Visible = False
         TabControlMenu.Visible = False
         PanelAberto_Helpdesk()
         BtnNomes_Helpdesk()

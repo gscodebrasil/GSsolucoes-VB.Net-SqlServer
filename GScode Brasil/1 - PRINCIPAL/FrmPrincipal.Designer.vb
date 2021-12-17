@@ -573,7 +573,7 @@ Partial Class FrmPrincipal
         '
         'BtnYoutube
         '
-        Me.BtnYoutube.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnYoutube.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnYoutube.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnYoutube.CheckedState.Parent = Me.BtnYoutube
         Me.AppTransition.SetDecoration(Me.BtnYoutube, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -586,7 +586,7 @@ Partial Class FrmPrincipal
         Me.BtnYoutube.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnYoutube.ImageRotate = 0!
         Me.BtnYoutube.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnYoutube.Location = New System.Drawing.Point(115, -2)
+        Me.BtnYoutube.Location = New System.Drawing.Point(124, -2)
         Me.BtnYoutube.Name = "BtnYoutube"
         Me.BtnYoutube.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnYoutube.PressedState.Parent = Me.BtnYoutube
@@ -596,7 +596,7 @@ Partial Class FrmPrincipal
         '
         'BtnFacebook
         '
-        Me.BtnFacebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnFacebook.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnFacebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnFacebook.CheckedState.Parent = Me.BtnFacebook
         Me.AppTransition.SetDecoration(Me.BtnFacebook, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -609,7 +609,7 @@ Partial Class FrmPrincipal
         Me.BtnFacebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnFacebook.ImageRotate = 0!
         Me.BtnFacebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnFacebook.Location = New System.Drawing.Point(72, -2)
+        Me.BtnFacebook.Location = New System.Drawing.Point(81, -2)
         Me.BtnFacebook.Name = "BtnFacebook"
         Me.BtnFacebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnFacebook.PressedState.Parent = Me.BtnFacebook
@@ -619,7 +619,7 @@ Partial Class FrmPrincipal
         '
         'BtnInstagram
         '
-        Me.BtnInstagram.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnInstagram.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnInstagram.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnInstagram.CheckedState.Parent = Me.BtnInstagram
         Me.AppTransition.SetDecoration(Me.BtnInstagram, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -632,7 +632,7 @@ Partial Class FrmPrincipal
         Me.BtnInstagram.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnInstagram.ImageRotate = 0!
         Me.BtnInstagram.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnInstagram.Location = New System.Drawing.Point(29, -2)
+        Me.BtnInstagram.Location = New System.Drawing.Point(38, -2)
         Me.BtnInstagram.Name = "BtnInstagram"
         Me.BtnInstagram.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnInstagram.PressedState.Parent = Me.BtnInstagram
@@ -1355,7 +1355,7 @@ Partial Class FrmPrincipal
         '
         'BtnYoutube_Phonebook
         '
-        Me.BtnYoutube_Phonebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnYoutube_Phonebook.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnYoutube_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnYoutube_Phonebook.CheckedState.Parent = Me.BtnYoutube_Phonebook
         Me.AppTransition.SetDecoration(Me.BtnYoutube_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -1368,7 +1368,7 @@ Partial Class FrmPrincipal
         Me.BtnYoutube_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnYoutube_Phonebook.ImageRotate = 0!
         Me.BtnYoutube_Phonebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnYoutube_Phonebook.Location = New System.Drawing.Point(91, -2)
+        Me.BtnYoutube_Phonebook.Location = New System.Drawing.Point(104, -2)
         Me.BtnYoutube_Phonebook.Name = "BtnYoutube_Phonebook"
         Me.BtnYoutube_Phonebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnYoutube_Phonebook.PressedState.Parent = Me.BtnYoutube_Phonebook
@@ -1378,7 +1378,7 @@ Partial Class FrmPrincipal
         '
         'BtnFacebook_Phonebook
         '
-        Me.BtnFacebook_Phonebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnFacebook_Phonebook.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnFacebook_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnFacebook_Phonebook.CheckedState.Parent = Me.BtnFacebook_Phonebook
         Me.AppTransition.SetDecoration(Me.BtnFacebook_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -1391,7 +1391,7 @@ Partial Class FrmPrincipal
         Me.BtnFacebook_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnFacebook_Phonebook.ImageRotate = 0!
         Me.BtnFacebook_Phonebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnFacebook_Phonebook.Location = New System.Drawing.Point(48, -2)
+        Me.BtnFacebook_Phonebook.Location = New System.Drawing.Point(61, -2)
         Me.BtnFacebook_Phonebook.Name = "BtnFacebook_Phonebook"
         Me.BtnFacebook_Phonebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnFacebook_Phonebook.PressedState.Parent = Me.BtnFacebook_Phonebook
@@ -1401,7 +1401,7 @@ Partial Class FrmPrincipal
         '
         'BtnInstagram_Phonebook
         '
-        Me.BtnInstagram_Phonebook.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnInstagram_Phonebook.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnInstagram_Phonebook.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnInstagram_Phonebook.CheckedState.Parent = Me.BtnInstagram_Phonebook
         Me.AppTransition.SetDecoration(Me.BtnInstagram_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -1414,7 +1414,7 @@ Partial Class FrmPrincipal
         Me.BtnInstagram_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnInstagram_Phonebook.ImageRotate = 0!
         Me.BtnInstagram_Phonebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnInstagram_Phonebook.Location = New System.Drawing.Point(5, -2)
+        Me.BtnInstagram_Phonebook.Location = New System.Drawing.Point(18, -2)
         Me.BtnInstagram_Phonebook.Name = "BtnInstagram_Phonebook"
         Me.BtnInstagram_Phonebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnInstagram_Phonebook.PressedState.Parent = Me.BtnInstagram_Phonebook
@@ -2186,7 +2186,7 @@ Partial Class FrmPrincipal
         '
         'BtnYoutube_Helpdesk
         '
-        Me.BtnYoutube_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnYoutube_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnYoutube_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnYoutube_Helpdesk.CheckedState.Parent = Me.BtnYoutube_Helpdesk
         Me.AppTransition.SetDecoration(Me.BtnYoutube_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -2199,7 +2199,7 @@ Partial Class FrmPrincipal
         Me.BtnYoutube_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnYoutube_Helpdesk.ImageRotate = 0!
         Me.BtnYoutube_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnYoutube_Helpdesk.Location = New System.Drawing.Point(91, -2)
+        Me.BtnYoutube_Helpdesk.Location = New System.Drawing.Point(104, -2)
         Me.BtnYoutube_Helpdesk.Name = "BtnYoutube_Helpdesk"
         Me.BtnYoutube_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnYoutube_Helpdesk.PressedState.Parent = Me.BtnYoutube_Helpdesk
@@ -2209,7 +2209,7 @@ Partial Class FrmPrincipal
         '
         'BtnFacebook_Helpdesk
         '
-        Me.BtnFacebook_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnFacebook_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnFacebook_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnFacebook_Helpdesk.CheckedState.Parent = Me.BtnFacebook_Helpdesk
         Me.AppTransition.SetDecoration(Me.BtnFacebook_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -2222,7 +2222,7 @@ Partial Class FrmPrincipal
         Me.BtnFacebook_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnFacebook_Helpdesk.ImageRotate = 0!
         Me.BtnFacebook_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnFacebook_Helpdesk.Location = New System.Drawing.Point(48, -2)
+        Me.BtnFacebook_Helpdesk.Location = New System.Drawing.Point(61, -2)
         Me.BtnFacebook_Helpdesk.Name = "BtnFacebook_Helpdesk"
         Me.BtnFacebook_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnFacebook_Helpdesk.PressedState.Parent = Me.BtnFacebook_Helpdesk
@@ -2232,7 +2232,7 @@ Partial Class FrmPrincipal
         '
         'BtnInstagram_Helpdesk
         '
-        Me.BtnInstagram_Helpdesk.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnInstagram_Helpdesk.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.BtnInstagram_Helpdesk.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnInstagram_Helpdesk.CheckedState.Parent = Me.BtnInstagram_Helpdesk
         Me.AppTransition.SetDecoration(Me.BtnInstagram_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -2245,7 +2245,7 @@ Partial Class FrmPrincipal
         Me.BtnInstagram_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnInstagram_Helpdesk.ImageRotate = 0!
         Me.BtnInstagram_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnInstagram_Helpdesk.Location = New System.Drawing.Point(5, -2)
+        Me.BtnInstagram_Helpdesk.Location = New System.Drawing.Point(18, -2)
         Me.BtnInstagram_Helpdesk.Name = "BtnInstagram_Helpdesk"
         Me.BtnInstagram_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnInstagram_Helpdesk.PressedState.Parent = Me.BtnInstagram_Helpdesk
@@ -2466,9 +2466,9 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TpEstoque.Location = New System.Drawing.Point(44, 4)
+        Me.TpEstoque.Location = New System.Drawing.Point(5, 4)
         Me.TpEstoque.Name = "TpEstoque"
-        Me.TpEstoque.Size = New System.Drawing.Size(180, 651)
+        Me.TpEstoque.Size = New System.Drawing.Size(219, 651)
         Me.TpEstoque.TabIndex = 3
         Me.TpEstoque.Text = "Estoque"
         '
@@ -3223,9 +3223,9 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.TpFinanceiro, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpFinanceiro, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpFinanceiro, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TpFinanceiro.Location = New System.Drawing.Point(44, 4)
+        Me.TpFinanceiro.Location = New System.Drawing.Point(5, 4)
         Me.TpFinanceiro.Name = "TpFinanceiro"
-        Me.TpFinanceiro.Size = New System.Drawing.Size(180, 651)
+        Me.TpFinanceiro.Size = New System.Drawing.Size(219, 651)
         Me.TpFinanceiro.TabIndex = 4
         Me.TpFinanceiro.Text = "Financeiro"
         '
@@ -3980,9 +3980,9 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.TpDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TpDashboard.Location = New System.Drawing.Point(44, 4)
+        Me.TpDashboard.Location = New System.Drawing.Point(5, 4)
         Me.TpDashboard.Name = "TpDashboard"
-        Me.TpDashboard.Size = New System.Drawing.Size(180, 651)
+        Me.TpDashboard.Size = New System.Drawing.Size(219, 651)
         Me.TpDashboard.TabIndex = 5
         Me.TpDashboard.Text = "Dashboard"
         '
