@@ -40,22 +40,15 @@
 
                 Select Case count
                     Case 0
-                        LblSelectRegister.Visible = False
                         PanelSelect.Visible = False
 
                     Case 1
-                        LblSelectRegister.Text = $"{count} Registro selecionado"
-                        LblSelectRegister.Visible = True
-
                         LblSelect.Text = $"Arquivos selecionados ({count})"
                         PanelSelect.BringToFront()
                         SelectTransition.ShowSync(PanelSelect)
                         BtnRestoreBkp.Enabled = True
 
                     Case Else
-                        LblSelectRegister.Text = $"{count} Registros selecionados"
-                        LblSelectRegister.Visible = True
-
                         LblSelect.Text = $"Arquivos selecionados ({count})"
                         PanelSelect.BringToFront()
                         SelectTransition.ShowSync(PanelSelect)
@@ -219,7 +212,6 @@
                 PanelSelect.Visible = False
                 TimerDatabaseDownload.Stop()
                 TabControlBackup.SelectTab(1)
-                LblSelectRegister.Visible = False
                 DgvBackup.Rows.Clear()
                 ClServerSFTP.FileList(DgvBackup)
 

@@ -1350,6 +1350,7 @@ Public Class FrmCadastros_Phonebook
                         End If
                     End If
                 Else
+                    ClCliente_Phonebook.id_interno = LblId_Interno.Text
                     ClCliente_Phonebook.cpf_cnpj = TxtCPFouCNPJ_Cliente.Text
                     ClCliente_Phonebook.name = TxtNome_Cliente.Text
                     ClCliente_Phonebook.email = TxtEmail_Cliente.Text

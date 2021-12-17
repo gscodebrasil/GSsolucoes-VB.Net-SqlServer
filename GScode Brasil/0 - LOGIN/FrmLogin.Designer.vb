@@ -856,7 +856,7 @@ Partial Class FrmLogin
         Me.tpUserLogin.Controls.Add(Me.Guna2PictureBox1)
         Me.tpUserLogin.Location = New System.Drawing.Point(4, 4)
         Me.tpUserLogin.Name = "tpUserLogin"
-        Me.tpUserLogin.Size = New System.Drawing.Size(692, 476)
+        Me.tpUserLogin.Size = New System.Drawing.Size(692, 505)
         Me.tpUserLogin.TabIndex = 10
         Me.tpUserLogin.Text = "Login"
         '
@@ -1032,7 +1032,7 @@ Partial Class FrmLogin
         Me.btnAddUser.ImageOffset = New System.Drawing.Point(1, 0)
         Me.btnAddUser.ImageSize = New System.Drawing.Size(30, 30)
         Me.btnAddUser.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnAddUser.Location = New System.Drawing.Point(634, 418)
+        Me.btnAddUser.Location = New System.Drawing.Point(634, 448)
         Me.btnAddUser.Name = "btnAddUser"
         Me.btnAddUser.ShadowDecoration.Parent = Me.btnAddUser
         Me.btnAddUser.Size = New System.Drawing.Size(51, 51)
@@ -1176,7 +1176,7 @@ Partial Class FrmLogin
         Me.tpAcesso.Controls.Add(Me.txtCadConfPass)
         Me.tpAcesso.Location = New System.Drawing.Point(4, 4)
         Me.tpAcesso.Name = "tpAcesso"
-        Me.tpAcesso.Size = New System.Drawing.Size(692, 476)
+        Me.tpAcesso.Size = New System.Drawing.Size(692, 505)
         Me.tpAcesso.TabIndex = 1
         Me.tpAcesso.Text = "Acesso"
         '

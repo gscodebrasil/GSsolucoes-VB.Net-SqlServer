@@ -36,7 +36,7 @@ Public Class FrmPrincipal
 
     'OCULTA SUBMENUS
     Private Sub HideSubMenu(Pnc As Guna2Panel, PncFlutuante As Guna2Panel)
-        If PanelMenu.Width >= 228 Then
+        If TabControlMenu.Width >= 228 Then
             For Each Btn As Guna2GradientButton In Pnc.Controls
                 Pnc.Visible = False
                 Btn.Checked = False
@@ -373,6 +373,7 @@ Public Class FrmPrincipal
         BtnAgenda_Helpdesk.ImageOffset = New Point(10, 0)
         BtnRelatorio_Helpdesk.ImageOffset = New Point(10, 0)
         BtnHome_Helpdesk.ImageOffset = New Point(10, 0)
+
     End Sub
 
 #End Region
@@ -566,7 +567,7 @@ Public Class FrmPrincipal
 
     End Sub
 
-    Private Sub BtnNotLeft_Phonebook_Click(sender As Object, e As EventArgs) Handles BtnNotLeft_Phonebook.Click
+    Private Sub BtnNotLeft_Phonebook_Click(sender As Object, e As EventArgs)
 
     End Sub
 

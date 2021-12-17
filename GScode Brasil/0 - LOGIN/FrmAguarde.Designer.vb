@@ -91,6 +91,7 @@ Partial Class FrmAguarde
         'btnClose
         '
         Me.btnClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClose.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.btnClose.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.btnClose.CheckedState.Parent = Me.btnClose
         Me.btnClose.HoverState.ImageSize = New System.Drawing.Size(22, 22)

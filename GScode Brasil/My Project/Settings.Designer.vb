@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("192.168.2.110")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.2.200")>  _
         Public Property Database_Servidor() As String
             Get
                 Return CType(Me("Database_Servidor"),String)
@@ -104,7 +104,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("ysQLa5ihU1gRA4cRtUuyCnOJZXm5UFE5LRn7UhkkTbI=")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ADcYhGwf4S2kbyMKqQRmcidLfnf9ZbrmuRs2d5tdEOromEmqty3BrkD3v/cFMU0X")>  _
         Public Property Database_Senha() As String
             Get
                 Return CType(Me("Database_Senha"),String)
@@ -116,7 +116,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("192.168.2.110")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.2.200")>  _
         Public Property SFTP_Servidor() As String
             Get
                 Return CType(Me("SFTP_Servidor"),String)
@@ -152,7 +152,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("J+WwcS81aKmlswP8dUXn/MEbjuLRUGxXrwLsYvBpAsk=")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("gXNbIr2dNP8YnGTZQnCCZfxlIlwq23+7xQp1dn0JP6M=")>  _
         Public Property SFTP_Senha() As String
             Get
                 Return CType(Me("SFTP_Senha"),String)
@@ -392,8 +392,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("OsqQoz+7buQxgJLa9BN367TF6YfBdNCLsHAl440MgYSD1UmBeBfIopnuiarJDhWnqx00QSWRBRXpXiy15"& _ 
-            "bdcfNVw7XNuPDPELlG6f6kqWjxlhiWSPniDwk23mru6Aojn")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("gXNbIr2dNP8YnGTZQnCCZfxlIlwq23+7xQp1dn0JP6M=")>  _
         Public Property SMTP_Senha() As String
             Get
                 Return CType(Me("SMTP_Senha"),String)
@@ -441,7 +440,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("LD7rLToHaFEjhuZazDwzNMFSx05DO0ohRgbhqU4On8ry+Ul/7TZCxWdN8XionMEY")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("gXNbIr2dNP8YnGTZQnCCZfxlIlwq23+7xQp1dn0JP6M=")>  _
         Public Property AcessoAdmin_Senha() As String
             Get
                 Return CType(Me("AcessoAdmin_Senha"),String)

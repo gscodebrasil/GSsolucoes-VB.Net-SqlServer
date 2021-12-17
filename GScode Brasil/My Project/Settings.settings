@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Database_Servidor" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.2.110</Value>
+      <Value Profile="(Default)">192.168.2.200</Value>
     </Setting>
     <Setting Name="Database_Porta" Type="System.String" Scope="User">
       <Value Profile="(Default)">1433</Value>
@@ -15,10 +15,10 @@
       <Value Profile="(Default)">sa</Value>
     </Setting>
     <Setting Name="Database_Senha" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ysQLa5ihU1gRA4cRtUuyCnOJZXm5UFE5LRn7UhkkTbI=</Value>
+      <Value Profile="(Default)">ADcYhGwf4S2kbyMKqQRmcidLfnf9ZbrmuRs2d5tdEOromEmqty3BrkD3v/cFMU0X</Value>
     </Setting>
     <Setting Name="SFTP_Servidor" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.2.110</Value>
+      <Value Profile="(Default)">192.168.2.200</Value>
     </Setting>
     <Setting Name="SFTP_Porta" Type="System.String" Scope="User">
       <Value Profile="(Default)">22</Value>
@@ -27,7 +27,7 @@
       <Value Profile="(Default)">mssql</Value>
     </Setting>
     <Setting Name="SFTP_Senha" Type="System.String" Scope="User">
-      <Value Profile="(Default)">J+WwcS81aKmlswP8dUXn/MEbjuLRUGxXrwLsYvBpAsk=</Value>
+      <Value Profile="(Default)">gXNbIr2dNP8YnGTZQnCCZfxlIlwq23+7xQp1dn0JP6M=</Value>
     </Setting>
     <Setting Name="SFTP_ChaveSSH" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -87,7 +87,7 @@
       <Value Profile="(Default)">suporte@erimat.com.br</Value>
     </Setting>
     <Setting Name="SMTP_Senha" Type="System.String" Scope="User">
-      <Value Profile="(Default)">OsqQoz+7buQxgJLa9BN367TF6YfBdNCLsHAl440MgYSD1UmBeBfIopnuiarJDhWnqx00QSWRBRXpXiy15bdcfNVw7XNuPDPELlG6f6kqWjxlhiWSPniDwk23mru6Aojn</Value>
+      <Value Profile="(Default)">gXNbIr2dNP8YnGTZQnCCZfxlIlwq23+7xQp1dn0JP6M=</Value>
     </Setting>
     <Setting Name="SMTP_Administrador" Type="System.String" Scope="User">
       <Value Profile="(Default)">guilherme@erimat.com.br</Value>
@@ -99,7 +99,7 @@
       <Value Profile="(Default)">admin@gscodebrasil.com.br</Value>
     </Setting>
     <Setting Name="AcessoAdmin_Senha" Type="System.String" Scope="User">
-      <Value Profile="(Default)">LD7rLToHaFEjhuZazDwzNMFSx05DO0ohRgbhqU4On8ry+Ul/7TZCxWdN8XionMEY</Value>
+      <Value Profile="(Default)">gXNbIr2dNP8YnGTZQnCCZfxlIlwq23+7xQp1dn0JP6M=</Value>
     </Setting>
     <Setting Name="AutoLogin" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>

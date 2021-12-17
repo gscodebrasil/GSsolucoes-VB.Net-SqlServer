@@ -69,7 +69,6 @@ Partial Class FrmBackup
         Me.DgvBackup = New Bunifu.UI.WinForms.BunifuDataGridView()
         Me.DgvColumnSelect = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.PanelPaginacao = New Guna.UI2.WinForms.Guna2Panel()
-        Me.LblSelectRegister = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LblPaginacao = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnVoltarMenu = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.TpServerConfig = New System.Windows.Forms.TabPage()
@@ -802,7 +801,6 @@ Partial Class FrmBackup
         Me.DgvBackup.Location = New System.Drawing.Point(0, 0)
         Me.DgvBackup.MultiSelect = False
         Me.DgvBackup.Name = "DgvBackup"
-        Me.DgvBackup.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -825,14 +823,12 @@ Partial Class FrmBackup
         Me.DgvColumnSelect.HeaderText = ""
         Me.DgvColumnSelect.MinimumWidth = 50
         Me.DgvColumnSelect.Name = "DgvColumnSelect"
-        Me.DgvColumnSelect.ReadOnly = True
         Me.DgvColumnSelect.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DgvColumnSelect.Visible = False
         Me.DgvColumnSelect.Width = 50
         '
         'PanelPaginacao
         '
-        Me.PanelPaginacao.Controls.Add(Me.LblSelectRegister)
         Me.PanelPaginacao.Controls.Add(Me.LblPaginacao)
         Me.PanelPaginacao.Controls.Add(Me.BtnVoltarMenu)
         Me.SelectTransition.SetDecoration(Me.PanelPaginacao, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -842,20 +838,6 @@ Partial Class FrmBackup
         Me.PanelPaginacao.ShadowDecoration.Parent = Me.PanelPaginacao
         Me.PanelPaginacao.Size = New System.Drawing.Size(718, 41)
         Me.PanelPaginacao.TabIndex = 10
-        '
-        'LblSelectRegister
-        '
-        Me.LblSelectRegister.BackColor = System.Drawing.Color.Transparent
-        Me.SelectTransition.SetDecoration(Me.LblSelectRegister, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblSelectRegister.Font = New System.Drawing.Font("Segoe UI", 7.0!)
-        Me.LblSelectRegister.ForeColor = System.Drawing.Color.DimGray
-        Me.LblSelectRegister.Location = New System.Drawing.Point(3, 3)
-        Me.LblSelectRegister.Name = "LblSelectRegister"
-        Me.LblSelectRegister.Size = New System.Drawing.Size(9, 14)
-        Me.LblSelectRegister.TabIndex = 6
-        Me.LblSelectRegister.Text = "..."
-        Me.LblSelectRegister.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        Me.LblSelectRegister.Visible = False
         '
         'LblPaginacao
         '
@@ -1480,7 +1462,6 @@ Partial Class FrmBackup
     Friend WithEvents BtnUploadBkp As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents PanelPaginacao As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents LblSelectRegister As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LblPaginacao As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnVoltarMenu As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents LblBDAviso As Guna.UI2.WinForms.Guna2HtmlLabel

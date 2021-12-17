@@ -62,9 +62,14 @@ Public Class FrmAguarde
         lblAguarde.Text = $"Olá {clUserInfo.StrNome}, seja bem vindo(a) novamente."
 
         FrmPrincipal.LblNameLeft.Text = clUserInfo.StrNome
-        FrmPrincipal.LblEmailLeft.Text = clUserInfo.StrEmail
         FrmPrincipal.LblNameTop.Text = clUserInfo.StrNome
+        FrmPrincipal.LblNameLeft_Phonebook.Text = clUserInfo.StrNome
+        FrmPrincipal.LblNameLeft_Helpdesk.Text = clUserInfo.StrNome
+
+        FrmPrincipal.LblEmailLeft.Text = clUserInfo.StrEmail
         FrmPrincipal.LblEmailTop.Text = clUserInfo.StrEmail
+        FrmPrincipal.LblEmailLeft_Phonebook.Text = clUserInfo.StrEmail
+        FrmPrincipal.LblEmailLeft_Helpdesk.Text = clUserInfo.StrEmail
 
         'If FrmPrincipal.ImageUserLeft.Images.Count = 2 Then
         '    FrmPrincipal.PbPerfilLeft.Image = FrmPrincipal.ImageUserLeft.Images(1)

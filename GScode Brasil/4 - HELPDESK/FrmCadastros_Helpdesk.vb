@@ -1877,4 +1877,9 @@ Public Class FrmCadastros_Helpdesk
                 TxtContatoSecundario_Ocorrencia.IconRight = ImageList.Images(1)
         End Select
     End Sub
+
+    Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged
+        BtnLimpar.Visible = True
+        BtnAplicar.Visible = True
+    End Sub
 End Class
