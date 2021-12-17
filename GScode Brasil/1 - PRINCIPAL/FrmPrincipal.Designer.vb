@@ -59,8 +59,6 @@ Partial Class FrmPrincipal
         Me.PanelImageLeft_Home = New Guna.UI2.WinForms.Guna2Panel()
         Me.PbPerfilLeft = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.BtnPerfilLeft = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.LblNameLeft = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.LblEmailLeft = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PanelNotifiLeft = New System.Windows.Forms.Panel()
         Me.LblNotLeftHome = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnNotLeft = New Guna.UI2.WinForms.Guna2ImageButton()
@@ -84,8 +82,6 @@ Partial Class FrmPrincipal
         Me.PanelImageLeft_Phonebook = New Guna.UI2.WinForms.Guna2Panel()
         Me.PbPerfilLeft_Phonebook = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.BtnPerfilLeft_Phonebook = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.LblNameLeft_Phonebook = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.LblEmailLeft_Phonebook = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PanelNotifiLeft_Phonebook = New System.Windows.Forms.Panel()
         Me.LblNotLeftHome_Phonebook = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnNotLeft_Phonebook = New Guna.UI2.WinForms.Guna2ImageButton()
@@ -111,8 +107,6 @@ Partial Class FrmPrincipal
         Me.PanelImageLeft_Helpdesk = New Guna.UI2.WinForms.Guna2Panel()
         Me.PbPerfilLeft_Helpdesk = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.BtnPerfilLeft_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
-        Me.LblNameLeft_Helpdesk = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.LblEmailLeft_Helpdesk = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PanelNotifiLeft_Helpdesk = New System.Windows.Forms.Panel()
         Me.LblNotLeftHome_Helpdesk = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.BtnNotLeft_Helpdesk = New Guna.UI2.WinForms.Guna2ImageButton()
@@ -230,6 +224,12 @@ Partial Class FrmPrincipal
         Me.TimerSubMenuDeslizante = New Guna.UI2.WinForms.Guna2Transition()
         Me.TimerPanelDeslizante = New Guna.UI2.WinForms.Guna2Transition()
         Me.AppTransition = New Guna.UI2.WinForms.Guna2Transition()
+        Me.LblNameLeft = New System.Windows.Forms.Label()
+        Me.LblEmailLeft = New System.Windows.Forms.Label()
+        Me.LblEmailLeft_Phonebook = New System.Windows.Forms.Label()
+        Me.LblNameLeft_Phonebook = New System.Windows.Forms.Label()
+        Me.LblEmailLeft_Helpdesk = New System.Windows.Forms.Label()
+        Me.LblNameLeft_Helpdesk = New System.Windows.Forms.Label()
         Me.TabControlMenu.SuspendLayout()
         Me.TpHome.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
@@ -1005,9 +1005,9 @@ Partial Class FrmPrincipal
         'PanelPerfilLeft
         '
         Me.PanelPerfilLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.PanelPerfilLeft.Controls.Add(Me.PanelImageLeft_Home)
         Me.PanelPerfilLeft.Controls.Add(Me.LblNameLeft)
         Me.PanelPerfilLeft.Controls.Add(Me.LblEmailLeft)
+        Me.PanelPerfilLeft.Controls.Add(Me.PanelImageLeft_Home)
         Me.PanelPerfilLeft.Controls.Add(Me.PanelNotifiLeft)
         Me.PanelPerfilLeft.Controls.Add(Me.PanelDeslizanteLeft_Home)
         Me.PanelPerfilLeft.Controls.Add(Me.Pn1)
@@ -1078,42 +1078,6 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft.ShadowDecoration.Parent = Me.BtnPerfilLeft
         Me.BtnPerfilLeft.Size = New System.Drawing.Size(32, 32)
         Me.BtnPerfilLeft.TabIndex = 29
-        '
-        'LblNameLeft
-        '
-        Me.LblNameLeft.AutoSize = False
-        Me.LblNameLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.AppTransition.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblNameLeft.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LblNameLeft.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.LblNameLeft.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LblNameLeft.Location = New System.Drawing.Point(0, 170)
-        Me.LblNameLeft.Name = "LblNameLeft"
-        Me.LblNameLeft.Size = New System.Drawing.Size(196, 19)
-        Me.LblNameLeft.TabIndex = 34
-        Me.LblNameLeft.Text = "Admin"
-        Me.LblNameLeft.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LblEmailLeft
-        '
-        Me.LblEmailLeft.AutoSize = False
-        Me.LblEmailLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.AppTransition.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblEmailLeft.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LblEmailLeft.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEmailLeft.ForeColor = System.Drawing.Color.DarkGray
-        Me.LblEmailLeft.Location = New System.Drawing.Point(0, 189)
-        Me.LblEmailLeft.Name = "LblEmailLeft"
-        Me.LblEmailLeft.Size = New System.Drawing.Size(196, 19)
-        Me.LblEmailLeft.TabIndex = 35
-        Me.LblEmailLeft.Text = "admin@gscodebrasil.com.br"
-        Me.LblEmailLeft.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'PanelNotifiLeft
         '
@@ -1566,9 +1530,9 @@ Partial Class FrmPrincipal
         'PanelPerfilLeft_Phonebook
         '
         Me.PanelPerfilLeft_Phonebook.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.PanelImageLeft_Phonebook)
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.LblNameLeft_Phonebook)
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.LblEmailLeft_Phonebook)
+        Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.PanelImageLeft_Phonebook)
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.PanelNotifiLeft_Phonebook)
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.Panel36)
         Me.PanelPerfilLeft_Phonebook.Controls.Add(Me.PanelDeslizanteLeft_Phonebook)
@@ -1639,42 +1603,6 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft_Phonebook.ShadowDecoration.Parent = Me.BtnPerfilLeft_Phonebook
         Me.BtnPerfilLeft_Phonebook.Size = New System.Drawing.Size(32, 32)
         Me.BtnPerfilLeft_Phonebook.TabIndex = 29
-        '
-        'LblNameLeft_Phonebook
-        '
-        Me.LblNameLeft_Phonebook.AutoSize = False
-        Me.LblNameLeft_Phonebook.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.AppTransition.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblNameLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LblNameLeft_Phonebook.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.LblNameLeft_Phonebook.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LblNameLeft_Phonebook.Location = New System.Drawing.Point(0, 170)
-        Me.LblNameLeft_Phonebook.Name = "LblNameLeft_Phonebook"
-        Me.LblNameLeft_Phonebook.Size = New System.Drawing.Size(157, 19)
-        Me.LblNameLeft_Phonebook.TabIndex = 36
-        Me.LblNameLeft_Phonebook.Text = "Admin"
-        Me.LblNameLeft_Phonebook.TextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        '
-        'LblEmailLeft_Phonebook
-        '
-        Me.LblEmailLeft_Phonebook.AutoSize = False
-        Me.LblEmailLeft_Phonebook.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblEmailLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LblEmailLeft_Phonebook.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEmailLeft_Phonebook.ForeColor = System.Drawing.Color.DarkGray
-        Me.LblEmailLeft_Phonebook.Location = New System.Drawing.Point(0, 189)
-        Me.LblEmailLeft_Phonebook.Name = "LblEmailLeft_Phonebook"
-        Me.LblEmailLeft_Phonebook.Size = New System.Drawing.Size(157, 19)
-        Me.LblEmailLeft_Phonebook.TabIndex = 37
-        Me.LblEmailLeft_Phonebook.Text = "admin@gscodebrasil.com.br"
-        Me.LblEmailLeft_Phonebook.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'PanelNotifiLeft_Phonebook
         '
@@ -2217,9 +2145,9 @@ Partial Class FrmPrincipal
         'PanelPerfilLeft_Helpdesk
         '
         Me.PanelPerfilLeft_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.PanelImageLeft_Helpdesk)
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.LblNameLeft_Helpdesk)
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.LblEmailLeft_Helpdesk)
+        Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.PanelImageLeft_Helpdesk)
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.PanelNotifiLeft_Helpdesk)
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.Panel41)
         Me.PanelPerfilLeft_Helpdesk.Controls.Add(Me.PanelDeslizanteLeft_Helpdesk)
@@ -2289,42 +2217,6 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft_Helpdesk.ShadowDecoration.Parent = Me.BtnPerfilLeft_Helpdesk
         Me.BtnPerfilLeft_Helpdesk.Size = New System.Drawing.Size(32, 32)
         Me.BtnPerfilLeft_Helpdesk.TabIndex = 29
-        '
-        'LblNameLeft_Helpdesk
-        '
-        Me.LblNameLeft_Helpdesk.AutoSize = False
-        Me.LblNameLeft_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.AppTransition.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblNameLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LblNameLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.LblNameLeft_Helpdesk.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.LblNameLeft_Helpdesk.Location = New System.Drawing.Point(0, 170)
-        Me.LblNameLeft_Helpdesk.Name = "LblNameLeft_Helpdesk"
-        Me.LblNameLeft_Helpdesk.Size = New System.Drawing.Size(157, 19)
-        Me.LblNameLeft_Helpdesk.TabIndex = 36
-        Me.LblNameLeft_Helpdesk.Text = "Admin"
-        Me.LblNameLeft_Helpdesk.TextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        '
-        'LblEmailLeft_Helpdesk
-        '
-        Me.LblEmailLeft_Helpdesk.AutoSize = False
-        Me.LblEmailLeft_Helpdesk.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
-        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.LblEmailLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LblEmailLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEmailLeft_Helpdesk.ForeColor = System.Drawing.Color.DarkGray
-        Me.LblEmailLeft_Helpdesk.Location = New System.Drawing.Point(0, 189)
-        Me.LblEmailLeft_Helpdesk.Name = "LblEmailLeft_Helpdesk"
-        Me.LblEmailLeft_Helpdesk.Size = New System.Drawing.Size(157, 19)
-        Me.LblEmailLeft_Helpdesk.TabIndex = 37
-        Me.LblEmailLeft_Helpdesk.Text = "admin@gscodebrasil.com.br"
-        Me.LblEmailLeft_Helpdesk.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'PanelNotifiLeft_Helpdesk
         '
@@ -4801,7 +4693,7 @@ Partial Class FrmPrincipal
         'BtnPerfilTop
         '
         Me.BtnPerfilTop.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.BtnPerfilTop.BackColor = System.Drawing.Color.Transparent
+        Me.BtnPerfilTop.BackColor = System.Drawing.Color.White
         Me.BtnPerfilTop.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnPerfilTop.CheckedState.Parent = Me.BtnPerfilTop
         Me.AppTransition.SetDecoration(Me.BtnPerfilTop, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -5197,6 +5089,102 @@ Partial Class FrmPrincipal
         Me.AppTransition.MaxAnimationTime = 1000
         Me.AppTransition.TimeStep = 0.01!
         '
+        'LblNameLeft
+        '
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblNameLeft.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblNameLeft.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LblNameLeft.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LblNameLeft.Location = New System.Drawing.Point(0, 172)
+        Me.LblNameLeft.Name = "LblNameLeft"
+        Me.LblNameLeft.Size = New System.Drawing.Size(196, 23)
+        Me.LblNameLeft.TabIndex = 0
+        Me.LblNameLeft.Text = "Admin"
+        Me.LblNameLeft.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'LblEmailLeft
+        '
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblEmailLeft.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblEmailLeft.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.LblEmailLeft.ForeColor = System.Drawing.Color.DimGray
+        Me.LblEmailLeft.Location = New System.Drawing.Point(0, 195)
+        Me.LblEmailLeft.Name = "LblEmailLeft"
+        Me.LblEmailLeft.Size = New System.Drawing.Size(196, 13)
+        Me.LblEmailLeft.TabIndex = 1
+        Me.LblEmailLeft.Text = "admin@gscodebrasil.com.br"
+        Me.LblEmailLeft.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LblEmailLeft_Phonebook
+        '
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblEmailLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblEmailLeft_Phonebook.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.LblEmailLeft_Phonebook.ForeColor = System.Drawing.Color.DimGray
+        Me.LblEmailLeft_Phonebook.Location = New System.Drawing.Point(0, 195)
+        Me.LblEmailLeft_Phonebook.Name = "LblEmailLeft_Phonebook"
+        Me.LblEmailLeft_Phonebook.Size = New System.Drawing.Size(157, 13)
+        Me.LblEmailLeft_Phonebook.TabIndex = 3
+        Me.LblEmailLeft_Phonebook.Text = "admin@gscodebrasil.com.br"
+        Me.LblEmailLeft_Phonebook.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LblNameLeft_Phonebook
+        '
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblNameLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblNameLeft_Phonebook.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LblNameLeft_Phonebook.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LblNameLeft_Phonebook.Location = New System.Drawing.Point(0, 176)
+        Me.LblNameLeft_Phonebook.Name = "LblNameLeft_Phonebook"
+        Me.LblNameLeft_Phonebook.Size = New System.Drawing.Size(157, 19)
+        Me.LblNameLeft_Phonebook.TabIndex = 2
+        Me.LblNameLeft_Phonebook.Text = "Admin"
+        Me.LblNameLeft_Phonebook.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'LblEmailLeft_Helpdesk
+        '
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblEmailLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblEmailLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblEmailLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.LblEmailLeft_Helpdesk.ForeColor = System.Drawing.Color.DimGray
+        Me.LblEmailLeft_Helpdesk.Location = New System.Drawing.Point(0, 195)
+        Me.LblEmailLeft_Helpdesk.Name = "LblEmailLeft_Helpdesk"
+        Me.LblEmailLeft_Helpdesk.Size = New System.Drawing.Size(157, 13)
+        Me.LblEmailLeft_Helpdesk.TabIndex = 5
+        Me.LblEmailLeft_Helpdesk.Text = "admin@gscodebrasil.com.br"
+        Me.LblEmailLeft_Helpdesk.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LblNameLeft_Helpdesk
+        '
+        Me.TimerPanelDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerSubMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.AppTransition.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.TimerMenuDeslizante.SetDecoration(Me.LblNameLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.LblNameLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LblNameLeft_Helpdesk.Font = New System.Drawing.Font("Segoe UI Semibold", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LblNameLeft_Helpdesk.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.LblNameLeft_Helpdesk.Location = New System.Drawing.Point(0, 176)
+        Me.LblNameLeft_Helpdesk.Name = "LblNameLeft_Helpdesk"
+        Me.LblNameLeft_Helpdesk.Size = New System.Drawing.Size(157, 19)
+        Me.LblNameLeft_Helpdesk.TabIndex = 4
+        Me.LblNameLeft_Helpdesk.Text = "Admin"
+        Me.LblNameLeft_Helpdesk.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -5482,16 +5470,16 @@ Partial Class FrmPrincipal
     Friend WithEvents PanelNotifiLeft_Phonebook As Panel
     Friend WithEvents LblNotLeftHome_Phonebook As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnNotLeft_Phonebook As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents LblNameLeft As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblEmailLeft As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PanelNotifiLeft As Panel
     Friend WithEvents LblNotLeftHome As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnNotLeft As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents PanelNotifiLeft_Helpdesk As Panel
     Friend WithEvents LblNotLeftHome_Helpdesk As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents BtnNotLeft_Helpdesk As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents LblNameLeft_Phonebook As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblEmailLeft_Phonebook As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblNameLeft_Helpdesk As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents LblEmailLeft_Helpdesk As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents LblNameLeft As Label
+    Friend WithEvents LblEmailLeft As Label
+    Friend WithEvents LblNameLeft_Phonebook As Label
+    Friend WithEvents LblEmailLeft_Phonebook As Label
+    Friend WithEvents LblNameLeft_Helpdesk As Label
+    Friend WithEvents LblEmailLeft_Helpdesk As Label
 End Class
