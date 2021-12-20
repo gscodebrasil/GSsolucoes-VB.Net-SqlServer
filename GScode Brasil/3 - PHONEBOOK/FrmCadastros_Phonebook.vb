@@ -852,9 +852,34 @@ Public Class FrmCadastros_Phonebook
         End Select
     End Sub
 
-    Private Sub BtnAbrirOS_Click(sender As Object, e As EventArgs) Handles BtnAbrirOS.Click
+    'Private Sub AbrirOS()
+    '    FrmCadastros_Helpdesk.TxtCPFouCNPJ_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(3).Value
+    '    FrmCadastros_Helpdesk.TxtNome_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(4).Value
+    '    FrmCadastros_Helpdesk.TxtEmail_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(5).Value
+    '    FrmCadastros_Helpdesk.TxtContato_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(6).Value
+    '    FrmCadastros_Helpdesk.TxtContatoPrincipal_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(7).Value
+    '    FrmCadastros_Helpdesk.LblContatoSecundario_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(8).Value
+    '    FrmCadastros_Helpdesk.TxtCelular_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(9).Value
+    '    FrmCadastros_Helpdesk.TxtCEP_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(10).Value
+    '    FrmCadastros_Helpdesk.TxtEndereco_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(11).Value
+    '    FrmCadastros_Helpdesk.TxtComplemento_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(12).Value
+    '    FrmCadastros_Helpdesk.TxtCidade_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(13).Value
+    '    FrmCadastros_Helpdesk.TxtUF_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(14).Value
+    '    FrmCadastros_Helpdesk.CbCondicao_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(15).Value
+    '    FrmCadastros_Helpdesk.TxtEquipamento_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(16).Value
+    '    FrmCadastros_Helpdesk.TxtNSerie_Ocorrencia.Text = DgvRegistros.CurrentRow.Cells(17).Value
 
-    End Sub
+    '    FrmPrincipal.TabSelect = FrmPrincipal.BtnAbrirOS_Helpdesk.Text
+    '    FrmCadastros_Helpdesk.TlpOS.Size = New Size(757, 1026)
+    '    FrmPrincipal.UnCheckBtn_Phonebook()
+    '    FrmPrincipal.BtnAbrirOS_Helpdesk.Checked = True
+    '    FrmPrincipal.MenuAbertoOuFechado_Helpdesk(2)
+    '    FrmPrincipal.FormShow(New FrmCadastros_Helpdesk)
+    'End Sub
+
+    'Private Sub BtnAbrirOS_Click(sender As Object, e As EventArgs) Handles BtnAbrirOS.Click
+    '    AbrirOS()
+    'End Sub
 
     Private Sub BtnSelectApagar_Click(sender As Object, e As EventArgs) Handles BtnSelectApagar.Click
         ExcluirRegistro()

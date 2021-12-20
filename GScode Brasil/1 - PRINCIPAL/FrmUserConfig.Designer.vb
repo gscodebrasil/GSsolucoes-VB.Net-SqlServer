@@ -1508,9 +1508,9 @@ Partial Class FrmUserConfig
         Me.lblInfoB.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblInfoB.Location = New System.Drawing.Point(71, 346)
         Me.lblInfoB.Name = "lblInfoB"
-        Me.lblInfoB.Size = New System.Drawing.Size(235, 21)
+        Me.lblInfoB.Size = New System.Drawing.Size(246, 21)
         Me.lblInfoB.TabIndex = 225
-        Me.lblInfoB.Text = "INFORMÇÕES PROFISSIONAIS"
+        Me.lblInfoB.Text = "INFORMAÇÕES PROFISSIONAIS"
         '
         'lblInfoP
         '
@@ -1520,9 +1520,9 @@ Partial Class FrmUserConfig
         Me.lblInfoP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblInfoP.Location = New System.Drawing.Point(71, 11)
         Me.lblInfoP.Name = "lblInfoP"
-        Me.lblInfoP.Size = New System.Drawing.Size(191, 21)
+        Me.lblInfoP.Size = New System.Drawing.Size(202, 21)
         Me.lblInfoP.TabIndex = 224
-        Me.lblInfoP.Text = "INFORMÇÕES PESSOAIS"
+        Me.lblInfoP.Text = "INFORMAÇÕES PESSOAIS"
         '
         'TpEditar_Email
         '

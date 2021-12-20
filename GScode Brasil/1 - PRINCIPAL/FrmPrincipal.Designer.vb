@@ -484,7 +484,6 @@ Partial Class FrmPrincipal
         Me.TabControlMenu.TabButtonSize = New System.Drawing.Size(40, 40)
         Me.TabControlMenu.TabIndex = 0
         Me.TabControlMenu.TabMenuBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer))
-        Me.TabControlMenu.TabMenuVisible = False
         '
         'TpHome
         '
@@ -494,10 +493,10 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.TpHome, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpHome, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpHome, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TpHome.Location = New System.Drawing.Point(5, 4)
+        Me.TpHome.Location = New System.Drawing.Point(44, 4)
         Me.TpHome.Name = "TpHome"
         Me.TpHome.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpHome.Size = New System.Drawing.Size(219, 651)
+        Me.TpHome.Size = New System.Drawing.Size(180, 651)
         Me.TpHome.TabIndex = 0
         Me.TpHome.Text = "Home"
         '
@@ -521,7 +520,7 @@ Partial Class FrmPrincipal
         Me.PanelMenu.Location = New System.Drawing.Point(3, 3)
         Me.PanelMenu.Name = "PanelMenu"
         Me.PanelMenu.ShadowDecoration.Parent = Me.PanelMenu
-        Me.PanelMenu.Size = New System.Drawing.Size(213, 645)
+        Me.PanelMenu.Size = New System.Drawing.Size(174, 645)
         Me.PanelMenu.TabIndex = 0
         '
         'PanelLogoFull
@@ -536,7 +535,7 @@ Partial Class FrmPrincipal
         Me.PanelLogoFull.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelLogoFull.Location = New System.Drawing.Point(0, 793)
         Me.PanelLogoFull.Name = "PanelLogoFull"
-        Me.PanelLogoFull.Size = New System.Drawing.Size(196, 149)
+        Me.PanelLogoFull.Size = New System.Drawing.Size(157, 149)
         Me.PanelLogoFull.TabIndex = 17
         '
         'PbLogoG
@@ -550,7 +549,7 @@ Partial Class FrmPrincipal
         Me.PbLogoG.Image = CType(resources.GetObject("PbLogoG.Image"), System.Drawing.Image)
         Me.PbLogoG.Location = New System.Drawing.Point(0, 36)
         Me.PbLogoG.Name = "PbLogoG"
-        Me.PbLogoG.Size = New System.Drawing.Size(196, 71)
+        Me.PbLogoG.Size = New System.Drawing.Size(157, 71)
         Me.PbLogoG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoG.TabIndex = 19
         Me.PbLogoG.TabStop = False
@@ -568,7 +567,7 @@ Partial Class FrmPrincipal
         Me.PanelSocial.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelSocial.Location = New System.Drawing.Point(0, 107)
         Me.PanelSocial.Name = "PanelSocial"
-        Me.PanelSocial.Size = New System.Drawing.Size(196, 42)
+        Me.PanelSocial.Size = New System.Drawing.Size(157, 42)
         Me.PanelSocial.TabIndex = 0
         '
         'BtnYoutube
@@ -586,7 +585,7 @@ Partial Class FrmPrincipal
         Me.BtnYoutube.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnYoutube.ImageRotate = 0!
         Me.BtnYoutube.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnYoutube.Location = New System.Drawing.Point(124, -2)
+        Me.BtnYoutube.Location = New System.Drawing.Point(104, -2)
         Me.BtnYoutube.Name = "BtnYoutube"
         Me.BtnYoutube.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnYoutube.PressedState.Parent = Me.BtnYoutube
@@ -609,7 +608,7 @@ Partial Class FrmPrincipal
         Me.BtnFacebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnFacebook.ImageRotate = 0!
         Me.BtnFacebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnFacebook.Location = New System.Drawing.Point(81, -2)
+        Me.BtnFacebook.Location = New System.Drawing.Point(61, -2)
         Me.BtnFacebook.Name = "BtnFacebook"
         Me.BtnFacebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnFacebook.PressedState.Parent = Me.BtnFacebook
@@ -632,7 +631,7 @@ Partial Class FrmPrincipal
         Me.BtnInstagram.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnInstagram.ImageRotate = 0!
         Me.BtnInstagram.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnInstagram.Location = New System.Drawing.Point(38, -2)
+        Me.BtnInstagram.Location = New System.Drawing.Point(18, -2)
         Me.BtnInstagram.Name = "BtnInstagram"
         Me.BtnInstagram.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnInstagram.PressedState.Parent = Me.BtnInstagram
@@ -679,7 +678,7 @@ Partial Class FrmPrincipal
         Me.BtnAjuda.Name = "BtnAjuda"
         Me.BtnAjuda.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnAjuda.ShadowDecoration.Parent = Me.BtnAjuda
-        Me.BtnAjuda.Size = New System.Drawing.Size(196, 45)
+        Me.BtnAjuda.Size = New System.Drawing.Size(157, 45)
         Me.BtnAjuda.TabIndex = 16
         Me.BtnAjuda.Text = "Ajuda"
         Me.BtnAjuda.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -723,7 +722,7 @@ Partial Class FrmPrincipal
         Me.BtnLicencas.Name = "BtnLicencas"
         Me.BtnLicencas.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnLicencas.ShadowDecoration.Parent = Me.BtnLicencas
-        Me.BtnLicencas.Size = New System.Drawing.Size(196, 45)
+        Me.BtnLicencas.Size = New System.Drawing.Size(157, 45)
         Me.BtnLicencas.TabIndex = 15
         Me.BtnLicencas.Text = "Licenças"
         Me.BtnLicencas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -746,7 +745,7 @@ Partial Class FrmPrincipal
         Me.PanelConfig.Location = New System.Drawing.Point(0, 478)
         Me.PanelConfig.Name = "PanelConfig"
         Me.PanelConfig.ShadowDecoration.Parent = Me.PanelConfig
-        Me.PanelConfig.Size = New System.Drawing.Size(196, 225)
+        Me.PanelConfig.Size = New System.Drawing.Size(157, 225)
         Me.PanelConfig.TabIndex = 0
         Me.PanelConfig.Visible = False
         '
@@ -784,7 +783,7 @@ Partial Class FrmPrincipal
         Me.BtnUsuarios.Name = "BtnUsuarios"
         Me.BtnUsuarios.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnUsuarios.ShadowDecoration.Parent = Me.BtnUsuarios
-        Me.BtnUsuarios.Size = New System.Drawing.Size(196, 45)
+        Me.BtnUsuarios.Size = New System.Drawing.Size(157, 45)
         Me.BtnUsuarios.TabIndex = 24
         Me.BtnUsuarios.Text = "Usuários"
         Me.BtnUsuarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -823,7 +822,7 @@ Partial Class FrmPrincipal
         Me.BtnArquivos.Name = "BtnArquivos"
         Me.BtnArquivos.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnArquivos.ShadowDecoration.Parent = Me.BtnArquivos
-        Me.BtnArquivos.Size = New System.Drawing.Size(196, 45)
+        Me.BtnArquivos.Size = New System.Drawing.Size(157, 45)
         Me.BtnArquivos.TabIndex = 23
         Me.BtnArquivos.Text = "Arquivos"
         Me.BtnArquivos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -862,7 +861,7 @@ Partial Class FrmPrincipal
         Me.BtnBackup.Name = "BtnBackup"
         Me.BtnBackup.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnBackup.ShadowDecoration.Parent = Me.BtnBackup
-        Me.BtnBackup.Size = New System.Drawing.Size(196, 45)
+        Me.BtnBackup.Size = New System.Drawing.Size(157, 45)
         Me.BtnBackup.TabIndex = 22
         Me.BtnBackup.Text = "Backup"
         Me.BtnBackup.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -901,7 +900,7 @@ Partial Class FrmPrincipal
         Me.BtnSmtp.Name = "BtnSmtp"
         Me.BtnSmtp.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.BtnSmtp.ShadowDecoration.Parent = Me.BtnSmtp
-        Me.BtnSmtp.Size = New System.Drawing.Size(196, 45)
+        Me.BtnSmtp.Size = New System.Drawing.Size(157, 45)
         Me.BtnSmtp.TabIndex = 21
         Me.BtnSmtp.Text = "SMTP"
         Me.BtnSmtp.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -940,7 +939,7 @@ Partial Class FrmPrincipal
         Me.Btnsoftphone.Name = "Btnsoftphone"
         Me.Btnsoftphone.Padding = New System.Windows.Forms.Padding(50, 0, 0, 0)
         Me.Btnsoftphone.ShadowDecoration.Parent = Me.Btnsoftphone
-        Me.Btnsoftphone.Size = New System.Drawing.Size(196, 45)
+        Me.Btnsoftphone.Size = New System.Drawing.Size(157, 45)
         Me.Btnsoftphone.TabIndex = 20
         Me.Btnsoftphone.Text = "Softphone"
         Me.Btnsoftphone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -984,7 +983,7 @@ Partial Class FrmPrincipal
         Me.BtnConfig.Name = "BtnConfig"
         Me.BtnConfig.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnConfig.ShadowDecoration.Parent = Me.BtnConfig
-        Me.BtnConfig.Size = New System.Drawing.Size(196, 45)
+        Me.BtnConfig.Size = New System.Drawing.Size(157, 45)
         Me.BtnConfig.TabIndex = 14
         Me.BtnConfig.Text = "Configurações"
         Me.BtnConfig.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1028,7 +1027,7 @@ Partial Class FrmPrincipal
         Me.BtnAplication.Name = "BtnAplication"
         Me.BtnAplication.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnAplication.ShadowDecoration.Parent = Me.BtnAplication
-        Me.BtnAplication.Size = New System.Drawing.Size(196, 45)
+        Me.BtnAplication.Size = New System.Drawing.Size(157, 45)
         Me.BtnAplication.TabIndex = 0
         Me.BtnAplication.Text = "Aplicações"
         Me.BtnAplication.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1049,7 +1048,7 @@ Partial Class FrmPrincipal
         Me.PanelPerfilLeft.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilLeft.Location = New System.Drawing.Point(0, 100)
         Me.PanelPerfilLeft.Name = "PanelPerfilLeft"
-        Me.PanelPerfilLeft.Size = New System.Drawing.Size(196, 288)
+        Me.PanelPerfilLeft.Size = New System.Drawing.Size(157, 288)
         Me.PanelPerfilLeft.TabIndex = 13
         '
         'LblNameLeft
@@ -1063,7 +1062,7 @@ Partial Class FrmPrincipal
         Me.LblNameLeft.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LblNameLeft.Location = New System.Drawing.Point(0, 172)
         Me.LblNameLeft.Name = "LblNameLeft"
-        Me.LblNameLeft.Size = New System.Drawing.Size(196, 23)
+        Me.LblNameLeft.Size = New System.Drawing.Size(157, 23)
         Me.LblNameLeft.TabIndex = 0
         Me.LblNameLeft.Text = "Admin"
         Me.LblNameLeft.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -1079,7 +1078,7 @@ Partial Class FrmPrincipal
         Me.LblEmailLeft.ForeColor = System.Drawing.Color.DimGray
         Me.LblEmailLeft.Location = New System.Drawing.Point(0, 195)
         Me.LblEmailLeft.Name = "LblEmailLeft"
-        Me.LblEmailLeft.Size = New System.Drawing.Size(196, 13)
+        Me.LblEmailLeft.Size = New System.Drawing.Size(157, 13)
         Me.LblEmailLeft.TabIndex = 1
         Me.LblEmailLeft.Text = "admin@gscodebrasil.com.br"
         Me.LblEmailLeft.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1096,7 +1095,7 @@ Partial Class FrmPrincipal
         Me.PanelImageLeft_Home.Location = New System.Drawing.Point(0, 26)
         Me.PanelImageLeft_Home.Name = "PanelImageLeft_Home"
         Me.PanelImageLeft_Home.ShadowDecoration.Parent = Me.PanelImageLeft_Home
-        Me.PanelImageLeft_Home.Size = New System.Drawing.Size(196, 144)
+        Me.PanelImageLeft_Home.Size = New System.Drawing.Size(157, 144)
         Me.PanelImageLeft_Home.TabIndex = 31
         '
         'BtnPerfilLeft
@@ -1121,7 +1120,7 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft.ForeColor = System.Drawing.Color.White
         Me.BtnPerfilLeft.HoverState.Parent = Me.BtnPerfilLeft
         Me.BtnPerfilLeft.Image = CType(resources.GetObject("BtnPerfilLeft.Image"), System.Drawing.Image)
-        Me.BtnPerfilLeft.Location = New System.Drawing.Point(132, 90)
+        Me.BtnPerfilLeft.Location = New System.Drawing.Point(112, 90)
         Me.BtnPerfilLeft.Name = "BtnPerfilLeft"
         Me.BtnPerfilLeft.PressedColor = System.Drawing.Color.DimGray
         Me.BtnPerfilLeft.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
@@ -1140,7 +1139,7 @@ Partial Class FrmPrincipal
         Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbPerfilLeft.Image = CType(resources.GetObject("PbPerfilLeft.Image"), System.Drawing.Image)
         Me.PbPerfilLeft.ImageRotate = 0!
-        Me.PbPerfilLeft.Location = New System.Drawing.Point(38, 0)
+        Me.PbPerfilLeft.Location = New System.Drawing.Point(18, 0)
         Me.PbPerfilLeft.Name = "PbPerfilLeft"
         Me.PbPerfilLeft.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.PbPerfilLeft.ShadowDecoration.Parent = Me.PbPerfilLeft
@@ -1161,7 +1160,7 @@ Partial Class FrmPrincipal
         Me.PanelNotifiLeft.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelNotifiLeft.Location = New System.Drawing.Point(0, 208)
         Me.PanelNotifiLeft.Name = "PanelNotifiLeft"
-        Me.PanelNotifiLeft.Size = New System.Drawing.Size(196, 33)
+        Me.PanelNotifiLeft.Size = New System.Drawing.Size(157, 33)
         Me.PanelNotifiLeft.TabIndex = 33
         '
         'LblNotLeftHome
@@ -1174,7 +1173,7 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNotLeftHome.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LblNotLeftHome.ForeColor = System.Drawing.Color.White
-        Me.LblNotLeftHome.Location = New System.Drawing.Point(82, 12)
+        Me.LblNotLeftHome.Location = New System.Drawing.Point(62, 12)
         Me.LblNotLeftHome.Name = "LblNotLeftHome"
         Me.LblNotLeftHome.Size = New System.Drawing.Size(69, 17)
         Me.LblNotLeftHome.TabIndex = 0
@@ -1195,7 +1194,7 @@ Partial Class FrmPrincipal
         Me.BtnNotLeft.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnNotLeft.ImageRotate = 0!
         Me.BtnNotLeft.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnNotLeft.Location = New System.Drawing.Point(45, 5)
+        Me.BtnNotLeft.Location = New System.Drawing.Point(25, 5)
         Me.BtnNotLeft.Name = "BtnNotLeft"
         Me.BtnNotLeft.PressedState.ImageSize = New System.Drawing.Size(22, 22)
         Me.BtnNotLeft.PressedState.Parent = Me.BtnNotLeft
@@ -1214,7 +1213,7 @@ Partial Class FrmPrincipal
         Me.PanelDeslizanteLeft_Home.Location = New System.Drawing.Point(0, 0)
         Me.PanelDeslizanteLeft_Home.Name = "PanelDeslizanteLeft_Home"
         Me.PanelDeslizanteLeft_Home.ShadowDecoration.Parent = Me.PanelDeslizanteLeft_Home
-        Me.PanelDeslizanteLeft_Home.Size = New System.Drawing.Size(196, 26)
+        Me.PanelDeslizanteLeft_Home.Size = New System.Drawing.Size(157, 26)
         Me.PanelDeslizanteLeft_Home.TabIndex = 30
         '
         'BtnPanelDeslizanteLeft
@@ -1232,7 +1231,7 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteLeft.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnPanelDeslizanteLeft.ImageRotate = 0!
         Me.BtnPanelDeslizanteLeft.ImageSize = New System.Drawing.Size(18, 18)
-        Me.BtnPanelDeslizanteLeft.Location = New System.Drawing.Point(175, 0)
+        Me.BtnPanelDeslizanteLeft.Location = New System.Drawing.Point(136, 0)
         Me.BtnPanelDeslizanteLeft.Name = "BtnPanelDeslizanteLeft"
         Me.BtnPanelDeslizanteLeft.PressedState.ImageSize = New System.Drawing.Size(18, 18)
         Me.BtnPanelDeslizanteLeft.PressedState.Parent = Me.BtnPanelDeslizanteLeft
@@ -1249,7 +1248,7 @@ Partial Class FrmPrincipal
         Me.Pn1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Pn1.Location = New System.Drawing.Point(0, 241)
         Me.Pn1.Name = "Pn1"
-        Me.Pn1.Size = New System.Drawing.Size(196, 47)
+        Me.Pn1.Size = New System.Drawing.Size(157, 47)
         Me.Pn1.TabIndex = 18
         '
         'PbLogoP
@@ -1263,7 +1262,7 @@ Partial Class FrmPrincipal
         Me.PbLogoP.Image = CType(resources.GetObject("PbLogoP.Image"), System.Drawing.Image)
         Me.PbLogoP.Location = New System.Drawing.Point(0, 0)
         Me.PbLogoP.Name = "PbLogoP"
-        Me.PbLogoP.Size = New System.Drawing.Size(196, 100)
+        Me.PbLogoP.Size = New System.Drawing.Size(157, 100)
         Me.PbLogoP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoP.TabIndex = 1
         Me.PbLogoP.TabStop = False
@@ -2466,9 +2465,9 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpEstoque, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TpEstoque.Location = New System.Drawing.Point(5, 4)
+        Me.TpEstoque.Location = New System.Drawing.Point(44, 4)
         Me.TpEstoque.Name = "TpEstoque"
-        Me.TpEstoque.Size = New System.Drawing.Size(219, 651)
+        Me.TpEstoque.Size = New System.Drawing.Size(180, 651)
         Me.TpEstoque.TabIndex = 3
         Me.TpEstoque.Text = "Estoque"
         '

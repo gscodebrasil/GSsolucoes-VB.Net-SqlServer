@@ -58,7 +58,7 @@ Public Class FrmPrincipal
         Next
     End Sub
 
-    Private Sub UnCheckBtn_Phonebook()
+    Public Sub UnCheckBtn_Phonebook()
         For Each Btn As Guna2GradientButton In New List(Of Guna2GradientButton) From {BtnCadastros_Phonebook, BtnContatos, BtnLocalizacao}
             Btn.Checked = False
         Next

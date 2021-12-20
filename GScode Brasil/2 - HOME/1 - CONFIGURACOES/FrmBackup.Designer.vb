@@ -234,11 +234,10 @@ Partial Class FrmBackup
         'BtnSelectFechar
         '
         Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
+        Me.BtnSelectFechar.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BtnSelectFechar.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnSelectFechar.CheckedState.Parent = Me.BtnSelectFechar
         Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.BtnSelectFechar.HoverState.ImageSize = New System.Drawing.Size(22, 22)
         Me.BtnSelectFechar.HoverState.Parent = Me.BtnSelectFechar
         Me.BtnSelectFechar.Image = CType(resources.GetObject("BtnSelectFechar.Image"), System.Drawing.Image)
         Me.BtnSelectFechar.ImageOffset = New System.Drawing.Point(0, 0)
@@ -246,7 +245,7 @@ Partial Class FrmBackup
         Me.BtnSelectFechar.ImageSize = New System.Drawing.Size(16, 16)
         Me.BtnSelectFechar.Location = New System.Drawing.Point(337, 6)
         Me.BtnSelectFechar.Name = "BtnSelectFechar"
-        Me.BtnSelectFechar.PressedState.ImageSize = New System.Drawing.Size(18, 18)
+        Me.BtnSelectFechar.PressedState.ImageSize = New System.Drawing.Size(16, 16)
         Me.BtnSelectFechar.PressedState.Parent = Me.BtnSelectFechar
         Me.BtnSelectFechar.ShadowDecoration.Parent = Me.BtnSelectFechar
         Me.BtnSelectFechar.Size = New System.Drawing.Size(20, 20)

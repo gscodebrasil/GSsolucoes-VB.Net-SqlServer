@@ -300,7 +300,7 @@ Partial Class FrmUsers
         'BtnSelectFechar
         '
         Me.BtnSelectFechar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnSelectFechar.BackColor = System.Drawing.Color.White
+        Me.BtnSelectFechar.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BtnSelectFechar.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
         Me.BtnSelectFechar.CheckedState.Parent = Me.BtnSelectFechar
         Me.SelectTransition.SetDecoration(Me.BtnSelectFechar, Guna.UI2.AnimatorNS.DecorationType.None)

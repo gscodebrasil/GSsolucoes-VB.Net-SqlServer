@@ -133,7 +133,6 @@ Public Class FrmCadastros_Helpdesk
 
             .Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             .Columns(21).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-
         End With
     End Sub
 
@@ -434,29 +433,26 @@ Public Class FrmCadastros_Helpdesk
         End If
     End Sub
 
-    Private Function TxtEmpty(Valida As Boolean)
+    Private Function TxtEmpty() As Boolean
         For Each Txt As Guna2TextBox In New List(Of Guna2TextBox) From {TxtCPFouCNPJ_Ocorrencia, TxtNome_Ocorrencia, TxtEmail_Ocorrencia, TxtContato_Ocorrencia, TxtContatoPrincipal_Ocorrencia, TxtEquipamento_Ocorrencia, TxtOcorrencia}
             If Txt.Text.Length <= 0 Then
                 Txt.IconRight = ImageList.Images(1)
-                Valida = True
+                TxtEmpty = True
             End If
         Next
         For Each Cbox As Guna2ComboBox In New List(Of Guna2ComboBox) From {CbPrioridade_Ocorrencia, CbCondicao_Ocorrencia}
             If Cbox.Text.Length <= 0 Then
                 Cbox.FillColor = Color.FromArgb(255, 198, 198)
-                Valida = True
+                TxtEmpty = True
             End If
         Next
-        Return Valida
+        Return TxtEmpty
     End Function
 
     Private Sub BtnSalvar_Ocorrencia_Click(sender As Object, e As EventArgs) Handles BtnSalvar_Ocorrencia.Click
-        Dim Valida As Boolean
-        TxtEmpty(Valida)
-
-        If Valida = False Then
+        If TxtEmpty() = False Then
             If ValidaEmail(TxtEmail_Ocorrencia.Text) Then
-                If TxtCEP_Ocorrencia.Text.Length = 0 OrElse (TxtCEP_Ocorrencia.Text) Then
+                If TxtCEP_Ocorrencia.Text.Length = 0 OrElse ValidaCEP(TxtCEP_Ocorrencia.Text) Then
                     ProgressAguarde.Value = 0
                     TabControl_CadCons.SelectTab(7)
                     TimerCad.Start()
@@ -756,33 +752,6 @@ Public Class FrmCadastros_Helpdesk
                     linha.Cells(0).Value = IMG_list.Images(3)
             End Select
         Next
-
-        For Intx As Integer = 0 To DgvPainel.Rows.Count - 1
-
-            Dim StatusColor As String = DgvPainel.Rows(Intx).Cells(29).Value.ToString
-
-            If StatusColor = "Encerrado - Cliente S/ Contrato" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Red
-                DgvPainel.Rows(Intx).DefaultCellStyle.ForeColor = Color.White
-            End If
-
-            If StatusColor = "Necessário abrir OS para ir ao local" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.YellowGreen
-            End If
-
-            If StatusColor = "Chamado está em andamento" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.LightSkyBlue
-            End If
-
-            If StatusColor = "Aguardando Pendência da Erimat" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Olive
-            End If
-
-            If StatusColor = "Aguardando Pendência do Cliente" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Yellow
-            End If
-
-        Next
     End Sub
 
     Private Sub DgvGerenciador_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles DgvGerenciador.RowsAdded
@@ -798,36 +767,20 @@ Public Class FrmCadastros_Helpdesk
                     linha.Cells(1).Value = IMG_list.Images(3)
             End Select
 
-            If linha.Cells(30).Value = "Encerrado - Cliente de Contrato" OrElse linha.Cells(30).Value = "Encerrado - Cliente S/ Contrato" OrElse linha.Cells(30).Value = "Encerrado - Sem Cobrança" OrElse linha.Cells(30).Value = "Cancelado pela Erimat" OrElse linha.Cells(30).Value = "Cancelado pelo Cliente" OrElse linha.Cells(30).Value = "Necessário abrir OS para ir ao local" Then
-                linha.Cells(1).Value = IMG_list.Images(4)
-            End If
-        Next
-
-        For Intx As Integer = 0 To DgvPainel.Rows.Count - 1
-
-            Dim StatusColor As String = DgvPainel.Rows(Intx).Cells(30).Value.ToString
-
-            If StatusColor = "Encerrado - Cliente S/ Contrato" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Red
-                DgvPainel.Rows(Intx).DefaultCellStyle.ForeColor = Color.White
-            End If
-
-            If StatusColor = "Necessário abrir OS para ir ao local" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.YellowGreen
-            End If
-
-            If StatusColor = "Chamado está em andamento" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.LightSkyBlue
-            End If
-
-            If StatusColor = "Aguardando Pendência da Erimat" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Olive
-            End If
-
-            If StatusColor = "Aguardando Pendência do Cliente" Then
-                DgvPainel.Rows(Intx).DefaultCellStyle.BackColor = Color.Yellow
-            End If
-
+            Select Case linha.Cells(30).Value
+                Case "Encerrado - Cliente S/ Contrato"
+                    linha.Cells(1).Value = IMG_list.Images(4)
+                Case "Encerrado - Cliente de Contrato"
+                    linha.Cells(1).Value = IMG_list.Images(4)
+                Case "Encerrado - Sem Cobrança"
+                    linha.Cells(1).Value = IMG_list.Images(4)
+                Case "Cancelado pela Erimat"
+                    linha.Cells(1).Value = IMG_list.Images(4)
+                Case "Cancelado pelo Cliente"
+                    linha.Cells(1).Value = IMG_list.Images(4)
+                Case "Necessário abrir OS para ir ao local"
+                    linha.Cells(1).Value = IMG_list.Images(4)
+            End Select
         Next
     End Sub
 
@@ -1535,6 +1488,12 @@ Public Class FrmCadastros_Helpdesk
     End Sub
 
     Private Sub BtnSalvar_Resultado_Click(sender As Object, e As EventArgs) Handles BtnSalvar_Resultado.Click
+        If CbStatus_Resultado.Text = "Chamado está em andamento" Then
+            ProgressAguarde.Value = 0
+            TabControl_CadCons.SelectTab(7)
+            TimerCad.Start()
+            Exit Sub
+        End If
         If CbStatus_Resultado.Text.Length > 0 Then
             If TxtContato_Resultado.Text.Length > 0 Then
                 If CbTempo_Resultado.Text.Length > 0 Then
@@ -1888,5 +1847,41 @@ Public Class FrmCadastros_Helpdesk
     Private Sub CBStatus_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBStatus.SelectedIndexChanged
         BtnLimpar.Visible = True
         BtnAplicar.Visible = True
+    End Sub
+
+    Private Sub CbStatus_Resultado_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CbStatus_Resultado.SelectedIndexChanged
+        If CbStatus_Resultado.Text = "Chamado está em andamento" Then
+            TxtContato_Resultado.PlaceholderText = "Contato"
+            LblContato_Resultado.Text = "Contato"
+            LblTempo_Resulotado.Text = "Tempo de conexão"
+            LblResultado_Resultado.Text = "Resultado"
+        Else
+            TxtContato_Resultado.PlaceholderText = "Contato *"
+            LblContato_Resultado.Text = "Contato *"
+            LblTempo_Resulotado.Text = "Tempo de conexão *"
+            LblResultado_Resultado.Text = "Resultado *"
+        End If
+    End Sub
+
+    Private Sub DgvGerenciador_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles DgvGerenciador.RowPrePaint
+        Select Case DgvGerenciador.Rows(e.RowIndex).Cells(30).Value
+            Case "Chamado está em andamento"
+                DgvGerenciador.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.LightSkyBlue
+            Case "Aguardando Pendência do Cliente"
+                DgvGerenciador.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Yellow
+            Case "Aguardando Pendência da Erimat"
+                DgvGerenciador.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Olive
+        End Select
+    End Sub
+
+    Private Sub DgvPainel_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles DgvPainel.RowPrePaint
+        Select Case DgvPainel.Rows(e.RowIndex).Cells(29).Value
+            Case "Chamado está em andamento"
+                DgvPainel.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.LightSkyBlue
+            Case "Aguardando Pendência do Cliente"
+                DgvPainel.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Yellow
+            Case "Aguardando Pendência da Erimat"
+                DgvPainel.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Olive
+        End Select
     End Sub
 End Class
