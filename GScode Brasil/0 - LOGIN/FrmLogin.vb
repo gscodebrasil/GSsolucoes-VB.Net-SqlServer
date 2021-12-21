@@ -1172,6 +1172,8 @@ Public Class FrmLogin
         End If
     End Sub
 
+    Private ClServerSFTP As New ServerSFTP
+
     Private Sub TimerCadastro_Tick(sender As Object, e As EventArgs) Handles TimerCadastro.Tick
         ProgressAguarde.Increment(1)
 
@@ -1182,8 +1184,7 @@ Public Class FrmLogin
 
                 If ClUserInfo.valida = True Then
                     ClUserInfo.valida = False
-
-
+                    ClServerSFTP.Path_Usuario(txtCadEmail.Text)
                 End If
 
             Case 100
