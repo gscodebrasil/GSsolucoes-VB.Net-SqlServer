@@ -211,6 +211,7 @@ Partial Class FrmUserConfig
         Me.TabControl_UserConfig.TabIndex = 172
         Me.TabControl_UserConfig.TabMenuBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.TabControl_UserConfig.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalBottom
+        Me.TabControl_UserConfig.TabMenuVisible = False
         '
         'TpPerfil
         '
@@ -220,7 +221,7 @@ Partial Class FrmUserConfig
         Me.TpPerfil.Location = New System.Drawing.Point(4, 4)
         Me.TpPerfil.Name = "TpPerfil"
         Me.TpPerfil.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpPerfil.Size = New System.Drawing.Size(780, 527)
+        Me.TpPerfil.Size = New System.Drawing.Size(780, 556)
         Me.TpPerfil.TabIndex = 5
         Me.TpPerfil.Text = "Perfil"
         '

@@ -999,6 +999,7 @@ Partial Class FrmUsers
         Me.TabControlUsers.TabIndex = 13
         Me.TabControlUsers.TabMenuBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.TabControlUsers.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalBottom
+        Me.TabControlUsers.TabMenuVisible = False
         Me.TabControlUsers.Visible = False
         '
         'TpInicial
@@ -1012,7 +1013,7 @@ Partial Class FrmUsers
         Me.TpInicial.Location = New System.Drawing.Point(4, 4)
         Me.TpInicial.Name = "TpInicial"
         Me.TpInicial.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpInicial.Size = New System.Drawing.Size(780, 524)
+        Me.TpInicial.Size = New System.Drawing.Size(780, 556)
         Me.TpInicial.TabIndex = 0
         Me.TpInicial.Text = "Tela Inicial"
         '
@@ -1188,7 +1189,7 @@ Partial Class FrmUsers
         Me.Lbl2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Lbl2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl2.ForeColor = System.Drawing.Color.Black
-        Me.Lbl2.Location = New System.Drawing.Point(3, 436)
+        Me.Lbl2.Location = New System.Drawing.Point(3, 468)
         Me.Lbl2.Name = "Lbl2"
         Me.Lbl2.Size = New System.Drawing.Size(774, 85)
         Me.Lbl2.TabIndex = 111
@@ -3042,9 +3043,9 @@ Partial Class FrmUsers
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(788, 565)
+        Me.Controls.Add(Me.TabControlUsers)
         Me.Controls.Add(Me.PanelFilter)
         Me.Controls.Add(Me.PanelSelect)
-        Me.Controls.Add(Me.TabControlUsers)
         Me.SelectTransition.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmUsers"

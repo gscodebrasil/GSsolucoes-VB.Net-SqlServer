@@ -87,7 +87,7 @@ Public Class OS_Helpdesk
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"UPDATE os_helpdesk SET nome_res='{nome_res}',email_res='{email_res}',data_res='{data_res}',resultado='{resultado}',contato_res='{contato_res}',tempo_conexao='{tempo_conexao}',status='{status}' WHERE id_interno='{id_interno}'", conn)
+                Using command As SqlCommand = New SqlCommand($"UPDATE os_helpdesk SET nome_res='{nome_res}',email_res='{email_res}',data_res='{data_res}',resultado='{resultado}',contato_res='{contato_res}',tempo_conexao='{tempo_conexao}',status='{status}' WHERE id_interno='{id_interno}' WHERE id_interno='{id_interno}'", conn)
                     command.ExecuteNonQuery()
                     Valida = True
                 End Using

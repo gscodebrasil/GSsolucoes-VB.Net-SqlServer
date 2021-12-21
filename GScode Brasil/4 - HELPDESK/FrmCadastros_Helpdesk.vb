@@ -1091,19 +1091,13 @@ Public Class FrmCadastros_Helpdesk
 
                 PanelSelect.Visible = False
 
-                If row.Cells(27).Value.ToString.Length > 0 Then
-                    If row.Cells(28).Value.ToString.Length > 0 Then
-                        If row.Cells(29).Value.ToString.Length > 0 Then
-                            If row.Cells(30).Value.ToString.Length > 0 Then
-                                BtnVerResultado.Visible = True
-                            Else
-                                BtnVerResultado.Visible = False
-                            End If
-                        End If
-                    End If
+                If row.Cells(30).Value.Length > 0 Then
+                    BtnVerResultado.Visible = True
+                Else
+                    BtnVerResultado.Visible = False
                 End If
 
-                If row.Cells(30).Value = "Encerrado - Cliente sem Contrato" Then
+                If row.Cells(30).Value = "Encerrado - Cliente S/ Contrato" Then
                     LblFaturamento.Visible = True
                 Else
                     LblFaturamento.Visible = False
@@ -1597,10 +1591,10 @@ Public Class FrmCadastros_Helpdesk
             End Select
 
             ClEmail.ToEmail = TxtSendEmail_OS.Text
-
-
             NewThread = New Thread(AddressOf ClEmail.InformacoesOS_Helpdesk) With {.IsBackground = True}
             NewThread.Start()
+
+            TxtSendEmail_OS.Clear()
         End If
     End Sub
 
