@@ -411,9 +411,10 @@ Public Class FrmPrincipal
 
 #End Region
 
+    Private clUserInfo As New UserInfo
+
     'MAXIMIZA O FORM SEM COBRIR A BARRA DO WINDOWS
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'PanelMenu.VerticalScroll.Visible = False
         TabControlMenu.TabMenuVisible = False
     End Sub
 
@@ -585,6 +586,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub BtnHome_Phonebook_Click(sender As Object, e As EventArgs) Handles BtnHome_Phonebook.Click
+        Cad_Cons = Nothing
         Me.BtnHome_Phonebook.Checked = False
         BtnAplication.Checked = False
         MenuAbertoOuFechado(0)
@@ -615,24 +617,24 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub BtnAbrirOS_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnAbrirOS_Helpdesk.Click
-        If TabSelect <> Me.BtnAbrirOS_Helpdesk.Text Then
-            TabSelect = Me.BtnAbrirOS_Helpdesk.Text
+        If TabSelect <> "Abrir OS" Then
+            TabSelect = "Abrir OS"
             FormShow(New FrmCarregar())
             FrmCarregar.TimerHelpdesk.Start()
         End If
     End Sub
 
     Private Sub BtnPainel_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnPainel_Helpdesk.Click
-        If TabSelect <> Me.BtnPainel_Helpdesk.Text Then
-            TabSelect = Me.BtnPainel_Helpdesk.Text
+        If TabSelect <> "Painel" Then
+            TabSelect = "Painel"
             FormShow(New FrmCarregar())
             FrmCarregar.TimerHelpdesk.Start()
         End If
     End Sub
 
     Private Sub BtnGerenciador_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnGerenciador_Helpdesk.Click
-        If TabSelect <> Me.BtnGerenciador_Helpdesk.Text Then
-            TabSelect = Me.BtnGerenciador_Helpdesk.Text
+        If TabSelect <> "Gerenciador" Then
+            TabSelect = "Gerenciador"
             FormShow(New FrmCarregar())
             FrmCarregar.TimerHelpdesk.Start()
         End If
@@ -651,6 +653,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub BtnHome_Helpdesk_Click(sender As Object, e As EventArgs) Handles BtnHome_Helpdesk.Click
+        TabSelect = Nothing
         Me.BtnHome_Helpdesk.Checked = False
         BtnAplication.Checked = False
         MenuAbertoOuFechado(0)

@@ -171,7 +171,7 @@ Public Class ServerSFTP
         Ofd.CheckFileExists = True
         Ofd.CheckPathExists = True
         Ofd.FilterIndex = 2
-        Ofd.RestoreDirectory = True
+        Ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         Ofd.ReadOnlyChecked = True
         Ofd.ShowReadOnly = True
         Ofd.FileName = ""
@@ -357,7 +357,7 @@ Public Class ServerSFTP
         Ofd.CheckFileExists = True
         Ofd.CheckPathExists = True
         Ofd.FilterIndex = 2
-        Ofd.RestoreDirectory = True
+        Ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         Ofd.ReadOnlyChecked = True
         Ofd.ShowReadOnly = True
         Ofd.FileName = ""
@@ -448,7 +448,7 @@ Public Class ServerSFTP
         Ofd.CheckFileExists = True
         Ofd.CheckPathExists = True
         Ofd.FilterIndex = 2
-        Ofd.RestoreDirectory = True
+        Ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         Ofd.ReadOnlyChecked = True
         Ofd.ShowReadOnly = True
         Ofd.FileName = ""
@@ -539,7 +539,7 @@ Public Class ServerSFTP
         Ofd.CheckFileExists = True
         Ofd.CheckPathExists = True
         Ofd.FilterIndex = 2
-        Ofd.RestoreDirectory = True
+        Ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         Ofd.ReadOnlyChecked = True
         Ofd.ShowReadOnly = True
         Ofd.FileName = ""
@@ -983,7 +983,7 @@ Public Class ServerSFTP
         Ofd.CheckFileExists = True
         Ofd.CheckPathExists = True
         Ofd.FilterIndex = 2
-        Ofd.RestoreDirectory = True
+        Ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         Ofd.ReadOnlyChecked = True
         Ofd.ShowReadOnly = True
         Ofd.FileName = ""
@@ -1163,10 +1163,6 @@ Public Class ServerSFTP
         Return Dgv
     End Function
 
-
-
-
-
     Public Function FileList_Usuario(PbPerfil As Guna2CirclePictureBox, Usuario As String)
         Try
             Using Sftp As SftpClient = Getconnection()
@@ -1177,8 +1173,10 @@ Public Class ServerSFTP
 
                     For Each File In Files
                         If File.IsRegularFile Then
-                            Dim MyImage = Image.FromFile($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{File.Name}")
-                            PbPerfil.Image = MyImage
+                            'Dim imageByte As Byte() = Sftp.ReadAllBytes(File.FullName)
+                            'Dim mStream As MemoryStream = New MemoryStream()
+                            'mStream.Write(imageByte, 0, Convert.ToInt32(imageByte.Length))
+                            PbPerfil.Image = New Bitmap(Sftp.OpenRead(File.FullName), False)
                         End If
                     Next
                 End If
@@ -1194,18 +1192,17 @@ Public Class ServerSFTP
 
 
 
-    Public Sub CarregarArquivo_Usuario(Ofd As OpenFileDialog, FotoUserConfig As Guna2CirclePictureBox, FotoLeft As Guna2CirclePictureBox, FotoTop As Guna2CirclePictureBox, ImgLeft As ImageList, ImgTop As ImageList, Usuario As String)
+    Public Function CarregarArquivo_Usuario(Ofd As OpenFileDialog, ImagePerfil As Guna2CirclePictureBox, Usuario As String)
         Ofd.Title = "Selecione a Imagem"
-        Ofd.Filter = "Todos os arquivos (*.JPG;*.JPEG;*.PNG;*.GIF)|*.JPG;*.JPEG;*.PNG;*.GIF"
+        Ofd.Filter = "Image File(*.JPG;*.JPEG;*.PNG;*.GIF)|*.JPG;*.JPEG;*.PNG;*.GIF"
         Ofd.Multiselect = True
         Ofd.CheckFileExists = True
         Ofd.CheckPathExists = True
         Ofd.FilterIndex = 2
-        Ofd.RestoreDirectory = True
         Ofd.ReadOnlyChecked = True
         Ofd.ShowReadOnly = True
         Ofd.FileName = ""
-
+        Ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
         Try
             Using Sftp As SftpClient = Getconnection()
                 Sftp.Connect()
@@ -1217,48 +1214,22 @@ Public Class ServerSFTP
                     'VERIFICA AS INFORMAÇÕES (ULTIMA ATUALIZAÇÃO E TAMANHO) DO ARQUIVO
                     For Each FileName In FilePath
 
-                        If Not Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}") Then
-                            Sftp.CreateDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}")
-                        End If
+                        'If Not Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}") Then
+                        '    Sftp.CreateDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}")
+                        'End If
 
-                        If Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{Path.GetFileName(FileName)}") Then
-                            If MessageBox.Show($"O Arquivo {Path.GetFileName(FileName)} já existe no servidor, deseja substitui-lo?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
-
-                                'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
-                                Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
-                                    Sftp.UploadFile(stream, $"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{Path.GetFileName(FileName)}")
-                                    If ImgLeft.Images.Count = 2 Then
-                                        ImgLeft.Images.RemoveAt(1)
-                                        ImgTop.Images.RemoveAt(1)
-                                    End If
-
-                                    ImgLeft.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
-                                    ImgTop.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
-
-                                    FotoLeft.Image = ImgLeft.Images(1)
-                                    FotoTop.Image = ImgTop.Images(1)
-                                    FotoUserConfig.Image = ImgLeft.Images(1)
-                                End Using
+                        Dim Files = Sftp.ListDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/")
+                        For Each File In Files
+                            If File.IsRegularFile Then
+                                Sftp.DeleteFile($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{File.Name}")
                             End If
-                        Else
+                        Next
 
-                            'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
-                            Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
-                                Sftp.UploadFile(stream, $"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{Path.GetFileName(FileName)}")
-                                If ImgLeft.Images.Count = 2 Then
-                                    ImgLeft.Images.RemoveAt(1)
-                                    ImgTop.Images.RemoveAt(1)
-                                End If
-
-                                ImgLeft.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
-                                ImgTop.Images.Add(Image.FromFile(Path.GetFullPath(FileName)))
-
-                                FotoLeft.Image = ImgLeft.Images(1)
-                                FotoTop.Image = ImgTop.Images(1)
-                                FotoUserConfig.Image = ImgLeft.Images(1)
-                            End Using
-                        End If
-
+                        'FAZ COPIA DO ARQUIVO PARA O SERVIDOR
+                        Using stream As Stream = File.OpenRead($"{Path.GetFullPath(FileName)}")
+                            Sftp.UploadFile(stream, $"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{Path.GetFileName(FileName)}")
+                            ImagePerfil.Image = Image.FromFile(FileName)
+                        End Using
                     Next
                 End If
             End Using
@@ -1269,36 +1240,62 @@ Public Class ServerSFTP
 
             End If
         End Try
-    End Sub
+        Return ImagePerfil
+    End Function
 
 
-
-
-
-
-
-
-    Public Function FileDelete_Usuario(Dgv As BunifuDataGridView, Panel As Guna2ShadowPanel, Path As String)
+    Public Sub FileDelete_Usuario(Usuario As String)
         Try
             Using Sftp As SftpClient = Getconnection()
                 Sftp.Connect()
-                Dim i As Integer = 0
-                While i < Dgv.Rows.Count
-                    Dim row As DataGridViewRow = Dgv.Rows(i)
-                    If Convert.ToBoolean(row.Cells(0).Value) Then
-                        Dim Files As String = row.Cells(1).Value
-                        Sftp.DeleteFile($"{Path}{Files}")
-                        Dgv.Rows.Remove(row)
-                        Panel.Visible = False
-                        i -= 1
-                    End If
-                    i += 1
-                End While
+                If Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/") Then
+                    Dim Files = Sftp.ListDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/")
+                    For Each File In Files
+                        If File.IsRegularFile Then
+                            Sftp.DeleteFile($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{File.Name}")
+                        End If
+                    Next
+                End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-        Return Dgv
-    End Function
+    End Sub
+
+    Public Sub PathDelete_Usuario(Usuario As String)
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+                Dim FilesImage = Sftp.ListDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/")
+                For Each File In FilesImage
+                    If File.IsRegularFile Then
+                        Sftp.DeleteFile($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/{File.Name}")
+                    End If
+                Next
+                Sftp.DeleteDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}/")
+
+                Dim FilesBackup = Sftp.ListDirectory($"{My.Settings.SFTP_BackupSistema}{Usuario}/")
+                For Each File In FilesBackup
+                    If File.IsRegularFile Then
+                        Sftp.DeleteFile($"{My.Settings.SFTP_BackupSistema}{Usuario}/{File.Name}")
+                    End If
+                Next
+                Sftp.DeleteDirectory($"{My.Settings.SFTP_BackupSistema}{Usuario}/")
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Public Sub Path_Usuario(Usuario As String)
+        Try
+            Using Sftp As SftpClient = Getconnection()
+                Sftp.Connect()
+                Sftp.CreateDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}")
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
 End Class

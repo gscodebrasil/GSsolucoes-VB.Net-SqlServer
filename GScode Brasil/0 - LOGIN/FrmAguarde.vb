@@ -61,6 +61,8 @@ Public Class FrmAguarde
 
         lblAguarde.Text = $"Olá {clUserInfo.StrNome}, seja bem vindo(a) novamente."
 
+        ClServerSFTP.FileList_Usuario(FrmPrincipal.PbPerfilLeft, clUserInfo.email)
+
         FrmPrincipal.LblNameLeft.Text = clUserInfo.StrNome
         FrmPrincipal.LblNameTop.Text = clUserInfo.StrNome
         FrmPrincipal.LblNameLeft_Phonebook.Text = clUserInfo.StrNome
@@ -71,15 +73,9 @@ Public Class FrmAguarde
         FrmPrincipal.LblEmailLeft_Phonebook.Text = clUserInfo.StrEmail
         FrmPrincipal.LblEmailLeft_Helpdesk.Text = clUserInfo.StrEmail
 
-        'If FrmPrincipal.ImageUserLeft.Images.Count = 2 Then
-        '    FrmPrincipal.PbPerfilLeft.Image = FrmPrincipal.ImageUserLeft.Images(1)
-        '    FrmPrincipal.PbPerfilTop.Image = FrmPrincipal.ImageUserTop.Images(1)
-        '    FrmUserConfig.imgPerfil.Image = FrmPrincipal.ImageUserLeft.Images(1)
-        'Else
-        '    FrmPrincipal.PbPerfilLeft.Image = FrmPrincipal.ImageUserLeft.Images(0)
-        '    FrmPrincipal.PbPerfilTop.Image = FrmPrincipal.ImageUserTop.Images(0)
-        '    FrmUserConfig.imgPerfil.Image = FrmPrincipal.ImageUserLeft.Images(0)
-        'End If
+        FrmPrincipal.PbPerfilLeft_Helpdesk.Image = FrmPrincipal.PbPerfilLeft.Image
+        FrmPrincipal.PbPerfilLeft_Phonebook.Image = FrmPrincipal.PbPerfilLeft.Image
+        FrmPrincipal.PbPerfilTop.Image = FrmPrincipal.PbPerfilLeft.Image
 
         clUserInfo.StrEmail = Nothing
         clUserInfo.StrPass = Nothing

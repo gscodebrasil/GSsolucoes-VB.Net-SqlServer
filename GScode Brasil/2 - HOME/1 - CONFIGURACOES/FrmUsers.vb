@@ -248,6 +248,8 @@ Public Class FrmUsers
         End While
     End Sub
 
+    Private ReadOnly ClServerSFTP As New ServerSFTP
+
     Private Sub ExcluirUsuario()
 
         Dim i As Integer = 0
@@ -260,6 +262,11 @@ Public Class FrmUsers
                 DgvUsers.Rows.Remove(row)
                 LblSelectRegister.Visible = False
                 PanelSelect.Visible = False
+
+                If ClUserInfo.valida = True Then
+                    ClUserInfo.valida = False
+                    ClServerSFTP.PathDelete_Usuario(row.Cells(3).Value)
+                End If
                 i -= 1
             End If
             i += 1

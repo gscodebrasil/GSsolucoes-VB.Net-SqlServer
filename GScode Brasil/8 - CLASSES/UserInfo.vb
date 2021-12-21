@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports Guna.UI2.WinForms
 
 Public Class UserInfo
 
@@ -58,7 +60,6 @@ Public Class UserInfo
     Public Property pass As String
     Public Property pass_retry As String
     Public Property name As String
-    Public Property foto As String
     Public Property nascimento As String
     Public Property genero As String
     Public Property cell As String
@@ -102,6 +103,7 @@ Public Class UserInfo
             conn.Open()
             Using command As SqlCommand = New SqlCommand($"DELETE FROM user_info WHERE id={id}", conn)
                 command.ExecuteNonQuery()
+                valida = True
             End Using
         End Using
     End Sub
@@ -110,7 +112,7 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"INSERT INTO user_info(id_interno, email, pass, pass_retry, name, foto, nascimento, genero, cell, cep, endereco, comp, cidade, uf, not_whats, not_email, acept_termos, empresa, depart, funcao, tell_empresa, ramal, token, gssolucoes, phonebook, helpdesk, estoque, financeiro, dashboard, date_cad) VALUES ('{id_interno}','{email}','{pass}','{pass_retry}','{name}','{foto}','{nascimento}','{genero}','{cell}','{cep}','{endereco}','{comp}','{cidade}','{uf}','{not_whats}','{not_email}','{acept_termos}','{empresa}','{depart}','{funcao}','{tell_empresa}','{ramal}','{token}','{"1"}','{""}','{""}','{""}','{""}','{""}', GETDATE());", conn)
+                Using command As SqlCommand = New SqlCommand($"INSERT INTO user_info(id_interno, email, pass, pass_retry, name, nascimento, genero, cell, cep, endereco, comp, cidade, uf, not_whats, not_email, acept_termos, empresa, depart, funcao, tell_empresa, ramal, token, gssolucoes, phonebook, helpdesk, estoque, financeiro, dashboard, date_cad) VALUES ('{id_interno}','{email}','{pass}','{pass_retry}','{name}','{nascimento}','{genero}','{cell}','{cep}','{endereco}','{comp}','{cidade}','{uf}','{not_whats}','{not_email}','{acept_termos}','{empresa}','{depart}','{funcao}','{tell_empresa}','{ramal}','{token}','{"1"}','{""}','{""}','{""}','{""}','{""}', GETDATE());", conn)
 
                     command.ExecuteNonQuery()
                     valida = True
@@ -223,14 +225,13 @@ Public Class UserInfo
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass, name, foto FROM user_info WHERE email='{email}'", conn)
+                Using cmd As SqlCommand = New SqlCommand($"SELECT email, pass, name FROM user_info WHERE email='{email}'", conn)
                     Using dr = cmd.ExecuteReader()
                         If dr.HasRows Then
                             If dr.Read() Then
                                 If dr("pass") = pass Then
                                     StrEmail = dr("email")
                                     StrNome = dr("name")
-                                    StrFoto = dr("foto")
                                     valida = True
                                 End If
                             End If

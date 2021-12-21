@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmAguarde
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -31,6 +31,7 @@ Partial Class FrmAguarde
         Me.Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Me.ProgressAguarde = New Guna.UI2.WinForms.Guna2ProgressBar()
         Me.btnClose = New Guna.UI2.WinForms.Guna2ImageButton()
+        Me.ImgPerfil = New System.Windows.Forms.ImageList(Me.components)
         Me.Guna2GradientPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -108,6 +109,12 @@ Partial Class FrmAguarde
         Me.btnClose.Size = New System.Drawing.Size(22, 22)
         Me.btnClose.TabIndex = 186
         '
+        'ImgPerfil
+        '
+        Me.ImgPerfil.ImageStream = CType(resources.GetObject("ImgPerfil.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImgPerfil.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImgPerfil.Images.SetKeyName(0, "addImage 96x96.png")
+        '
         'FrmAguarde
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -128,4 +135,5 @@ Partial Class FrmAguarde
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents ProgressAguarde As Guna.UI2.WinForms.Guna2ProgressBar
     Friend WithEvents btnClose As Guna.UI2.WinForms.Guna2ImageButton
+    Friend WithEvents ImgPerfil As ImageList
 End Class

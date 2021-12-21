@@ -3042,9 +3042,9 @@ Partial Class FrmUsers
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(788, 565)
-        Me.Controls.Add(Me.TabControlUsers)
         Me.Controls.Add(Me.PanelFilter)
         Me.Controls.Add(Me.PanelSelect)
+        Me.Controls.Add(Me.TabControlUsers)
         Me.SelectTransition.SetDecoration(Me, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FrmUsers"

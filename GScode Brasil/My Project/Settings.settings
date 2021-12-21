@@ -122,5 +122,11 @@
     <Setting Name="SFTP_ImagemUsuario" Type="System.String" Scope="User">
       <Value Profile="(Default)">/gscode/GSHome/Usuarios/</Value>
     </Setting>
+    <Setting Name="Softphone_Prefixo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Softphone_AceptPrefixo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

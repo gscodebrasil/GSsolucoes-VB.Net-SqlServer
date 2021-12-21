@@ -178,7 +178,6 @@ Public Class FrmLogin
             ClUserInfo.pass_retry = ClCifer.Criptar(txtCadConfPass.Text, ClCifer.senha)
             ClUserInfo.id_interno = Senha
             ClUserInfo.name = txtPerfilNome.Text
-            ClUserInfo.foto = ""
             ClUserInfo.nascimento = txtPerfilNascimento.Text
             ClUserInfo.genero = cbPerfilGenero.Text
             ClUserInfo.cell = txtPerfilCelular.Text
@@ -1180,6 +1179,12 @@ Public Class FrmLogin
 
             Case 80
                 Insert()
+
+                If ClUserInfo.valida = True Then
+                    ClUserInfo.valida = False
+
+
+                End If
 
             Case 100
                 Application.Restart()

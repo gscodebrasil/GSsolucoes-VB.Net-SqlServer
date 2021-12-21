@@ -34,6 +34,7 @@ Partial Class FrmUserConfig
         Me.TpPerfil = New System.Windows.Forms.TabPage()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.BtnPerfil = New Guna.UI2.WinForms.Guna2GradientCircleButton()
         Me.imgPerfil = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.BtnSendEmail_Login = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BtnCopy = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -242,6 +243,7 @@ Partial Class FrmUserConfig
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.Controls.Add(Me.BtnPerfil)
         Me.Guna2Panel1.Controls.Add(Me.imgPerfil)
         Me.Guna2Panel1.Controls.Add(Me.BtnSendEmail_Login)
         Me.Guna2Panel1.Controls.Add(Me.BtnCopy)
@@ -257,6 +259,33 @@ Partial Class FrmUserConfig
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
         Me.Guna2Panel1.Size = New System.Drawing.Size(701, 825)
         Me.Guna2Panel1.TabIndex = 0
+        '
+        'BtnPerfil
+        '
+        Me.BtnPerfil.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnPerfil.BackColor = System.Drawing.Color.Transparent
+        Me.BtnPerfil.CheckedState.Parent = Me.BtnPerfil
+        Me.BtnPerfil.CustomImages.Parent = Me.BtnPerfil
+        Me.BtnPerfil.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnPerfil.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnPerfil.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnPerfil.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnPerfil.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnPerfil.DisabledState.Parent = Me.BtnPerfil
+        Me.BtnPerfil.FillColor = System.Drawing.Color.Transparent
+        Me.BtnPerfil.FillColor2 = System.Drawing.Color.Transparent
+        Me.BtnPerfil.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnPerfil.ForeColor = System.Drawing.Color.White
+        Me.BtnPerfil.HoverState.Parent = Me.BtnPerfil
+        Me.BtnPerfil.Image = CType(resources.GetObject("BtnPerfil.Image"), System.Drawing.Image)
+        Me.BtnPerfil.Location = New System.Drawing.Point(381, 150)
+        Me.BtnPerfil.Name = "BtnPerfil"
+        Me.BtnPerfil.PressedColor = System.Drawing.Color.DimGray
+        Me.BtnPerfil.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.BtnPerfil.ShadowDecoration.Parent = Me.BtnPerfil
+        Me.BtnPerfil.Size = New System.Drawing.Size(39, 38)
+        Me.BtnPerfil.TabIndex = 285
+        Me.BtnPerfil.UseTransparentBackground = True
         '
         'imgPerfil
         '
@@ -2271,7 +2300,8 @@ Partial Class FrmUserConfig
         '
         'Ofd
         '
-        Me.Ofd.FileName = "OpenFileDialog1"
+        Me.Ofd.InitialDirectory = "Descktop"
+        Me.Ofd.Multiselect = True
         '
         'FrmUserConfig
         '
@@ -2413,4 +2443,5 @@ Partial Class FrmUserConfig
     Friend WithEvents BtnSendEmail_Login As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Ofd As OpenFileDialog
     Friend WithEvents imgPerfil As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents BtnPerfil As Guna.UI2.WinForms.Guna2GradientCircleButton
 End Class

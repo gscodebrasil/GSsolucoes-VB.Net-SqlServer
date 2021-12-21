@@ -32,6 +32,9 @@ Partial Class FrmSoftphone
         Me.BtnBuscarSoftphone = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.ImgSoftphone = New System.Windows.Forms.ImageList(Me.components)
         Me.Ofd = New System.Windows.Forms.OpenFileDialog()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TxtPrefixo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.ChkPrefixo = New Guna.UI2.WinForms.Guna2CustomCheckBox()
         Me.SuspendLayout()
         '
         'BtnSalvar
@@ -51,7 +54,7 @@ Partial Class FrmSoftphone
         Me.BtnSalvar.ForeColor = System.Drawing.Color.White
         Me.BtnSalvar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnSalvar.HoverState.Parent = Me.BtnSalvar
-        Me.BtnSalvar.Location = New System.Drawing.Point(397, 367)
+        Me.BtnSalvar.Location = New System.Drawing.Point(397, 426)
         Me.BtnSalvar.Name = "BtnSalvar"
         Me.BtnSalvar.ShadowDecoration.Parent = Me.BtnSalvar
         Me.BtnSalvar.Size = New System.Drawing.Size(124, 38)
@@ -75,7 +78,7 @@ Partial Class FrmSoftphone
         Me.BtnLimpar.ForeColor = System.Drawing.Color.White
         Me.BtnLimpar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical
         Me.BtnLimpar.HoverState.Parent = Me.BtnLimpar
-        Me.BtnLimpar.Location = New System.Drawing.Point(267, 367)
+        Me.BtnLimpar.Location = New System.Drawing.Point(267, 426)
         Me.BtnLimpar.Name = "BtnLimpar"
         Me.BtnLimpar.ShadowDecoration.Parent = Me.BtnLimpar
         Me.BtnLimpar.Size = New System.Drawing.Size(124, 38)
@@ -176,12 +179,82 @@ Partial Class FrmSoftphone
         '
         Me.Ofd.FileName = "OpenFileDialog1"
         '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(175, 314)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(50, 15)
+        Me.Label1.TabIndex = 368
+        Me.Label1.Text = "Perefixo"
+        '
+        'TxtPrefixo
+        '
+        Me.TxtPrefixo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TxtPrefixo.Animated = True
+        Me.TxtPrefixo.BackColor = System.Drawing.Color.Transparent
+        Me.TxtPrefixo.BorderColor = System.Drawing.Color.Silver
+        Me.TxtPrefixo.BorderRadius = 7
+        Me.TxtPrefixo.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom
+        Me.TxtPrefixo.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TxtPrefixo.DefaultText = ""
+        Me.TxtPrefixo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TxtPrefixo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TxtPrefixo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtPrefixo.DisabledState.Parent = Me.TxtPrefixo
+        Me.TxtPrefixo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TxtPrefixo.FillColor = System.Drawing.Color.WhiteSmoke
+        Me.TxtPrefixo.FocusedState.Parent = Me.TxtPrefixo
+        Me.TxtPrefixo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TxtPrefixo.ForeColor = System.Drawing.Color.Black
+        Me.TxtPrefixo.HoverState.Parent = Me.TxtPrefixo
+        Me.TxtPrefixo.IconLeftOffset = New System.Drawing.Point(5, 0)
+        Me.TxtPrefixo.IconLeftSize = New System.Drawing.Size(18, 18)
+        Me.TxtPrefixo.Location = New System.Drawing.Point(178, 332)
+        Me.TxtPrefixo.Name = "TxtPrefixo"
+        Me.TxtPrefixo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TxtPrefixo.PlaceholderForeColor = System.Drawing.Color.DarkGray
+        Me.TxtPrefixo.PlaceholderText = ""
+        Me.TxtPrefixo.ReadOnly = True
+        Me.TxtPrefixo.SelectedText = ""
+        Me.TxtPrefixo.ShadowDecoration.Parent = Me.TxtPrefixo
+        Me.TxtPrefixo.Size = New System.Drawing.Size(72, 36)
+        Me.TxtPrefixo.TabIndex = 367
+        Me.TxtPrefixo.TextOffset = New System.Drawing.Point(10, 0)
+        '
+        'ChkPrefixo
+        '
+        Me.ChkPrefixo.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ChkPrefixo.BackColor = System.Drawing.Color.Transparent
+        Me.ChkPrefixo.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.ChkPrefixo.CheckedState.BorderRadius = 3
+        Me.ChkPrefixo.CheckedState.BorderThickness = 1
+        Me.ChkPrefixo.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.ChkPrefixo.CheckedState.Parent = Me.ChkPrefixo
+        Me.ChkPrefixo.Location = New System.Drawing.Point(151, 341)
+        Me.ChkPrefixo.Name = "ChkPrefixo"
+        Me.ChkPrefixo.ShadowDecoration.Parent = Me.ChkPrefixo
+        Me.ChkPrefixo.Size = New System.Drawing.Size(20, 20)
+        Me.ChkPrefixo.TabIndex = 369
+        Me.ChkPrefixo.UncheckedState.BorderColor = System.Drawing.Color.Gray
+        Me.ChkPrefixo.UncheckedState.BorderRadius = 3
+        Me.ChkPrefixo.UncheckedState.BorderThickness = 1
+        Me.ChkPrefixo.UncheckedState.FillColor = System.Drawing.Color.Transparent
+        Me.ChkPrefixo.UncheckedState.Parent = Me.ChkPrefixo
+        Me.ChkPrefixo.UseTransparentBackground = True
+        '
         'FrmSoftphone
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(788, 565)
+        Me.Controls.Add(Me.ChkPrefixo)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TxtPrefixo)
         Me.Controls.Add(Me.BtnBuscarSoftphone)
         Me.Controls.Add(Me.LblSoftphone)
         Me.Controls.Add(Me.BtnSalvar)
@@ -203,4 +276,7 @@ Partial Class FrmSoftphone
     Friend WithEvents BtnBuscarSoftphone As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents ImgSoftphone As ImageList
     Friend WithEvents Ofd As OpenFileDialog
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TxtPrefixo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents ChkPrefixo As Guna.UI2.WinForms.Guna2CustomCheckBox
 End Class

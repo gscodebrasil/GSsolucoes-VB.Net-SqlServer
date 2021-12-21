@@ -37,15 +37,31 @@ Public Class FrmSoftphone
 
         My.Settings.Softphone_Nome = LblSoftphone.Text
         My.Settings.Softphone_Local = TxtSoftphone.Text
+        My.Settings.Softphone_AceptPrefixo = ChkPrefixo.Checked
+        My.Settings.Softphone_Prefixo = TxtPrefixo.Text
         My.Settings.Save()
 
     End Sub
 
     Private Sub FrmSoftphone_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If ChkPrefixo.Checked = True Then
+            TxtPrefixo.ReadOnly = False
+        End If
+
         If My.Settings.Softphone_Nome.Length > 0 Then
             LblSoftphone.Text = My.Settings.Softphone_Nome
             TxtSoftphone.Text = My.Settings.Softphone_Local
+            TxtPrefixo.Text = My.Settings.Softphone_Prefixo
+            ChkPrefixo.Checked = My.Settings.Softphone_AceptPrefixo
             LblSoftphone.Visible = True
+        End If
+    End Sub
+
+    Private Sub chkPerfilTermos_Click(sender As Object, e As EventArgs) Handles ChkPrefixo.Click
+        If ChkPrefixo.Checked = True Then
+            TxtPrefixo.ReadOnly = False
+        Else
+            TxtPrefixo.ReadOnly = False
         End If
     End Sub
 End Class

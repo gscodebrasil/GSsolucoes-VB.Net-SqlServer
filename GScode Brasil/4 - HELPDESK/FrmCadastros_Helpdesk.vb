@@ -1,6 +1,8 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Threading
 Imports Guna.UI2.WinForms
+Imports WindowsInput.Native
+Imports WindowsInput
 
 Public Class FrmCadastros_Helpdesk
 
@@ -395,35 +397,6 @@ Public Class FrmCadastros_Helpdesk
 
         Return Senha
     End Function
-
-    Private Sub FrmCadastros_Helpdesk_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        ToolTipLoad()
-
-        Select Case FrmPrincipal.TabSelect
-
-            Case "Abrir OS"
-                TabControl_CadCons.SelectTab(4)
-            Case "Painel"
-                ClOS_Helpdesk.BuscarOSAbertas(DgvPainel)
-                FormataGridView_Painel()
-                TabControl_CadCons.SelectTab(1)
-            Case "Gerenciador"
-                BuscarRegistros()
-                FormataGridView_Gerenciador()
-                TabControl_CadCons.SelectTab(0)
-            Case "Agenda"
-
-            Case "Relatório"
-
-            Case "Home"
-
-        End Select
-
-        TabControl_CadCons.TabMenuVisible = False
-        TabControl_CadCons.Visible = True
-
-        ClCliente_Phonebook.BuscarNomeCliente(TxtNome_Ocorrencia)
-    End Sub
 
     Private Sub MostrarLabel(Txt As Guna2TextBox, Lbl As Label)
         If Txt.Text.Length > 0 Then
@@ -1883,5 +1856,323 @@ Public Class FrmCadastros_Helpdesk
             Case "Aguardando Pendência da Erimat"
                 DgvPainel.Rows(e.RowIndex).DefaultCellStyle.BackColor = Color.Olive
         End Select
+    End Sub
+
+    Private Sub BtnLigar_Click(sender As Object, e As EventArgs) Handles BtnLigar.Click
+        If GboxContato.Visible = True Then
+            SelectTransition.HideSync(GboxContato)
+            Exit Sub
+        End If
+
+        If My.Settings.Softphone_Nome.Length > 0 Then
+            If DgvGerenciador.CurrentRow.Cells(11).Value.ToString.Length > 0 Then
+                If DgvGerenciador.CurrentRow.Cells(12).Value.ToString.Length > 0 OrElse DgvGerenciador.CurrentRow.Cells(13).Value.ToString.Length > 0 Then
+                    SelectTransition.ShowSync(GboxContato)
+                Else
+                    Dim Input As New InputSimulator
+                    Process.Start(My.Settings.Softphone_Local)
+
+                    If DgvGerenciador.CurrentRow.Cells(11).Value.ToString.Length > 0 Then
+                        Dim Contato_Principal = DgvGerenciador.CurrentRow.Cells(11).Value.ToString.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+                        If My.Settings.Softphone_Prefixo.Length > 0 Then
+                            Select Case Contato_Principal.Length
+                                Case 8
+                                    Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Principal}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+
+                                Case 9
+                                    Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Principal}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 10
+                                    Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Principal}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 11
+                                    If Contato_Principal.StartsWith("0800") Then
+                                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Principal}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    Else
+                                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Principal}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    End If
+                            End Select
+                        Else
+                            Select Case Contato_Principal.Length
+                                Case 8
+                                    Input.Keyboard.TextEntry($"{Contato_Principal}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+
+                                Case 9
+                                    Input.Keyboard.TextEntry($"{Contato_Principal}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 10
+                                    Input.Keyboard.TextEntry($"0{Contato_Principal}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 11
+                                    If Contato_Principal.StartsWith("0800") Then
+                                        Input.Keyboard.TextEntry($"0{Contato_Principal}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    Else
+                                        Input.Keyboard.TextEntry($"{Contato_Principal}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    End If
+                            End Select
+                        End If
+                        Exit Sub
+                    End If
+
+                    If DgvGerenciador.CurrentRow.Cells(12).Value.ToString.Length > 0 Then
+                        Dim Contato_Secundario = DgvGerenciador.CurrentRow.Cells(12).Value.ToString.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+                        If My.Settings.Softphone_Prefixo.Length > 0 Then
+                            Select Case Contato_Secundario.Length
+
+                                Case 8
+                                    Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Secundario}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 9
+                                    Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Secundario}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 10
+                                    Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Secundario}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 11
+                                    If Contato_Secundario.StartsWith("0800") Then
+                                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Secundario}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    Else
+                                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Secundario}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    End If
+                            End Select
+                        Else
+                            Select Case Contato_Secundario.Length
+
+                                Case 8
+                                    Input.Keyboard.TextEntry($"{Contato_Secundario}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 9
+                                    Input.Keyboard.TextEntry($"{Contato_Secundario}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 10
+                                    Input.Keyboard.TextEntry($"0{Contato_Secundario}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 11
+                                    If Contato_Secundario.StartsWith("0800") Then
+                                        Input.Keyboard.TextEntry($"0{Contato_Secundario}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    Else
+                                        Input.Keyboard.TextEntry($"{Contato_Secundario}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    End If
+                            End Select
+                        End If
+                        Exit Sub
+                    End If
+
+                    If DgvGerenciador.CurrentRow.Cells(13).Value.ToString.Length > 0 Then
+                        Dim Celular = DgvGerenciador.CurrentRow.Cells(13).Value.ToString.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+                        If My.Settings.Softphone_Prefixo.Length > 0 Then
+                            Select Case Celular.Length
+
+                                Case 9
+                                    Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Celular}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 11
+                                    If Not Celular.StartsWith("0") Then
+                                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Celular}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    End If
+                            End Select
+                        Else
+                            Select Case Celular.Length
+
+                                Case 9
+                                    Input.Keyboard.TextEntry($"{Celular}")
+                                    Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                Case 11
+                                    If Not Celular.StartsWith("0") Then
+                                        Input.Keyboard.TextEntry($"0{Celular}")
+                                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                                    End If
+                            End Select
+                        End If
+                        Exit Sub
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnContato_Principal_Click(sender As Object, e As EventArgs) Handles BtnContato_Principal.Click
+        Dim Input As New InputSimulator
+        Process.Start(My.Settings.Softphone_Local)
+
+        If DgvGerenciador.CurrentRow.Cells(11).Value.ToString.Length > 0 Then
+            Dim Contato_Principal = DgvGerenciador.CurrentRow.Cells(11).Value.ToString.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+            SelectTransition.HideSync(GboxContato)
+
+            If My.Settings.Softphone_Prefixo.Length > 0 Then
+                Select Case Contato_Principal.Length
+                    Case 8
+                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Principal}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+
+                    Case 9
+                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Principal}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 10
+                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Principal}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 11
+                        If Contato_Principal.StartsWith("0800") Then
+                            Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Principal}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        Else
+                            Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Principal}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        End If
+                End Select
+            Else
+                Select Case Contato_Principal.Length
+                    Case 8
+                        Input.Keyboard.TextEntry($"{Contato_Principal}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+
+                    Case 9
+                        Input.Keyboard.TextEntry($"{Contato_Principal}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 10
+                        Input.Keyboard.TextEntry($"0{Contato_Principal}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 11
+                        If Contato_Principal.StartsWith("0800") Then
+                            Input.Keyboard.TextEntry($"0{Contato_Principal}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        Else
+                            Input.Keyboard.TextEntry($"{Contato_Principal}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        End If
+                End Select
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnContato_Secundario_Click(sender As Object, e As EventArgs) Handles BtnContato_Secundario.Click
+        Dim Input As New InputSimulator
+        Process.Start(My.Settings.Softphone_Local)
+
+        If DgvGerenciador.CurrentRow.Cells(12).Value.ToString.Length > 0 Then
+            Dim Contato_Secundario = DgvGerenciador.CurrentRow.Cells(12).Value.ToString.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+            SelectTransition.HideSync(GboxContato)
+
+            If My.Settings.Softphone_Prefixo.Length > 0 Then
+                Select Case Contato_Secundario.Length
+
+                    Case 8
+                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Secundario}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 9
+                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Secundario}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 10
+                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Secundario}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 11
+                        If Contato_Secundario.StartsWith("0800") Then
+                            Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Contato_Secundario}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        Else
+                            Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Contato_Secundario}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        End If
+                End Select
+            Else
+                Select Case Contato_Secundario.Length
+
+                    Case 8
+                        Input.Keyboard.TextEntry($"{Contato_Secundario}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 9
+                        Input.Keyboard.TextEntry($"{Contato_Secundario}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 10
+                        Input.Keyboard.TextEntry($"0{Contato_Secundario}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 11
+                        If Contato_Secundario.StartsWith("0800") Then
+                            Input.Keyboard.TextEntry($"0{Contato_Secundario}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        Else
+                            Input.Keyboard.TextEntry($"{Contato_Secundario}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        End If
+                End Select
+            End If
+        End If
+    End Sub
+
+    Private Sub BtnContato_Celular_Click(sender As Object, e As EventArgs) Handles BtnContato_Celular.Click
+        Dim Input As New InputSimulator
+        Process.Start(My.Settings.Softphone_Local)
+
+        If DgvGerenciador.CurrentRow.Cells(13).Value.ToString.Length > 0 Then
+            Dim Celular = DgvGerenciador.CurrentRow.Cells(13).Value.ToString.Replace("(", "").Replace(") ", "").Replace("-", "").Replace(" ", "")
+            SelectTransition.HideSync(GboxContato)
+
+            If My.Settings.Softphone_Prefixo.Length > 0 Then
+                Select Case Celular.Length
+
+                    Case 9
+                        Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}{Celular}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 11
+                        If Not Celular.StartsWith("0") Then
+                            Input.Keyboard.TextEntry($"{My.Settings.Softphone_Prefixo}0{Celular}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        End If
+                End Select
+            Else
+                Select Case Celular.Length
+
+                    Case 9
+                        Input.Keyboard.TextEntry($"{Celular}")
+                        Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                    Case 11
+                        If Not Celular.StartsWith("0") Then
+                            Input.Keyboard.TextEntry($"0{Celular}")
+                            Input.Keyboard.KeyPress(VirtualKeyCode.RETURN)
+                        End If
+                End Select
+            End If
+            Exit Sub
+        End If
+    End Sub
+
+    Private Sub FrmCadastros_Helpdesk_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ToolTipLoad()
+
+        Select Case FrmPrincipal.TabSelect
+
+            Case "Abrir OS"
+                TabControl_CadCons.SelectTab(4)
+            Case "Painel"
+                ClOS_Helpdesk.BuscarOSAbertas(DgvPainel)
+                FormataGridView_Painel()
+                TabControl_CadCons.SelectTab(1)
+            Case "Gerenciador"
+                BuscarRegistros()
+                FormataGridView_Gerenciador()
+                TabControl_CadCons.SelectTab(0)
+            Case "Agenda"
+
+            Case "Relatório"
+
+            Case "Home"
+
+        End Select
+
+        TabControl_CadCons.TabMenuVisible = False
+        TabControl_CadCons.Visible = True
+
+        ClCliente_Phonebook.BuscarNomeCliente(TxtNome_Ocorrencia)
     End Sub
 End Class

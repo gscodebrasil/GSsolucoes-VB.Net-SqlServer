@@ -133,7 +133,7 @@ Public Class FrmUserConfig
             pbEmail.Visible = True
         End If
 
-
+        imgPerfil.Image = FrmPrincipal.PbPerfilLeft.Image
         lblChaveKey.Text = clUser.token
 
         lblUserInfo.Text = $"<b>Informações  Pessoais</b><br><br>
@@ -391,6 +391,12 @@ Public Class FrmUserConfig
 
             Case 80
                 clUser.Delete()
+
+                If clUser.valida = True Then
+                    clUser.valida = False
+
+                    ClServerSFTP.PathDelete_Usuario(FrmPrincipal.LblEmailLeft.Text)
+                End If
 
             Case 100
                 TimerExcluir.Stop()
@@ -1076,7 +1082,11 @@ Public Class FrmUserConfig
         End If
     End Sub
 
-    Private Sub imgPerfil_Click(sender As Object, e As EventArgs) Handles imgPerfil.Click
-        'ClServerSFTP.CarregarArquivo_Usuario(Ofd, imgPerfil, FrmPrincipal.PbPerfilLeft, FrmPrincipal.PbPerfilTop, FrmPrincipal.ImageUserLeft, FrmPrincipal.ImageUserTop, $"{FrmPrincipal.LblEmailLeft.Text}")
+    Private Sub BtnPerfil_Click(sender As Object, e As EventArgs) Handles BtnPerfil.Click
+        ClServerSFTP.CarregarArquivo_Usuario(Ofd, imgPerfil, FrmPrincipal.LblEmailLeft.Text)
+        FrmPrincipal.PbPerfilLeft.Image = imgPerfil.Image
+        FrmPrincipal.PbPerfilLeft_Helpdesk.Image = imgPerfil.Image
+        FrmPrincipal.PbPerfilLeft_Phonebook.Image = imgPerfil.Image
+        FrmPrincipal.PbPerfilTop.Image = imgPerfil.Image
     End Sub
 End Class
