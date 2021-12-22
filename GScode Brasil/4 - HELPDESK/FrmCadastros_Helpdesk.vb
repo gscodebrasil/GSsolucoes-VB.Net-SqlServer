@@ -655,7 +655,7 @@ Public Class FrmCadastros_Helpdesk
                                 ClEmail.nserie = DgvGerenciador.CurrentRow.Cells(21).Value
                                 ClEmail.ocorrencia = DgvGerenciador.CurrentRow.Cells(22).Value
 
-                                If CbStatus_Resultado.Text = "Encerrado - Cliente sem Contrato" Then
+                                If CbStatus_Resultado.Text = "Encerrado - Cliente S/ Contrato" Then
                                     ClEmail.faturamento = $"<br><br><br>
                                                             <b><font size ='5' color='Red'>{LblFaturamento.Text}</font></b><br><br><br><br><br><br><br>"
                                 Else
@@ -679,6 +679,17 @@ Public Class FrmCadastros_Helpdesk
                                         ClEmail.Color = "DarkOrange"
                                     Case "Urgente"
                                         ClEmail.Color = "Red"
+                                End Select
+
+                                Select Case DgvGerenciador.CurrentRow.Cells(30).Value
+                                    Case "Chamado está em andamento"
+                                        ClEmail.ColorStatus = "LightSkyBlue"
+                                    Case "Aguardando Pendência do Cliente"
+                                        ClEmail.ColorStatus = "Yellow"
+                                    Case "Aguardando Pendência da Erimat"
+                                        ClEmail.ColorStatus = "Olive"
+                                    Case "Necessário abrir OS para ir ao local"
+                                        ClEmail.ColorStatus = "YellowGreen"
                                 End Select
 
                                 ClEmail.ToEmail = TxtSendEmail_Resultado.Text
@@ -1554,14 +1565,26 @@ Public Class FrmCadastros_Helpdesk
             ClEmail.nserie = DgvGerenciador.CurrentRow.Cells(21).Value
             ClEmail.ocorrencia = DgvGerenciador.CurrentRow.Cells(22).Value
 
-            If DgvGerenciador.CurrentRow.Cells(27).Value.ToString.Length > 0 Then
+            If DgvGerenciador.CurrentRow.Cells(30).Value.ToString.Length > 0 Then
+
+                Select Case DgvGerenciador.CurrentRow.Cells(30).Value
+                    Case "Chamado está em andamento"
+                        ClEmail.ColorStatus = "LightSkyBlue"
+                    Case "Aguardando Pendência do Cliente"
+                        ClEmail.ColorStatus = "Yellow"
+                    Case "Aguardando Pendência da Erimat"
+                        ClEmail.ColorStatus = "Olive"
+                    Case "Necessário abrir OS para ir ao local"
+                        ClEmail.ColorStatus = "YellowGreen"
+                End Select
+
                 ClEmail.info_res = $"<br><br><br><br><br><br><br>
                                      <b><font size ='4' color='MidnightBlue'>------------------------------ RESULTADO ------------------------------</font></b><br><br><br><br><br>
-                                     <b><font color='Gray'>{DgvGerenciador.CurrentRow.Cells(24).Value}</b> < br >
-                                     {DgvGerenciador.CurrentRow.Cells(25).Value} < br >
+                                     <b><font color='Gray'>{DgvGerenciador.CurrentRow.Cells(24).Value}</b><br>
+                                     {DgvGerenciador.CurrentRow.Cells(25).Value}<br>
                                      {DgvGerenciador.CurrentRow.Cells(26).Value}</font><br><br><br><br>
                                      <b>Contato</b>: {DgvGerenciador.CurrentRow.Cells(28).Value}<br>
-                                     <b>Status</b>: {DgvGerenciador.CurrentRow.Cells(30).Value}<br>
+                                     <b>Status</b>: <font color='{ClEmail.ColorStatus}'>{DgvGerenciador.CurrentRow.Cells(30).Value}</font><br>
                                      <b>Tempo de conexão</b>: {DgvGerenciador.CurrentRow.Cells(29).Value}<br><br>
                                      <Resultado</b>:<br>
                                      {DgvGerenciador.CurrentRow.Cells(27).Value}"
@@ -1569,9 +1592,9 @@ Public Class FrmCadastros_Helpdesk
                 ClEmail.info_res = ""
             End If
 
-            If DgvGerenciador.CurrentRow.Cells(30).Value = "Encerrado - Cliente sem Contrato" Then
+            If DgvGerenciador.CurrentRow.Cells(30).Value = "Encerrado - Cliente S/ Contrato" Then
                 ClEmail.faturamento = $"<br><br><br>
-                                                            <b><font size ='5' color='Red'>{LblFaturamento.Text}</font></b><br><br><br><br><br><br><br>"
+                                        <b><font size ='5' color='Red'>{LblFaturamento.Text}</font></b><br><br><br><br><br><br><br>"
             Else
                 ClEmail.faturamento = $"<br><br><br><br><br><br><br>"
             End If

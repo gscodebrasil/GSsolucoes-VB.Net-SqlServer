@@ -42,6 +42,7 @@ Public Class Email
 
     Public Property info_res As String
     Public Property Color As String
+    Public Property ColorStatus As String
     Public Property Token As String
     Public Property ToEmail As String
     Public Property YourSenha As String
@@ -208,9 +209,9 @@ Public Class Email
                     {email_res}<br>
                     {data_res}</font><br><br><br><br>
                     <b>Contato</b>: {contato_res}<br>
-                    <b>Status</b>: {status}<br>
+                    <b>Status</b>: <font color='{ColorStatus}'>{status}</font><br>
                     <b>Tempo de conexão</b>: {tempo_conexao}<br><br>
-                    <Resultado</b>:<br>
+                    <b>Resultado</b>:<br>
                     {resultado}", Nothing, "text/html")
                     Email.AlternateViews.Add(Html)
                     Smtp.Send(Email)
@@ -269,14 +270,12 @@ Public Class Email
     End Sub
 
     Public Sub AlterarEmail()
-
-
         Try
             Using Smtp As New SmtpClient
                 Using Email As New MailMessage
                     'SERVIDOR SMTP
                     Smtp.Host = My.Settings.SMTP_Servidor
-                    Smtp.Credentials = New NetworkCredential(My.Settings.SMTP_Usuario, clCifer.Decriptar(My.Settings.SMTP_Senha, clCifer.senha))
+                    Smtp.Credentials = New NetworkCredential(My.Settings.SMTP_Usuario, ClCifer.Decriptar(My.Settings.SMTP_Senha, ClCifer.senha))
                     Smtp.Port = My.Settings.SMTP_Porta
                     Smtp.EnableSsl = My.Settings.SMTP_SSL
 
