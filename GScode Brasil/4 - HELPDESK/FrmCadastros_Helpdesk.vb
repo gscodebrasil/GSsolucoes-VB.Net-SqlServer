@@ -681,15 +681,17 @@ Public Class FrmCadastros_Helpdesk
                                         ClEmail.Color = "Red"
                                 End Select
 
-                                Select Case DgvGerenciador.CurrentRow.Cells(30).Value
+                                Select Case CbStatus_Resultado.Text
                                     Case "Chamado está em andamento"
                                         ClEmail.ColorStatus = "LightSkyBlue"
                                     Case "Aguardando Pendência do Cliente"
-                                        ClEmail.ColorStatus = "Yellow"
+                                        ClEmail.ColorStatus = "Orange"
                                     Case "Aguardando Pendência da Erimat"
                                         ClEmail.ColorStatus = "Olive"
                                     Case "Necessário abrir OS para ir ao local"
-                                        ClEmail.ColorStatus = "YellowGreen"
+                                        ClEmail.ColorStatus = "Green"
+                                    Case Else
+                                        ClEmail.ColorStatus = "Gray"
                                 End Select
 
                                 ClEmail.ToEmail = TxtSendEmail_Resultado.Text
@@ -1571,23 +1573,25 @@ Public Class FrmCadastros_Helpdesk
                     Case "Chamado está em andamento"
                         ClEmail.ColorStatus = "LightSkyBlue"
                     Case "Aguardando Pendência do Cliente"
-                        ClEmail.ColorStatus = "Yellow"
+                        ClEmail.ColorStatus = "Orange"
                     Case "Aguardando Pendência da Erimat"
                         ClEmail.ColorStatus = "Olive"
                     Case "Necessário abrir OS para ir ao local"
-                        ClEmail.ColorStatus = "YellowGreen"
+                        ClEmail.ColorStatus = "Green"
+                    Case Else
+                        ClEmail.ColorStatus = "Gray"
                 End Select
 
                 ClEmail.info_res = $"<br><br><br><br><br><br><br>
                                      <b><font size ='4' color='MidnightBlue'>------------------------------ RESULTADO ------------------------------</font></b><br><br><br><br><br>
                                      <b><font color='Gray'>{DgvGerenciador.CurrentRow.Cells(24).Value}</b><br>
                                      {DgvGerenciador.CurrentRow.Cells(25).Value}<br>
-                                     {DgvGerenciador.CurrentRow.Cells(26).Value}</font><br><br><br><br>
+                                     {DgvGerenciador.CurrentRow.Cells(26).Value}<br><br><br><br>
                                      <b>Contato</b>: {DgvGerenciador.CurrentRow.Cells(28).Value}<br>
-                                     <b>Status</b>: <font color='{ClEmail.ColorStatus}'>{DgvGerenciador.CurrentRow.Cells(30).Value}</font><br>
-                                     <b>Tempo de conexão</b>: {DgvGerenciador.CurrentRow.Cells(29).Value}<br><br>
+                                     <b>Status</b>:</font> <font color='{ClEmail.ColorStatus}'>{DgvGerenciador.CurrentRow.Cells(30).Value}</font><br>
+                                     <b><font color='Gray'>Tempo de conexão</b>: {DgvGerenciador.CurrentRow.Cells(29).Value}<br><br>
                                      <b>Resultado</b>:<br>
-                                     {DgvGerenciador.CurrentRow.Cells(27).Value}"
+                                     {DgvGerenciador.CurrentRow.Cells(27).Value}</font>"
             Else
                 ClEmail.info_res = ""
             End If

@@ -755,7 +755,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpOS.Location = New System.Drawing.Point(4, 4)
         Me.TpOS.Name = "TpOS"
         Me.TpOS.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpOS.Size = New System.Drawing.Size(780, 532)
+        Me.TpOS.Size = New System.Drawing.Size(780, 556)
         Me.TpOS.TabIndex = 5
         Me.TpOS.Text = "OS"
         '
@@ -1401,7 +1401,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpEditar_OS.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_OS.Name = "TpEditar_OS"
         Me.TpEditar_OS.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpEditar_OS.Size = New System.Drawing.Size(780, 532)
+        Me.TpEditar_OS.Size = New System.Drawing.Size(780, 556)
         Me.TpEditar_OS.TabIndex = 10
         Me.TpEditar_OS.Text = "Editar OS"
         '
@@ -1559,7 +1559,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.Lbl2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Lbl2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl2.ForeColor = System.Drawing.Color.Black
-        Me.Lbl2.Location = New System.Drawing.Point(3, 444)
+        Me.Lbl2.Location = New System.Drawing.Point(3, 468)
         Me.Lbl2.Name = "Lbl2"
         Me.Lbl2.Size = New System.Drawing.Size(774, 85)
         Me.Lbl2.TabIndex = 121
@@ -1576,7 +1576,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpCad_Ocorrencia.Location = New System.Drawing.Point(4, 4)
         Me.TpCad_Ocorrencia.Name = "TpCad_Ocorrencia"
         Me.TpCad_Ocorrencia.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpCad_Ocorrencia.Size = New System.Drawing.Size(780, 532)
+        Me.TpCad_Ocorrencia.Size = New System.Drawing.Size(780, 556)
         Me.TpCad_Ocorrencia.TabIndex = 0
         Me.TpCad_Ocorrencia.Text = "Cad. Ocorrencia"
         '

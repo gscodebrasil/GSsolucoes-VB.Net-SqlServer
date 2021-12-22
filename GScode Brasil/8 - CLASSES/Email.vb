@@ -155,7 +155,7 @@ Public Class Email
                     <b>Contato</b>: {contato_oc}<br>
                     <b>Endereço</b>: {endereco}, {complemento}, {cidade}, {uf}, {cep}<br><br>                    
                     <b>Condição</b>: {condicao}<br>
-                    <b>Prioridade</b>:<font color='{Color}'> {prioridade}</font><br>
+                    <b>Prioridade</b>:</font> <font color='{Color}'> {prioridade}</font><br>
                     <b>Equipamento</b>: {equipamento} - <b>Nº de Série</b>: {nserie}<br><br>
                     <b>Ocorrência</b>:<br>
                     {ocorrencia}", Nothing, "text/html")
@@ -200,19 +200,19 @@ Public Class Email
                     <b>Contato</b>: {contato_oc}<br>
                     <b>Endereço</b>: {endereco}, {complemento}, {cidade}, {uf}, {cep}<br><br>                    
                     <b>Condição</b>: {condicao}<br>
-                    <b>Prioridade</b>: <font color='{Color}'>{prioridade}</font><br>
-                    <b>Equipamento</b>: {equipamento} - <b>Nº de Série</b>: {nserie}<br><br>
-                    <b>Ocorrência</b>:<br>
+                    <b>Prioridade</b>:</font> <font color='{Color}'>{prioridade}</font><br>
+                    <b><font color='Gray'>Equipamento</b>: {equipamento} - <b>Nº de Série</b>: {nserie}<br><br>
+                    <b>Ocorrência</b>:</font><br>
                     {ocorrencia}{faturamento}
                     <b><font size='4' color='MidnightBlue'>------------------------------ RESULTADO ------------------------------</font></b><br><br><br><br><br>
                     <b><font color='Gray'>{nome_res}</b><br>
                     {email_res}<br>
-                    {data_res}</font><br><br><br><br>
+                    {data_res}<br><br><br><br>
                     <b>Contato</b>: {contato_res}<br>
-                    <b>Status</b>: <font color='{ColorStatus}'>{status}</font><br>
-                    <b>Tempo de conexão</b>: {tempo_conexao}<br><br>
+                    <b>Status</b>:</font> <font color='{ColorStatus}'>{status}</font><br>
+                    <b><font color='Gray'>Tempo de conexão</b>: {tempo_conexao}<br><br>
                     <b>Resultado</b>:<br>
-                    {resultado}", Nothing, "text/html")
+                    {resultado}</font>", Nothing, "text/html")
                     Email.AlternateViews.Add(Html)
                     Smtp.Send(Email)
                     ValidaEmail = True
@@ -254,10 +254,10 @@ Public Class Email
                     <b>Contato</b>: {contato_oc}<br>
                     <b>Endereço</b>: {endereco}, {complemento}, {cidade}, {uf}, {cep}<br><br>                    
                     <b>Condição</b>: {condicao}<br>
-                    <b>Prioridade</b>:<font color='{Color}'> {prioridade}</font><br>
-                    <b>Equipamento</b>: {equipamento} - <b>Nº de Série</b>: {nserie}<br><br>
+                    <b>Prioridade</b>:</font> <font color='{Color}'>{prioridade}</font><br>
+                    <b><font color='Gray'><Equipamento</b>: {equipamento} - <b>Nº de Série</b>: {nserie}<br><br>
                     <b>Ocorrência</b>:<br>
-                    {ocorrencia}{info_res}", Nothing, "text/html")
+                    {ocorrencia}</font>{info_res}", Nothing, "text/html")
                     Email.AlternateViews.Add(Html)
                     Smtp.Send(Email)
                     ValidaEmail = True
