@@ -596,7 +596,6 @@ Public Class FrmPrincipal
         OcultaPainelLateral_Phonebook()
     End Sub
 
-
     Private Sub BtnPerfilLeft_Phonebook_Click(sender As Object, e As EventArgs) Handles BtnPerfilLeft_Phonebook.Click
         If Application.OpenForms.OfType(Of FrmUserConfig)().Count = 0 Then
             FormShow(New FrmUserConfig())

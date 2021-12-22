@@ -24,10 +24,10 @@ Partial Class FrmPrincipal
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation8 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
-        Dim Animation7 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
-        Dim Animation6 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
-        Dim Animation5 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation16 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation15 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation14 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation13 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
         Me.NotMessageLeftHome = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.NotMessageTop = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
@@ -436,7 +436,7 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft_Helpdesk.ForeColor = System.Drawing.Color.White
         Me.BtnPerfilLeft_Helpdesk.HoverState.Parent = Me.BtnPerfilLeft_Helpdesk
         Me.BtnPerfilLeft_Helpdesk.Image = CType(resources.GetObject("BtnPerfilLeft_Helpdesk.Image"), System.Drawing.Image)
-        Me.BtnPerfilLeft_Helpdesk.Location = New System.Drawing.Point(132, 90)
+        Me.BtnPerfilLeft_Helpdesk.Location = New System.Drawing.Point(112, 90)
         Me.BtnPerfilLeft_Helpdesk.Name = "BtnPerfilLeft_Helpdesk"
         Me.BtnPerfilLeft_Helpdesk.PressedColor = System.Drawing.Color.DimGray
         Me.BtnPerfilLeft_Helpdesk.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
@@ -1840,10 +1840,10 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.TpHelpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpHelpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpHelpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TpHelpdesk.Location = New System.Drawing.Point(5, 4)
+        Me.TpHelpdesk.Location = New System.Drawing.Point(44, 4)
         Me.TpHelpdesk.Name = "TpHelpdesk"
         Me.TpHelpdesk.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpHelpdesk.Size = New System.Drawing.Size(219, 651)
+        Me.TpHelpdesk.Size = New System.Drawing.Size(180, 651)
         Me.TpHelpdesk.TabIndex = 2
         Me.TpHelpdesk.Text = "Helpdesk"
         '
@@ -1868,7 +1868,7 @@ Partial Class FrmPrincipal
         Me.PanelMenu_Helpdesk.Location = New System.Drawing.Point(3, 3)
         Me.PanelMenu_Helpdesk.Name = "PanelMenu_Helpdesk"
         Me.PanelMenu_Helpdesk.ShadowDecoration.Parent = Me.PanelMenu_Helpdesk
-        Me.PanelMenu_Helpdesk.Size = New System.Drawing.Size(213, 645)
+        Me.PanelMenu_Helpdesk.Size = New System.Drawing.Size(174, 645)
         Me.PanelMenu_Helpdesk.TabIndex = 1
         '
         'BtnHome_Helpdesk
@@ -1910,7 +1910,7 @@ Partial Class FrmPrincipal
         Me.BtnHome_Helpdesk.Name = "BtnHome_Helpdesk"
         Me.BtnHome_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnHome_Helpdesk.ShadowDecoration.Parent = Me.BtnHome_Helpdesk
-        Me.BtnHome_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnHome_Helpdesk.Size = New System.Drawing.Size(157, 45)
         Me.BtnHome_Helpdesk.TabIndex = 19
         Me.BtnHome_Helpdesk.Text = "Home"
         Me.BtnHome_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1954,7 +1954,7 @@ Partial Class FrmPrincipal
         Me.BtnRelatorio_Helpdesk.Name = "BtnRelatorio_Helpdesk"
         Me.BtnRelatorio_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnRelatorio_Helpdesk.ShadowDecoration.Parent = Me.BtnRelatorio_Helpdesk
-        Me.BtnRelatorio_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnRelatorio_Helpdesk.Size = New System.Drawing.Size(157, 45)
         Me.BtnRelatorio_Helpdesk.TabIndex = 16
         Me.BtnRelatorio_Helpdesk.Text = "Relatório"
         Me.BtnRelatorio_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1998,7 +1998,7 @@ Partial Class FrmPrincipal
         Me.BtnAgenda_Helpdesk.Name = "BtnAgenda_Helpdesk"
         Me.BtnAgenda_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnAgenda_Helpdesk.ShadowDecoration.Parent = Me.BtnAgenda_Helpdesk
-        Me.BtnAgenda_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnAgenda_Helpdesk.Size = New System.Drawing.Size(157, 45)
         Me.BtnAgenda_Helpdesk.TabIndex = 14
         Me.BtnAgenda_Helpdesk.Text = "Agenda"
         Me.BtnAgenda_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -2042,7 +2042,7 @@ Partial Class FrmPrincipal
         Me.BtnGerenciador_Helpdesk.Name = "BtnGerenciador_Helpdesk"
         Me.BtnGerenciador_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnGerenciador_Helpdesk.ShadowDecoration.Parent = Me.BtnGerenciador_Helpdesk
-        Me.BtnGerenciador_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnGerenciador_Helpdesk.Size = New System.Drawing.Size(157, 45)
         Me.BtnGerenciador_Helpdesk.TabIndex = 18
         Me.BtnGerenciador_Helpdesk.Text = "Gerenciador"
         Me.BtnGerenciador_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -2086,7 +2086,7 @@ Partial Class FrmPrincipal
         Me.BtnPainel_Helpdesk.Name = "BtnPainel_Helpdesk"
         Me.BtnPainel_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnPainel_Helpdesk.ShadowDecoration.Parent = Me.BtnPainel_Helpdesk
-        Me.BtnPainel_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnPainel_Helpdesk.Size = New System.Drawing.Size(157, 45)
         Me.BtnPainel_Helpdesk.TabIndex = 15
         Me.BtnPainel_Helpdesk.Text = "Painel"
         Me.BtnPainel_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -2130,7 +2130,7 @@ Partial Class FrmPrincipal
         Me.BtnAbrirOS_Helpdesk.Name = "BtnAbrirOS_Helpdesk"
         Me.BtnAbrirOS_Helpdesk.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnAbrirOS_Helpdesk.ShadowDecoration.Parent = Me.BtnAbrirOS_Helpdesk
-        Me.BtnAbrirOS_Helpdesk.Size = New System.Drawing.Size(196, 45)
+        Me.BtnAbrirOS_Helpdesk.Size = New System.Drawing.Size(157, 45)
         Me.BtnAbrirOS_Helpdesk.TabIndex = 0
         Me.BtnAbrirOS_Helpdesk.Text = "Abrir OS"
         Me.BtnAbrirOS_Helpdesk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -2147,7 +2147,7 @@ Partial Class FrmPrincipal
         Me.PanelLogoFull_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelLogoFull_Helpdesk.Location = New System.Drawing.Point(0, 658)
         Me.PanelLogoFull_Helpdesk.Name = "PanelLogoFull_Helpdesk"
-        Me.PanelLogoFull_Helpdesk.Size = New System.Drawing.Size(196, 149)
+        Me.PanelLogoFull_Helpdesk.Size = New System.Drawing.Size(157, 149)
         Me.PanelLogoFull_Helpdesk.TabIndex = 17
         '
         'PbLogoG_Helpdesk
@@ -2161,7 +2161,7 @@ Partial Class FrmPrincipal
         Me.PbLogoG_Helpdesk.Image = CType(resources.GetObject("PbLogoG_Helpdesk.Image"), System.Drawing.Image)
         Me.PbLogoG_Helpdesk.Location = New System.Drawing.Point(0, 36)
         Me.PbLogoG_Helpdesk.Name = "PbLogoG_Helpdesk"
-        Me.PbLogoG_Helpdesk.Size = New System.Drawing.Size(196, 71)
+        Me.PbLogoG_Helpdesk.Size = New System.Drawing.Size(157, 71)
         Me.PbLogoG_Helpdesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoG_Helpdesk.TabIndex = 19
         Me.PbLogoG_Helpdesk.TabStop = False
@@ -2179,7 +2179,7 @@ Partial Class FrmPrincipal
         Me.PanelSocial_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelSocial_Helpdesk.Location = New System.Drawing.Point(0, 107)
         Me.PanelSocial_Helpdesk.Name = "PanelSocial_Helpdesk"
-        Me.PanelSocial_Helpdesk.Size = New System.Drawing.Size(196, 42)
+        Me.PanelSocial_Helpdesk.Size = New System.Drawing.Size(157, 42)
         Me.PanelSocial_Helpdesk.TabIndex = 0
         '
         'BtnYoutube_Helpdesk
@@ -2197,7 +2197,7 @@ Partial Class FrmPrincipal
         Me.BtnYoutube_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnYoutube_Helpdesk.ImageRotate = 0!
         Me.BtnYoutube_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnYoutube_Helpdesk.Location = New System.Drawing.Point(124, -2)
+        Me.BtnYoutube_Helpdesk.Location = New System.Drawing.Point(104, -2)
         Me.BtnYoutube_Helpdesk.Name = "BtnYoutube_Helpdesk"
         Me.BtnYoutube_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnYoutube_Helpdesk.PressedState.Parent = Me.BtnYoutube_Helpdesk
@@ -2220,7 +2220,7 @@ Partial Class FrmPrincipal
         Me.BtnFacebook_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnFacebook_Helpdesk.ImageRotate = 0!
         Me.BtnFacebook_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnFacebook_Helpdesk.Location = New System.Drawing.Point(81, -2)
+        Me.BtnFacebook_Helpdesk.Location = New System.Drawing.Point(61, -2)
         Me.BtnFacebook_Helpdesk.Name = "BtnFacebook_Helpdesk"
         Me.BtnFacebook_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnFacebook_Helpdesk.PressedState.Parent = Me.BtnFacebook_Helpdesk
@@ -2243,7 +2243,7 @@ Partial Class FrmPrincipal
         Me.BtnInstagram_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnInstagram_Helpdesk.ImageRotate = 0!
         Me.BtnInstagram_Helpdesk.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnInstagram_Helpdesk.Location = New System.Drawing.Point(38, -2)
+        Me.BtnInstagram_Helpdesk.Location = New System.Drawing.Point(18, -2)
         Me.BtnInstagram_Helpdesk.Name = "BtnInstagram_Helpdesk"
         Me.BtnInstagram_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnInstagram_Helpdesk.PressedState.Parent = Me.BtnInstagram_Helpdesk
@@ -2267,7 +2267,7 @@ Partial Class FrmPrincipal
         Me.PanelPerfilLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilLeft_Helpdesk.Location = New System.Drawing.Point(0, 100)
         Me.PanelPerfilLeft_Helpdesk.Name = "PanelPerfilLeft_Helpdesk"
-        Me.PanelPerfilLeft_Helpdesk.Size = New System.Drawing.Size(196, 288)
+        Me.PanelPerfilLeft_Helpdesk.Size = New System.Drawing.Size(157, 288)
         Me.PanelPerfilLeft_Helpdesk.TabIndex = 13
         '
         'LblNameLeft_Helpdesk
@@ -2281,7 +2281,7 @@ Partial Class FrmPrincipal
         Me.LblNameLeft_Helpdesk.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LblNameLeft_Helpdesk.Location = New System.Drawing.Point(0, 176)
         Me.LblNameLeft_Helpdesk.Name = "LblNameLeft_Helpdesk"
-        Me.LblNameLeft_Helpdesk.Size = New System.Drawing.Size(196, 19)
+        Me.LblNameLeft_Helpdesk.Size = New System.Drawing.Size(157, 19)
         Me.LblNameLeft_Helpdesk.TabIndex = 4
         Me.LblNameLeft_Helpdesk.Text = "Admin"
         Me.LblNameLeft_Helpdesk.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -2297,15 +2297,15 @@ Partial Class FrmPrincipal
         Me.LblEmailLeft_Helpdesk.ForeColor = System.Drawing.Color.DimGray
         Me.LblEmailLeft_Helpdesk.Location = New System.Drawing.Point(0, 195)
         Me.LblEmailLeft_Helpdesk.Name = "LblEmailLeft_Helpdesk"
-        Me.LblEmailLeft_Helpdesk.Size = New System.Drawing.Size(196, 13)
+        Me.LblEmailLeft_Helpdesk.Size = New System.Drawing.Size(157, 13)
         Me.LblEmailLeft_Helpdesk.TabIndex = 5
         Me.LblEmailLeft_Helpdesk.Text = "admin@gscodebrasil.com.br"
         Me.LblEmailLeft_Helpdesk.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'PanelImageLeft_Helpdesk
         '
-        Me.PanelImageLeft_Helpdesk.Controls.Add(Me.PbPerfilLeft_Helpdesk)
         Me.PanelImageLeft_Helpdesk.Controls.Add(Me.BtnPerfilLeft_Helpdesk)
+        Me.PanelImageLeft_Helpdesk.Controls.Add(Me.PbPerfilLeft_Helpdesk)
         Me.AppTransition.SetDecoration(Me.PanelImageLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerMenuDeslizante.SetDecoration(Me.PanelImageLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerSubMenuDeslizante.SetDecoration(Me.PanelImageLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -2314,7 +2314,7 @@ Partial Class FrmPrincipal
         Me.PanelImageLeft_Helpdesk.Location = New System.Drawing.Point(0, 26)
         Me.PanelImageLeft_Helpdesk.Name = "PanelImageLeft_Helpdesk"
         Me.PanelImageLeft_Helpdesk.ShadowDecoration.Parent = Me.PanelImageLeft_Helpdesk
-        Me.PanelImageLeft_Helpdesk.Size = New System.Drawing.Size(196, 144)
+        Me.PanelImageLeft_Helpdesk.Size = New System.Drawing.Size(157, 144)
         Me.PanelImageLeft_Helpdesk.TabIndex = 31
         '
         'PbPerfilLeft_Helpdesk
@@ -2327,7 +2327,7 @@ Partial Class FrmPrincipal
         Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbPerfilLeft_Helpdesk.Image = CType(resources.GetObject("PbPerfilLeft_Helpdesk.Image"), System.Drawing.Image)
         Me.PbPerfilLeft_Helpdesk.ImageRotate = 0!
-        Me.PbPerfilLeft_Helpdesk.Location = New System.Drawing.Point(38, 0)
+        Me.PbPerfilLeft_Helpdesk.Location = New System.Drawing.Point(18, 0)
         Me.PbPerfilLeft_Helpdesk.Name = "PbPerfilLeft_Helpdesk"
         Me.PbPerfilLeft_Helpdesk.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.PbPerfilLeft_Helpdesk.ShadowDecoration.Parent = Me.PbPerfilLeft_Helpdesk
@@ -2348,7 +2348,7 @@ Partial Class FrmPrincipal
         Me.PanelNotifiLeft_Helpdesk.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelNotifiLeft_Helpdesk.Location = New System.Drawing.Point(0, 208)
         Me.PanelNotifiLeft_Helpdesk.Name = "PanelNotifiLeft_Helpdesk"
-        Me.PanelNotifiLeft_Helpdesk.Size = New System.Drawing.Size(196, 33)
+        Me.PanelNotifiLeft_Helpdesk.Size = New System.Drawing.Size(157, 33)
         Me.PanelNotifiLeft_Helpdesk.TabIndex = 33
         '
         'LblNotLeftHome_Helpdesk
@@ -2361,7 +2361,7 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Helpdesk, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNotLeftHome_Helpdesk.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LblNotLeftHome_Helpdesk.ForeColor = System.Drawing.Color.White
-        Me.LblNotLeftHome_Helpdesk.Location = New System.Drawing.Point(82, 12)
+        Me.LblNotLeftHome_Helpdesk.Location = New System.Drawing.Point(62, 12)
         Me.LblNotLeftHome_Helpdesk.Name = "LblNotLeftHome_Helpdesk"
         Me.LblNotLeftHome_Helpdesk.Size = New System.Drawing.Size(69, 17)
         Me.LblNotLeftHome_Helpdesk.TabIndex = 0
@@ -2382,7 +2382,7 @@ Partial Class FrmPrincipal
         Me.BtnNotLeft_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnNotLeft_Helpdesk.ImageRotate = 0!
         Me.BtnNotLeft_Helpdesk.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnNotLeft_Helpdesk.Location = New System.Drawing.Point(45, 5)
+        Me.BtnNotLeft_Helpdesk.Location = New System.Drawing.Point(25, 5)
         Me.BtnNotLeft_Helpdesk.Name = "BtnNotLeft_Helpdesk"
         Me.BtnNotLeft_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(22, 22)
         Me.BtnNotLeft_Helpdesk.PressedState.Parent = Me.BtnNotLeft_Helpdesk
@@ -2399,7 +2399,7 @@ Partial Class FrmPrincipal
         Me.Panel41.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel41.Location = New System.Drawing.Point(0, 241)
         Me.Panel41.Name = "Panel41"
-        Me.Panel41.Size = New System.Drawing.Size(196, 47)
+        Me.Panel41.Size = New System.Drawing.Size(157, 47)
         Me.Panel41.TabIndex = 18
         '
         'PanelDeslizanteLeft_Helpdesk
@@ -2413,7 +2413,7 @@ Partial Class FrmPrincipal
         Me.PanelDeslizanteLeft_Helpdesk.Location = New System.Drawing.Point(0, 0)
         Me.PanelDeslizanteLeft_Helpdesk.Name = "PanelDeslizanteLeft_Helpdesk"
         Me.PanelDeslizanteLeft_Helpdesk.ShadowDecoration.Parent = Me.PanelDeslizanteLeft_Helpdesk
-        Me.PanelDeslizanteLeft_Helpdesk.Size = New System.Drawing.Size(196, 26)
+        Me.PanelDeslizanteLeft_Helpdesk.Size = New System.Drawing.Size(157, 26)
         Me.PanelDeslizanteLeft_Helpdesk.TabIndex = 30
         '
         'BtnPanelDeslizanteLeft_Helpdesk
@@ -2431,7 +2431,7 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteLeft_Helpdesk.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnPanelDeslizanteLeft_Helpdesk.ImageRotate = 0!
         Me.BtnPanelDeslizanteLeft_Helpdesk.ImageSize = New System.Drawing.Size(18, 18)
-        Me.BtnPanelDeslizanteLeft_Helpdesk.Location = New System.Drawing.Point(175, 0)
+        Me.BtnPanelDeslizanteLeft_Helpdesk.Location = New System.Drawing.Point(136, 0)
         Me.BtnPanelDeslizanteLeft_Helpdesk.Name = "BtnPanelDeslizanteLeft_Helpdesk"
         Me.BtnPanelDeslizanteLeft_Helpdesk.PressedState.ImageSize = New System.Drawing.Size(18, 18)
         Me.BtnPanelDeslizanteLeft_Helpdesk.PressedState.Parent = Me.BtnPanelDeslizanteLeft_Helpdesk
@@ -2450,7 +2450,7 @@ Partial Class FrmPrincipal
         Me.PbLogoP_Helpdesk.Image = CType(resources.GetObject("PbLogoP_Helpdesk.Image"), System.Drawing.Image)
         Me.PbLogoP_Helpdesk.Location = New System.Drawing.Point(0, 0)
         Me.PbLogoP_Helpdesk.Name = "PbLogoP_Helpdesk"
-        Me.PbLogoP_Helpdesk.Size = New System.Drawing.Size(196, 100)
+        Me.PbLogoP_Helpdesk.Size = New System.Drawing.Size(157, 100)
         Me.PbLogoP_Helpdesk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoP_Helpdesk.TabIndex = 1
         Me.PbLogoP_Helpdesk.TabStop = False
@@ -5119,64 +5119,64 @@ Partial Class FrmPrincipal
         '
         Me.TimerMenuDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
         Me.TimerMenuDeslizante.Cursor = Nothing
-        Animation8.AnimateOnlyDifferences = True
-        Animation8.BlindCoeff = CType(resources.GetObject("Animation8.BlindCoeff"), System.Drawing.PointF)
-        Animation8.LeafCoeff = 0!
-        Animation8.MaxTime = 1.0!
-        Animation8.MinTime = 0!
-        Animation8.MosaicCoeff = CType(resources.GetObject("Animation8.MosaicCoeff"), System.Drawing.PointF)
-        Animation8.MosaicShift = CType(resources.GetObject("Animation8.MosaicShift"), System.Drawing.PointF)
-        Animation8.MosaicSize = 0
-        Animation8.Padding = New System.Windows.Forms.Padding(0)
-        Animation8.RotateCoeff = 0!
-        Animation8.RotateLimit = 0!
-        Animation8.ScaleCoeff = CType(resources.GetObject("Animation8.ScaleCoeff"), System.Drawing.PointF)
-        Animation8.SlideCoeff = CType(resources.GetObject("Animation8.SlideCoeff"), System.Drawing.PointF)
-        Animation8.TimeCoeff = 0!
-        Animation8.TransparencyCoeff = 0!
-        Me.TimerMenuDeslizante.DefaultAnimation = Animation8
+        Animation16.AnimateOnlyDifferences = True
+        Animation16.BlindCoeff = CType(resources.GetObject("Animation16.BlindCoeff"), System.Drawing.PointF)
+        Animation16.LeafCoeff = 0!
+        Animation16.MaxTime = 1.0!
+        Animation16.MinTime = 0!
+        Animation16.MosaicCoeff = CType(resources.GetObject("Animation16.MosaicCoeff"), System.Drawing.PointF)
+        Animation16.MosaicShift = CType(resources.GetObject("Animation16.MosaicShift"), System.Drawing.PointF)
+        Animation16.MosaicSize = 0
+        Animation16.Padding = New System.Windows.Forms.Padding(0)
+        Animation16.RotateCoeff = 0!
+        Animation16.RotateLimit = 0!
+        Animation16.ScaleCoeff = CType(resources.GetObject("Animation16.ScaleCoeff"), System.Drawing.PointF)
+        Animation16.SlideCoeff = CType(resources.GetObject("Animation16.SlideCoeff"), System.Drawing.PointF)
+        Animation16.TimeCoeff = 0!
+        Animation16.TransparencyCoeff = 0!
+        Me.TimerMenuDeslizante.DefaultAnimation = Animation16
         '
         'TimerSubMenuDeslizante
         '
         Me.TimerSubMenuDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.VertSlide
         Me.TimerSubMenuDeslizante.Cursor = Nothing
-        Animation7.AnimateOnlyDifferences = True
-        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
-        Animation7.LeafCoeff = 0!
-        Animation7.MaxTime = 1.0!
-        Animation7.MinTime = 0!
-        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
-        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
-        Animation7.MosaicSize = 0
-        Animation7.Padding = New System.Windows.Forms.Padding(0)
-        Animation7.RotateCoeff = 0!
-        Animation7.RotateLimit = 0!
-        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
-        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
-        Animation7.TimeCoeff = 0!
-        Animation7.TransparencyCoeff = 0!
-        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation7
+        Animation15.AnimateOnlyDifferences = True
+        Animation15.BlindCoeff = CType(resources.GetObject("Animation15.BlindCoeff"), System.Drawing.PointF)
+        Animation15.LeafCoeff = 0!
+        Animation15.MaxTime = 1.0!
+        Animation15.MinTime = 0!
+        Animation15.MosaicCoeff = CType(resources.GetObject("Animation15.MosaicCoeff"), System.Drawing.PointF)
+        Animation15.MosaicShift = CType(resources.GetObject("Animation15.MosaicShift"), System.Drawing.PointF)
+        Animation15.MosaicSize = 0
+        Animation15.Padding = New System.Windows.Forms.Padding(0)
+        Animation15.RotateCoeff = 0!
+        Animation15.RotateLimit = 0!
+        Animation15.ScaleCoeff = CType(resources.GetObject("Animation15.ScaleCoeff"), System.Drawing.PointF)
+        Animation15.SlideCoeff = CType(resources.GetObject("Animation15.SlideCoeff"), System.Drawing.PointF)
+        Animation15.TimeCoeff = 0!
+        Animation15.TransparencyCoeff = 0!
+        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation15
         '
         'TimerPanelDeslizante
         '
         Me.TimerPanelDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
         Me.TimerPanelDeslizante.Cursor = Nothing
-        Animation6.AnimateOnlyDifferences = True
-        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
-        Animation6.LeafCoeff = 0!
-        Animation6.MaxTime = 1.0!
-        Animation6.MinTime = 0!
-        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
-        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
-        Animation6.MosaicSize = 0
-        Animation6.Padding = New System.Windows.Forms.Padding(0)
-        Animation6.RotateCoeff = 0!
-        Animation6.RotateLimit = 0!
-        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
-        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
-        Animation6.TimeCoeff = 0!
-        Animation6.TransparencyCoeff = 1.0!
-        Me.TimerPanelDeslizante.DefaultAnimation = Animation6
+        Animation14.AnimateOnlyDifferences = True
+        Animation14.BlindCoeff = CType(resources.GetObject("Animation14.BlindCoeff"), System.Drawing.PointF)
+        Animation14.LeafCoeff = 0!
+        Animation14.MaxTime = 1.0!
+        Animation14.MinTime = 0!
+        Animation14.MosaicCoeff = CType(resources.GetObject("Animation14.MosaicCoeff"), System.Drawing.PointF)
+        Animation14.MosaicShift = CType(resources.GetObject("Animation14.MosaicShift"), System.Drawing.PointF)
+        Animation14.MosaicSize = 0
+        Animation14.Padding = New System.Windows.Forms.Padding(0)
+        Animation14.RotateCoeff = 0!
+        Animation14.RotateLimit = 0!
+        Animation14.ScaleCoeff = CType(resources.GetObject("Animation14.ScaleCoeff"), System.Drawing.PointF)
+        Animation14.SlideCoeff = CType(resources.GetObject("Animation14.SlideCoeff"), System.Drawing.PointF)
+        Animation14.TimeCoeff = 0!
+        Animation14.TransparencyCoeff = 1.0!
+        Me.TimerPanelDeslizante.DefaultAnimation = Animation14
         Me.TimerPanelDeslizante.Interval = 5
         Me.TimerPanelDeslizante.MaxAnimationTime = 800
         Me.TimerPanelDeslizante.TimeStep = 0.05!
@@ -5185,22 +5185,22 @@ Partial Class FrmPrincipal
         '
         Me.AppTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
         Me.AppTransition.Cursor = Nothing
-        Animation5.AnimateOnlyDifferences = True
-        Animation5.BlindCoeff = CType(resources.GetObject("Animation5.BlindCoeff"), System.Drawing.PointF)
-        Animation5.LeafCoeff = 0!
-        Animation5.MaxTime = 1.0!
-        Animation5.MinTime = 0!
-        Animation5.MosaicCoeff = CType(resources.GetObject("Animation5.MosaicCoeff"), System.Drawing.PointF)
-        Animation5.MosaicShift = CType(resources.GetObject("Animation5.MosaicShift"), System.Drawing.PointF)
-        Animation5.MosaicSize = 0
-        Animation5.Padding = New System.Windows.Forms.Padding(0)
-        Animation5.RotateCoeff = 0!
-        Animation5.RotateLimit = 0!
-        Animation5.ScaleCoeff = CType(resources.GetObject("Animation5.ScaleCoeff"), System.Drawing.PointF)
-        Animation5.SlideCoeff = CType(resources.GetObject("Animation5.SlideCoeff"), System.Drawing.PointF)
-        Animation5.TimeCoeff = 0!
-        Animation5.TransparencyCoeff = 1.0!
-        Me.AppTransition.DefaultAnimation = Animation5
+        Animation13.AnimateOnlyDifferences = True
+        Animation13.BlindCoeff = CType(resources.GetObject("Animation13.BlindCoeff"), System.Drawing.PointF)
+        Animation13.LeafCoeff = 0!
+        Animation13.MaxTime = 1.0!
+        Animation13.MinTime = 0!
+        Animation13.MosaicCoeff = CType(resources.GetObject("Animation13.MosaicCoeff"), System.Drawing.PointF)
+        Animation13.MosaicShift = CType(resources.GetObject("Animation13.MosaicShift"), System.Drawing.PointF)
+        Animation13.MosaicSize = 0
+        Animation13.Padding = New System.Windows.Forms.Padding(0)
+        Animation13.RotateCoeff = 0!
+        Animation13.RotateLimit = 0!
+        Animation13.ScaleCoeff = CType(resources.GetObject("Animation13.ScaleCoeff"), System.Drawing.PointF)
+        Animation13.SlideCoeff = CType(resources.GetObject("Animation13.SlideCoeff"), System.Drawing.PointF)
+        Animation13.TimeCoeff = 0!
+        Animation13.TransparencyCoeff = 1.0!
+        Me.AppTransition.DefaultAnimation = Animation13
         Me.AppTransition.Interval = 5
         Me.AppTransition.MaxAnimationTime = 1000
         Me.AppTransition.TimeStep = 0.01!
