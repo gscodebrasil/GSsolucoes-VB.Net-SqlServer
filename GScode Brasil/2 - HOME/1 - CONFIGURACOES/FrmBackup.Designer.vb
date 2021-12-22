@@ -319,6 +319,7 @@ Partial Class FrmBackup
         Me.TabControlBackup.TabIndex = 11
         Me.TabControlBackup.TabMenuBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.TabControlBackup.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalBottom
+        Me.TabControlBackup.TabMenuVisible = False
         Me.TabControlBackup.Visible = False
         '
         'TpInicial
@@ -333,7 +334,7 @@ Partial Class FrmBackup
         Me.TpInicial.Location = New System.Drawing.Point(4, 4)
         Me.TpInicial.Name = "TpInicial"
         Me.TpInicial.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpInicial.Size = New System.Drawing.Size(780, 524)
+        Me.TpInicial.Size = New System.Drawing.Size(780, 556)
         Me.TpInicial.TabIndex = 1
         Me.TpInicial.Text = "Inicial"
         '
@@ -405,12 +406,13 @@ Partial Class FrmBackup
         Me.SelectTransition.SetDecoration(Me.Lbl6, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Lbl6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Lbl6.Location = New System.Drawing.Point(10, 146)
+        Me.Lbl6.Location = New System.Drawing.Point(10, 131)
         Me.Lbl6.Name = "Lbl6"
-        Me.Lbl6.Size = New System.Drawing.Size(142, 109)
+        Me.Lbl6.Size = New System.Drawing.Size(142, 123)
         Me.Lbl6.TabIndex = 92
-        Me.Lbl6.Text = "Clique sobre o botão para realizar um backup do banco de dados. O arquivo sera sa" &
-    "lvo no servidor, para realizar o download entre em Restore."
+        Me.Lbl6.Text = "Clique no botão acima para realizar um backup do banco de dados. O arquivo sera s" &
+    "alvo no servidor, para realizar o download ou restaurar as configurações vá para" &
+    " lista de backps."
         Me.Lbl6.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'BtnDatabaseBkp
@@ -510,12 +512,12 @@ Partial Class FrmBackup
         Me.SelectTransition.SetDecoration(Me.Lbl5, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Lbl5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Lbl5.Location = New System.Drawing.Point(10, 146)
+        Me.Lbl5.Location = New System.Drawing.Point(10, 143)
         Me.Lbl5.Name = "Lbl5"
         Me.Lbl5.Size = New System.Drawing.Size(142, 96)
         Me.Lbl5.TabIndex = 92
-        Me.Lbl5.Text = "Clique sobre o botão para realizar um backup do sistema. O arquivo sera salvo no " &
-    "servidor, para realizar o download entre em Restore."
+        Me.Lbl5.Text = "Clique no botão acima para realizar um backup do sistema. O arquivo sera salvo no" &
+    " servidor, para restaurar as configurações salvas, clique em restore."
         Me.Lbl5.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'BtnSystemBkp
@@ -591,8 +593,8 @@ Partial Class FrmBackup
         Me.Lbl7.Name = "Lbl7"
         Me.Lbl7.Size = New System.Drawing.Size(142, 143)
         Me.Lbl7.TabIndex = 92
-        Me.Lbl7.Text = "Clique sobre o botão para ir na pagina de configuração do Banco de Dados. O softw" &
-    "are vem configurado com acesso ao banco de dados local."
+        Me.Lbl7.Text = "Clique no botão acima para ir na pagina de configuração do Banco de Dados. O soft" &
+    "ware vem configurado com acesso ao banco de dados local."
         Me.Lbl7.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'BtnDatabaseConfig
@@ -647,7 +649,7 @@ Partial Class FrmBackup
         Me.Lbl2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Lbl2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl2.ForeColor = System.Drawing.Color.Black
-        Me.Lbl2.Location = New System.Drawing.Point(3, 436)
+        Me.Lbl2.Location = New System.Drawing.Point(3, 468)
         Me.Lbl2.Name = "Lbl2"
         Me.Lbl2.Size = New System.Drawing.Size(774, 85)
         Me.Lbl2.TabIndex = 111

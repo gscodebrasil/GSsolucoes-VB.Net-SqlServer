@@ -119,13 +119,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            Else
-                Application.Restart()
-            End If
+            MessageBox.Show($"Não foi possível cadastrar, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -139,11 +134,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível editar, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -157,13 +149,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-
-            valida = False
-
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível editar as permissões, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -177,11 +164,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível editar o email, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -195,11 +179,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível editar a senha, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -213,11 +194,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível excluir o usuário, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -240,24 +218,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            FrmAguarde.TimerAguarde.Stop()
-            FrmAguarde.Close()
-
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                StrEmail = Nothing
-                StrPass = Nothing
-                StrNome = Nothing
-                AcessoConfig = Nothing
-                AcessoPhonebook = Nothing
-                AcessoHelpdesk = Nothing
-                AcessoEstoque = Nothing
-                AcessoFinanceiro = Nothing
-                AcessoDashboard = Nothing
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível efetuar o login, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -299,12 +261,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível buscar as informações do usuário, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -325,14 +283,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            Else
-                Application.Restart()
-            End If
+            MessageBox.Show($"Não foi possível buscar e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -353,14 +305,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            Else
-                Application.Restart()
-            End If
+            MessageBox.Show($"Não foi possível validar o código, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -383,12 +329,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível validar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -409,12 +351,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível validar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -434,14 +372,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                StrPass = Nothing
-                StrEmail = Nothing
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível buscar a senha, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -468,12 +400,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível buscar o token, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -484,7 +412,8 @@ Public Class UserInfo
                 MessageBox.Show("Conexão realizada com sucesso.", "INFORMÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível estabelecer uma conexão, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -499,7 +428,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível contar os registros, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return TotalUser
     End Function
@@ -518,8 +448,8 @@ Public Class UserInfo
                 End Using
             End Using
         Catch ex As Exception
-            valida = False
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível buscar os registros, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return DgvUser
     End Function

@@ -24,11 +24,11 @@ Partial Class FrmPrincipal
     <Obsolete>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim Animation8 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation7 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation6 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim Animation5 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrincipal))
-        Dim Animation6 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
-        Dim Animation7 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
-        Dim Animation8 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Me.NotMessageLeftHome = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.NotMessageTop = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.BtnNotTop = New Guna.UI2.WinForms.Guna2ImageButton()
@@ -1275,10 +1275,10 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.TpPhonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.TimerPanelDeslizante.SetDecoration(Me.TpPhonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.AppTransition.SetDecoration(Me.TpPhonebook, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.TpPhonebook.Location = New System.Drawing.Point(5, 4)
+        Me.TpPhonebook.Location = New System.Drawing.Point(44, 4)
         Me.TpPhonebook.Name = "TpPhonebook"
         Me.TpPhonebook.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpPhonebook.Size = New System.Drawing.Size(219, 651)
+        Me.TpPhonebook.Size = New System.Drawing.Size(180, 651)
         Me.TpPhonebook.TabIndex = 1
         Me.TpPhonebook.Text = "Phonebook"
         '
@@ -1301,7 +1301,7 @@ Partial Class FrmPrincipal
         Me.PanelMenu_Phonebook.Location = New System.Drawing.Point(3, 3)
         Me.PanelMenu_Phonebook.Name = "PanelMenu_Phonebook"
         Me.PanelMenu_Phonebook.ShadowDecoration.Parent = Me.PanelMenu_Phonebook
-        Me.PanelMenu_Phonebook.Size = New System.Drawing.Size(213, 645)
+        Me.PanelMenu_Phonebook.Size = New System.Drawing.Size(174, 645)
         Me.PanelMenu_Phonebook.TabIndex = 1
         '
         'PanelLogoFull_Phonebook
@@ -1316,7 +1316,7 @@ Partial Class FrmPrincipal
         Me.PanelLogoFull_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelLogoFull_Phonebook.Location = New System.Drawing.Point(0, 568)
         Me.PanelLogoFull_Phonebook.Name = "PanelLogoFull_Phonebook"
-        Me.PanelLogoFull_Phonebook.Size = New System.Drawing.Size(196, 149)
+        Me.PanelLogoFull_Phonebook.Size = New System.Drawing.Size(157, 149)
         Me.PanelLogoFull_Phonebook.TabIndex = 17
         '
         'PbLogoG_Phonebook
@@ -1330,7 +1330,7 @@ Partial Class FrmPrincipal
         Me.PbLogoG_Phonebook.Image = CType(resources.GetObject("PbLogoG_Phonebook.Image"), System.Drawing.Image)
         Me.PbLogoG_Phonebook.Location = New System.Drawing.Point(0, 36)
         Me.PbLogoG_Phonebook.Name = "PbLogoG_Phonebook"
-        Me.PbLogoG_Phonebook.Size = New System.Drawing.Size(196, 71)
+        Me.PbLogoG_Phonebook.Size = New System.Drawing.Size(157, 71)
         Me.PbLogoG_Phonebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoG_Phonebook.TabIndex = 19
         Me.PbLogoG_Phonebook.TabStop = False
@@ -1348,7 +1348,7 @@ Partial Class FrmPrincipal
         Me.PanelSocial_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelSocial_Phonebook.Location = New System.Drawing.Point(0, 107)
         Me.PanelSocial_Phonebook.Name = "PanelSocial_Phonebook"
-        Me.PanelSocial_Phonebook.Size = New System.Drawing.Size(196, 42)
+        Me.PanelSocial_Phonebook.Size = New System.Drawing.Size(157, 42)
         Me.PanelSocial_Phonebook.TabIndex = 0
         '
         'BtnYoutube_Phonebook
@@ -1366,7 +1366,7 @@ Partial Class FrmPrincipal
         Me.BtnYoutube_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnYoutube_Phonebook.ImageRotate = 0!
         Me.BtnYoutube_Phonebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnYoutube_Phonebook.Location = New System.Drawing.Point(124, -2)
+        Me.BtnYoutube_Phonebook.Location = New System.Drawing.Point(104, -2)
         Me.BtnYoutube_Phonebook.Name = "BtnYoutube_Phonebook"
         Me.BtnYoutube_Phonebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnYoutube_Phonebook.PressedState.Parent = Me.BtnYoutube_Phonebook
@@ -1389,7 +1389,7 @@ Partial Class FrmPrincipal
         Me.BtnFacebook_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnFacebook_Phonebook.ImageRotate = 0!
         Me.BtnFacebook_Phonebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnFacebook_Phonebook.Location = New System.Drawing.Point(81, -2)
+        Me.BtnFacebook_Phonebook.Location = New System.Drawing.Point(61, -2)
         Me.BtnFacebook_Phonebook.Name = "BtnFacebook_Phonebook"
         Me.BtnFacebook_Phonebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnFacebook_Phonebook.PressedState.Parent = Me.BtnFacebook_Phonebook
@@ -1412,7 +1412,7 @@ Partial Class FrmPrincipal
         Me.BtnInstagram_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnInstagram_Phonebook.ImageRotate = 0!
         Me.BtnInstagram_Phonebook.ImageSize = New System.Drawing.Size(26, 26)
-        Me.BtnInstagram_Phonebook.Location = New System.Drawing.Point(38, -2)
+        Me.BtnInstagram_Phonebook.Location = New System.Drawing.Point(18, -2)
         Me.BtnInstagram_Phonebook.Name = "BtnInstagram_Phonebook"
         Me.BtnInstagram_Phonebook.PressedState.ImageSize = New System.Drawing.Size(26, 26)
         Me.BtnInstagram_Phonebook.PressedState.Parent = Me.BtnInstagram_Phonebook
@@ -1459,7 +1459,7 @@ Partial Class FrmPrincipal
         Me.BtnHome_Phonebook.Name = "BtnHome_Phonebook"
         Me.BtnHome_Phonebook.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnHome_Phonebook.ShadowDecoration.Parent = Me.BtnHome_Phonebook
-        Me.BtnHome_Phonebook.Size = New System.Drawing.Size(196, 45)
+        Me.BtnHome_Phonebook.Size = New System.Drawing.Size(157, 45)
         Me.BtnHome_Phonebook.TabIndex = 16
         Me.BtnHome_Phonebook.Text = "Home"
         Me.BtnHome_Phonebook.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1503,7 +1503,7 @@ Partial Class FrmPrincipal
         Me.BtnLocalizacao.Name = "BtnLocalizacao"
         Me.BtnLocalizacao.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnLocalizacao.ShadowDecoration.Parent = Me.BtnLocalizacao
-        Me.BtnLocalizacao.Size = New System.Drawing.Size(196, 45)
+        Me.BtnLocalizacao.Size = New System.Drawing.Size(157, 45)
         Me.BtnLocalizacao.TabIndex = 15
         Me.BtnLocalizacao.Text = "Localização"
         Me.BtnLocalizacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1547,7 +1547,7 @@ Partial Class FrmPrincipal
         Me.BtnContatos.Name = "BtnContatos"
         Me.BtnContatos.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnContatos.ShadowDecoration.Parent = Me.BtnContatos
-        Me.BtnContatos.Size = New System.Drawing.Size(196, 45)
+        Me.BtnContatos.Size = New System.Drawing.Size(157, 45)
         Me.BtnContatos.TabIndex = 14
         Me.BtnContatos.Text = "Contatos"
         Me.BtnContatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1591,7 +1591,7 @@ Partial Class FrmPrincipal
         Me.BtnCadastros_Phonebook.Name = "BtnCadastros_Phonebook"
         Me.BtnCadastros_Phonebook.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.BtnCadastros_Phonebook.ShadowDecoration.Parent = Me.BtnCadastros_Phonebook
-        Me.BtnCadastros_Phonebook.Size = New System.Drawing.Size(196, 45)
+        Me.BtnCadastros_Phonebook.Size = New System.Drawing.Size(157, 45)
         Me.BtnCadastros_Phonebook.TabIndex = 0
         Me.BtnCadastros_Phonebook.Text = "Cadastros"
         Me.BtnCadastros_Phonebook.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -1612,7 +1612,7 @@ Partial Class FrmPrincipal
         Me.PanelPerfilLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelPerfilLeft_Phonebook.Location = New System.Drawing.Point(0, 100)
         Me.PanelPerfilLeft_Phonebook.Name = "PanelPerfilLeft_Phonebook"
-        Me.PanelPerfilLeft_Phonebook.Size = New System.Drawing.Size(196, 288)
+        Me.PanelPerfilLeft_Phonebook.Size = New System.Drawing.Size(157, 288)
         Me.PanelPerfilLeft_Phonebook.TabIndex = 13
         '
         'LblNameLeft_Phonebook
@@ -1626,7 +1626,7 @@ Partial Class FrmPrincipal
         Me.LblNameLeft_Phonebook.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.LblNameLeft_Phonebook.Location = New System.Drawing.Point(0, 176)
         Me.LblNameLeft_Phonebook.Name = "LblNameLeft_Phonebook"
-        Me.LblNameLeft_Phonebook.Size = New System.Drawing.Size(196, 19)
+        Me.LblNameLeft_Phonebook.Size = New System.Drawing.Size(157, 19)
         Me.LblNameLeft_Phonebook.TabIndex = 2
         Me.LblNameLeft_Phonebook.Text = "Admin"
         Me.LblNameLeft_Phonebook.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -1642,7 +1642,7 @@ Partial Class FrmPrincipal
         Me.LblEmailLeft_Phonebook.ForeColor = System.Drawing.Color.DimGray
         Me.LblEmailLeft_Phonebook.Location = New System.Drawing.Point(0, 195)
         Me.LblEmailLeft_Phonebook.Name = "LblEmailLeft_Phonebook"
-        Me.LblEmailLeft_Phonebook.Size = New System.Drawing.Size(196, 13)
+        Me.LblEmailLeft_Phonebook.Size = New System.Drawing.Size(157, 13)
         Me.LblEmailLeft_Phonebook.TabIndex = 3
         Me.LblEmailLeft_Phonebook.Text = "admin@gscodebrasil.com.br"
         Me.LblEmailLeft_Phonebook.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -1659,7 +1659,7 @@ Partial Class FrmPrincipal
         Me.PanelImageLeft_Phonebook.Location = New System.Drawing.Point(0, 26)
         Me.PanelImageLeft_Phonebook.Name = "PanelImageLeft_Phonebook"
         Me.PanelImageLeft_Phonebook.ShadowDecoration.Parent = Me.PanelImageLeft_Phonebook
-        Me.PanelImageLeft_Phonebook.Size = New System.Drawing.Size(196, 144)
+        Me.PanelImageLeft_Phonebook.Size = New System.Drawing.Size(157, 144)
         Me.PanelImageLeft_Phonebook.TabIndex = 30
         '
         'BtnPerfilLeft_Phonebook
@@ -1684,7 +1684,7 @@ Partial Class FrmPrincipal
         Me.BtnPerfilLeft_Phonebook.ForeColor = System.Drawing.Color.White
         Me.BtnPerfilLeft_Phonebook.HoverState.Parent = Me.BtnPerfilLeft_Phonebook
         Me.BtnPerfilLeft_Phonebook.Image = CType(resources.GetObject("BtnPerfilLeft_Phonebook.Image"), System.Drawing.Image)
-        Me.BtnPerfilLeft_Phonebook.Location = New System.Drawing.Point(132, 90)
+        Me.BtnPerfilLeft_Phonebook.Location = New System.Drawing.Point(112, 90)
         Me.BtnPerfilLeft_Phonebook.Name = "BtnPerfilLeft_Phonebook"
         Me.BtnPerfilLeft_Phonebook.PressedColor = System.Drawing.Color.DimGray
         Me.BtnPerfilLeft_Phonebook.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
@@ -1703,7 +1703,7 @@ Partial Class FrmPrincipal
         Me.TimerPanelDeslizante.SetDecoration(Me.PbPerfilLeft_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PbPerfilLeft_Phonebook.Image = CType(resources.GetObject("PbPerfilLeft_Phonebook.Image"), System.Drawing.Image)
         Me.PbPerfilLeft_Phonebook.ImageRotate = 0!
-        Me.PbPerfilLeft_Phonebook.Location = New System.Drawing.Point(38, 0)
+        Me.PbPerfilLeft_Phonebook.Location = New System.Drawing.Point(18, 0)
         Me.PbPerfilLeft_Phonebook.Name = "PbPerfilLeft_Phonebook"
         Me.PbPerfilLeft_Phonebook.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.PbPerfilLeft_Phonebook.ShadowDecoration.Parent = Me.PbPerfilLeft_Phonebook
@@ -1724,7 +1724,7 @@ Partial Class FrmPrincipal
         Me.PanelNotifiLeft_Phonebook.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelNotifiLeft_Phonebook.Location = New System.Drawing.Point(0, 208)
         Me.PanelNotifiLeft_Phonebook.Name = "PanelNotifiLeft_Phonebook"
-        Me.PanelNotifiLeft_Phonebook.Size = New System.Drawing.Size(196, 33)
+        Me.PanelNotifiLeft_Phonebook.Size = New System.Drawing.Size(157, 33)
         Me.PanelNotifiLeft_Phonebook.TabIndex = 33
         '
         'LblNotLeftHome_Phonebook
@@ -1737,7 +1737,7 @@ Partial Class FrmPrincipal
         Me.TimerMenuDeslizante.SetDecoration(Me.LblNotLeftHome_Phonebook, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.LblNotLeftHome_Phonebook.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.LblNotLeftHome_Phonebook.ForeColor = System.Drawing.Color.White
-        Me.LblNotLeftHome_Phonebook.Location = New System.Drawing.Point(82, 12)
+        Me.LblNotLeftHome_Phonebook.Location = New System.Drawing.Point(62, 12)
         Me.LblNotLeftHome_Phonebook.Name = "LblNotLeftHome_Phonebook"
         Me.LblNotLeftHome_Phonebook.Size = New System.Drawing.Size(69, 17)
         Me.LblNotLeftHome_Phonebook.TabIndex = 0
@@ -1758,7 +1758,7 @@ Partial Class FrmPrincipal
         Me.BtnNotLeft_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnNotLeft_Phonebook.ImageRotate = 0!
         Me.BtnNotLeft_Phonebook.ImageSize = New System.Drawing.Size(22, 22)
-        Me.BtnNotLeft_Phonebook.Location = New System.Drawing.Point(45, 5)
+        Me.BtnNotLeft_Phonebook.Location = New System.Drawing.Point(25, 5)
         Me.BtnNotLeft_Phonebook.Name = "BtnNotLeft_Phonebook"
         Me.BtnNotLeft_Phonebook.PressedState.ImageSize = New System.Drawing.Size(22, 22)
         Me.BtnNotLeft_Phonebook.PressedState.Parent = Me.BtnNotLeft_Phonebook
@@ -1775,7 +1775,7 @@ Partial Class FrmPrincipal
         Me.Panel36.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel36.Location = New System.Drawing.Point(0, 241)
         Me.Panel36.Name = "Panel36"
-        Me.Panel36.Size = New System.Drawing.Size(196, 47)
+        Me.Panel36.Size = New System.Drawing.Size(157, 47)
         Me.Panel36.TabIndex = 18
         '
         'PanelDeslizanteLeft_Phonebook
@@ -1789,7 +1789,7 @@ Partial Class FrmPrincipal
         Me.PanelDeslizanteLeft_Phonebook.Location = New System.Drawing.Point(0, 0)
         Me.PanelDeslizanteLeft_Phonebook.Name = "PanelDeslizanteLeft_Phonebook"
         Me.PanelDeslizanteLeft_Phonebook.ShadowDecoration.Parent = Me.PanelDeslizanteLeft_Phonebook
-        Me.PanelDeslizanteLeft_Phonebook.Size = New System.Drawing.Size(196, 26)
+        Me.PanelDeslizanteLeft_Phonebook.Size = New System.Drawing.Size(157, 26)
         Me.PanelDeslizanteLeft_Phonebook.TabIndex = 31
         '
         'BtnPanelDeslizanteLeft_Phonebook
@@ -1807,7 +1807,7 @@ Partial Class FrmPrincipal
         Me.BtnPanelDeslizanteLeft_Phonebook.ImageOffset = New System.Drawing.Point(0, 0)
         Me.BtnPanelDeslizanteLeft_Phonebook.ImageRotate = 0!
         Me.BtnPanelDeslizanteLeft_Phonebook.ImageSize = New System.Drawing.Size(18, 18)
-        Me.BtnPanelDeslizanteLeft_Phonebook.Location = New System.Drawing.Point(175, 0)
+        Me.BtnPanelDeslizanteLeft_Phonebook.Location = New System.Drawing.Point(136, 0)
         Me.BtnPanelDeslizanteLeft_Phonebook.Name = "BtnPanelDeslizanteLeft_Phonebook"
         Me.BtnPanelDeslizanteLeft_Phonebook.PressedState.ImageSize = New System.Drawing.Size(18, 18)
         Me.BtnPanelDeslizanteLeft_Phonebook.PressedState.Parent = Me.BtnPanelDeslizanteLeft_Phonebook
@@ -1826,7 +1826,7 @@ Partial Class FrmPrincipal
         Me.PbLogoP_Phonebook.Image = CType(resources.GetObject("PbLogoP_Phonebook.Image"), System.Drawing.Image)
         Me.PbLogoP_Phonebook.Location = New System.Drawing.Point(0, 0)
         Me.PbLogoP_Phonebook.Name = "PbLogoP_Phonebook"
-        Me.PbLogoP_Phonebook.Size = New System.Drawing.Size(196, 100)
+        Me.PbLogoP_Phonebook.Size = New System.Drawing.Size(157, 100)
         Me.PbLogoP_Phonebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PbLogoP_Phonebook.TabIndex = 1
         Me.PbLogoP_Phonebook.TabStop = False
@@ -5119,72 +5119,6 @@ Partial Class FrmPrincipal
         '
         Me.TimerMenuDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide
         Me.TimerMenuDeslizante.Cursor = Nothing
-        Animation5.AnimateOnlyDifferences = True
-        Animation5.BlindCoeff = CType(resources.GetObject("Animation5.BlindCoeff"), System.Drawing.PointF)
-        Animation5.LeafCoeff = 0!
-        Animation5.MaxTime = 1.0!
-        Animation5.MinTime = 0!
-        Animation5.MosaicCoeff = CType(resources.GetObject("Animation5.MosaicCoeff"), System.Drawing.PointF)
-        Animation5.MosaicShift = CType(resources.GetObject("Animation5.MosaicShift"), System.Drawing.PointF)
-        Animation5.MosaicSize = 0
-        Animation5.Padding = New System.Windows.Forms.Padding(0)
-        Animation5.RotateCoeff = 0!
-        Animation5.RotateLimit = 0!
-        Animation5.ScaleCoeff = CType(resources.GetObject("Animation5.ScaleCoeff"), System.Drawing.PointF)
-        Animation5.SlideCoeff = CType(resources.GetObject("Animation5.SlideCoeff"), System.Drawing.PointF)
-        Animation5.TimeCoeff = 0!
-        Animation5.TransparencyCoeff = 0!
-        Me.TimerMenuDeslizante.DefaultAnimation = Animation5
-        '
-        'TimerSubMenuDeslizante
-        '
-        Me.TimerSubMenuDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.VertSlide
-        Me.TimerSubMenuDeslizante.Cursor = Nothing
-        Animation6.AnimateOnlyDifferences = True
-        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
-        Animation6.LeafCoeff = 0!
-        Animation6.MaxTime = 1.0!
-        Animation6.MinTime = 0!
-        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
-        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
-        Animation6.MosaicSize = 0
-        Animation6.Padding = New System.Windows.Forms.Padding(0)
-        Animation6.RotateCoeff = 0!
-        Animation6.RotateLimit = 0!
-        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
-        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
-        Animation6.TimeCoeff = 0!
-        Animation6.TransparencyCoeff = 0!
-        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation6
-        '
-        'TimerPanelDeslizante
-        '
-        Me.TimerPanelDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
-        Me.TimerPanelDeslizante.Cursor = Nothing
-        Animation7.AnimateOnlyDifferences = True
-        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
-        Animation7.LeafCoeff = 0!
-        Animation7.MaxTime = 1.0!
-        Animation7.MinTime = 0!
-        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
-        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
-        Animation7.MosaicSize = 0
-        Animation7.Padding = New System.Windows.Forms.Padding(0)
-        Animation7.RotateCoeff = 0!
-        Animation7.RotateLimit = 0!
-        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
-        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
-        Animation7.TimeCoeff = 0!
-        Animation7.TransparencyCoeff = 1.0!
-        Me.TimerPanelDeslizante.DefaultAnimation = Animation7
-        Me.TimerPanelDeslizante.Interval = 5
-        Me.TimerPanelDeslizante.MaxAnimationTime = 800
-        Me.TimerPanelDeslizante.TimeStep = 0.05!
-        '
-        'AppTransition
-        '
-        Me.AppTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
-        Me.AppTransition.Cursor = Nothing
         Animation8.AnimateOnlyDifferences = True
         Animation8.BlindCoeff = CType(resources.GetObject("Animation8.BlindCoeff"), System.Drawing.PointF)
         Animation8.LeafCoeff = 0!
@@ -5199,8 +5133,74 @@ Partial Class FrmPrincipal
         Animation8.ScaleCoeff = CType(resources.GetObject("Animation8.ScaleCoeff"), System.Drawing.PointF)
         Animation8.SlideCoeff = CType(resources.GetObject("Animation8.SlideCoeff"), System.Drawing.PointF)
         Animation8.TimeCoeff = 0!
-        Animation8.TransparencyCoeff = 1.0!
-        Me.AppTransition.DefaultAnimation = Animation8
+        Animation8.TransparencyCoeff = 0!
+        Me.TimerMenuDeslizante.DefaultAnimation = Animation8
+        '
+        'TimerSubMenuDeslizante
+        '
+        Me.TimerSubMenuDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.VertSlide
+        Me.TimerSubMenuDeslizante.Cursor = Nothing
+        Animation7.AnimateOnlyDifferences = True
+        Animation7.BlindCoeff = CType(resources.GetObject("Animation7.BlindCoeff"), System.Drawing.PointF)
+        Animation7.LeafCoeff = 0!
+        Animation7.MaxTime = 1.0!
+        Animation7.MinTime = 0!
+        Animation7.MosaicCoeff = CType(resources.GetObject("Animation7.MosaicCoeff"), System.Drawing.PointF)
+        Animation7.MosaicShift = CType(resources.GetObject("Animation7.MosaicShift"), System.Drawing.PointF)
+        Animation7.MosaicSize = 0
+        Animation7.Padding = New System.Windows.Forms.Padding(0)
+        Animation7.RotateCoeff = 0!
+        Animation7.RotateLimit = 0!
+        Animation7.ScaleCoeff = CType(resources.GetObject("Animation7.ScaleCoeff"), System.Drawing.PointF)
+        Animation7.SlideCoeff = CType(resources.GetObject("Animation7.SlideCoeff"), System.Drawing.PointF)
+        Animation7.TimeCoeff = 0!
+        Animation7.TransparencyCoeff = 0!
+        Me.TimerSubMenuDeslizante.DefaultAnimation = Animation7
+        '
+        'TimerPanelDeslizante
+        '
+        Me.TimerPanelDeslizante.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
+        Me.TimerPanelDeslizante.Cursor = Nothing
+        Animation6.AnimateOnlyDifferences = True
+        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
+        Animation6.LeafCoeff = 0!
+        Animation6.MaxTime = 1.0!
+        Animation6.MinTime = 0!
+        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
+        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
+        Animation6.MosaicSize = 0
+        Animation6.Padding = New System.Windows.Forms.Padding(0)
+        Animation6.RotateCoeff = 0!
+        Animation6.RotateLimit = 0!
+        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
+        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
+        Animation6.TimeCoeff = 0!
+        Animation6.TransparencyCoeff = 1.0!
+        Me.TimerPanelDeslizante.DefaultAnimation = Animation6
+        Me.TimerPanelDeslizante.Interval = 5
+        Me.TimerPanelDeslizante.MaxAnimationTime = 800
+        Me.TimerPanelDeslizante.TimeStep = 0.05!
+        '
+        'AppTransition
+        '
+        Me.AppTransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Transparent
+        Me.AppTransition.Cursor = Nothing
+        Animation5.AnimateOnlyDifferences = True
+        Animation5.BlindCoeff = CType(resources.GetObject("Animation5.BlindCoeff"), System.Drawing.PointF)
+        Animation5.LeafCoeff = 0!
+        Animation5.MaxTime = 1.0!
+        Animation5.MinTime = 0!
+        Animation5.MosaicCoeff = CType(resources.GetObject("Animation5.MosaicCoeff"), System.Drawing.PointF)
+        Animation5.MosaicShift = CType(resources.GetObject("Animation5.MosaicShift"), System.Drawing.PointF)
+        Animation5.MosaicSize = 0
+        Animation5.Padding = New System.Windows.Forms.Padding(0)
+        Animation5.RotateCoeff = 0!
+        Animation5.RotateLimit = 0!
+        Animation5.ScaleCoeff = CType(resources.GetObject("Animation5.ScaleCoeff"), System.Drawing.PointF)
+        Animation5.SlideCoeff = CType(resources.GetObject("Animation5.SlideCoeff"), System.Drawing.PointF)
+        Animation5.TimeCoeff = 0!
+        Animation5.TransparencyCoeff = 1.0!
+        Me.AppTransition.DefaultAnimation = Animation5
         Me.AppTransition.Interval = 5
         Me.AppTransition.MaxAnimationTime = 1000
         Me.AppTransition.TimeStep = 0.01!

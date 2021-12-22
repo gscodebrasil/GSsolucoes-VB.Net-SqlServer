@@ -55,13 +55,8 @@ Public Class OS_Helpdesk
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            Else
-                Application.Restart()
-            End If
+            MessageBox.Show($"Não foi possível cadastrar a OS, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -75,11 +70,8 @@ Public Class OS_Helpdesk
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível editar a ocorrencia, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -87,17 +79,14 @@ Public Class OS_Helpdesk
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using command As SqlCommand = New SqlCommand($"UPDATE os_helpdesk SET nome_res='{nome_res}',email_res='{email_res}',data_res='{data_res}',resultado='{resultado}',contato_res='{contato_res}',tempo_conexao='{tempo_conexao}',status='{status}' WHERE id_interno='{id_interno}' WHERE id_interno='{id_interno}'", conn)
+                Using command As SqlCommand = New SqlCommand($"UPDATE os_helpdesk SET nome_res='{nome_res}', email_res='{email_res}', data_res='{data_res}', resultado='{resultado}', contato_res='{contato_res}', tempo_conexao='{tempo_conexao}', status='{status}' WHERE id_interno='{id_interno}'", conn)
                     command.ExecuteNonQuery()
                     Valida = True
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível editar o resultado, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -111,11 +100,8 @@ Public Class OS_Helpdesk
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível excluir a OS, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -136,14 +122,8 @@ Public Class OS_Helpdesk
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                Valida = False
-            Else
-                Application.Restart()
-            End If
+            MessageBox.Show($"Não foi possível validar o código da OS, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -159,8 +139,8 @@ Public Class OS_Helpdesk
                 End Using
             End Using
         Catch ex As Exception
-            Valida = False
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível buscar as OS abertas, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return DgvUser
     End Function
@@ -177,8 +157,8 @@ Public Class OS_Helpdesk
                 End Using
             End Using
         Catch ex As Exception
-            Valida = False
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível buscar as todas as OS, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return DgvUser
     End Function
@@ -194,7 +174,8 @@ Public Class OS_Helpdesk
                 End Using
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível contar as OS, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return TotalOS
     End Function

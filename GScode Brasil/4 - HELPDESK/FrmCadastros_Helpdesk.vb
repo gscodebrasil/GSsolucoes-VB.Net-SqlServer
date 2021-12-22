@@ -806,7 +806,6 @@ Public Class FrmCadastros_Helpdesk
         TimerPainel.Enabled = False
         ClOS_Helpdesk.BuscarOSAbertas(DgvPainel)
         FormataGridView_Painel()
-
     End Sub
 
     Private Sub FrmCadastros_Helpdesk_Closed(sender As Object, e As EventArgs) Handles Me.Closed
@@ -1519,7 +1518,6 @@ Public Class FrmCadastros_Helpdesk
                 BuscarRegistros()
                 FormataGridView_Gerenciador()
                 MessageBox.Show($"A OS foi deletada com sucesso!", "INFORMAÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
         End Select
     End Sub
 

@@ -20,8 +20,8 @@ Public Class Cifer
             msgEncriptada = Convert.ToBase64String(encrypt.TransformFinalBlock(Buffer, 0, Buffer.Length))
             Criptar = msgEncriptada
         Catch ex As Exception
-            MessageBox.Show($"Não foi possível criptar. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Criptar = Nothing
+            MessageBox.Show($"Não foi possível criptar, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Function
 
@@ -41,8 +41,8 @@ Public Class Cifer
             msgDecriptada = UnicodeEncoding.Unicode.GetString(decrypt.TransformFinalBlock(Buffer, 0, Buffer.Length))
             Decriptar = msgDecriptada
         Catch ex As Exception
-            MessageBox.Show($"Não foi possível decriptar. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Decriptar = Nothing
+            MessageBox.Show($"Não foi possível decriptar, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Function
 End Class

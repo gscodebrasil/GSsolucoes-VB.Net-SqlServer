@@ -119,8 +119,8 @@ Public Class Email
                 End Using
             End Using
         Catch ex As Exception
-            ValidaEmail = False
-            MessageBox.Show($"Não foi possível enviar o e-mail. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível enviar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -164,8 +164,8 @@ Public Class Email
                 End Using
             End Using
         Catch ex As Exception
-            ValidaEmail = False
-            MessageBox.Show($"Não foi possível enviar o e-mail. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível enviar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -218,8 +218,8 @@ Public Class Email
                 End Using
             End Using
         Catch ex As Exception
-            ValidaEmail = False
-            MessageBox.Show($"Não foi possível enviar o e-mail. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível enviar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -263,8 +263,8 @@ Public Class Email
                 End Using
             End Using
         Catch ex As Exception
-            ValidaEmail = False
-            MessageBox.Show($"Não foi possível enviar o e-mail. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível enviar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -302,8 +302,8 @@ Public Class Email
                 End Using
             End Using
         Catch ex As Exception
-            ValidaEmail = False
-            MessageBox.Show($"Não foi possível enviar o e-mail. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível enviar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -344,8 +344,8 @@ Public Class Email
                 End Using
             End Using
         Catch ex As Exception
-            ValidaEmail = False
-            MessageBox.Show($"Não foi possível enviar o e-mail. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível enviar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -388,7 +388,8 @@ Public Class Email
                 End Using
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Não foi possível enviar o e-mail. {vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível enviar o e-mail, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 End Class

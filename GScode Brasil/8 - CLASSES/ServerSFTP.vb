@@ -19,7 +19,8 @@ Public Class ServerSFTP
 
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao estabelecer conexão com o servidor.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível conectar-se ao servidor, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -93,7 +94,8 @@ Public Class ServerSFTP
                 Next
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao listar os arquivos.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível listar os backups do banco de dados, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -122,9 +124,8 @@ Public Class ServerSFTP
 
             End Using
         Catch ex As Exception
-            Timer.Stop()
-            TabControl.SelectTab(0)
-            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível salvar o backup do sistema, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -158,9 +159,8 @@ Public Class ServerSFTP
 
             End Using
         Catch ex As Exception
-            Timer.Stop()
-            TabControl.SelectTab(0)
-            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível restaurar o backup do sistema, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -243,11 +243,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível carregar o arquivo para o servidor, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -280,11 +277,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível fazer o download do arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -307,7 +301,8 @@ Public Class ServerSFTP
                 End While
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível excluir o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -432,11 +427,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível carregar o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -523,11 +515,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível carregar o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -614,11 +603,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível carregar o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -658,7 +644,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao listar os arquivos.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível listar os arquivos, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -739,7 +726,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao listar os arquivos.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível listar os arquivos, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -773,11 +761,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível fazer o download do arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -810,11 +795,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível fazer o download do arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -847,11 +829,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível fazer o download do arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -873,7 +852,8 @@ Public Class ServerSFTP
                 End While
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível excluir o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -893,7 +873,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível excluir a pasta do registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -971,7 +952,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao listar os arquivos.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível listar os arquivos, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -1062,11 +1044,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível carregar o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -1095,16 +1074,13 @@ Public Class ServerSFTP
                     Next
 
                     If Valida = True Then
-                        MessageBox.Show($"Download realizado com sucesso.", "informação", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show($"Download realizado com sucesso.", "INFORMAÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     End If
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                TabControl.SelectTab(2)
-            End If
+            MessageBox.Show($"Não foi possível fazer o download do arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -1136,7 +1112,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível excluir a pasta do registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -1158,7 +1135,8 @@ Public Class ServerSFTP
                 End While
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar o backup.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível excluir o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Dgv
     End Function
@@ -1182,7 +1160,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao listar os arquivos.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível buscar o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return PbPerfil
     End Function
@@ -1212,6 +1191,7 @@ Public Class ServerSFTP
                     Dim FileName As String
 
                     'VERIFICA AS INFORMAÇÕES (ULTIMA ATUALIZAÇÃO E TAMANHO) DO ARQUIVO
+
                     For Each FileName In FilePath
 
                         'If Not Sftp.Exists($"{My.Settings.SFTP_ImagemUsuario}{Usuario}") Then
@@ -1234,11 +1214,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o servidor. {vbNewLine}{vbNewLine}ERRO: {ex.Message}{vbNewLine}{vbNewLine} Deseja verificar as informações do servidor?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-            Else
-
-            End If
+            MessageBox.Show($"Não foi possível buscar o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return ImagePerfil
     End Function
@@ -1258,7 +1235,8 @@ Public Class ServerSFTP
                 End If
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível excluir o arquivo, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -1283,7 +1261,8 @@ Public Class ServerSFTP
                 Sftp.DeleteDirectory($"{My.Settings.SFTP_BackupSistema}{Usuario}/")
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível excluir a pasta do usuário, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -1294,7 +1273,8 @@ Public Class ServerSFTP
                 Sftp.CreateDirectory($"{My.Settings.SFTP_ImagemUsuario}{Usuario}")
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Erro ao efetuar a exclusão.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível criar a pasta do usuário, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 

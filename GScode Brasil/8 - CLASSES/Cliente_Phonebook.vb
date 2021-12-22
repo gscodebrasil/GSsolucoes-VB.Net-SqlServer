@@ -52,13 +52,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            Else
-                Application.Restart()
-            End If
+            MessageBox.Show($"Não foi possível cadastrar o registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -72,11 +67,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível editar o registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -90,11 +82,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-            End If
+            MessageBox.Show($"Não foi possível deletar o registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -111,12 +100,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível buscar o registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -156,12 +141,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível buscar as informações do registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -185,12 +166,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            End If
+            MessageBox.Show($"Não foi possível buscar o nome do registro, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return Txt
     End Function
@@ -212,14 +189,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            If MessageBox.Show($"Erro na operação com o banco de dados. {vbNewLine}ERRO: {ex.Message}{vbNewLine} Deseja verificar as informações do banco de dados?", "ERRO",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Error) = DialogResult.Yes Then
-
-                FrmLogin.ErroNoBancoDeDados()
-                valida = False
-            Else
-                Application.Restart()
-            End If
+            MessageBox.Show($"Não foi possível validar o código do cliente, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
     End Sub
 
@@ -234,7 +205,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível efetuar a contagem dos registros, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return TotalUser
     End Function
@@ -251,8 +223,8 @@ Public Class Cliente_Phonebook
                 End Using
             End Using
         Catch ex As Exception
-            valida = False
-            MessageBox.Show($"Não foi possivel obter uma conexão com o banco de dados.{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show($"Não foi possível efetuar a busca dos registros, o sistema será reiniciado, entre em contato com o suporte para mais informações.{vbNewLine}{vbNewLine}ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Application.Restart()
         End Try
         Return DgvUser
     End Function
