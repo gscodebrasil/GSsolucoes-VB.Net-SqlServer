@@ -1586,7 +1586,7 @@ Public Class FrmCadastros_Helpdesk
                                      <b>Contato</b>: {DgvGerenciador.CurrentRow.Cells(28).Value}<br>
                                      <b>Status</b>: <font color='{ClEmail.ColorStatus}'>{DgvGerenciador.CurrentRow.Cells(30).Value}</font><br>
                                      <b>Tempo de conexão</b>: {DgvGerenciador.CurrentRow.Cells(29).Value}<br><br>
-                                     <Resultado</b>:<br>
+                                     <b>Resultado</b>:<br>
                                      {DgvGerenciador.CurrentRow.Cells(27).Value}"
             Else
                 ClEmail.info_res = ""
