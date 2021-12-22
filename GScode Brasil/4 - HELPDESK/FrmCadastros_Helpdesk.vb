@@ -796,7 +796,7 @@ Public Class FrmCadastros_Helpdesk
 
     Private Sub CBStatus_Validated(sender As Object, e As EventArgs) Handles CBStatus.Validated
         If CBStatus.Text = "OS Aberta" Then
-            ColumnStatus = $"status Like '%andamento' OR status = '' And"
+            ColumnStatus = $"status Like '%andamento' OR status LIKE 'Aguardando%' OR status = '' And"
         Else
             ColumnStatus = $"status = '{CBStatus.Text}' And"
         End If

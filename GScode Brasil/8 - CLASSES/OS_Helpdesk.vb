@@ -131,7 +131,7 @@ Public Class OS_Helpdesk
         Try
             Using conn As SqlConnection = Getconnection()
                 conn.Open()
-                Using da = New SqlDataAdapter($"SELECT * FROM os_helpdesk WHERE status LIKE '%andamento' OR status = '' ORDER BY id DESC", conn)
+                Using da = New SqlDataAdapter($"SELECT * FROM os_helpdesk WHERE status LIKE '%andamento' OR status LIKE 'Aguardando%' OR status = '' ORDER BY id DESC", conn)
                     Using dt = New DataTable()
                         da.Fill(dt)
                         DgvUser.DataSource = dt

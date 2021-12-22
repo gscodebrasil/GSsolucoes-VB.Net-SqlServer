@@ -639,7 +639,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpPainel.Location = New System.Drawing.Point(4, 4)
         Me.TpPainel.Name = "TpPainel"
         Me.TpPainel.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpPainel.Size = New System.Drawing.Size(780, 532)
+        Me.TpPainel.Size = New System.Drawing.Size(780, 556)
         Me.TpPainel.TabIndex = 8
         Me.TpPainel.Text = "Painel"
         '
@@ -659,7 +659,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TlpPainel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.TlpPainel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TlpPainel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TlpPainel.Size = New System.Drawing.Size(774, 526)
+        Me.TlpPainel.Size = New System.Drawing.Size(774, 550)
         Me.TlpPainel.TabIndex = 10
         '
         'DgvPainel
@@ -733,7 +733,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.DgvPainel.RowHeadersVisible = False
         Me.DgvPainel.RowTemplate.Height = 40
         Me.DgvPainel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvPainel.Size = New System.Drawing.Size(718, 460)
+        Me.DgvPainel.Size = New System.Drawing.Size(718, 484)
         Me.DgvPainel.TabIndex = 10
         Me.DgvPainel.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -756,7 +756,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpOS.Location = New System.Drawing.Point(4, 4)
         Me.TpOS.Name = "TpOS"
         Me.TpOS.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpOS.Size = New System.Drawing.Size(780, 532)
+        Me.TpOS.Size = New System.Drawing.Size(780, 556)
         Me.TpOS.TabIndex = 5
         Me.TpOS.Text = "OS"
         '
@@ -1402,7 +1402,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpEditar_OS.Location = New System.Drawing.Point(4, 4)
         Me.TpEditar_OS.Name = "TpEditar_OS"
         Me.TpEditar_OS.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpEditar_OS.Size = New System.Drawing.Size(780, 532)
+        Me.TpEditar_OS.Size = New System.Drawing.Size(780, 556)
         Me.TpEditar_OS.TabIndex = 10
         Me.TpEditar_OS.Text = "Editar OS"
         '
@@ -1560,7 +1560,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.Lbl2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Lbl2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl2.ForeColor = System.Drawing.Color.Black
-        Me.Lbl2.Location = New System.Drawing.Point(3, 444)
+        Me.Lbl2.Location = New System.Drawing.Point(3, 468)
         Me.Lbl2.Name = "Lbl2"
         Me.Lbl2.Size = New System.Drawing.Size(774, 85)
         Me.Lbl2.TabIndex = 121
@@ -1577,7 +1577,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpCad_Ocorrencia.Location = New System.Drawing.Point(4, 4)
         Me.TpCad_Ocorrencia.Name = "TpCad_Ocorrencia"
         Me.TpCad_Ocorrencia.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpCad_Ocorrencia.Size = New System.Drawing.Size(780, 532)
+        Me.TpCad_Ocorrencia.Size = New System.Drawing.Size(780, 556)
         Me.TpCad_Ocorrencia.TabIndex = 0
         Me.TpCad_Ocorrencia.Text = "Cad. Ocorrencia"
         '
@@ -2717,7 +2717,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpCad_Resultado.Location = New System.Drawing.Point(4, 4)
         Me.TpCad_Resultado.Name = "TpCad_Resultado"
         Me.TpCad_Resultado.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpCad_Resultado.Size = New System.Drawing.Size(780, 532)
+        Me.TpCad_Resultado.Size = New System.Drawing.Size(780, 556)
         Me.TpCad_Resultado.TabIndex = 9
         Me.TpCad_Resultado.Text = "Cad. Resultado"
         '
@@ -3098,7 +3098,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpAnexo.Location = New System.Drawing.Point(4, 4)
         Me.TpAnexo.Name = "TpAnexo"
         Me.TpAnexo.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpAnexo.Size = New System.Drawing.Size(780, 532)
+        Me.TpAnexo.Size = New System.Drawing.Size(780, 556)
         Me.TpAnexo.TabIndex = 6
         Me.TpAnexo.Text = "Anexo"
         '
@@ -3121,7 +3121,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.Tpl1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
         Me.Tpl1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.Tpl1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.Tpl1.Size = New System.Drawing.Size(774, 526)
+        Me.Tpl1.Size = New System.Drawing.Size(774, 550)
         Me.Tpl1.TabIndex = 11
         '
         'Guna2Panel1
@@ -3133,7 +3133,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.Guna2Panel1.Location = New System.Drawing.Point(28, 107)
         Me.Guna2Panel1.Name = "Guna2Panel1"
         Me.Guna2Panel1.ShadowDecoration.Parent = Me.Guna2Panel1
-        Me.Guna2Panel1.Size = New System.Drawing.Size(718, 386)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(718, 410)
         Me.Guna2Panel1.TabIndex = 10
         '
         'DgvArquivos
@@ -3207,7 +3207,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.DgvArquivos.RowHeadersVisible = False
         Me.DgvArquivos.RowTemplate.Height = 40
         Me.DgvArquivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvArquivos.Size = New System.Drawing.Size(718, 345)
+        Me.DgvArquivos.Size = New System.Drawing.Size(718, 369)
         Me.DgvArquivos.TabIndex = 11
         Me.DgvArquivos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light
         '
@@ -3227,7 +3227,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.PanelVoltar_Anexo.Controls.Add(Me.BtnVoltar)
         Me.SelectTransition.SetDecoration(Me.PanelVoltar_Anexo, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.PanelVoltar_Anexo.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelVoltar_Anexo.Location = New System.Drawing.Point(0, 345)
+        Me.PanelVoltar_Anexo.Location = New System.Drawing.Point(0, 369)
         Me.PanelVoltar_Anexo.Name = "PanelVoltar_Anexo"
         Me.PanelVoltar_Anexo.ShadowDecoration.Parent = Me.PanelVoltar_Anexo
         Me.PanelVoltar_Anexo.Size = New System.Drawing.Size(718, 41)
@@ -3309,7 +3309,7 @@ Partial Class FrmCadastros_Helpdesk
         Me.TpAguarde.Location = New System.Drawing.Point(4, 4)
         Me.TpAguarde.Name = "TpAguarde"
         Me.TpAguarde.Padding = New System.Windows.Forms.Padding(3)
-        Me.TpAguarde.Size = New System.Drawing.Size(780, 532)
+        Me.TpAguarde.Size = New System.Drawing.Size(780, 556)
         Me.TpAguarde.TabIndex = 4
         Me.TpAguarde.Text = "Aguarde"
         '
