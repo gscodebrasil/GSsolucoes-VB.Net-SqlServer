@@ -1663,6 +1663,10 @@ Public Class FrmCadastros_Helpdesk
     Private Sub BtnVoltarLista_Click(sender As Object, e As EventArgs) Handles BtnVoltarLista.Click
         DgvGerenciador.CurrentRow.Cells(0).Value = False
         TabControl_CadCons.SelectTab(0)
+        BtnVerResultado.Text = "Visualizar Resultado"
+        PanelResultado.Visible = False
+        TlpOS.Size = New Size(757, 1026)
+        PanelPerfil.Refresh()
     End Sub
 
     Private Sub BtnExcluir_Click(sender As Object, e As EventArgs) Handles BtnExcluir.Click
