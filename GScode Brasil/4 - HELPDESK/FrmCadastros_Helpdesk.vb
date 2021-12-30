@@ -1582,8 +1582,7 @@ Public Class FrmCadastros_Helpdesk
                         ClEmail.ColorStatus = "Gray"
                 End Select
 
-                ClEmail.info_res = $"<br><br><br><br><br><br><br>
-                                     <b><font size ='4' color='MidnightBlue'>------------------------------ RESULTADO ------------------------------</font></b><br><br><br><br><br>
+                ClEmail.info_res = $"<b><font size ='4' color='MidnightBlue'>------------------------------ RESULTADO ------------------------------</font></b><br><br><br><br><br>
                                      <b><font color='Gray'>{DgvGerenciador.CurrentRow.Cells(24).Value}</b><br>
                                      {DgvGerenciador.CurrentRow.Cells(25).Value}<br>
                                      {DgvGerenciador.CurrentRow.Cells(26).Value}<br><br><br><br>

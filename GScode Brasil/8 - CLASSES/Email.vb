@@ -255,9 +255,9 @@ Public Class Email
                     <b>Endereço</b>: {endereco}, {complemento}, {cidade}, {uf}, {cep}<br><br>                    
                     <b>Condição</b>: {condicao}<br>
                     <b>Prioridade</b>:</font> <font color='{Color}'>{prioridade}</font><br>
-                    <b><font color='Gray'><Equipamento</b>: {equipamento} - <b>Nº de Série</b>: {nserie}<br><br>
+                    <b><font color='Gray'>Equipamento</b>: {equipamento} - <b>Nº de Série</b>: {nserie}<br><br>
                     <b>Ocorrência</b>:<br>
-                    {ocorrencia}</font>{info_res}", Nothing, "text/html")
+                    {ocorrencia}</font>{faturamento}{info_res}", Nothing, "text/html")
                     Email.AlternateViews.Add(Html)
                     Smtp.Send(Email)
                     ValidaEmail = True
