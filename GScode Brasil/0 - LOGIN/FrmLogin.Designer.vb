@@ -835,7 +835,6 @@ Partial Class FrmLogin
         Me.bpCadUser.TabIndex = 173
         Me.bpCadUser.TabMenuBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer))
         Me.bpCadUser.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalBottom
-        Me.bpCadUser.TabMenuVisible = False
         '
         'tpUserLogin
         '
@@ -856,7 +855,7 @@ Partial Class FrmLogin
         Me.tpUserLogin.Controls.Add(Me.Guna2PictureBox1)
         Me.tpUserLogin.Location = New System.Drawing.Point(4, 4)
         Me.tpUserLogin.Name = "tpUserLogin"
-        Me.tpUserLogin.Size = New System.Drawing.Size(692, 505)
+        Me.tpUserLogin.Size = New System.Drawing.Size(692, 476)
         Me.tpUserLogin.TabIndex = 10
         Me.tpUserLogin.Text = "Login"
         '
@@ -1032,7 +1031,7 @@ Partial Class FrmLogin
         Me.btnAddUser.ImageOffset = New System.Drawing.Point(1, 0)
         Me.btnAddUser.ImageSize = New System.Drawing.Size(30, 30)
         Me.btnAddUser.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.btnAddUser.Location = New System.Drawing.Point(634, 448)
+        Me.btnAddUser.Location = New System.Drawing.Point(634, 419)
         Me.btnAddUser.Name = "btnAddUser"
         Me.btnAddUser.ShadowDecoration.Parent = Me.btnAddUser
         Me.btnAddUser.Size = New System.Drawing.Size(51, 51)
@@ -2593,7 +2592,7 @@ Partial Class FrmLogin
         Me.tpCheckList.Controls.Add(Me.pbChklistAviso)
         Me.tpCheckList.Location = New System.Drawing.Point(4, 4)
         Me.tpCheckList.Name = "tpCheckList"
-        Me.tpCheckList.Size = New System.Drawing.Size(692, 505)
+        Me.tpCheckList.Size = New System.Drawing.Size(692, 476)
         Me.tpCheckList.TabIndex = 5
         Me.tpCheckList.Text = "Cheklist"
         '
@@ -2694,7 +2693,7 @@ Partial Class FrmLogin
         Me.tpBanco.Controls.Add(Me.Guna2CirclePictureBox1)
         Me.tpBanco.Location = New System.Drawing.Point(4, 4)
         Me.tpBanco.Name = "tpBanco"
-        Me.tpBanco.Size = New System.Drawing.Size(692, 505)
+        Me.tpBanco.Size = New System.Drawing.Size(692, 476)
         Me.tpBanco.TabIndex = 6
         Me.tpBanco.Text = "Banco"
         '
@@ -3380,7 +3379,7 @@ Partial Class FrmLogin
         Me.tpEditarBanco.Controls.Add(Me.txtEditarBDEmail)
         Me.tpEditarBanco.Location = New System.Drawing.Point(4, 4)
         Me.tpEditarBanco.Name = "tpEditarBanco"
-        Me.tpEditarBanco.Size = New System.Drawing.Size(692, 505)
+        Me.tpEditarBanco.Size = New System.Drawing.Size(692, 476)
         Me.tpEditarBanco.TabIndex = 9
         Me.tpEditarBanco.Text = "Editar Banco"
         '
