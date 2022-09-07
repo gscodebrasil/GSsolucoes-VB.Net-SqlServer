@@ -49,7 +49,7 @@ Public Class FrmLogin
         Ttip.SetToolTip(btnFacebook, "GScode Brasil")
         Ttip.SetToolTip(btnYoutube, "GScode Brasil")
         Ttip.SetToolTip(btnAcessoBD, "Acesso ao Banco de Dados")
-        Ttip.SetToolTip(lblPerfilTermos, "Download do termo")
+        Ttip.SetToolTip(Linklbl_Termos, "Download dos termos e condições")
         Ttip.SetToolTip(txtCadPass, "A Senha deve conter um tamanho maximo de 18 caractere.")
         'Ttip.Active = True
     End Sub
@@ -711,8 +711,8 @@ Public Class FrmLogin
         End If
     End Sub
 
-    Private Sub lblPerfilTermos_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblPerfilTermos.LinkClicked
-        MsgBox("Download")
+    Private Sub Linklbl_Termos_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Linklbl_Termos.LinkClicked
+        MsgBox("Estamos trabalhando nesse processo!")
     End Sub
 
 #End Region
@@ -1201,6 +1201,7 @@ Public Class FrmLogin
         VAutoLoginAcesso()
         txtLoginEmail.Focus()
         TtipLoad()
+        bpCadUser.TabMenuVisible = False
     End Sub
 
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
@@ -1379,5 +1380,25 @@ Public Class FrmLogin
 
     Private Sub txtLoginPassword_Enter(sender As Object, e As EventArgs) Handles txtLoginPassword.Enter
         txtLoginPassword.IconRight = Nothing
+    End Sub
+
+    Private Sub Busca_Cep()
+        Try
+            Dim WS = New WSCep.AtendeClienteClient()
+            Dim Resposta = WS.consultaCEP(txtPerfilCep.Text)
+            txtPerfilEndereco.Text = $"{Resposta.end}, {Resposta.bairro},"
+            txtPerfilComp.Text = $"{Resposta.complemento2}"
+            txtPerfilCidade.Text = $"{Resposta.cidade}"
+            txtPerfilUF.Text = $"{Resposta.uf}"
+
+        Catch ex As Exception
+            MessageBox.Show($"ERRO: {ex.Message}", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub txtPerfilCep_Validated(sender As Object, e As EventArgs) Handles txtPerfilCep.Validated
+        If txtPerfilCep.Text.Length = 9 Then
+            Busca_Cep()
+        End If
     End Sub
 End Class

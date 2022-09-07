@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("192.168.2.204")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.250")>  _
         Public Property Database_Servidor() As String
             Get
                 Return CType(Me("Database_Servidor"),String)
@@ -116,7 +116,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("192.168.2.204")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("192.168.1.250")>  _
         Public Property SFTP_Servidor() As String
             Get
                 Return CType(Me("SFTP_Servidor"),String)

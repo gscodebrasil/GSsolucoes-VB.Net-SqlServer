@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="Database_Servidor" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.2.204</Value>
+      <Value Profile="(Default)">192.168.1.250</Value>
     </Setting>
     <Setting Name="Database_Porta" Type="System.String" Scope="User">
       <Value Profile="(Default)">1433</Value>
@@ -18,7 +18,7 @@
       <Value Profile="(Default)">ADcYhGwf4S2kbyMKqQRmcidLfnf9ZbrmuRs2d5tdEOromEmqty3BrkD3v/cFMU0X</Value>
     </Setting>
     <Setting Name="SFTP_Servidor" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.2.204</Value>
+      <Value Profile="(Default)">192.168.1.250</Value>
     </Setting>
     <Setting Name="SFTP_Porta" Type="System.String" Scope="User">
       <Value Profile="(Default)">22</Value>

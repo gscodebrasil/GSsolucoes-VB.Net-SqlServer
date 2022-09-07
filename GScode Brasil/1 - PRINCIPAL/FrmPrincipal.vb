@@ -411,8 +411,6 @@ Public Class FrmPrincipal
 
 #End Region
 
-    Private clUserInfo As New UserInfo
-
     'MAXIMIZA O FORM SEM COBRIR A BARRA DO WINDOWS
     Private Sub FrmHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TabControlMenu.TabMenuVisible = False
